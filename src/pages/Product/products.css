@@ -1,0 +1,26 @@
+.managers_block{
+    width: 200px;
+    height: 500px;
+    /* border: 1px solid black; */
+}
+#managers_block1{
+    background: #FFB33E;
+}
+#managers_block2{
+    background: #FFE7AE;
+}
+#managers_block3{
+    background: #EAD37D;
+}
+#managers_block4{
+    background: #84026F;
+}
+#managers_block5{
+    background: #FFCA88;
+
+}
+@media screen and (max-width : 450px){
+    .managers_block{
+        height: 300px;
+    }
+}

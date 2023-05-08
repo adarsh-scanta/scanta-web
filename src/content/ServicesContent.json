@@ -1,0 +1,53 @@
+{
+  "title": "Being Proactive",
+  "subtitle": "What if you could find problems before they become serious?",
+  "cards": [
+    {
+      "cardHeading": "Go Beyond Surveys",
+      "cardContent1": "Real Time & Continuous Insights",
+      "cardContent2": "Filter by Groups & Demographics",
+      "cardContent3": "See Trends Over Time",
+      "cardColor": "#5B72EE",
+      "icon2": "service1.svg",
+      "icon1": "service1.svg"
+    },
+    {
+      "cardHeading": "Save Time & Money",
+      "cardContent1": " Less Time Surveying",
+      "cardContent2": "Automatic Analysis",
+      "cardContent3": "Visible ROI & Effectiveness Data",
+      "cardColor": "#F46706",
+      "icon2": "service2.svg",
+      "icon1": "service2.svg"
+    }
+  ],
+  "cards2": [
+    {
+      "cardHeading": "Go Beyond Surveys",
+      "cardContent1": "Real Time & Continuous Insights",
+      "cardContent2": "Filter by Groups & Demographics",
+      "cardContent3": "See Trends Over Time",
+      "cardColor": "#5B72EE",
+      "icon2": "service1.svg",
+      "icon1": "service1.svg"
+    },
+    {
+      "cardHeading": "Save Time & Money",
+      "cardContent1": " Less Time Surveying",
+      "cardContent2": "Automatic Analysis",
+      "cardContent3": "Visible ROI & Effectiveness Data",
+      "cardColor": "#F46706",
+      "icon2": "service2.svg",
+      "icon1": "service2.svg"
+    },
+    {
+      "cardHeading": "It’s Easy",
+      "cardContent1": "Link Teams & Slack Feeds",
+      "cardContent2": "Pick AI Analyzers",
+      "cardContent3": "See Insights in Dashboards",
+      "cardColor": "#423EB6",
+      "icon2": "service1.svg",
+      "icon1": "service1.svg"
+    }
+  ]
+}

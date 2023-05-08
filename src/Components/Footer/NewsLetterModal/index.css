@@ -1,0 +1,40 @@
+.newsletter-form div button{
+    cursor: pointer;
+    padding: 0.8rem;
+    border-radius: 15px;
+    background: #EB7A02;
+    border: none;
+    color: #FFFFFF;
+    font-size: 1rem;
+    margin:1rem auto;
+    position:relative;
+    left:40%;
+}
+
+.newsletter-form-footer div button{
+    cursor: pointer;
+    /* padding: 0.8rem; */
+    border-radius: 25px;
+    background: #EB7A02;
+    border: none;
+    color: #FFFFFF;
+    font-size: 1rem;
+    margin:0rem auto 1rem;
+    /* position:relative;
+    left:40%; */
+}
+.newsletter-form-footer div {
+    display: flex;
+}
+.newsletter-form-footer div input{
+    /* padding: 0.8rem; */
+    /* min-width: 250px; */
+    height: 70px;
+    border-radius: 25px;
+    background: transparent;
+    border: 1px solid #b2b3cf;
+    color: #b2b3cf;
+    font-size: 1rem;
+    margin:0rem 1rem 1rem 0; 
+    
+}

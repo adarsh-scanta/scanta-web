@@ -1,0 +1,49 @@
+.desktop {
+    display: block;
+}
+
+.mobile {
+    display: none;
+}
+
+.homepage-container {
+    height: 2750px;
+}
+
+/* .trupulsePage-container{
+    height: 2100px;
+} */
+
+.home-bluebox {
+    background: #423EB6;
+    width: 100%;
+    border-radius: 30px;
+    padding: 2rem;
+    margin-bottom: 4rem;
+}
+
+
+@media screen and (max-width: 1080px) {
+    .desktop {
+        display: none;
+    }
+    
+    .mobile {
+        display: block;
+    }
+    
+    .homepage-container {
+        height: 3800px;
+    }
+    
+    .home-bluebox {
+        padding: 0;
+        width: 95%;
+    }
+}
+@media screen and (max-width: 580px) {
+    .homepage-container {
+        height: 4500px;
+
+    }
+}

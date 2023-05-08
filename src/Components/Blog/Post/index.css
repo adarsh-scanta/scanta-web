@@ -1,0 +1,30 @@
+.blog-content {
+    margin: 2rem;
+}
+
+.blog-content p {
+    margin: 0 auto !important;
+
+}
+
+.blog-content h1{
+    margin-bottom: 0;
+}
+
+.blog-content h2{
+    margin-bottom: 0;
+    font-size: 25px;
+}
+
+.blog-content p img {
+    max-width: 80%;
+    margin: 0 4rem;
+}
+
+
+strong {
+    color: #000;
+    font-family: "Poppins Bold";
+    font-weight: bold;
+
+}
