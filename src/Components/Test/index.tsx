@@ -1,3 +1,4 @@
+"use client";
 import { Row, Col, Collapse, Modal } from "antd";
 import { lazy, useState, useEffect } from "react";
 import { withTranslation } from "react-i18next";
@@ -1807,4 +1808,3 @@ const CompanyInfoBlock = ({ t, from }: any) => {
 };
 
 export default withTranslation()(CompanyInfoBlock);
- 

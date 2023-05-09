@@ -1,6 +1,7 @@
+"use client";
 import { Row, Col } from "antd";
 import { withTranslation } from "react-i18next";
-import { Fade } from 'react-awesome-reveal';
+import { Fade } from "react-awesome-reveal";
 import ServiceCard from "../../ServiceCard";
 import {
   ServicesBlockContent,
@@ -10,13 +11,13 @@ import {
 import Container from "../../../common/Container";
 
 const ServicesBlock = ({ t, cards }: any) => {
- 
   return (
     <ServicesBlockContent>
       <Container>
         <Row justify="center">
           <Col>
-            <ServicesHeading><span style={{ color: "#2F327D" }}>Why </span>TruPulse
+            <ServicesHeading>
+              <span style={{ color: "#2F327D" }}>Why </span>TruPulse
             </ServicesHeading>
           </Col>
         </Row>
@@ -27,7 +28,6 @@ const ServicesBlock = ({ t, cards }: any) => {
             </Col>
           ))}
         </Row>
-
       </Container>
     </ServicesBlockContent>
   );

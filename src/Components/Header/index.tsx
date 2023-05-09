@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { Row, Col, Drawer, Dropdown, Menu, Modal } from "antd";
 import { withTranslation } from "react-i18next";
 import { Button } from "../../common/Button";
-import { Link, useLocation } from "react-router-dom";
+import Link from "next/link";
 import {
   HeaderSection,
   LogoContainer,
@@ -26,7 +26,6 @@ import { collection, setDoc, doc, query, onSnapshot } from "firebase/firestore";
 import { db } from "../../firebase";
 
 const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
-  const location = useLocation();
   const [user, loading, error] = useAuthState(auth);
   const [visible, setVisibility] = useState(false);
   const [showHeader, setShowHeader] = useState(true);
@@ -51,26 +50,26 @@ const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
     };
   });
 
-  const scrollTo = (id: string) => {
-    if (
-      (location.pathname === "/departments" &&
-        (id === "Executive-Management" ||
-          id === "Human-Resource" ||
-          id === "IT-Security" ||
-          id === "LandC")) ||
-      (location.pathname === "/company" &&
-        (id === "Our-Story" ||
-          id === "Our-Team" ||
-          id === "About" ||
-          id === "contact-us"))
-    ) {
-      const element = document.getElementById(id) as HTMLDivElement;
-      element.scrollIntoView({
-        behavior: "smooth",
-      });
-      setVisibility(false);
-    }
-  };
+  // const scrollTo = (id: string) => {
+  //   if (
+  //     (location.pathname === "/departments" &&
+  //       (id === "Executive-Management" ||
+  //         id === "Human-Resource" ||
+  //         id === "IT-Security" ||
+  //         id === "LandC")) ||
+  //     (location.pathname === "/company" &&
+  //       (id === "Our-Story" ||
+  //         id === "Our-Team" ||
+  //         id === "About" ||
+  //         id === "contact-us"))
+  //   ) {
+  //     const element = document.getElementById(id) as HTMLDivElement;
+  //     element.scrollIntoView({
+  //       behavior: "smooth",
+  //     });
+  //     setVisibility(false);
+  //   }
+  // };
 
   const showDrawer = () => {
     setVisibility(!visible);
@@ -89,60 +88,36 @@ const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
       }}
     >
       <Menu.Item>
-        <Link to="/company#About">
+        <Link href="/company#About">
           <Span
-            onClick={() => {
-              scrollTo("About");
-              (window as { [key: string]: any })["track_load"](
-                "https://www.scanta.io/company#About",
-                "About Us"
-              );
-            }}
+           
           >
             About
           </Span>
         </Link>
       </Menu.Item>
       <Menu.Item>
-        <Link to="/company#Our-Team">
+        <Link href="/company#Our-Team">
           <Span
-            onClick={() => {
-              scrollTo("Our-Team");
-              (window as { [key: string]: any })["track_load"](
-                "https://www.scanta.io/company#Our-Team",
-                "About Us-Team"
-              );
-            }}
+            
           >
             Our Team
           </Span>
         </Link>
       </Menu.Item>
       <Menu.Item>
-        <Link to="/company#Our-Advisors">
+        <Link href="/company#Our-Advisors">
           <Span
-            onClick={() => {
-              scrollTo("Our-Advisor");
-              (window as { [key: string]: any })["track_load"](
-                "https://www.scanta.io/company#Our-Advisors",
-                "About Us-Advisor"
-              );
-            }}
+           
           >
             Advisors
           </Span>
         </Link>
       </Menu.Item>
       <Menu.Item>
-        <Link to="/company#contact-us">
+        <Link href="/company#contact-us">
           <Span
-            onClick={() => {
-              scrollTo("Contact-Us");
-              (window as { [key: string]: any })["track_load"](
-                "https://www.scanta.io/company#contact-us",
-                "Contact Us"
-              );
-            }}
+           
           >
             Contact Us
           </Span>
@@ -164,10 +139,6 @@ const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
   const handleDemoRequestButtonClick = async () => {
     openModal();
     //Lead Forensic function call
-    (window as { [key: string]: any })["track_load"](
-      "https://www.scanta.io/company#contact-us",
-      "Contact Us"
-    );
     if (ctaClicksCount > 0) {
       try {
         await setDoc(doc(db, "stats", "P0kHUuxV7HZvSA7XrcHh"), {
@@ -186,28 +157,18 @@ const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
         <Row justify="space-between">
           <Col>
             <CustomNavLinkSmall>
-              <Link to="/" aria-label="homepage">
+              <Link href="/" aria-label="homepage">
                 <Span
-                  onClick={() => {
-                    (window as { [key: string]: any })["track_load"](
-                      "https://www.scanta.io/",
-                      "Home Page"
-                    );
-                  }}
+                 
                 >
                   Home
                 </Span>
               </Link>
             </CustomNavLinkSmall>
             <CustomNavLinkSmall>
-              <Link to="/trupulse" aria-label="product">
+              <Link href="/trupulse" aria-label="product">
                 <Span
-                  onClick={() => {
-                    (window as { [key: string]: any })["track_load"](
-                      "https://www.scanta.io/trupulse",
-                      "Product Page"
-                    );
-                  }}
+                 
                 >
                   TruPulse™
                 </Span>
@@ -220,14 +181,9 @@ const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
                   className="ant-dropdown-link"
                   onClick={(e) => e.preventDefault()}
                 >
-                  <Link to="/company">
+                  <Link href="/company">
                     <Span
-                      onClick={() => {
-                        (window as { [key: string]: any })["track_load"](
-                          "https://www.scanta.io/company",
-                          "About Us"
-                        );
-                      }}
+                      
                     >
                       About
                     </Span>
@@ -237,14 +193,9 @@ const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
               </Dropdown>
             </CustomNavLinkSmall>
             <CustomNavLinkSmall>
-              <Link to="/blog">
+              <Link href="/blog">
                 <Span
-                  onClick={() => {
-                    (window as { [key: string]: any })["track_load"](
-                      "https://www.scanta.io/blog",
-                      "Blog Page"
-                    );
-                  }}
+                  
                 >
                   Blog
                 </Span>
@@ -257,7 +208,7 @@ const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
                 <CustomNavLinkSmall
                   style={{ minWidth: "185px", margin: "0.5rem" }}
                 >
-                  <Link to="/request-demo">
+                  <Link href="/request-demo">
                     <CTAWrapper
                       className="pulse"
                       // onClick={handleDemoRequestButtonClick}
@@ -273,9 +224,9 @@ const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
                   }}
                   // onClick={() => scrollTo("contact")}
                 >
-                  <Link to="/free-trial">
+                  <Link href="/free-trial">
                     <CTAWrapper
-                      className="pulse"
+                      className="pulse" 
                       // onClick={handleDemoRequestButtonClick}
                     >
                       <Button>{t("Free Trial")}</Button>
@@ -308,14 +259,9 @@ const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
     >
       <Row justify="space-between">
         <LogoContainer
-          to="/"
+          href="/"
           aria-label="homepage"
-          onClick={() => {
-            (window as { [key: string]: any })["track_load"](
-              "https://www.scanta.io/",
-              "Home Page"
-            );
-          }}
+          
         >
           <img
             src="\img\icons\logo192.png"

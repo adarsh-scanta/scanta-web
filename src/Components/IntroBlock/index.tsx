@@ -1,6 +1,5 @@
-import { useState } from "react";
 import { Row, Col } from "antd";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { withTranslation } from "react-i18next";
 import { SvgIcon } from "../../common/SvgIcon";
 import IntroArt from "../../assets/arts/IntroArt";
@@ -33,9 +32,8 @@ const RightBlock = ({ t, id }: any) => {
                   and corporate culture.
                 </Subtitle>
                 <Content>
-                  TruPulse uses AI to help you
-                  <br /> understand the employee experience without running
-                  surveys.
+                  TruPulse uses AI to help you understand
+                  <br /> the employee experience without running surveys.
                 </Content>
               </div>
               <div style={{ margin: "4rem 0 0" }}>
@@ -43,17 +41,8 @@ const RightBlock = ({ t, id }: any) => {
                   <Col xs={24} sm={8} md={24} lg={24} xl={24}>
                     <div style={{ margin: "0.5rem 0", minWidth: "190px" }}>
                       <CTAWrapper className="pulse">
-                        <Link to="/trupulse">
-                          <Button
-                            onClick={() => {
-                              (window as { [key: string]: any })["track_load"](
-                                "https://www.scanta.io/trupulse",
-                                "Product Page"
-                              );
-                            }}
-                          >
-                            {t("Learn more")}
-                          </Button>
+                        <Link href="/trupulse">
+                          <Button>{t("Learn more")}</Button>
                         </Link>
                       </CTAWrapper>
                     </div>
@@ -63,10 +52,8 @@ const RightBlock = ({ t, id }: any) => {
                       style={{ margin: "0.5rem 0", minWidth: "190px" }}
                     ></div>
                     <CTAWrapper className="pulse">
-                      <Link to="/request-demo">
-                        <Button>
-                          {t("Request a Demo")}
-                        </Button>
+                      <Link href="/request-demo">
+                        <Button>{t("Request a Demo")}</Button>
                       </Link>
                     </CTAWrapper>
                   </Col>

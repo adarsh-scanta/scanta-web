@@ -1,6 +1,11 @@
+"use client";
 import React, { useEffect, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
-import { auth, logInWithEmailAndPassword ,sendPasswordReset} from "../../../firebase";
+import {
+  auth,
+  logInWithEmailAndPassword,
+  sendPasswordReset,
+} from "../../../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Row, Col } from "antd";
 import { withTranslation } from "react-i18next";
@@ -9,7 +14,6 @@ import Container from "../../../common/Container";
 import "./index.css";
 
 const ResetPassword = () => {
-
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [user, loading, error] = useAuthState(auth);
@@ -25,7 +29,17 @@ const ResetPassword = () => {
   return (
     <RightBlockContainer id="blog-login">
       <Container>
-        <p style={{ color: "#2f327d", fontFamily: "Poppins bold", fontSize: "28px", fontWeight: "600", margin: "2rem " }}>Reset Password</p>
+        <p
+          style={{
+            color: "#2f327d",
+            fontFamily: "Poppins bold",
+            fontSize: "28px",
+            fontWeight: "600",
+            margin: "2rem ",
+          }}
+        >
+          Reset Password
+        </p>
         <Row justify="space-between">
           <div className="login">
             <div className="login__container">
@@ -36,7 +50,7 @@ const ResetPassword = () => {
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="E-mail Address"
               />
-              
+
               <button
                 className="login__btn"
                 onClick={() => sendPasswordReset(email)}
@@ -44,11 +58,10 @@ const ResetPassword = () => {
                 Send
               </button>
               <div>
-                Back to{" "}<Link to="/blog/login">Login</Link>
+                Back to <Link to="/blog/login">Login</Link>
               </div>
             </div>
           </div>
-
         </Row>
       </Container>
     </RightBlockContainer>

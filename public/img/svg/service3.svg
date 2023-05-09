@@ -1,0 +1,21 @@
+<svg width="180" height="181" viewBox="0 0 180 181" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_d_1846_1679)">
+<circle cx="90" cy="80.7285" r="50" fill="#5B73F1"/>
+</g>
+<path d="M119 106.2C119 108 118.3 109.7 117 111C115.7 112.3 114 113 112.2 113H67.8C64.1 113 61 109.9 61 106.2C61 105.7 61.5 105.2 62 105.2H118C118.5 105.2 119 105.6 119 106.2Z" fill="white"/>
+<path d="M111.5 103.2H68.5C67.9 103.2 67.5 102.8 67.5 102.2V83.6C67.5 81.8 68.9 80.3 70.5 80.3H109.4C111.1 80.3 112.4 81.8 112.4 83.6V102.2C112.5 102.7 112.1 103.2 111.5 103.2ZM69.5 101.2H110.5V83.6C110.5 82.9 110 82.3 109.5 82.3H70.5C69.9 82.3 69.5 82.9 69.5 83.6V101.2Z" fill="white"/>
+<path d="M97 91.3L93.6 93.7L94.9 97.6C95 98 94.9 98.5 94.5 98.7C94.2 99 93.7 99 93.3 98.7L90 96.3L86.7 98.7C86.5 98.8 86.3 98.9 86.1 98.9C85.9 98.9 85.7 98.8 85.5 98.7C85.2 98.4 85 98 85.1 97.6L86.4 93.7L83 91.3C82.6 91 82.5 90.6 82.6 90.2C82.7 89.8 83.1 89.5 83.6 89.5H87.8L89.1 85.6C89.2 85.2 89.6 84.9 90.1 84.9C90.5 84.9 90.9 85.2 91.1 85.6L92.4 89.5H96.6C97 89.5 97.4 89.8 97.6 90.2C97.5 90.5 97.3 91 97 91.3Z" fill="white"/>
+<path d="M82.8 56.3C82.8 52.3 86 49 90 49C94 49 97.3 52.3 97.3 56.3C97.3 60.3 94 63.5 90 63.5C86 63.5 82.8 60.3 82.8 56.3Z" fill="white"/>
+<path d="M106.4 74.6V78.3H73.6001V74.6C73.6001 71.3 76.3001 68.6 79.6001 68.6H86.9001C87.3001 68.6 87.7001 68.9 87.8001 69.2L89.6001 73.1L91.4001 69.2C91.5001 68.9 91.9001 68.6 92.3001 68.6H100.4C103.7 68.6 106.4 71.3 106.4 74.6Z" fill="white"/>
+<defs>
+<filter id="filter0_d_1846_1679" x="0" y="0.728516" width="180" height="180" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="10"/>
+<feGaussianBlur stdDeviation="20"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.212 0 0 0 0 0.238778 0 0 0 0 0.533333 0 0 0 0.06 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1846_1679"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1846_1679" result="shape"/>
+</filter>
+</defs>
+</svg>

@@ -1,7 +1,8 @@
+"use client";
 import { useState, useEffect } from "react";
 import { Row, Col, Modal, Input } from "antd";
 import { withTranslation } from "react-i18next";
-import { Link, history, useHistory } from "react-router-dom";
+import { history, useHistory } from "react-router-dom";
 import Container from "../../common/Container";
 import { Button } from "../../common/Button";
 import ZapierForm from "react-zapier-form";

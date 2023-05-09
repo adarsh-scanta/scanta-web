@@ -1,3 +1,4 @@
+"use client";
 import { Row, Col } from "antd";
 import { withTranslation } from "react-i18next";
 import "./index.css";
@@ -9,8 +10,7 @@ import {
 } from "./styles";
 import Container from "../../../common/Container";
 
-const MainBlock = ({ id, t, openModal, isModalVisible, closeModal }: any) => {
-
+const MainBlock = ({ id, t }: any) => {
   return (
     <RightBlockContainer id="intro">
       <Container>
@@ -1271,7 +1271,6 @@ const MainBlock = ({ id, t, openModal, isModalVisible, closeModal }: any) => {
                       privacy.
                     </p>
                   </Row>
-                  
                 </div>
               </ContentWrapper>
               <SplashIcon1

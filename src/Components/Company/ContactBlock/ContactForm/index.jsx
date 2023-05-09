@@ -1,3 +1,4 @@
+"use client";
 import React, { useRef, useState, useEffect } from "react";
 import { Row, Col } from "antd";
 import ZapierForm from "react-zapier-form";

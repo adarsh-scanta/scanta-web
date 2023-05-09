@@ -1,3 +1,4 @@
+"use client";
 import { useState } from "react";
 import { Row, Col } from "antd";
 import { withTranslation } from "react-i18next";
@@ -30,7 +31,7 @@ const MainBlock = ({ t, id }: any) => {
       history.push("/thankyou");
     },
   });
- 
+
   return (
     <RightBlockContainer id="intro">
       <Container>
@@ -217,7 +218,7 @@ const MainBlock = ({ t, id }: any) => {
                   styles={{
                     height: "100%",
                     position: "relative",
-                    top: "20px", 
+                    top: "20px",
                     scrollbarWidth: "none",
                     border: "none",
                     boxShadow: "none",

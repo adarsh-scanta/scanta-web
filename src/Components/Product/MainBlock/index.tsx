@@ -1,3 +1,5 @@
+
+"use client";
 import { Row, Col, Modal } from "antd";
 import { withTranslation } from "react-i18next";
 import { SvgIcon } from "../../../common/SvgIcon";
@@ -15,7 +17,7 @@ import {
 import Container from "../../../common/Container";
 import ProductTopArt from "../../../assets/arts/ProductTopArt";
 
-const RightBlock = ({ t, id, openModal, isModalVisible, closeModal }: any) => {
+const RightBlock = ({ t, id }: any) => {
 
   return (
     <RightBlockContainer>

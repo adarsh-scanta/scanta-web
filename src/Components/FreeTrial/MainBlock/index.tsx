@@ -1,3 +1,4 @@
+"use client";
 import { useState } from "react";
 import { Row, Col } from "antd";
 import { withTranslation } from "react-i18next";

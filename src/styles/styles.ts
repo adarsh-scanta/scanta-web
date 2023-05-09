@@ -1,28 +1,7 @@
+"use client";
 import { createGlobalStyle } from "styled-components";
 
 export const Styles = createGlobalStyle`
-
-    @font-face {
-        font-family: "Poppins Light";
-        src: url("/fonts/Poppins-Light.ttf") format("truetype");
-        font-style: normal;
-        font-display: fallback;
-    }
-
-    @font-face {
-        font-family: "Poppins Bold";
-        src: url("/fonts/Poppins-Bold.ttf") format("truetype");
-        font-style: normal;
-        font-display: fallback;
-    }
-
-    @font-face {
-        font-family: "Poppins SemiBold";
-        src: url("/fonts/Poppins-SemiBold.ttf") format("truetype");
-        font-style: normal;
-        font-display: fallback;
-    }
-
 
     body,
     html,

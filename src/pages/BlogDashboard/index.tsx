@@ -1,3 +1,4 @@
+"use client";
 import { useState, useEffect } from "react";
 import { db } from "../../firebase";
 import { Row, Col } from "antd";

@@ -1,3 +1,4 @@
+"use client";
 import { useState, useEffect, lazy } from "react";
 import { useHistory } from "react-router-dom";
 const ScrollToTop = lazy(() => import("../../common/ScrollToTop"));

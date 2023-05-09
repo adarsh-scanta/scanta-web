@@ -1,3 +1,4 @@
+"use client";
 import { lazy, useState } from "react";
 import { Row, Col, Carousel } from "antd";
 import { SplashArt3 } from "../../../assets/arts/SplashArt";

@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { auth, logInWithEmailAndPassword } from "../../../firebase";
@@ -12,7 +13,7 @@ import Content from "./Content";
 import parse from "html-react-parser";
 import { FacebookShareButton, FacebookIcon } from "react-share";
 var options = {
-  weekday: "long", 
+  weekday: "long",
   year: "numeric",
   month: "long",
   day: "numeric",
@@ -67,7 +68,6 @@ const Posts = ({ post }: any) => {
             />
           </Row>
           {/* <Content content={post?.data?.content} /> */}
-          
           <div className="blog-content">
             {parse(post?.data?.content ? post?.data?.content : "", parseOption)}
           </div>

@@ -1,3 +1,4 @@
+"use client";
 import styled from "styled-components";
 
 export const ServicesBlockContent = styled("section")`
@@ -13,8 +14,8 @@ export const ServicesBlockContent = styled("section")`
 
 export const Content = styled("p")`
   margin: 1.5rem 0 2rem 0;
-  width:80%;
-  color:#696984;
+  width: 80%;
+  color: #696984;
   text-align: center;
 `;
 

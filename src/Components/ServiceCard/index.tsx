@@ -1,3 +1,4 @@
+"use client";
 import { useState } from "react";
 import { withTranslation } from "react-i18next";
 import { SvgIcon } from "../../common/SvgIcon";
@@ -5,7 +6,6 @@ import { SvgIcon } from "../../common/SvgIcon";
 import { ServiceCardTemplate, CardContent, CardHeading } from "./styles";
 
 const ServiceCard = ({ card, from }: any) => {
-
   const [mouseOver, setMouseOver] = useState("");
   const onMouseOver = (sectionHeading: any) => {
     setMouseOver(sectionHeading);
@@ -33,15 +33,9 @@ const ServiceCard = ({ card, from }: any) => {
       <div
         style={{
           position: "absolute",
-          bottom:
-            mouseOver === card.cardHeading
-              ? "58%"
-              : "75%",
+          bottom: mouseOver === card.cardHeading ? "58%" : "75%",
           // display: mouseOver === card.cardHeading ? "none" : "",
-          left:
-            mouseOver === card.cardHeading
-              ? "0"
-              : "38%",
+          left: mouseOver === card.cardHeading ? "0" : "38%",
           transition: "all 0.3s",
         }}
       >
@@ -55,8 +49,7 @@ const ServiceCard = ({ card, from }: any) => {
       <div>
         <CardHeading
           style={{
-            margin:
-              mouseOver === card.cardHeading ? "3rem 0 0" : "2rem 0 0",
+            margin: mouseOver === card.cardHeading ? "3rem 0 0" : "2rem 0 0",
             color: mouseOver === card.cardHeading ? "#fff" : "",
           }}
         >
@@ -66,10 +59,11 @@ const ServiceCard = ({ card, from }: any) => {
           style={{
             color: mouseOver === card.cardHeading ? "#fff" : "#696984",
           }}
-        ><ul>
-            <li style={{margin:"0.3rem 0"}}>{card.cardContent1}</li>
-            <li style={{margin:"0.3rem 0"}}>{card.cardContent2}</li>
-            <li style={{margin:"0.3rem 0"}}>{card.cardContent3}</li>
+        >
+          <ul>
+            <li style={{ margin: "0.3rem 0" }}>{card.cardContent1}</li>
+            <li style={{ margin: "0.3rem 0" }}>{card.cardContent2}</li>
+            <li style={{ margin: "0.3rem 0" }}>{card.cardContent3}</li>
           </ul>
         </CardContent>
       </div>

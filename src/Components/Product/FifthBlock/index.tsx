@@ -1,11 +1,13 @@
+"use client";
 import { Row, Col } from "antd";
 import { withTranslation } from "react-i18next";
-import { Fade } from 'react-awesome-reveal';
+import { Fade } from "react-awesome-reveal";
 import ServiceCard from "../../ServiceCard";
 import {
   ServicesBlockContent,
   ServicesHeading,
-  ServicesSubHeading, Content
+  ServicesSubHeading,
+  Content,
 } from "./styles";
 import Container from "../../../common/Container";
 

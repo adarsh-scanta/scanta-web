@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { auth, logInWithEmailAndPassword } from "../../../firebase";
@@ -9,7 +10,6 @@ import Container from "../../../common/Container";
 import "./index.css";
 
 const LoginPage = () => {
-
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [user, loading, error] = useAuthState(auth);
@@ -25,7 +25,17 @@ const LoginPage = () => {
   return (
     <RightBlockContainer id="blog-login">
       <Container>
-        <p style={{ color: "#2f327d", fontFamily: "Poppins bold", fontSize: "28px", fontWeight: "600", margin: "2rem 2rem 0" }}>Login</p>
+        <p
+          style={{
+            color: "#2f327d",
+            fontFamily: "Poppins bold",
+            fontSize: "28px",
+            fontWeight: "600",
+            margin: "2rem 2rem 0",
+          }}
+        >
+          Login
+        </p>
         <Row justify="space-between">
           <div className="login">
             <div className="login__container">
@@ -52,10 +62,8 @@ const LoginPage = () => {
               <div>
                 <Link to="/blog/reset">Forgot Password</Link>
               </div>
-              
             </div>
           </div>
-
         </Row>
       </Container>
     </RightBlockContainer>

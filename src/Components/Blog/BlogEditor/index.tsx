@@ -1,60 +1,72 @@
+"use client";
 import { useState } from "react";
 import { Row, Col } from "antd";
 import { withTranslation } from "react-i18next";
 import { RightBlockContainer } from "./styles";
 import Container from "../../../common/Container";
-import ReactQuill, { Quill } from 'react-quill';
+import ReactQuill, { Quill } from "react-quill";
 import "./index.css";
-import 'react-quill/dist/quill.snow.css';
-import { Button, Input } from 'antd';
-import { DeleteOutlined } from '@ant-design/icons';
+import "react-quill/dist/quill.snow.css";
+import { Button, Input } from "antd";
+import { DeleteOutlined } from "@ant-design/icons";
 import { storage } from "../../../firebase";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
-import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
-import { db } from '../../../firebase';
-const fontSizeArr = ["21px",'8px', '9px', '10px', '12px', '14px', '16px', '20px', '24px', '32px', '42px', '54px', '68px', '84px', '98px'];
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import { db } from "../../../firebase";
+const fontSizeArr = [
+  "21px",
+  "8px",
+  "9px",
+  "10px",
+  "12px",
+  "14px",
+  "16px",
+  "20px",
+  "24px",
+  "32px",
+  "42px",
+  "54px",
+  "68px",
+  "84px",
+  "98px",
+];
 
-var Size = Quill.import('attributors/style/size');
-var Bold = Quill.import('formats/bold');
-Bold.tagName = 'B';   // Quill uses <strong> by default
+var Size = Quill.import("attributors/style/size");
+var Bold = Quill.import("formats/bold");
+Bold.tagName = "B"; // Quill uses <strong> by default
 Quill.register(Bold, true);
 Size.whitelist = fontSizeArr;
 Quill.register(Size, true);
 
-
 const { Search } = Input;
 
-
-
 const BlogEditor = () => {
-
   const [title, setTitle] = useState("");
   const [altTag, setAltTag] = useState("");
   const [metaTitle, setMetaTitle] = useState("");
   const [metaDescription, setMetaDescription] = useState("");
-  const [content, setContent] = useState('');
+  const [content, setContent] = useState("");
   const [tags, setTags] = useState([] as any);
   const [file, setFile] = useState({} as any);
 
   const modules = {
     toolbar: [
       // [{ header: [1, 2, 3, false] }],
-      [{ 'font': [] }],
-      [{ "size": fontSizeArr }],
-      ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
-      ['blockquote', 'code-block', 'link'],
+      [{ font: [] }],
+      [{ size: fontSizeArr }],
+      ["bold", "italic", "underline", "strike"], // toggled buttons
+      ["blockquote", "code-block", "link"],
       ["image"],
-      [{ 'list': 'ordered' }, { 'list': 'bullet' }],
-      [{ 'script': 'sub' }, { 'script': 'super' }],      // superscript/subscript
-      [{ 'indent': '-1' }, { 'indent': '+1' }],          // outdent/indent
-      [{ 'direction': 'rtl' }],                         // text direction
-      [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
-      [{ 'align': [] }],
+      [{ list: "ordered" }, { list: "bullet" }],
+      [{ script: "sub" }, { script: "super" }], // superscript/subscript
+      [{ indent: "-1" }, { indent: "+1" }], // outdent/indent
+      [{ direction: "rtl" }], // text direction
+      [{ color: [] }, { background: [] }], // dropdown with defaults from theme
+      [{ align: [] }],
 
-      ['clean']                                         // remove formatting button
-    ]
-  }
-
+      ["clean"], // remove formatting button
+    ],
+  };
 
   function uniq(a: any) {
     return a.sort().filter(function (item: any, pos: any, ary: any) {
@@ -79,7 +91,6 @@ const BlogEditor = () => {
   function handleChange(event: any) {
     event.preventDefault();
     setFile(event.target.files[0]);
-
   }
 
   const [coverImage, setCoverImage] = useState("");
@@ -110,7 +121,7 @@ const BlogEditor = () => {
       () => {
         // download url
         getDownloadURL(uploadTask.snapshot.ref).then((url) => {
-          setCoverImage(url)
+          setCoverImage(url);
         });
       }
     );
@@ -147,10 +158,10 @@ const BlogEditor = () => {
         setMetaDescription("");
         setTags([]);
       } catch (err) {
-        alert(err)
+        alert(err);
       }
     }
-  }
+  };
 
   return (
     <RightBlockContainer id="blog-editor">
@@ -191,7 +202,7 @@ const BlogEditor = () => {
                     borderRadius: "8px",
                     padding: "0.3rem 0.5rem",
                     color: "#fff",
-                    marginBottom:"0.5rem"
+                    marginBottom: "0.5rem",
                   }}
                 >
                   Upload Image

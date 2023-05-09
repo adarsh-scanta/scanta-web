@@ -1,3 +1,4 @@
+"use client";
 import styled from "styled-components";
 import { Carousel } from "antd";
 
@@ -40,7 +41,7 @@ export const AboutHeading = styled("h6")`
 export const AboutSubHeading = styled("div")`
   font-size: 1.3rem;
   font-weight: 1000;
-  color: #EB7A02;
+  color: #eb7a02;
   @media only screen and (min-width: 1400px) {
     font-size: 1.5rem;
   }

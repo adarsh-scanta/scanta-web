@@ -1,7 +1,9 @@
+"use client";
 import { Row, Col, Collapse, Modal } from "antd";
 import { lazy, useState } from "react";
 import { withTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import Link from "next/link";
 import "./index.css";
 import { Button } from "../../common/Button";
 import { RightOutlined, LeftOutlined } from "@ant-design/icons";
@@ -10,7 +12,7 @@ import {
   CarouselLabel,
   ServicesHeading,
   CarouselWrapper,
-  CTAWrapper,
+  CTAWrapper, 
   Title,
   Content,
 } from "./styles";
@@ -134,7 +136,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                         margin: "2rem 0 0",
                       }}
                     >
-                      <Link to="/trupulse">
+                      <Link href="/trupulse">
                         <Button
                           onClick={() => {
                             (window as { [key: string]: any })["track_load"](
@@ -159,7 +161,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                         margin: "2rem 0 0",
                       }}
                     >
-                      <Link to="/trupulse">
+                      <Link href="/trupulse">
                         <Button
                           onClick={() => {
                             (window as { [key: string]: any })["track_load"](
@@ -1337,7 +1339,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                               className="pulse"
                               style={{ margin: "1rem 0 2rem 4rem" }}
                             >
-                              <Link to="/trupulse">
+                              <Link href="/trupulse">
                                 <Button
                                   onClick={() => {
                                     (window as { [key: string]: any })[
@@ -1360,7 +1362,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                               className="pulse"
                               style={{ margin: "1rem 0 2rem" }}
                             >
-                              <Link to="/trupulse">
+                              <Link href="/trupulse">
                                 <Button
                                   onClick={() => {
                                     (window as { [key: string]: any })[
@@ -1460,7 +1462,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
             </Row>
             <Row justify="center">
               <CTAWrapper className="pulse">
-                <Link to="/trupulse">
+                <Link href="/trupulse">
                   <Button
                     onClick={() => {
                       (window as { [key: string]: any })["track_load"](
@@ -1658,4 +1660,4 @@ const CompanyInfoBlock = ({ t, from }: any) => {
   );
 };
 
-export default withTranslation()(CompanyInfoBlock)
+export default withTranslation()(CompanyInfoBlock);

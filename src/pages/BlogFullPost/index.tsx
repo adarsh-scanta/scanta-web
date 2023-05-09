@@ -1,3 +1,4 @@
+"use client";
 import { useState, useEffect, lazy } from "react";
 import { Skeleton } from "antd";
 import { db } from "../../firebase";
@@ -44,7 +45,7 @@ function BlogFullPost() {
     "text/html"
   );
 
-  console.log(currentPost)
+  console.log(currentPost);
   return (
     <div className="App">
       <ScrollToTop />

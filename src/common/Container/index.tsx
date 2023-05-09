@@ -1,3 +1,4 @@
+"use client";
 import { StyledContainer } from "./styles";
 import { ContainerProps } from "../types";
 
