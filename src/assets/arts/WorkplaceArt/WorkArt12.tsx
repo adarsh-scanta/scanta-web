@@ -1,5 +1,3 @@
-import "./index.css";
-
 const WorkArt12 = () => (
   <div className="mobile">
     <svg
@@ -767,7 +765,7 @@ const WorkArt12 = () => (
         fill="#455A64"
       />
     </svg>
-  </div> 
-); 
+  </div>
+);
 
 export default WorkArt12;

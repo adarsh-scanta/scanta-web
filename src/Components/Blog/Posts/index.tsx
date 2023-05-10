@@ -1,15 +1,11 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { Link, useHistory } from "react-router-dom";
-import { auth, logInWithEmailAndPassword } from "../../../firebase";
-import { useAuthState } from "react-firebase-hooks/auth";
 import { Row, Col, Pagination, Card, Skeleton, Avatar } from "antd";
 import { withTranslation } from "react-i18next";
 import { RightBlockContainer } from "./styles";
 import Container from "../../../common/Container";
-// import "./index.css";
 import { ClockCircleOutlined } from "@ant-design/icons";
-
+import Link from "next/link";
 var options = {
   weekday: "long",
   year: "numeric",
@@ -19,7 +15,6 @@ var options = {
 
 const Posts = ({ posts }: any) => {
   const { Meta } = Card;
-  const history = useHistory();
   const loadingPosts = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
   const [page, setPage] = useState(1);
   const [minIndex, setMinIndex] = useState(0);
@@ -49,23 +44,23 @@ const Posts = ({ posts }: any) => {
     }
   }, [page]);
 
-  const handleClick = (data: any) => {
-    history.push(
-      `blog/${data.title
-        .toLowerCase()
-        .replace(/[^a-zA-Z ]/g, "")
-        .split(" ")
-        .join("-")}`
-    );
-    (window as { [key: string]: any })["track_load"](
-      `blog/${data.title
-        .toLowerCase()
-        .replace(/[^a-zA-Z ]/g, "")
-        .split(" ")
-        .join("-")}`,
-      `Blog-${data.title}`
-    );
-  };
+  // const handleClick = (data: any) => {
+  //   history.push(
+  //     `blog/${data.title
+  //       .toLowerCase()
+  //       .replace(/[^a-zA-Z ]/g, "")
+  //       .split(" ")
+  //       .join("-")}`
+  //   );
+  //   (window as { [key: string]: any })["track_load"](
+  //     `blog/${data.title
+  //       .toLowerCase()
+  //       .replace(/[^a-zA-Z ]/g, "")
+  //       .split(" ")
+  //       .join("-")}`,
+  //     `Blog-${data.title}`
+  //   );
+  // };
   return (
     <RightBlockContainer id="intro">
       <Container>
@@ -95,52 +90,53 @@ const Posts = ({ posts }: any) => {
                   return (
                     <Col xs={24} sm={24} md={12} lg={8} xl={8}>
                       <Row justify="center">
-                        <Card
-                          hoverable
-                          style={{
-                            width: 350,
-                            height: 450,
-                            marginBottom: 36,
-                          }}
-                          cover={
-                            <img
-                              alt={item.data.title}
-                              style={{
-                                width: "100%",
-                                height: "225px",
-                                marginBottom: 16,
-                              }}
-                              src={item.data.cover_image}
+                        <Link href={`/blog/${item.data.title}`} rel="sponsored">
+                          <Card
+                            hoverable
+                            style={{
+                              width: 350,
+                              height: 450,
+                              marginBottom: 36,
+                            }}
+                            cover={
+                              <img
+                                alt={item.data.title}
+                                style={{
+                                  width: "100%",
+                                  height: "225px",
+                                  marginBottom: 16,
+                                }}
+                                src={item.data.cover_image}
+                              />
+                            }
+                          >
+                            <Meta
+                              style={{ color: "#000" }}
+                              title={item.data.title}
+                              description={`${doc?.all[0].textContent?.slice(
+                                0,
+                                100
+                              )}...`}
                             />
-                          }
-                          onClick={() => handleClick(item?.data)}
-                        >
-                          <Meta
-                            style={{ color: "#000" }}
-                            title={item.data.title}
-                            description={`${doc?.all[0].textContent?.slice(
-                              0,
-                              100
-                            )}...`}
-                          />
-                          <hr style={{ margin: "1rem 0 1rem" }} />
-                          <Row justify="start">
-                            <ClockCircleOutlined
-                              style={{
-                                fontSize: "1rem",
-                                margin: "0.2rem 0.5rem",
-                              }}
-                            />
-                            <p style={{ color: "#333", fontSize: "1rem" }}>
-                              {item?.data?.created_at
-                                .toDate()
-                                .toString()
-                                .split(" ")
-                                .slice(0, 4)
-                                .join(" ")}{" "}
-                            </p>
-                          </Row>
-                        </Card>
+                            <hr style={{ margin: "1rem 0 1rem" }} />
+                            <Row justify="start">
+                              <ClockCircleOutlined
+                                style={{
+                                  fontSize: "1rem",
+                                  margin: "0.2rem 0.5rem",
+                                }}
+                              />
+                              <p style={{ color: "#333", fontSize: "1rem" }}>
+                                {item?.data?.created_at
+                                  .toDate()
+                                  .toString()
+                                  .split(" ")
+                                  .slice(0, 4)
+                                  .join(" ")}{" "}
+                              </p>
+                            </Row>
+                          </Card>
+                        </Link>
                       </Row>
                     </Col>
                   );

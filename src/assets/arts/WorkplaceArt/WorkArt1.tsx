@@ -1,4 +1,3 @@
-import "./index.css";
 const WorkArt1 = () => (
   <div className="desktop">
     <svg

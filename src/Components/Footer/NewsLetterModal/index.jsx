@@ -5,7 +5,7 @@ import emailjs from "emailjs-com";
 import ZapierForm from "react-zapier-form";
 import { useHistory } from "react-router-dom";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
-import "./index.css";
+import styles from "./modal.module.css";
 
 const NewsLetterModal = ({ handleClose }) => {
   const history = useHistory();

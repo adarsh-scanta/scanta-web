@@ -32,14 +32,15 @@ left: 45%;
         <Header />
         <IntroBlock id="intro" />
         <Container>
-            <SplashIcon>
-              <SplashArt2 />
-            </SplashIcon>
-            <AboutBlock /> 
-          </Container>
-          <CompanyInfoBlock from="home" />
-          <Footer fromWhere={"home"} />
+          <SplashIcon>
+            <SplashArt2 />
+          </SplashIcon>
+          <AboutBlock />
+        </Container>
+        <CompanyInfoBlock from="home" />
+        <Footer fromWhere={"home"} />
       </>
+      hi
     </React.Fragment>
-  ); 
+  );
 }

@@ -1,5 +1,3 @@
-import "./index.css";
-
 const WorkArt5 = () => (
   <div className="mobile">
     <svg

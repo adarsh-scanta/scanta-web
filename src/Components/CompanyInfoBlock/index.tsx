@@ -4,7 +4,7 @@ import { lazy, useState } from "react";
 import { withTranslation } from "react-i18next";
 // import { Link } from "react-router-dom";
 import Link from "next/link";
-import "./index.css";
+import styles from "./company.module.css";
 import { Button } from "../../common/Button";
 import { RightOutlined, LeftOutlined } from "@ant-design/icons";
 import {
@@ -12,7 +12,7 @@ import {
   CarouselLabel,
   ServicesHeading,
   CarouselWrapper,
-  CTAWrapper, 
+  CTAWrapper,
   Title,
   Content,
 } from "./styles";
@@ -51,7 +51,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
     <>
       {from === "home" ? (
         <LeftContentSection
-          className="homepage-container"
+          className={styles.homepageContainer}
           style={{
             alignItems: "center",
             justifyContent: "center",
@@ -95,7 +95,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                     <WorkArt7 />
                     <WorkArt8 />
                     <CarouselLabel
-                      className="moraleLabel"
+                      className={styles.moraleLabel}
                       style={{ position: "relative", top: "-30px" }}
                     >
                       Morale
@@ -129,7 +129,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                 <Col xs={0} md={0} lg={24} xl={24}>
                   <Row justify="end">
                     <CTAWrapper
-                      className="pulse"
+                      className={styles.pulse}
                       style={{
                         // position: "absolute",
                         // right: "80px",
@@ -154,7 +154,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                 <Col xs={24} md={24} lg={0} xl={0}>
                   <Row justify="center">
                     <CTAWrapper
-                      className="pulse"
+                      className={styles.pulse}
                       style={{
                         position: "relative",
                         left: "5px",
@@ -180,9 +180,9 @@ const CompanyInfoBlock = ({ t, from }: any) => {
             </div>
             <div>
               <Row justify="center">
-                <div className="home-bluebox">
+                <div className={styles.homeBluebox}>
                   <Row justify="space-between">
-                    <div className="mobile">
+                    <div className={styles.mobile}>
                       <Row justify="center">
                         <svg
                           width="100%"
@@ -778,7 +778,10 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                       </div>
                     </Col>
                     <Col xs={24} sm={24} md={24} lg={12} xl={12}>
-                      <div className="desktop" style={{ margin: "1rem 0" }}>
+                      <div
+                        className={styles.desktop}
+                        style={{ margin: "1rem 0" }}
+                      >
                         <Row justify="center">
                           <svg
                             width="100%"
@@ -1336,7 +1339,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                         <Col xs={0} md={0} lg={24} xl={24}>
                           <Row justify="center">
                             <CTAWrapper
-                              className="pulse"
+                              className={styles.pulse}
                               style={{ margin: "1rem 0 2rem 4rem" }}
                             >
                               <Link href="/trupulse">
@@ -1359,7 +1362,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                         <Col xs={24} md={24} lg={0} xl={0}>
                           <Row justify="center">
                             <CTAWrapper
-                              className="pulse"
+                              className={styles.pulse}
                               style={{ margin: "1rem 0 2rem" }}
                             >
                               <Link href="/trupulse">
@@ -1461,7 +1464,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
               </p>
             </Row>
             <Row justify="center">
-              <CTAWrapper className="pulse">
+              <CTAWrapper className={styles.pulse}>
                 <Link href="/trupulse">
                   <Button
                     onClick={() => {
@@ -1480,7 +1483,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
         </LeftContentSection>
       ) : (
         <LeftContentSection
-          className="trupulsePage-container"
+          className={styles.trupulsePageContainer}
           style={{
             alignItems: "center",
             justifyContent: "center",
