@@ -5,10 +5,10 @@ import ZapierForm from "react-zapier-form";
 import { useCalendlyEventListener, PopupWidget } from "react-calendly";
 import { collection, setDoc, doc, query, onSnapshot } from "firebase/firestore";
 import { db } from "../../../../firebase";
-import { useHistory } from "react-router-dom";
+import { useRouter } from "next/router";
 
 const ContactForm = () => {
-  const history = useHistory();
+  const router = useRouter();
   const [ctaClicksCount, setCtaClicksCount] = useState(0);
   const [ctaSubmits, setCtaSubmits] = useState(0);
   // const [calendlyDuration, setCalendlyDuration] = useState(15);
@@ -43,7 +43,7 @@ const ContactForm = () => {
       <ZapierForm action="https://hooks.zapier.com/hooks/catch/14238222/bj1e0wg/">
         {({ error, loading, success }) => {
           if (success) {
-            history.push("thankyou");
+            router.push("thankyou");
             statsUpdate();
           }
           return (

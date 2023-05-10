@@ -13,6 +13,7 @@ import { SplashArt2 } from "@/assets/arts/SplashArt";
 import AboutBlock from "@/Components/AboutBlock";
 import CompanyInfoBlock from "@/Components/CompanyInfoBlock";
 import Footer from "@/components/Footer";
+import Test from "@/Components/Test";
 // const ScrollToTop = lazy(() => import("../common/ScrollToTop"));
 
 export default function Home() {
@@ -37,7 +38,7 @@ left: 45%;
           </SplashIcon>
           <AboutBlock />
         </Container>
-        <CompanyInfoBlock from="home" />
+        <Test from="testHome" />
         <Footer fromWhere={"home"} />
       </>
     </React.Fragment>

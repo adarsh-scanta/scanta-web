@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { useRouter } from "next/router";
+import Link from "next/link";
 import {
   auth,
   logInWithEmailAndPassword,
@@ -11,19 +12,19 @@ import { Row, Col } from "antd";
 import { withTranslation } from "react-i18next";
 import { RightBlockContainer } from "./styles";
 import Container from "../../../common/Container";
-import "./index.css";
+import styles from "./index.module.css";
 
-const ResetPassword = () => {
+const ResetPassword = () => { 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [user, loading, error] = useAuthState(auth);
-  const history = useHistory();
+  const router = useRouter();
   useEffect(() => {
     if (loading) {
       // maybe trigger a loading screen
       return;
     }
-    if (user) history.push("/blog/dashboard");
+    if (user) router.push("/blog/dashboard");
   }, [user, loading]);
 
   return (
@@ -41,24 +42,24 @@ const ResetPassword = () => {
           Reset Password
         </p>
         <Row justify="space-between">
-          <div className="login">
-            <div className="login__container">
+          <div className={styles.login}>
+            <div className={styles.login__container}>
               <input
                 type="text"
-                className="login__textBox"
+                className={styles.login__textBox}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="E-mail Address"
               />
 
               <button
-                className="login__btn"
+                className={styles.login__btn}
                 onClick={() => sendPasswordReset(email)}
               >
                 Send
               </button>
               <div>
-                Back to <Link to="/blog/login">Login</Link>
+                Back to <Link href="/blog/login">Login</Link>
               </div>
             </div>
           </div>

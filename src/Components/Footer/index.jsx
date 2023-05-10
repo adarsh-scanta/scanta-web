@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { Row, Col, Modal, Input } from "antd";
 import { withTranslation } from "react-i18next";
-import { history, useHistory } from "react-router-dom";
+import { useRouter } from "next/router";
 import Container from "../../common/Container";
 import { Button } from "../../common/Button";
 import ZapierForm from "react-zapier-form";
@@ -14,7 +14,7 @@ import {
   LeftContainer,
 } from "./styles";
 const Footer = ({ t, fromWhere }) => {
-  const history = useHistory();
+  const router = useRouter();
 
   return (
     <>
@@ -157,7 +157,7 @@ const Footer = ({ t, fromWhere }) => {
                       <div className="newsletter-form-footer">
                         <ZapierForm action="https://hooks.zapier.com/hooks/catch/14238222/bj1czfx/">
                           {({ error, loading, success }) => {
-                            success && history.push("/trupulse");
+                            success && router.push("/trupulse");
                             return (
                               <div>
                                 {!success && !loading && (
@@ -408,7 +408,7 @@ const Footer = ({ t, fromWhere }) => {
                       <div className="newsletter-form-footer">
                         <ZapierForm action="https://hooks.zapier.com/hooks/catch/14238222/bj1czfx/">
                           {({ error, loading, success }) => {
-                            success && history.push("/trupulse");
+                            success && router.push("/trupulse");
                             return (
                               <div>
                                 {!success && !loading && (

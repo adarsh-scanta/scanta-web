@@ -6,11 +6,11 @@ import { collection, query, orderBy, onSnapshot } from "firebase/firestore";
 import BlogTable from "../../components/Blog/BlogTable";
 import Footer from "../../components/Footer";
 import { auth } from "../../firebase";
-import { useHistory } from "react-router-dom";
+import { useRouter } from "next/router";
 import { useAuthState } from "react-firebase-hooks/auth";
 
 function BlogDashboard() {
-  const history = useHistory();
+  const router = useRouter();
   const [user] = useAuthState(auth);
 
   const [ctaClicksCount, setCtaClicksCount] = useState(0);
@@ -25,7 +25,7 @@ function BlogDashboard() {
 
   useEffect(() => {
     if (!user) {
-      history.push("/blog/login");
+      router.push("/blog/login");
     }
   }, []);
 

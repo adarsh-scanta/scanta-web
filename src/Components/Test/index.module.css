@@ -6,7 +6,7 @@
     display: none;
 }
 
-.homepage-container {
+.homepage_container {
     height: 2750px;
 }
 
@@ -14,7 +14,7 @@
     height: 2100px;
 } */
 
-.home-bluebox {
+.home_bluebox {
     background: #423EB6;
     width: 100%;
     border-radius: 30px;
@@ -32,17 +32,17 @@
         display: block;
     }
     
-    .homepage-container {
+    .homepage_container {
         height: 3800px;
     }
     
-    .home-bluebox {
+    .home_bluebox {
         padding: 0;
         width: 95%;
     }
 }
 @media screen and (max-width: 580px) {
-    .homepage-container {
+    .homepage_container {
         height: 4500px;
 
     }

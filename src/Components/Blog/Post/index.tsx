@@ -1,17 +1,17 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { Link, useHistory } from "react-router-dom";
 import { auth, logInWithEmailAndPassword } from "../../../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Row, Col, Pagination, Card, Skeleton, Avatar } from "antd";
 import { withTranslation } from "react-i18next";
 import { RightBlockContainer } from "./styles";
 import Container from "../../../common/Container";
-import "./index.css";
+import styles from "./index.module.css";
 import { ClockCircleOutlined } from "@ant-design/icons";
 import Content from "./Content";
 import parse from "html-react-parser";
 import { FacebookShareButton, FacebookIcon } from "react-share";
+import moment from "moment";
 var options = {
   weekday: "long",
   year: "numeric",
@@ -25,9 +25,14 @@ const parseOption = {
     }
   },
 };
+const format_date = (value) => {
+  if (value) {
+    return moment(String(value)).format("dddd, MMMM Do YYYY");
+  }
+};
+
 const Posts = ({ post }: any) => {
   const { Meta } = Card;
-  const history = useHistory();
 
   return (
     <RightBlockContainer>
@@ -52,12 +57,7 @@ const Posts = ({ post }: any) => {
               <ClockCircleOutlined
                 style={{ fontSize: "1rem", margin: "0.2rem 0.5rem" }}
               />
-              {post?.data?.created_at
-                .toDate()
-                .toString()
-                .split(" ")
-                .slice(0, 5)
-                .join(" ")}{" "}
+              {format_date(new Date(post?.data?.created_at.seconds * 1000))}{" "}
             </p>
           </Row>{" "}
           <Row justify="center">
@@ -68,12 +68,13 @@ const Posts = ({ post }: any) => {
             />
           </Row>
           {/* <Content content={post?.data?.content} /> */}
-          <div className="blog-content">
+          <div className={styles.blog_content}>
             {parse(post?.data?.content ? post?.data?.content : "", parseOption)}
           </div>
           {post?.data?.tags !== "" && (
             <p style={{ color: "#696984", fontSize: "1rem", margin: "0 2rem" }}>
-              <strong>Tags: </strong> {post?.data?.tags.split(",").join(", ")}
+              <strong className="strng">Tags: </strong>{" "}
+              {post?.data?.tags.split(",").join(", ")}
             </p>
           )}
         </div>

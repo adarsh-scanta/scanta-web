@@ -30,18 +30,18 @@ export const Title = styled("span")`
   }
 `;
 export const Subtitle = styled("span")`
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   margin-bottom: 0;
   font-family: Poppins SemiBold;
   color: #430568;
   // line-height: 1.18;
 } @media only screen and (min-width: 1400px) {
-  font-size: 1.3rem;
+  font-size: 1.7rem;
 }
   @media only screen and (max-width: 1080px) {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   @media only screen and (max-width: 768px) {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
 `;
 

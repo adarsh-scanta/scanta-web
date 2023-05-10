@@ -2,8 +2,9 @@
 import { Row, Col, Collapse, Modal } from "antd";
 import { lazy, useState, useEffect } from "react";
 import { withTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
-import "./index.css";
+// import { Link } from "react-router-dom";
+import Link from "next/link";
+import styles from "./index.module.css";
 import { Button } from "../../common/Button";
 import { RightOutlined, LeftOutlined } from "@ant-design/icons";
 import {
@@ -58,7 +59,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
     <>
       {
         <LeftContentSection
-          className="homepage-container"
+          className={styles.homepage_container}
           style={{
             alignItems: "center",
             justifyContent: "center",
@@ -143,7 +144,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                         margin: "2rem 0 0",
                       }}
                     >
-                      <Link to="/trupulse">
+                      <Link href="/trupulse">
                         <Button
                           onClick={() => {
                             (window as { [key: string]: any })["track_load"](
@@ -168,7 +169,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                         margin: "2rem 0 0",
                       }}
                     >
-                      <Link to="/trupulse">
+                      <Link href="/trupulse">
                         <Button
                           onClick={() => {
                             (window as { [key: string]: any })["track_load"](
@@ -187,9 +188,9 @@ const CompanyInfoBlock = ({ t, from }: any) => {
             </div>
             <div>
               <Row justify="center">
-                <div className="home-bluebox">
+                <div className={styles.home_bluebox}>
                   <Row justify="space-between">
-                    <div className="mobile">
+                    <div className={styles.mobile}>
                       <Row justify="center">
                         <svg
                           width="100%"
@@ -785,7 +786,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                       </div>
                     </Col>
                     <Col xs={24} sm={24} md={24} lg={12} xl={12}>
-                      <div className="desktop" style={{ margin: "1rem 0" }}>
+                      <div className={styles.desktop} style={{ margin: "1rem 0" }}>
                         <Row justify="center">
                           <svg
                             width="100%"
@@ -1346,7 +1347,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                               className="pulse"
                               style={{ margin: "1rem 0 2rem 4rem" }}
                             >
-                              <Link to="/trupulse">
+                              <Link href="/trupulse">
                                 <Button
                                   onClick={() => {
                                     (window as { [key: string]: any })[
@@ -1369,7 +1370,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                               className="pulse"
                               style={{ margin: "1rem 0 2rem" }}
                             >
-                              <Link to="/trupulse">
+                              <Link href="/trupulse">
                                 <Button
                                   onClick={() => {
                                     (window as { [key: string]: any })[
@@ -1786,7 +1787,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
             </Row>
             <Row justify="center">
               <CTAWrapper className="pulse">
-                <Link to="/trupulse">
+                <Link href="/trupulse">
                   <Button
                     onClick={() => {
                       (window as { [key: string]: any })["track_load"](

@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { Row, Col } from "antd";
 import { withTranslation } from "react-i18next";
-import { Fade } from "react-awesome-reveal";
-import { useHistory } from "react-router-dom";
+import { useRouter } from "next/router";
 import Link from "next/link";
 import { Button } from "../../../common/Button";
 import MainArt from "../../../assets/arts/DemoRequest/MainArt";
@@ -19,7 +18,7 @@ import { InlineWidget, useCalendlyEventListener } from "react-calendly";
 import styles from "./index.module.css";
 
 const MainBlock = ({ t, id }: any) => {
-  // const history = useHistory();
+  const router = useRouter();
   const [meetDuration, setMeetDuration] = useState("15min");
 
   useCalendlyEventListener({
@@ -27,8 +26,8 @@ const MainBlock = ({ t, id }: any) => {
     onDateAndTimeSelected: () => console.log("onDateAndTimeSelected"),
     onEventTypeViewed: () => console.log("onEventTypeViewed"),
     onEventScheduled: () => {
-      (window as any).lintrk("track", { conversion_id: 13305921 });
-      // history.push("/thankyou");
+      // (window as any).lintrk("track", { conversion_id: 13305921 });
+      router.push("/thankyou");
     },
   });
 

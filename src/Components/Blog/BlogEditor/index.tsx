@@ -1,11 +1,11 @@
 "use client";
-import { useState } from "react";
+import React, { useMemo, useState } from "react";
 import { Row, Col } from "antd";
 import { withTranslation } from "react-i18next";
 import { RightBlockContainer } from "./styles";
 import Container from "../../../common/Container";
-import ReactQuill, { Quill } from "react-quill";
-import "./index.css";
+import{ Quill } from "react-quill";
+import styles from "./index.module.css";
 import "react-quill/dist/quill.snow.css";
 import { Button, Input } from "antd";
 import { DeleteOutlined } from "@ant-design/icons";
@@ -13,11 +13,12 @@ import { storage } from "../../../firebase";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import { db } from "../../../firebase";
+import dynamic from "next/dynamic";
 const fontSizeArr = [
   "21px",
   "8px",
   "9px",
-  "10px",
+  "10px", 
   "12px",
   "14px",
   "16px",
@@ -31,16 +32,21 @@ const fontSizeArr = [
   "98px",
 ];
 
-var Size = Quill.import("attributors/style/size");
-var Bold = Quill.import("formats/bold");
-Bold.tagName = "B"; // Quill uses <strong> by default
-Quill.register(Bold, true);
-Size.whitelist = fontSizeArr;
-Quill.register(Size, true);
+// var Size = Quill.import("attributors/style/size");
+// var Bold = Quill.import("formats/bold");
+// Bold.tagName = "B"; // Quill uses <strong> by default
+// Quill.register(Bold, true);
+// Size.whitelist = fontSizeArr;
+// Quill.register(Size, true);
 
 const { Search } = Input;
 
 const BlogEditor = () => {
+
+  const ReactQuill = useMemo(
+    () => dynamic(() => import("react-quill"), { ssr: false }),
+    []
+  );
   const [title, setTitle] = useState("");
   const [altTag, setAltTag] = useState("");
   const [metaTitle, setMetaTitle] = useState("");

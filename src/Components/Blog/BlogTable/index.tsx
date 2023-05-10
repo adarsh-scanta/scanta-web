@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import "antd/dist/antd.css";
 // import './index.css';
-import { useHistory } from "react-router-dom";
+import { useRouter } from "next/router";
 import Link from "next/link";
 import { Space, Table } from "antd";
 import type { ColumnsType } from "antd/es/table";
@@ -28,7 +28,7 @@ interface DataType {
 }
 
 const BlogTable: React.FC = () => {
-  const history = useHistory();
+  const router = useRouter();
 
   const columns: ColumnsType<DataType> = [
     {
@@ -50,14 +50,14 @@ const BlogTable: React.FC = () => {
         <Space size="middle">
           <a
             onClick={() => {
-              history.push(`/blog/post/edit/${record.id}`);
+              router.push(`/blog/post/edit/${record.id}`);
             }}
           >
             Edit
           </a>
           <a
             onClick={() => {
-              history.push(
+              router.push(
                 `/blog/preview/${record.title
                   .toLowerCase()
                   .replace(/[^a-zA-Z ]/g, "")
@@ -82,7 +82,7 @@ const BlogTable: React.FC = () => {
 
   const [posts, setPosts] = useState([] as any);
   useEffect(() => {
-    const q = query(collection(db, "posts"), orderBy("id"));
+    const q = query(collection(db, "posts"));
     onSnapshot(q, (querySnapshot) => {
       setPosts(
         querySnapshot.docs.map((doc) => ({

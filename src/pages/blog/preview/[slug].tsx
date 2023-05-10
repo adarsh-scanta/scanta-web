@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 import { Styles } from "@/styles/styles";
 import { Skeleton } from "antd";
 import Posts from "@/Components/Blog/Posts";
-import { db } from "../../firebase";
+import { db } from "../../../firebase";
 import {
   collection,
   query,
@@ -32,9 +32,7 @@ export const getServerSideProps = async (ctx) => {
   console.log(slug);
   return {
     props: {
-      currentPost: currentPost.data.isPublished
-        ? JSON.parse(JSON.stringify(currentPost))
-        : {},
+      currentPost: JSON.parse(JSON.stringify(currentPost)),
     },
   };
 };
@@ -47,7 +45,7 @@ export default function Home({ currentPost }) {
         <Styles />
         <ScrollToTop />
         <div style={{ margin: " auto", background: "#eff0f7" }}>
-          {currentPost?.data?.isPublished ? (
+          {currentPost?.data ? (
             <Post post={currentPost} />
           ) : (
             <div style={{ textAlign: "center", margin: "12rem auto 2rem" }}>

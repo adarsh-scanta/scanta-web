@@ -1,13 +1,12 @@
 "use client";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { Row, Col } from "antd";
 import { withTranslation } from "react-i18next";
 import { RightBlockContainer } from "./styles";
 import Container from "../../../common/Container";
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
-import ReactQuill, { Quill } from "react-quill";
-import "./index.css";
+import  { Quill } from "react-quill";
+import styles from "./index.module.css";
 import "react-quill/dist/quill.snow.css";
 import { Button, Input } from "antd";
 import type { UploadFile, UploadProps } from "antd/es/upload/interface";
@@ -18,11 +17,12 @@ import {
   collection,
   doc,
   orderBy,
-  onSnapshot,
+  onSnapshot, 
   setDoc,
   serverTimestamp,
 } from "firebase/firestore";
 import { db } from "../../../firebase";
+import dynamic from "next/dynamic";
 const fontSizeArr = [
   "21px",
   "8px",
@@ -41,18 +41,23 @@ const fontSizeArr = [
   "98px",
 ];
 
-var Size = Quill.import("attributors/style/size");
-var Bold = Quill.import("formats/bold");
-Bold.tagName = "B"; // Quill uses <strong> by default
-Quill.register(Bold, true);
-Size.whitelist = fontSizeArr;
-Quill.register(Size, true);
+// if (typeof document !== "undefined") {
+//   var Size = Quill.import("attributors/style/size");
+//   var Bold = Quill.import("formats/bold");
+//   Bold.tagName = "B"; // Quill uses <strong> by default
+//   Quill.register(Bold, true);
+//   Size.whitelist = fontSizeArr;
+//   Quill.register(Size, true);
+// }
 
 const { Search } = Input;
 
 const EditBlogEditor = ({ post }: any) => {
-  const location = useLocation();
-
+  
+const ReactQuill = useMemo(
+  () => dynamic(() => import("react-quill"), { ssr: false }),
+  []
+);
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [fileList, setFileList] = useState<UploadFile[]>([]);

@@ -5,7 +5,6 @@ import Header from "@/components/Header";
 import { Styles } from "@/styles/styles";
 import { Skeleton } from "antd";
 import Posts from "@/Components/Blog/Posts";
-import { db } from "../../firebase";
 import {
   collection,
   query,
@@ -14,6 +13,10 @@ import {
   getDocs,
 } from "firebase/firestore";
 import Post from "@/Components/Blog/Post";
+import EditBlogEditor from "@/Components/Blog/EditBlogEditor";
+import { auth, db } from "@/firebase";
+import { useRouter } from "next/router";
+import { useAuthState } from "react-firebase-hooks/auth";
 
 export const getServerSideProps = async (ctx) => {
   const { params } = ctx;
@@ -21,42 +24,35 @@ export const getServerSideProps = async (ctx) => {
   const postsRef = collection(db, "posts");
   const snapshot = await getDocs(postsRef);
   const posts = snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }));
-  const currentPost = posts.filter((post: any) =>
-    post.data.title
-      ?.toLowerCase()
-      .replace(/[^a-zA-Z ]/g, "")
-      .split(" ")
-      .join("-")
-      .includes(slug)
-  )[0];
-  console.log(slug);
+  const currentPost = posts.filter((post: any) => parseInt(post.data.id) === parseInt(slug))[0];
+  console.log(currentPost);
   return {
     props: {
-      currentPost: currentPost.data.isPublished
-        ? JSON.parse(JSON.stringify(currentPost))
-        : {},
+      currentPost: JSON.parse(JSON.stringify(currentPost)),
     },
   };
 };
 
 export default function Home({ currentPost }) {
+
+     const router = useRouter();
+     const [user, loading, error] = useAuthState(auth);
+     useEffect(() => {
+       if (loading) {
+         // maybe trigger a loading screen
+         return;
+       }
+       if (!user) router.push("/blog/login");
+     }, [user, loading]);
+
   return (
     <React.Fragment>
       <div className="App" style={{ margin: "2rem auto" }}>
         <Header />
         <Styles />
-        <ScrollToTop />
-        <div style={{ margin: " auto", background: "#eff0f7" }}>
-          {currentPost?.data?.isPublished ? (
-            <Post post={currentPost} />
-          ) : (
-            <div style={{ textAlign: "center", margin: "12rem auto 2rem" }}>
-              <Skeleton loading={true} active></Skeleton>
-            </div>
-          )}
-          <Footer fromWhere={"blog"} />
-        </div>
+        <EditBlogEditor post={currentPost} />
       </div>
+      <Footer fromWhere={"company"} />
     </React.Fragment>
   );
 }

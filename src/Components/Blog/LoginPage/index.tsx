@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { useHistory } from "react-router-dom";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { auth, logInWithEmailAndPassword } from "../../../firebase";
@@ -15,7 +14,6 @@ const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [user, loading, error] = useAuthState(auth);
-  // const history = useHistory();
   const router = useRouter();
   useEffect(() => {
     if (loading) {

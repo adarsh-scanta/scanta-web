@@ -1,17 +1,17 @@
 import Footer from "../../components/Footer";
 import BlogEditor from "../../components/Blog/BlogEditor"
 import { auth  } from "../../firebase";
-import { useHistory } from "react-router-dom";
+import { useRouter } from "next/router";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useEffect } from "react";
 
 const CreateBlogPost = () => {
-    const history = useHistory();
+    const router = useRouter();
     const [user] = useAuthState(auth);
 
     useEffect(() => {
         if(!user){
-            history.push("/blog/login")
+            router.push("/blog/login");
         }
     },[])
     return (
