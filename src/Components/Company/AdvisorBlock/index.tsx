@@ -4,24 +4,24 @@ import { Fade } from "react-awesome-reveal";
 import { RightBlockContainer, Content, Title, ContentWrapper } from "./styles";
 import Container from "../../../common/Container";
 import React, { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+// import { useLocation } from "react-router-dom";
 
 const AdvisorBlock = ({ id }: any) => {
-  const location = useLocation();
+  // const location = useLocation();
 
-  const scrollTo = (id: string) => {
-    const element = document.getElementById(id) as HTMLDivElement;
-    element.scrollIntoView({
-      behavior: "smooth",
-    });
-  };
+  // const scrollTo = (id: string) => {
+  //   const element = document.getElementById(id) as HTMLDivElement;
+  //   element.scrollIntoView({
+  //     behavior: "smooth",
+  //   });
+  // };
 
-  useEffect(() => {
-    location.hash === "#Our-Advisors" &&
-      setTimeout(function () {
-        scrollTo("Our-Advisors");
-      }, 500);
-  });
+  // useEffect(() => {
+  //   location.hash === "#Our-Advisors" &&
+  //     setTimeout(function () {
+  //       scrollTo("Our-Advisors");
+  //     }, 500);
+  // });
   return (
     <RightBlockContainer id="Our-Advisors">
       <Container>

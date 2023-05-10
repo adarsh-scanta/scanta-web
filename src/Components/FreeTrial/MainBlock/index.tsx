@@ -2,19 +2,20 @@
 import { useState } from "react";
 import { Row, Col } from "antd";
 import { withTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import Link from "next/link";
 import MainArt from "../../../assets/arts/FreeTrial/MainArt";
 import { RightBlockContainer, Content, ArtWrapper } from "./styles";
 import Container from "../../../common/Container";
 import { ContactForm } from "../../Company/ContactBlock/ContactForm";
 const MainBlock = ({ t, id }: any) => {
   return (
-    <RightBlockContainer id="intro">
+    <RightBlockContainer id="intro" style={{padding:"3rem 2rem 2rem"}}>
       <Container>
         {/* <Fade direction="up" duration={500} triggerOnce={true}> */}
         <Row justify="space-evenly" id={id}>
           <Col lg={12} md={10} sm={0} xs={0}>
-            <Link to="/">
+            <Link href="/">
               <svg
                 width="35"
                 height="35"

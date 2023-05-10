@@ -2,7 +2,8 @@
 import React, { useState, useEffect } from "react";
 import "antd/dist/antd.css";
 // import './index.css';
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
+import Link from "next/link";
 import { Space, Table } from "antd";
 import type { ColumnsType } from "antd/es/table";
 import Container from "../../../common/Container";
@@ -102,7 +103,7 @@ const BlogTable: React.FC = () => {
   return (
     <>
       <Container>
-        <Link to="/blog/post/create">
+        <Link href="/blog/post/create">
           <p style={{ fontSize: "1rem", maxWidth: "300px" }}>+Add new post</p>
         </Link>
         <Table columns={columns} dataSource={extract(posts)} />

@@ -1,25 +1,28 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
+import Link from "next/link";
+import { useRouter } from "next/router";
 import { auth, logInWithEmailAndPassword } from "../../../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Row, Col } from "antd";
 import { withTranslation } from "react-i18next";
 import { RightBlockContainer } from "./styles";
 import Container from "../../../common/Container";
-import "./index.css";
+import styles from "./index.module.css"
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [user, loading, error] = useAuthState(auth);
-  const history = useHistory();
+  // const history = useHistory();
+  const router = useRouter();
   useEffect(() => {
     if (loading) {
       // maybe trigger a loading screen
       return;
     }
-    if (user) history.push("/blog/dashboard");
+    if (user) router.push("/blog/dashboard");
   }, [user, loading]);
 
   return (
@@ -37,30 +40,30 @@ const LoginPage = () => {
           Login
         </p>
         <Row justify="space-between">
-          <div className="login">
-            <div className="login__container">
+          <div className={styles.login}>
+            <div className={styles.login__container}>
               <input
                 type="text"
-                className="login__textBox"
+                className={styles.login__textBox}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="E-mail Address"
               />
               <input
                 type="password"
-                className="login__textBox"
+                className={styles.login__textBox}
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="Password"
               />
               <button
-                className="login__btn"
+                className={styles.login__btn}
                 onClick={() => logInWithEmailAndPassword(email, password)}
               >
                 Login
               </button>
               <div>
-                <Link to="/blog/reset">Forgot Password</Link>
+                <Link href="/blog/reset">Forgot Password</Link>
               </div>
             </div>
           </div>

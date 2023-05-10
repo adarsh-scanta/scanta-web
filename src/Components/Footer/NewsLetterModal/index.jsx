@@ -3,12 +3,12 @@ import React, { useRef, useState } from "react";
 import { Row, Col } from "antd";
 import emailjs from "emailjs-com";
 import ZapierForm from "react-zapier-form";
-import { useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
 import styles from "./modal.module.css";
 
 const NewsLetterModal = ({ handleClose }) => {
-  const history = useHistory();
+  // const history = useHistory();
   const subsHandle = (e) => {
     e.preventDefault();
     setTimeout(() => {
@@ -21,7 +21,7 @@ const NewsLetterModal = ({ handleClose }) => {
         {({ error, loading, success }) => {
           if (success) {
             handleClose();
-            history.push("/trupulse");
+            // history.push("/trupulse");
           }
           return (
             <div>

@@ -1,3 +1,4 @@
+"use client";
 import { Row, Col } from "antd";
 import { withTranslation } from "react-i18next";
 import { Fade } from "react-awesome-reveal";

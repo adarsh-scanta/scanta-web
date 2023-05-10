@@ -1,15 +1,15 @@
 import styled from "styled-components";
 
 export const RightBlockContainer = styled("section")`
-  padding: 8rem 1rem 2rem;
-  //   background: url("/img/svg/wave.svg");
+  padding: 8rem 1rem 6rem;
+    background: url("/img/svg/wave2.svg");
   background-size: cover;
   @media only screen and (max-width: 1024px) {
-    padding: 6rem 0 1.5rem;
+    padding: 6rem 0 3rem;
   }
 
   @media only screen and (max-width: 768px) {
-    padding: 4rem 0 0.75rem;
+    padding: 4rem 0 2rem;
   }
 `;
 export const Content = styled("p")`

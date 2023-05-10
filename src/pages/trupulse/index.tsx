@@ -11,11 +11,13 @@ import Container from "@/common/Container";
 import Header from "@/Components/Header";
 import Footer from "@/components/Footer";
 import ServicesContent from "../../content/ServicesContent.json";
+import { Styles } from "@/styles/styles";
 
 export default function Trupulse() {
   return (
     <React.Fragment>
       <Header />
+      <Styles/>
       <MainBlock />
       <SecondBlock />
       <ThirdBlock />
@@ -24,7 +26,6 @@ export default function Trupulse() {
       <Container>
         <SolutionBlock from="product" />
       </Container>
-      
       <CompanyInfoBlock from="product" />
       <Footer fromWhere={"home"} />
     </React.Fragment>

@@ -17,7 +17,7 @@ import React, { useEffect } from "react";
 import { Map } from "./Map";
 
 const ContactBlock = ({ id }: any) => {
-  const location = useLocation();
+  // const location = useLocation();
   const [currentStage, setCurrentStage] = useState("contactInfo");
   const [prefill, setPrefill] = useState({
     name: "",
@@ -27,19 +27,19 @@ const ContactBlock = ({ id }: any) => {
   const updatePrefill = (obj: any) => {
     setPrefill(obj);
   };
-  const scrollTo = (id: string) => {
-    const element = document.getElementById(id) as HTMLDivElement;
-    element.scrollIntoView({
-      behavior: "smooth",
-    });
-  };
+  // const scrollTo = (id: string) => {
+  //   const element = document.getElementById(id) as HTMLDivElement;
+  //   element.scrollIntoView({
+  //     behavior: "smooth",
+  //   });
+  // };
 
-  useEffect(() => {
-    location.hash === "#contact-us" &&
-      setTimeout(function () {
-        scrollTo("contact-us");
-      }, 1000);
-  });
+  // useEffect(() => {
+  //   location.hash === "#contact-us" &&
+  //     setTimeout(function () {
+  //       scrollTo("contact-us");
+  //     }, 1000);
+  // });
 
   return (
     <RightBlockContainer>

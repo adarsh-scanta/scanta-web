@@ -1,9 +1,9 @@
-"use client";
 import { useState } from "react";
 import { Row, Col } from "antd";
 import { withTranslation } from "react-i18next";
 import { Fade } from "react-awesome-reveal";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
+import Link from "next/link";
 import { Button } from "../../../common/Button";
 import MainArt from "../../../assets/arts/DemoRequest/MainArt";
 import {
@@ -16,10 +16,10 @@ import {
 import Container from "../../../common/Container";
 import LeftCircleOutlined from "@ant-design/icons";
 import { InlineWidget, useCalendlyEventListener } from "react-calendly";
-import "./index.css";
+import styles from "./index.module.css";
 
 const MainBlock = ({ t, id }: any) => {
-  const history = useHistory();
+  // const history = useHistory();
   const [meetDuration, setMeetDuration] = useState("15min");
 
   useCalendlyEventListener({
@@ -28,17 +28,20 @@ const MainBlock = ({ t, id }: any) => {
     onEventTypeViewed: () => console.log("onEventTypeViewed"),
     onEventScheduled: () => {
       (window as any).lintrk("track", { conversion_id: 13305921 });
-      history.push("/thankyou");
+      // history.push("/thankyou");
     },
   });
 
   return (
-    <RightBlockContainer id="intro">
+    <RightBlockContainer
+      id="intro"
+      style={{ padding: "3rem 2rem 2rem", background: "#eff0f7" }}
+    >
       <Container>
         {/* <Fade direction="up" duration={500} triggerOnce={true}> */}
         <Row justify="space-evenly" id={id}>
           <Col lg={11} md={8} sm={0} xs={0}>
-            <Link to="/">
+            <Link href="/">
               <svg
                 width="35"
                 height="35"
@@ -122,7 +125,7 @@ const MainBlock = ({ t, id }: any) => {
               </div>
               <div
                 style={{
-                  width: "100%",
+                  width: "90%",
                   height: "650px",
                   background: "#fff",
                   boxShadow: "0px 0px 4px rgba(0, 0, 0, 0.25)",

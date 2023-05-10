@@ -1,7 +1,7 @@
 import { Row, Col } from "antd";
 import { withTranslation } from "react-i18next";
 import { Fade } from "react-awesome-reveal";
-import { useLocation } from "react-router-dom";
+// import { useLocation } from "react-router-dom";
 import StoryArt from "../../../assets/arts/Company/StoryArt";
 import {
   RightBlockContainer,
@@ -14,22 +14,22 @@ import Container from "../../../common/Container";
 import React, { useEffect } from "react";
 
 const StoryBlock = ({ id }: any) => {
-  const location = useLocation();
+  // const location = useLocation();
 
 
-  const scrollTo = (id: string) => {
-    const element = document.getElementById(id) as HTMLDivElement;
-    element.scrollIntoView({
-      behavior: "smooth",
-    });
-  };
+  // const scrollTo = (id: string) => {
+  //   const element = document.getElementById(id) as HTMLDivElement;
+  //   element.scrollIntoView({
+  //     behavior: "smooth",
+  //   });
+  // };
 
-  useEffect(() => {
-    location.hash === "#Our-Team" &&
-      setTimeout(function () {
-        scrollTo("Our-Team");
-      }, 1000);
-  });
+  // useEffect(() => {
+  //   location.hash === "#Our-Team" &&
+  //     setTimeout(function () {
+  //       scrollTo("Our-Team");
+  //     }, 1000);
+  // });
   return (
     <RightBlockContainer id="Our-Team">
       <Container>

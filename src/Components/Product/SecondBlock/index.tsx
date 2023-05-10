@@ -1,13 +1,13 @@
 "use client";
 import { Row, Col } from "antd";
 import { withTranslation } from "react-i18next";
-import "./index.css";
 import {
   RightBlockContainer,
   Title,
   SplashIcon1,
   ContentWrapper,
 } from "./styles";
+import styles from "./index.module.css"
 import Container from "../../../common/Container";
 
 const MainBlock = ({ id, t }: any) => {
@@ -28,9 +28,9 @@ const MainBlock = ({ id, t }: any) => {
                 <div style={{ position: "relative", top: "-100px" }}>
                   <Row justify="center">
                     <div style={{ width: "30%", minWidth: "300px" }}>
-                      <div id="stage">
-                        <div className="little-dude">
-                          <figure className="dude-body">
+                      <div id={styles.stage}>
+                        <div className={styles.little_dude}>
+                          <figure className={styles.dude_body}>
                             <svg
                               width="100%"
                               height="270"
@@ -1227,7 +1227,7 @@ const MainBlock = ({ id, t }: any) => {
                             </svg>
                           </figure>
                         </div>
-                        <figure className="shadow"></figure>
+                        <figure className={styles.shadow}></figure>
                       </div>
                     </div>
                   </Row>

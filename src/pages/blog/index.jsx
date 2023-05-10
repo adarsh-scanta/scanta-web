@@ -6,11 +6,11 @@ import { db } from "../../firebase";
 import { collection, query, orderBy, onSnapshot } from "firebase/firestore";
 
 export const getServerSideProps = async () => {
-  const resultRef = db.collection("posts").get();
-  const results = resultRef.docs.map((doc) => ({
-    id: doc.id,
-    data: doc.data(),
-  }));
+  // const resultRef = db.collection("posts").get();
+  // const results = resultRef.docs.map((doc) => ({
+  //   id: doc.id,
+  //   data: doc.data(),
+  // }));
   // const q = query(collection(db, "posts"), orderBy("id"));
   // const posts = () =>
   //   onSnapshot(q, (querySnapshot) =>
@@ -21,7 +21,7 @@ export const getServerSideProps = async () => {
   //   );
   // console.log(posts, "aa");
   return {
-    props: { posts: JSON.parse(JSON.stringify(results)) },
+    props: { posts: JSON.parse(JSON.stringify([])) },
   };
 };
 export default function Home({ posts }) {

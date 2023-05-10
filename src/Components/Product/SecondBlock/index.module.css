@@ -7,7 +7,7 @@
     position: relative;
   }
   
-  .little-dude {
+  .little_dude {
     text-align: center;
     position: relative;
     /* top: 25%; */
@@ -18,20 +18,20 @@
     -o-animation: levitation 3s ease-in-out infinite;
     animation: levitation 3s ease-in-out infinite;
   }
-  .little-dude:hover .mouth {
+  .little_dude:hover .mouth {
     height: 25px;
   }
-  .little-dude:hover .mouth:after {
+  .little_dude:hover .mouth:after {
     height: 10px;
   }
-  .little-dude:hover .leg-left {
+  .little_dude:hover .leg-left {
     -webkit-animation: moveLegLeft 0.15s ease-in-out infinite;
     -moz-animation: moveLegLeft 0.15s ease-in-out infinite;
     -ms-animation: moveLegLeft 0.15s ease-in-out infinite;
     -o-animation: moveLegLeft 0.15s ease-in-out infinite;
     animation: moveLegLeft 0.15s ease-in-out infinite;
   }
-  .little-dude:hover .leg-right {
+  .little_dude:hover .leg-right {
     -webkit-animation: moveLegRight 0.15s ease-in-out infinite;
     -moz-animation: moveLegRight 0.15s ease-in-out infinite;
     -ms-animation: moveLegRight 0.15s ease-in-out infinite;
@@ -39,7 +39,7 @@
     animation: moveLegRight 0.15s ease-in-out infinite;
   }
   
-  .dude-body {
+  .dude_body {
     margin: 0 auto;
     width: 300px;
     height: 250px;
