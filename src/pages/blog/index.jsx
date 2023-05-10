@@ -1,29 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ScrollToTop from "@/common/ScrollToTop";
 import Footer from "@/components/Footer";
 import Posts from "@/Components/Blog/Posts";
 import { db } from "../../firebase";
-import { collection, query, orderBy, onSnapshot } from "firebase/firestore";
+import {
+  collection,
+  query,
+  orderBy,
+  onSnapshot,
+  getDocs,
+} from "firebase/firestore";
 
 export const getServerSideProps = async () => {
-  const resultRef = db.collection("posts").get();
-  const results = resultRef.docs.map((doc) => ({
-    id: doc.id,
-    data: doc.data(),
-  }));
-  // const q = query(collection(db, "posts"), orderBy("id"));
-  // const posts = () =>
-  //   onSnapshot(q, (querySnapshot) =>
-  //     querySnapshot.docs.map((doc) => ({
-  //       id: doc.id,
-  //       data: doc.data(),
-  //     }))
-  //   );
-  // console.log(posts, "aa");
+  const postsRef = collection(db, "posts");
+  const snapshot = await getDocs(postsRef);
+  const posts = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+  console.log(posts);
   return {
-    props: { posts: JSON.parse(JSON.stringify(results)) },
+    props: {
+      posts: JSON.parse(JSON.stringify(posts)),
+    },
   };
 };
+
 export default function Home({ posts }) {
   console.log(posts);
   return (
@@ -31,7 +30,9 @@ export default function Home({ posts }) {
       <div className="App">
         <ScrollToTop />
         <div style={{ margin: "2rem auto" }}>
+          {/* <React.Suspense fallback={posts}> */}
           <Posts posts={posts} />
+          {/* </React.Suspense> */}
           <Footer fromWhere={"blog"} />
         </div>
       </div>

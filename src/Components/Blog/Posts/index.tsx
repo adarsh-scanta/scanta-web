@@ -22,7 +22,7 @@ const Posts = ({ posts }: any) => {
   const [publishedPosts, setPublishedPosts] = useState([]);
 
   useEffect(() => {
-    setPublishedPosts(posts.filter((item: any) => item.data.isPublished));
+    setPublishedPosts(posts?.filter((item: any) => item?.data?.isPublished));
   }, [posts]);
 
   useEffect(() => {
