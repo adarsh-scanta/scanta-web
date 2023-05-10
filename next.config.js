@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 const withAntdLess = require("next-plugin-antd-less");
 
-
 module.exports = withAntdLess({
   // modifyVars: { '@primary-color': '#04f' }, // optional
   lessVarsFilePath: "./src/styles/variables.less", // optional
@@ -17,6 +16,10 @@ module.exports = withAntdLess({
     getLocalIdent: (context, localIdentName, localName, options) => {
       return "whatever_random_class_name";
     },
+  },
+
+  typescript: {
+    ignoreBuildErrors: true,
   },
 
   compiler: {

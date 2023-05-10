@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { Styles } from "@/styles/styles";
 import { Skeleton } from "antd";
-import Posts from "@/Components/Blog/Posts";
+import Posts from "@/components/Blog/Posts";
 import { db } from "../../../firebase";
 import {
   collection,
@@ -13,7 +13,8 @@ import {
   onSnapshot,
   getDocs,
 } from "firebase/firestore";
-import Post from "@/Components/Blog/Post";
+import Post from "@/components/Blog/Post";
+import Head from "next/head";
 
 export const getServerSideProps = async (ctx) => {
   const { params } = ctx;
@@ -40,6 +41,9 @@ export const getServerSideProps = async (ctx) => {
 export default function Home({ currentPost }) {
   return (
     <React.Fragment>
+      <Head>
+        <title>Preview Blog - Scanta</title>
+      </Head>
       <div className="App" style={{ margin: "2rem auto" }}>
         <Header />
         <Styles />

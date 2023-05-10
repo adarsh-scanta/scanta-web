@@ -1,10 +1,11 @@
 "use client";
-import BlogEditor from "@/Components/Blog/BlogEditor";
-import LoginPage from "@/Components/Blog/LoginPage";
-import MainBlock from "@/Components/FreeTrial/MainBlock";
+import BlogEditor from "@/components/Blog/BlogEditor";
+import LoginPage from "@/components/Blog/LoginPage";
+import MainBlock from "@/components/FreeTrial/MainBlock";
 import Footer from "@/components/Footer";
 import { auth } from "@/firebase";
 import { Styles } from "@/styles/styles";
+import Head from "next/head";
 import { useRouter } from "next/router";
 import React, { useEffect } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
@@ -22,6 +23,9 @@ export default function Trupulse() {
 
   return (
     <React.Fragment>
+      <Head>
+        <title>Create blog - Scanta</title>
+      </Head>
       <Styles />
       <BlogEditor />
       <Footer fromWhere={"company"} />

@@ -3,17 +3,18 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import styled from "styled-components";
 import React, { lazy } from "react";
-import Header from "@/Components/Header";
+import Header from "@/components/Header";
 // import Router from "next/navigation";
 import { Styles } from "@/styles/styles";
-import IntroBlock from "@/Components/IntroBlock";
+import IntroBlock from "@/components/IntroBlock";
 import ScrollToTop from "@/common/ScrollToTop";
 import Container from "@/common/Container";
 import { SplashArt2 } from "@/assets/arts/SplashArt";
-import AboutBlock from "@/Components/AboutBlock";
-import CompanyInfoBlock from "@/Components/CompanyInfoBlock";
+import AboutBlock from "@/components/AboutBlock";
+import CompanyInfoBlock from "@/components/CompanyInfoBlock";
 import Footer from "@/components/Footer";
-import Test from "@/Components/Test";
+import Test from "@/components/Test";
+import Head from "next/head";
 // const ScrollToTop = lazy(() => import("../common/ScrollToTop"));
 
 export default function Home() {
@@ -28,6 +29,31 @@ left: 45%;
   return (
     <React.Fragment>
       <>
+        <Head>
+          <title>TruPulse - Best Employee Experience Tool</title>
+          <meta
+            name="description"
+            content="TruPulse is a listening platform for real-time understanding of company morale, trending topics and corporate culture with the best employee experience tools."
+          />
+          <link rel="canonical" href={"https://www.scanta.io/"} />
+          <meta
+            property="og:title"
+            content="TruPulse - Best Employee Experience Tool"
+          />
+          <meta property="og:url" content="https://www.scanta.io" />
+          <meta
+            property="og:image"
+            content="https://www.scanta.io/img/icons/ogGroup300.png"
+          />
+          <meta
+            property="og:description"
+            content="A conversational analysis platform that helps companies understand employee morale, trending topics and cultural health."
+          />
+          <link
+            rel="image_src"
+            href="https://www.scanta.io/img/icons/ogGroup300.png"
+          ></link>
+        </Head>
         <Styles />
         <ScrollToTop />
         <Header />

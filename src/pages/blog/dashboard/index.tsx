@@ -1,6 +1,6 @@
-import BlogTable from "@/Components/Blog/BlogTable";
-import LoginPage from "@/Components/Blog/LoginPage";
-import MainBlock from "@/Components/FreeTrial/MainBlock";
+import BlogTable from "@/components/Blog/BlogTable";
+import LoginPage from "@/components/Blog/LoginPage";
+import MainBlock from "@/components/FreeTrial/MainBlock";
 import Footer from "@/components/Footer";
 import { auth,db } from "@/firebase";
 import { Styles } from "@/styles/styles";
@@ -9,6 +9,7 @@ import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { collection, query, orderBy, onSnapshot } from "firebase/firestore";
+import Head from "next/head";
 
 export default function Trupulse() {
   const [user] = useAuthState(auth);
@@ -33,6 +34,9 @@ export default function Trupulse() {
 
   return (
     <React.Fragment>
+      <Head>
+        <title>Blog dashboard - Scanta</title>
+      </Head>
       <Styles />
       <div style={{ margin: "3rem 0 2rem", minHeight: "800px" }}>
         <p style={{ padding: "0 60px", fontWeight: "bold" }}>Dashboard</p>
