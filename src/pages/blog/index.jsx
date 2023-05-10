@@ -4,21 +4,26 @@ import Footer from "@/components/Footer";
 import Posts from "@/Components/Blog/Posts";
 import { db } from "../../firebase";
 import { collection, query, orderBy, onSnapshot } from "firebase/firestore";
-import { GetServerSideProps } from "next";
 
 export const getServerSideProps = async () => {
-  const q = query(collection(db, "posts"), orderBy("id"));
-  let posts = onSnapshot(q, (querySnapshot) =>
-    querySnapshot.docs.map((doc) => ({
-      id: doc.id,
-      data: doc.data(),
-    }))
-  );
+  const resultRef = db.collection("posts").get();
+  const results = resultRef.docs.map((doc) => ({
+    id: doc.id,
+    data: doc.data(),
+  }));
+  // const q = query(collection(db, "posts"), orderBy("id"));
+  // const posts = () =>
+  //   onSnapshot(q, (querySnapshot) =>
+  //     querySnapshot.docs.map((doc) => ({
+  //       id: doc.id,
+  //       data: doc.data(),
+  //     }))
+  //   );
+  // console.log(posts, "aa");
   return {
-    props: { posts: "iqbal" },
+    props: { posts: JSON.parse(JSON.stringify(results)) },
   };
 };
-
 export default function Home({ posts }) {
   console.log(posts);
   return (
