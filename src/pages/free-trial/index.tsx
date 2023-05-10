@@ -1,4 +1,4 @@
-import MainBlock from "@/components/FreeTrial/MainBlock";
+import MainBlock from "@/Components/FreeTrial/MainBlock";
 import { Styles } from "@/styles/styles";
 import Head from "next/head";
 import React from "react";

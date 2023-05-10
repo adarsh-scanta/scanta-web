@@ -1,8 +1,8 @@
 "use client";
-import BlogEditor from "@/components/Blog/BlogEditor";
-import LoginPage from "@/components/Blog/LoginPage";
-import MainBlock from "@/components/FreeTrial/MainBlock";
-import Footer from "@/components/Footer";
+import BlogEditor from "@/Components/Blog/BlogEditor";
+import LoginPage from "@/Components/Blog/LoginPage";
+import MainBlock from "@/Components/FreeTrial/MainBlock";
+import Footer from "@/Components/Footer";
 import { auth } from "@/firebase";
 import { Styles } from "@/styles/styles";
 import Head from "next/head";

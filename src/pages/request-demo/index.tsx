@@ -1,5 +1,5 @@
 
-import MainBlock from "@/components/DemoRequest/MainBlock";
+import MainBlock from "@/Components/DemoRequest/MainBlock";
 import { Styles } from "@/styles/styles";
 import Head from "next/head";
 import React from "react";

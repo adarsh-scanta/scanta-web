@@ -1,6 +1,6 @@
-import LoginPage from "@/components/Blog/LoginPage";
-import ResetPassword from "@/components/Blog/ResetPassword";
-import MainBlock from "@/components/FreeTrial/MainBlock";
+import LoginPage from "@/Components/Blog/LoginPage";
+import ResetPassword from "@/Components/Blog/ResetPassword";
+import MainBlock from "@/Components/FreeTrial/MainBlock";
 import { Styles } from "@/styles/styles";
 import Head from "next/head";
 import React from "react";

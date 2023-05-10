@@ -1,7 +1,7 @@
-import BlogTable from "@/components/Blog/BlogTable";
-import LoginPage from "@/components/Blog/LoginPage";
-import MainBlock from "@/components/FreeTrial/MainBlock";
-import Footer from "@/components/Footer";
+import BlogTable from "@/Components/Blog/BlogTable";
+import LoginPage from "@/Components/Blog/LoginPage";
+import MainBlock from "@/Components/FreeTrial/MainBlock";
+import Footer from "@/Components/Footer";
 import { auth,db } from "@/firebase";
 import { Styles } from "@/styles/styles";
 import { Col, Row } from "antd";

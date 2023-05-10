@@ -1,10 +1,10 @@
-import AdvisorBlock from "@/components/Company/AdvisorBlock";
-import ContactBlock from "@/components/Company/ContactBlock";
-import MainBlock from "@/components/Company/MainBlock";
-import StoryBlock from "@/components/Company/StoryBlock";
-import Header from "@/components/Header";
+import AdvisorBlock from "@/Components/Company/AdvisorBlock";
+import ContactBlock from "@/Components/Company/ContactBlock";
+import MainBlock from "@/Components/Company/MainBlock";
+import StoryBlock from "@/Components/Company/StoryBlock";
+import Header from "@/Components/Header";
 import ScrollToTop from "@/common/ScrollToTop";
-import Footer from "@/components/Footer";
+import Footer from "@/Components/Footer";
 import { Styles } from "@/styles/styles";
 import Head from "next/head";
 import Image from "next/image";

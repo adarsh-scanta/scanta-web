@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import ScrollToTop from "@/common/ScrollToTop";
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
+import Footer from "@/Components/Footer";
+import Header from "@/Components/Header";
 import { Styles } from "@/styles/styles";
-import Posts from "@/components/Blog/Posts";
+import Posts from "@/Components/Blog/Posts";
 import { db } from "../../firebase";
 import {
   collection,

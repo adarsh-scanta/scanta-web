@@ -1,8 +1,8 @@
-import MainBlock from "@/components/FreeTrial/MainBlock";
-import Header from "@/components/Header";
+import MainBlock from "@/Components/FreeTrial/MainBlock";
+import Header from "@/Components/Header";
 import Container from "@/common/Container";
 import ScrollToTop from "@/common/ScrollToTop";
-import Footer from "@/components/Footer";
+import Footer from "@/Components/Footer";
 import { Styles } from "@/styles/styles";
 import { Row, Col } from "antd";
 import React from "react";

@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import ScrollToTop from "@/common/ScrollToTop";
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
+import Footer from "@/Components/Footer";
+import Header from "@/Components/Header";
 import { Styles } from "@/styles/styles";
 import { Skeleton } from "antd";
-import Posts from "@/components/Blog/Posts";
+import Posts from "@/Components/Blog/Posts";
 import {
   collection,
   query,
@@ -12,8 +12,8 @@ import {
   onSnapshot,
   getDocs,
 } from "firebase/firestore";
-import Post from "@/components/Blog/Post";
-import EditBlogEditor from "@/components/Blog/EditBlogEditor";
+import Post from "@/Components/Blog/Post";
+import EditBlogEditor from "@/Components/Blog/EditBlogEditor";
 import { auth, db } from "@/firebase";
 import { useRouter } from "next/router";
 import { useAuthState } from "react-firebase-hooks/auth";

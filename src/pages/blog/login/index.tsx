@@ -1,6 +1,6 @@
-import LoginPage from "@/components/Blog/LoginPage";
-import MainBlock from "@/components/FreeTrial/MainBlock";
-import Footer from "@/components/Footer";
+import LoginPage from "@/Components/Blog/LoginPage";
+import MainBlock from "@/Components/FreeTrial/MainBlock";
+import Footer from "@/Components/Footer";
 import { Styles } from "@/styles/styles";
 import Head from "next/head";
 import React from "react";
