@@ -786,7 +786,10 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                       </div>
                     </Col>
                     <Col xs={24} sm={24} md={24} lg={12} xl={12}>
-                      <div className={styles.desktop} style={{ margin: "1rem 0" }}>
+                      <div
+                        className={styles.desktop}
+                        style={{ margin: "1rem 0" }}
+                      >
                         <Row justify="center">
                           <svg
                             width="100%"
@@ -1470,7 +1473,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                                           height:
                                             item.name ===
                                             "Nathan Mondragon, Ph.D."
-                                              ? "80px"
+                                              ? "74px"
                                               : "72px",
                                           // background: "#D9D9D9",
                                           borderRadius: "40px",
@@ -1540,9 +1543,10 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                                         color: "#000",
                                         fontSize: "0.8rem",
                                         fontFamily: "Poppins SemiBold",
+                                        maxHeight: "100px",
                                       }}
                                     >
-                                      {`"${item.content.slice(0, 176)}..."`}
+                                      {`"${item.content}"`}
                                     </p>
                                   </Row>
                                   <hr
@@ -1671,7 +1675,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                                         fontFamily: "Poppins SemiBold",
                                       }}
                                     >
-                                      {`"${item.content.slice(0, 176)}..."`}{" "}
+                                      {`"${item.content}"`}{" "}
                                     </p>
                                   </Row>
                                   <hr

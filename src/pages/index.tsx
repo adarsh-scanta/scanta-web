@@ -39,7 +39,7 @@ left: 45%;
 
   return (
     <React.Fragment>
-      <>
+      <div className="App">
         <Head>
           <title>TruPulse - Best Employee Experience Tool</title>
           <meta
@@ -80,7 +80,7 @@ left: 45%;
         </Container>
         <CompanyInfoBlock from="home" />
         <Footer fromWhere={"home"} />
-      </> 
+      </div> 
     </React.Fragment>
   );
 }
