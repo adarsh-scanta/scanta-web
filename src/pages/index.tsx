@@ -71,11 +71,11 @@ left: 45%;
         <Header />
         <Styles />
         <ScrollToTop />
-        <IntroBlock id="intro" />
+        {/* <IntroBlock id="intro" /> */}
         <Container>
-          {/* <SplashIcon>
+          <SplashIcon>
             <SplashArt2 />
-          </SplashIcon> */}
+          </SplashIcon>
           <AboutBlock />
         </Container>
         <CompanyInfoBlock from="home" />
