@@ -5,7 +5,7 @@ import { withTranslation } from "react-i18next";
 import { RightBlockContainer } from "./styles";
 import Container from "../../../common/Container";
 import { useEffect } from "react";
-import  { Quill } from "react-quill";
+import { Quill } from "react-quill";
 import styles from "./index.module.css";
 import "react-quill/dist/quill.snow.css";
 import { Button, Input } from "antd";
@@ -17,7 +17,7 @@ import {
   collection,
   doc,
   orderBy,
-  onSnapshot, 
+  onSnapshot,
   setDoc,
   serverTimestamp,
 } from "firebase/firestore";
@@ -53,11 +53,10 @@ const fontSizeArr = [
 const { Search } = Input;
 
 const EditBlogEditor = ({ post }: any) => {
-  
-const ReactQuill = useMemo(
-  () => dynamic(() => import("react-quill"), { ssr: false }),
-  []
-);
+  const ReactQuill = useMemo(
+    () => dynamic(() => import("react-quill"), { ssr: false }),
+    []
+  );
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [fileList, setFileList] = useState<UploadFile[]>([]);
@@ -67,6 +66,7 @@ const ReactQuill = useMemo(
   const [altTag, setAltTag] = useState("");
   const [metaTitle, setMetaTitle] = useState("");
   const [metaDescription, setMetaDescription] = useState("");
+  const [customURL, setCustomURL] = useState("");
   // progress
   const [percent, setPercent] = useState(0);
 
@@ -78,6 +78,7 @@ const ReactQuill = useMemo(
     setAltTag(post?.data?.altTag);
     setMetaTitle(post?.data?.metaTitle);
     setMetaDescription(post?.data?.metaDes);
+    setCustomURL(post?.data?.customURL);
   }, [post]);
   const modules = {
     toolbar: [
@@ -187,6 +188,11 @@ const ReactQuill = useMemo(
           altTag: altTag,
           metaTitle: metaTitle,
           metaDes: metaDescription,
+          customURL: customURL
+            .toLowerCase()
+            .replace(/[^a-zA-Z ]/g, "")
+            .split(" ")
+            .join("-"),
           tags: tags.join(","),
           created_at: serverTimestamp(),
           isPublished: post?.data?.isPublished,
@@ -281,6 +287,15 @@ const ReactQuill = useMemo(
                 style={{ margin: "0 0 0.5rem" }}
                 onChange={(e) => {
                   setMetaDescription(e.target.value);
+                }}
+              />
+              <label style={{ fontSize: "1.1rem" }}>Custom Url:</label>
+              <Input
+                placeholder="Enter Custom URL Here"
+                value={customURL}
+                style={{ margin: "0 0 0.5rem" }}
+                onChange={(e) => {
+                  setCustomURL(e.target.value);
                 }}
               />
               <label style={{ fontSize: "1.1rem", margin: "1.5rem 0" }}>

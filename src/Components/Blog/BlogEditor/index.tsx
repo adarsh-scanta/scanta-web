@@ -51,6 +51,7 @@ const BlogEditor = () => {
   const [altTag, setAltTag] = useState("");
   const [metaTitle, setMetaTitle] = useState("");
   const [metaDescription, setMetaDescription] = useState("");
+  const [customURL, setCustomURL] = useState("");
   const [content, setContent] = useState("");
   const [tags, setTags] = useState([] as any);
   const [file, setFile] = useState({} as any);
@@ -151,6 +152,11 @@ const BlogEditor = () => {
           altTag: altTag,
           metaTitle: metaTitle,
           metaDes: metaDescription,
+          customURL: customURL
+            .toLowerCase()
+            .replace(/[^a-zA-Z ]/g, "")
+            .split(" ")
+            .join("-"),
           tags: tags.join(","),
           created_at: serverTimestamp(),
           isPublished: false,
@@ -162,6 +168,7 @@ const BlogEditor = () => {
         setAltTag("");
         setMetaTitle("");
         setMetaDescription("");
+        setCustomURL("");
         setTags([]);
       } catch (err) {
         alert(err);
@@ -237,6 +244,14 @@ const BlogEditor = () => {
                 style={{ margin: "0 0 0.5rem" }}
                 onChange={(e) => {
                   setMetaDescription(e.target.value);
+                }}
+              />
+              <label style={{ fontSize: "1.1rem" }}>Custom Url</label>
+              <Input
+                placeholder="Enter Custom URL Here"
+                style={{ margin: "0 0 0.5rem" }}
+                onChange={(e) => {
+                  setCustomURL(e.target.value);
                 }}
               />
 
