@@ -64,18 +64,18 @@ left: 45%;
             rel="image_src"
             href="https://www.scanta.io/img/icons/ogGroup300.png"
           ></link>
-          {/* <script type="application/ld+json">
+          <script type="application/ld+json">
             {JSON.stringify(articleStructuredData)}
-          </script> */}
+          </script>
         </Head>
         <Header />
         <Styles />
         <ScrollToTop />
         <IntroBlock id="intro" />
         <Container>
-          <SplashIcon>
+          {/* <SplashIcon>
             <SplashArt2 />
-          </SplashIcon>
+          </SplashIcon> */}
           <AboutBlock />
         </Container>
         <CompanyInfoBlock from="home" />
