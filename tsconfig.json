@@ -13,7 +13,7 @@
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
-    "forceConsistentCasingInFileNames": true,
+    "forceConsistentCasingInFileNames": false,
     "noEmit": true,
     "incremental": true,
     "esModuleInterop": true,
@@ -35,8 +35,8 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx",
-    "**/*.jsx"
-, "tsconfig.json"  ],
+    "tsconfig.json"
+, "src/pages/registry.jsx"    ],
   "exclude": [
     "node_modules"
   ]
