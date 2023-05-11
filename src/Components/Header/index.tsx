@@ -154,7 +154,7 @@ const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
   const MenuItem = () => {
     return (
       <>
-        <Row justify="space-between">
+        <div style={{display:"flex", justifyContent: "space-between"}}>
           <Col>
             <CustomNavLinkSmall>
               <Link href="/" aria-label="homepage">
@@ -247,7 +247,7 @@ const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
               </CustomNavLinkSmall>
             )}
           </Col>
-        </Row>
+        </div>
       </>
     );
   };

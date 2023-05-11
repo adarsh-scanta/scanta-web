@@ -68,9 +68,9 @@ left: 45%;
             {JSON.stringify(articleStructuredData)}
           </script>
         </Head>
+        <Header />
         <Styles />
         <ScrollToTop />
-        <Header />
         <IntroBlock id="intro" />
         <Container>
           <SplashIcon>
