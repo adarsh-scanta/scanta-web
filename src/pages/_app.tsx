@@ -2,6 +2,8 @@ import "./globals.css";
 import type { AppProps } from "next/app";
 import Script from "next/script";
 import Head from "next/head";
+import ErrorBoundary from "@/Components/ErrorBoundary";
+
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
@@ -77,15 +79,17 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="geo.position" content="36.701463;-118.755997" />
         <meta name="ICBM" content="36.701463, -118.755997" />
       </Head>
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-5S97HQ4"
-            height="0"
-            width="0"
-          ></iframe>
-        </noscript>
+      <noscript>
+        <iframe
+          src="https://www.googletagmanager.com/ns.html?id=GTM-5S97HQ4"
+          height="0"
+          width="0"
+        ></iframe>
+      </noscript>
       <main>
-        <Component {...pageProps} />
+        <ErrorBoundary>
+          <Component {...pageProps} />
+        </ErrorBoundary>
       </main>
     </>
   );
