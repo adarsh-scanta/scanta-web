@@ -36,7 +36,7 @@
     "**/*.ts",
     "**/*.tsx",
     "tsconfig.json"
-, "src/pages/registry.jsx"    ],
+  ],
   "exclude": [
     "node_modules"
   ]
