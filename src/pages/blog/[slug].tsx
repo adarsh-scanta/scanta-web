@@ -23,17 +23,19 @@ export const getServerSideProps = async (ctx) => {
   const snapshot = await getDocs(postsRef);
   const posts = snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }));
   const currentPost = posts.filter((post: any) =>
-    post.data.title
-      ?.toLowerCase()
-      .replace(/[^a-zA-Z ]/g, "")
-      .split(" ")
-      .join("-")
-      .includes(slug)
+    post?.data?.customURL?.length > 3
+      ? post?.data?.customURL === slug
+      : post?.data?.title
+          ?.toLowerCase()
+          .replace(/[^a-zA-Z ]/g, "")
+          .split(" ")
+          .join("-")
+          .includes(slug)
   )[0];
   console.log(slug);
   return {
     props: {
-      currentPost: currentPost.data.isPublished
+      currentPost: currentPost?.data?.isPublished
         ? JSON.parse(JSON.stringify(currentPost))
         : {},
     },
@@ -59,7 +61,7 @@ export default function Home({ currentPost }) {
         <ScrollToTop />
         <div style={{ margin: " auto", background: "#eff0f7" }}>
           {currentPost?.data?.isPublished ? (
-            <Post post={currentPost} />
+            <Post post={currentPost} from="blog"/>
           ) : (
             <div style={{ textAlign: "center", margin: "12rem auto 2rem" }}>
               <Skeleton loading={true} active></Skeleton>

@@ -6,17 +6,17 @@ module.exports = withAntdLess({
   lessVarsFilePath: "./src/styles/variables.less", // optional
   lessVarsFilePathAppendToEndOfContent: false, // optional
   // optional https://github.com/webpack-contrib/css-loader#object
-  cssLoaderOptions: {
-    // ...
-    mode: "local",
-    localIdentName: "[hash:base64:8]",
-    exportLocalsConvention: "camelCase",
-    exportOnlyLocals: false,
-    // ...
-    getLocalIdent: (context, localIdentName, localName, options) => {
-      return "whatever_random_class_name";
-    },
-  },
+  // cssLoaderOptions: {
+  //   // ...
+  //   mode: "local",
+  //   localIdentName: "[hash:base64:8]",
+  //   exportLocalsConvention: "camelCase",
+  //   exportOnlyLocals: false,
+  //   // ...
+  //   getLocalIdent: (context, localIdentName, localName, options) => {
+  //     return "whatever_random_class_name";
+  //   },
+  // },
 
   typescript: {
     ignoreBuildErrors: true,

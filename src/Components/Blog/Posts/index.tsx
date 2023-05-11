@@ -32,8 +32,8 @@ const Posts = ({ posts }: any) => {
 
   useEffect(() => {
     setPublishedPosts(posts?.filter((item: any) => item?.data?.isPublished));
-  }, [posts]); 
-console.log(router.pathname)
+  }, [posts]);
+  console.log(router.pathname);
   useEffect(() => {
     if (page === 1) {
       setMinIndex(0);
@@ -56,13 +56,17 @@ console.log(router.pathname)
   console.log(publishedPosts);
 
   const handleClick = (data: any) => {
-    router.push(
-      `blog/${data.title
-        .toLowerCase()
-        .replace(/[^a-zA-Z ]/g, "")
-        .split(" ") 
-        .join("-")}`
-    );
+    if (data?.customURL?.length > 3) {
+      router.push(`blog/${data.customURL}`);
+    } else {
+      router.push(
+        `blog/${data.title
+          .toLowerCase()
+          .replace(/[^a-zA-Z ]/g, "")
+          .split(" ")
+          .join("-")}`
+      );
+    }
   };
   return (
     <RightBlockContainer id="intro">

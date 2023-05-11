@@ -81,9 +81,18 @@ const BlogTable: React.FC = () => {
   ];
 
   const [posts, setPosts] = useState([] as any);
+  const [sortedPosts, setSortedPosts] = useState([] as any);
+  useEffect(() => {
+    setSortedPosts(
+      posts.sort(
+        (a, b) => b.data.created_at.seconds - a.data.created_at.seconds
+      )
+    );
+  }, [posts]);
   useEffect(() => {
     const q = query(collection(db, "posts"));
     onSnapshot(q, (querySnapshot) => {
+      // const temp
       setPosts(
         querySnapshot.docs.map((doc) => ({
           id: doc.id,
@@ -106,7 +115,7 @@ const BlogTable: React.FC = () => {
         <Link href="/blog/post/create">
           <p style={{ fontSize: "1rem", maxWidth: "300px" }}>+Add new post</p>
         </Link>
-        <Table columns={columns} dataSource={extract(posts)} />
+        <Table columns={columns} dataSource={extract(sortedPosts)} />
       </Container>
     </>
   );

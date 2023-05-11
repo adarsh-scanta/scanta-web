@@ -80,7 +80,7 @@ left: 45%;
         </Container>
         <CompanyInfoBlock from="home" />
         <Footer fromWhere={"home"} />
-      </>
+      </> 
     </React.Fragment>
   );
 }

@@ -12,6 +12,7 @@ import {
   orderBy,
   onSnapshot,
   getDocs,
+  setDoc,
 } from "firebase/firestore";
 import Post from "@/Components/Blog/Post";
 import Head from "next/head";
@@ -38,6 +39,16 @@ export const getServerSideProps = async (ctx) => {
   };
 };
 
+
+  const hasPublishAccess = (user: any) => {
+    return (
+      user.email === "adarsh.scanta@gmail.com" ||
+      user.email === "damini@scanta.io" ||
+      user.email === "dirk@scanta.io" ||
+      user.email === "satwant@scanta.io"
+    );
+  };
+
 export default function Home({ currentPost }) {
   return (
     <React.Fragment>
@@ -50,7 +61,7 @@ export default function Home({ currentPost }) {
         <ScrollToTop />
         <div style={{ margin: " auto", background: "#eff0f7" }}>
           {currentPost?.data ? (
-            <Post post={currentPost} />
+            <Post post={currentPost} from="preview"/>
           ) : (
             <div style={{ textAlign: "center", margin: "12rem auto 2rem" }}>
               <Skeleton loading={true} active></Skeleton>
