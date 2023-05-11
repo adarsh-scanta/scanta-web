@@ -59,7 +59,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
     <>
       {
         <LeftContentSection
-          className={styles.homepage_container}
+          className={"homepage_container"}
           style={{
             alignItems: "center",
             justifyContent: "center",
