@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+// @ts-ignore
 import { useServerInsertedHTML } from "next/navigation";
 import { ServerStyleSheet, StyleSheetManager } from "styled-components";
 
