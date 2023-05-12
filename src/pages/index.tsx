@@ -78,7 +78,7 @@ left: 45%;
           </SplashIcon>
           <AboutBlock />
         </Container>
-        <CompanyInfoBlock from="home" />
+        {/* <CompanyInfoBlock from="home" /> */}
         <Footer fromWhere={"home"} />
       </div> 
     </React.Fragment>
