@@ -19,7 +19,6 @@ import {
 } from "./styles";
 import { feedbackData } from "./feedbackData";
 import Container from "../../common/Container";
-import { NewsLetterModal } from "../Footer/NewsLetterModal";
 
 const WorkArt7 = lazy(() => import("../../assets/arts/WorkplaceArt/WorkArt7"));
 const WorkArt8 = lazy(() => import("../../assets/arts/WorkplaceArt/WorkArt8"));
@@ -36,17 +35,6 @@ const WorkArt12 = lazy(
 
 const CompanyInfoBlock = ({ t, from }: any) => {
   const { Panel } = Collapse;
-
-  const [isNewsLetterModalVisible, setIsNewsLetterModalVisible] =
-    useState(false);
-
-  const closeNewsLetterModal = () => {
-    setIsNewsLetterModalVisible(false);
-    localStorage.setItem(
-      "newsletter",
-      JSON.stringify({ skipped: true, time: new Date() })
-    );
-  };
 
   const [wait, setWaiting] = useState(true);
 
@@ -91,7 +79,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                   </p>
                 </Col>
               </Row>
-              <CarouselWrapper
+              {/* <CarouselWrapper
                 autoplay
                 arrows
                 nextArrow={<RightOutlined />}
@@ -132,7 +120,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                     </CarouselLabel>
                   </div>
                 </Row>
-              </CarouselWrapper>
+              </CarouselWrapper> */}
               <Row justify="center">
                 <Col xs={0} md={0} lg={24} xl={24}>
                   <Row justify="end">
