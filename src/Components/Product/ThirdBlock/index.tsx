@@ -11,25 +11,13 @@ import {
   CarouselWrapper,
   CarouselLabel,
 } from "./styles";
+import WorkArt1 from "@/assets/arts/WorkplaceArt/WorkArt1";
+import WorkArt4 from "@/assets/arts/WorkplaceArt/WorkArt4";
+import WorkArt2 from "@/assets/arts/WorkplaceArt/WorkArt2";
+import WorkArt3 from "@/assets/arts/WorkplaceArt/WorkArt3";
+import WorkArt5 from "@/assets/arts/WorkplaceArt/WorkArt5";
+import WorkArt6 from "@/assets/arts/WorkplaceArt/WorkArt6";
 
-const WorkArt1 = lazy(
-  () => import("../../../assets/arts/WorkplaceArt/WorkArt1")
-);
-const WorkArt2 = lazy(
-  () => import("../../../assets/arts/WorkplaceArt/WorkArt2")
-);
-const WorkArt3 = lazy(
-  () => import("../../../assets/arts/WorkplaceArt/WorkArt3")
-);
-const WorkArt4 = lazy(
-  () => import("../../../assets/arts/WorkplaceArt/WorkArt4")
-);
-const WorkArt5 = lazy(
-  () => import("../../../assets/arts/WorkplaceArt/WorkArt5")
-);
-const WorkArt6 = lazy(
-  () => import("../../../assets/arts/WorkplaceArt/WorkArt6")
-);
 
 const AboutBlock = () => {
   return (
@@ -43,9 +31,9 @@ const AboutBlock = () => {
       </Row>
       <CarouselWrapper
         autoplay
-        // arrows
-        // nextArrow={<RightOutlined />}
-        // prevArrow={<LeftOutlined />}
+        arrows
+        nextArrow={<RightOutlined />}
+        prevArrow={<LeftOutlined />}
         autoplaySpeed={8000}
       >
         <Row justify="center">
