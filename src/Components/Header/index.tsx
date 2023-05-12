@@ -28,27 +28,6 @@ import { db } from "../../firebase";
 const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
   const [user, loading, error] = useAuthState(auth);
   const [visible, setVisibility] = useState(false);
-  const [showHeader, setShowHeader] = useState(true);
-  const [scrollPos, setScrollPos] = useState(0);
-  const [currentStage, setCurrentStage] = useState("contactInfo");
-  const [prefill, setPrefill] = useState({
-    name: "",
-    email: "",
-  });
-
-  const updatePrefill = (obj: any) => {
-    setPrefill(obj);
-  };
-  const handleScroll = () => {
-    setScrollPos(document.body.getBoundingClientRect().top);
-    setShowHeader(document.body.getBoundingClientRect().top > scrollPos);
-  };
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  });
 
   // const scrollTo = (id: string) => {
   //   if (
@@ -89,38 +68,22 @@ const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
     >
       <Menu.Item>
         <Link href="/company#About">
-          <Span
-           
-          >
-            About
-          </Span>
+          <Span>About</Span>
         </Link>
       </Menu.Item>
       <Menu.Item>
         <Link href="/company#Our-Team">
-          <Span
-            
-          >
-            Our Team
-          </Span>
+          <Span>Our Team</Span>
         </Link>
       </Menu.Item>
       <Menu.Item>
         <Link href="/company#Our-Advisors">
-          <Span
-           
-          >
-            Advisors
-          </Span>
+          <Span>Advisors</Span>
         </Link>
       </Menu.Item>
       <Menu.Item>
         <Link href="/company#contact-us">
-          <Span
-           
-          >
-            Contact Us
-          </Span>
+          <Span>Contact Us</Span>
         </Link>
       </Menu.Item>
     </Menu>
@@ -157,21 +120,13 @@ const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
         <Row justify="space-between">
           <Col>
             <CustomNavLinkSmall>
-              <Link href="/" >
-                <Span
-                 
-                >
-                  Home
-                </Span>
+              <Link href="/">
+                <Span>Home</Span>
               </Link>
             </CustomNavLinkSmall>
             <CustomNavLinkSmall>
               <Link href="/trupulse">
-                <Span
-                 
-                >
-                  TruPulse™
-                </Span>
+                <Span>TruPulse™</Span>
               </Link>
             </CustomNavLinkSmall>
             <CustomNavLinkSmall>
@@ -182,11 +137,7 @@ const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
                   onClick={(e) => e.preventDefault()}
                 >
                   <Link href="/company">
-                    <Span
-                      
-                    >
-                      About
-                    </Span>
+                    <Span>About</Span>
                   </Link>
                   <DownIcon />
                 </a>
@@ -194,11 +145,7 @@ const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
             </CustomNavLinkSmall>
             <CustomNavLinkSmall>
               <Link href="/blog">
-                <Span
-                  
-                >
-                  Blog
-                </Span>
+                <Span>Blog</Span>
               </Link>
             </CustomNavLinkSmall>
           </Col>
@@ -226,7 +173,7 @@ const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
                 >
                   <Link href="/free-trial">
                     <CTAWrapper
-                      className="pulse" 
+                      className="pulse"
                       // onClick={handleDemoRequestButtonClick}
                     >
                       <Button>{t("Free Trial")}</Button>
@@ -258,9 +205,7 @@ const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
       className="headerVisible"
     >
       <Row justify="space-between">
-        <LogoContainer
-          href="/"          
-        >
+        <LogoContainer href="/">
           <img
             src="\img\icons\logo192.png"
             width="220px"
@@ -278,7 +223,7 @@ const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
           </Burger>
         </BurgerContainer>
       </Row>
-      <Drawer closable={false} visible={visible} onClose={onClose}>
+      <Drawer closable={false} open={visible} onClose={onClose}>
         <Col style={{ marginBottom: "2.5rem" }}>
           <Label onClick={onClose}>
             <Col span={12}>
