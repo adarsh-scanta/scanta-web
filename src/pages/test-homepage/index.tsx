@@ -1,6 +1,6 @@
 "use client";
 import styled from "styled-components";
-import React, { lazy } from "react";
+import React from "react";
 import Header from "@/Components/Header";
 // import Router from "next/navigation";
 import { Styles } from "@/styles/styles";
@@ -12,7 +12,6 @@ import AboutBlock from "@/Components/AboutBlock";
 import Footer from "@/Components/Footer";
 import Test from "@/Components/Test";
 import Head from "next/head";
-// const ScrollToTop = lazy(() => import("../common/ScrollToTop"));
 
 export default function Home() {
   const SplashIcon = styled("div")`

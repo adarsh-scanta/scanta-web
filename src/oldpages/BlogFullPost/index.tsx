@@ -1,13 +1,13 @@
 "use client";
-import { useState, useEffect, lazy } from "react";
+import { useState, useEffect } from "react";
 import { Skeleton } from "antd";
 import { db } from "../../firebase";
 import { collection, query, orderBy, onSnapshot } from "firebase/firestore";
 import Post from "../../components/Blog/Post";
 import Footer from "../../components/Footer";
 import { Helmet } from "react-helmet";
+import ScrollToTop from "@/common/ScrollToTop";
 
-const ScrollToTop = lazy(() => import("../../common/ScrollToTop"));
 
 function BlogFullPost() {
   const [posts, setPosts] = useState([] as any);

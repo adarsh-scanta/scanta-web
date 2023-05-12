@@ -1,6 +1,6 @@
 "use client";
 import { Row, Col, Collapse, Modal } from "antd";
-import { lazy, useState, useEffect } from "react";
+import {  useState, useEffect } from "react";
 import { withTranslation } from "react-i18next";
 // import { Link } from "react-router-dom";
 import Link from "next/link";
@@ -19,19 +19,12 @@ import {
 } from "./styles";
 import { feedbackData } from "./feedbackData";
 import Container from "../../common/Container";
-
-const WorkArt7 = lazy(() => import("../../assets/arts/WorkplaceArt/WorkArt7"));
-const WorkArt8 = lazy(() => import("../../assets/arts/WorkplaceArt/WorkArt8"));
-const WorkArt9 = lazy(() => import("../../assets/arts/WorkplaceArt/WorkArt9"));
-const WorkArt10 = lazy(
-  () => import("../../assets/arts/WorkplaceArt/WorkArt10")
-);
-const WorkArt11 = lazy(
-  () => import("../../assets/arts/WorkplaceArt/WorkArt11")
-);
-const WorkArt12 = lazy(
-  () => import("../../assets/arts/WorkplaceArt/WorkArt12")
-);
+import WorkArt7 from "@/assets/arts/WorkplaceArt/WorkArt7";
+import WorkArt8 from "@/assets/arts/WorkplaceArt/WorkArt8";
+import WorkArt9 from "@/assets/arts/WorkplaceArt/WorkArt9";
+import WorkArt10 from "@/assets/arts/WorkplaceArt/WorkArt10";
+import WorkArt11 from "@/assets/arts/WorkplaceArt/WorkArt11";
+import WorkArt12 from "@/assets/arts/WorkplaceArt/WorkArt12";
 
 const CompanyInfoBlock = ({ t, from }: any) => {
   const { Panel } = Collapse;
@@ -55,7 +48,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
           }}
         >
           <Container>
-            {/* <div style={{ marginBottom: "8rem" }}>
+            <div style={{ marginBottom: "8rem" }}>
               <Row justify="center">
                 <ServicesHeading style={{ margin: "2rem 2rem 1rem" }}>
                   <span style={{ color: "#430568" }}>TruPulse Uncovers </span>{" "}
@@ -173,7 +166,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                   </Row>
                 </Col>
               </Row>
-            </div> */}
+            </div>
             <div>
               <Row justify="center">
                 <div className={styles.home_bluebox}>

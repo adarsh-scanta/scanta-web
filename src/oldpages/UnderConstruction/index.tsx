@@ -1,6 +1,6 @@
 import React, { lazy } from "react";
 import { Row, Col } from "antd";
-const Container = lazy(() => import("../../common/Container"));
+import Container from "@/common/Container";
 const UnderConstruction = () => {
   return (
     <>
