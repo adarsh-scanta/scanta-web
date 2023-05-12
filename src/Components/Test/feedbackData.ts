@@ -5,7 +5,7 @@ export const feedbackData = [
     content:
       "Employee surveys are amazing but usually very high level. With TruPulse I can see insights on employee morale at any altitude. I used to look forward to having survey results quarterly, now I can see those same results whenever I need them.",
     profilePic: "/img/svg/Daniel-McCulloch.svg",
-    company_logo: "/img/icons/white.png",
+    company_logo: "/img/icons/white1.png",
   },
 
   {
@@ -22,7 +22,7 @@ export const feedbackData = [
     content:
       "The idea of being able to call up a report on what employee morale is like at any time I want to is a powerful feature of TruPulse. Demographic breakdowns make the insights even more useful. Surveys are reactive, TruPulse is proactive.",
     profilePic: "/img/svg/Mani.svg",
-    company_logo: "/img/icons/white.png",
+    company_logo: "/img/icons/white1.png",
   },
   {
     name: "Jack Sullivan",
