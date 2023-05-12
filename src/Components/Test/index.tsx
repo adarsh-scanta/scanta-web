@@ -1,6 +1,6 @@
 "use client";
 import { Row, Col, Collapse, Modal } from "antd";
-import {  useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { withTranslation } from "react-i18next";
 // import { Link } from "react-router-dom";
 import Link from "next/link";
@@ -1525,6 +1525,10 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                                         fontSize: "0.8rem",
                                         fontFamily: "Poppins SemiBold",
                                         maxHeight: "100px",
+                                        marginBottom:
+                                          item.name === "Mani Sundaram"
+                                            ? "1.5rem"
+                                            : "1rem",
                                       }}
                                     >
                                       {`"${item.content}"`}
