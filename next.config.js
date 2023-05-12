@@ -22,7 +22,7 @@ module.exports = withAntdLess({
     ignoreBuildErrors: true,
   },
   reactStrictMode: true,
-  swcMinify:false,
+  productionBrowsersSourceMap: true,
   compiler: {
     // see https://styled-components.com/docs/tooling#babel-plugin for more info on the options.
     styledComponents: true,
