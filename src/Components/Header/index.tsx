@@ -157,7 +157,7 @@ const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
         <Row justify="space-between">
           <Col>
             <CustomNavLinkSmall>
-              <Link href="/" aria-label="homepage">
+              <Link href="/" >
                 <Span
                  
                 >
@@ -166,7 +166,7 @@ const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
               </Link>
             </CustomNavLinkSmall>
             <CustomNavLinkSmall>
-              <Link href="/trupulse" aria-label="product">
+              <Link href="/trupulse">
                 <Span
                  
                 >
@@ -259,9 +259,7 @@ const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
     >
       <Row justify="space-between">
         <LogoContainer
-          href="/"
-          aria-label="homepage"
-          
+          href="/"          
         >
           <img
             src="\img\icons\logo192.png"

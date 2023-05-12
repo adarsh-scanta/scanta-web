@@ -64,7 +64,7 @@ const MainBlock = ({ id }: any) => {
         <Row justify="center">
           <Col>
             <div style={{ margin: "1rem", padding: "1rem" }}>
-              <Link to="/departments" aria-label="under-construction">
+              <Link to="/departments">
                 <CTAWrapper>
                   <Button>
                     <span style={{ margin: "2.5rem" }}>Learn More</span>
