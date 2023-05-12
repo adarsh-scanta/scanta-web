@@ -733,7 +733,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                       </Row>
                     </div>
                     <Col xs={24} sm={24} md={24} lg={12} xl={12}>
-                      <div style={{ margin: "2rem" }}>
+                      <div style={{ margin: "6rem 2rem 2rem" }}>
                         <ServicesHeading
                           style={{ textAlign: "left", marginBottom: "2rem" }}
                         >
