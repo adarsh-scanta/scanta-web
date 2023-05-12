@@ -43,9 +43,9 @@ const AboutBlock = () => {
       </Row>
       <CarouselWrapper
         autoplay
-        arrows
-        nextArrow={<RightOutlined />}
-        prevArrow={<LeftOutlined />}
+        // arrows
+        // nextArrow={<RightOutlined />}
+        // prevArrow={<LeftOutlined />}
         autoplaySpeed={8000}
       >
         <Row justify="center">

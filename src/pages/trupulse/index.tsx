@@ -119,7 +119,7 @@ export default function Trupulse() {
       <Styles />
       <MainBlock />
       <SecondBlock />
-      {/* <ThirdBlock /> */}
+      <ThirdBlock />
       <FourthBlock cards={ServicesContent.cards2} />
       <FifthBlock />
       <Container>
