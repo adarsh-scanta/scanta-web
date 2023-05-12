@@ -62,7 +62,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="author" content="Adarsh Verma" />
         <meta name="copyright" content="https://www.scanta.io" />
         <meta name="robots" content="index, follow" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="https://www.scanta.io/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#000000" />
         <meta

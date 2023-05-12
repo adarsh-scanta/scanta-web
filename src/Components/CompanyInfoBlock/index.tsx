@@ -59,7 +59,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
           }}
         >
           <Container>
-            <div style={{ marginBottom: "8rem" }}>
+            {/* <div style={{ marginBottom: "8rem" }}>
               <Row justify="center">
                 <ServicesHeading style={{ margin: "2rem 2rem 1rem" }}>
                   <span style={{ color: "#430568" }}>TruPulse Uncovers </span>{" "}
@@ -137,16 +137,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                       }}
                     >
                       <Link href="/trupulse">
-                        <Button
-                          onClick={() => {
-                            (window as { [key: string]: any })["track_load"](
-                              "https://www.scanta.io/trupulse",
-                              "Product Page"
-                            );
-                          }}
-                        >
-                          {t("Learn more")}
-                        </Button>
+                        <Button>{t("Learn more")}</Button>
                       </Link>
                     </CTAWrapper>
                   </Row>
@@ -162,22 +153,13 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                       }}
                     >
                       <Link href="/trupulse">
-                        <Button
-                          onClick={() => {
-                            (window as { [key: string]: any })["track_load"](
-                              "https://www.scanta.io/trupulse",
-                              "Product Page"
-                            );
-                          }}
-                        >
-                          {t("Learn more")}
-                        </Button>
+                        <Button>{t("Learn more")}</Button>
                       </Link>
                     </CTAWrapper>
                   </Row>
                 </Col>
               </Row>
-            </div>
+            </div> */}
             <div>
               <Row justify="center">
                 <div className={styles.homeBluebox}>
@@ -1343,18 +1325,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                               style={{ margin: "1rem 0 2rem 4rem" }}
                             >
                               <Link href="/trupulse">
-                                <Button
-                                  onClick={() => {
-                                    (window as { [key: string]: any })[
-                                      "track_load"
-                                    ](
-                                      "https://www.scanta.io/trupulse",
-                                      "Product Page"
-                                    );
-                                  }}
-                                >
-                                  {t("Learn more")}
-                                </Button>
+                                <Button>{t("Learn more")}</Button>
                               </Link>
                             </CTAWrapper>
                           </Row>
@@ -1366,18 +1337,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                               style={{ margin: "1rem 0 2rem" }}
                             >
                               <Link href="/trupulse">
-                                <Button
-                                  onClick={() => {
-                                    (window as { [key: string]: any })[
-                                      "track_load"
-                                    ](
-                                      "https://www.scanta.io/trupulse",
-                                      "Product Page"
-                                    );
-                                  }}
-                                >
-                                  {t("Learn more")}
-                                </Button>
+                                <Button>{t("Learn more")}</Button>
                               </Link>
                             </CTAWrapper>
                           </Row>
@@ -1466,16 +1426,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
             <Row justify="center">
               <CTAWrapper className={styles.pulse}>
                 <Link href="/trupulse">
-                  <Button
-                    onClick={() => {
-                      (window as { [key: string]: any })["track_load"](
-                        "https://www.scanta.io/trupulse",
-                        "Product Page"
-                      );
-                    }}
-                  >
-                    {t("Learn more")}
-                  </Button>
+                  <Button>{t("Learn more")}</Button>
                 </Link>
               </CTAWrapper>
             </Row>

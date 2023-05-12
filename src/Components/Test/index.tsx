@@ -55,7 +55,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
           }}
         >
           <Container>
-            <div style={{ marginBottom: "8rem" }}>
+            {/* <div style={{ marginBottom: "8rem" }}>
               <Row justify="center">
                 <ServicesHeading style={{ margin: "2rem 2rem 1rem" }}>
                   <span style={{ color: "#430568" }}>TruPulse Uncovers </span>{" "}
@@ -79,7 +79,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                   </p>
                 </Col>
               </Row>
-              {/* <CarouselWrapper
+              <CarouselWrapper
                 autoplay
                 arrows
                 nextArrow={<RightOutlined />}
@@ -120,7 +120,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                     </CarouselLabel>
                   </div>
                 </Row>
-              </CarouselWrapper> */}
+              </CarouselWrapper>
               <Row justify="center">
                 <Col xs={0} md={0} lg={24} xl={24}>
                   <Row justify="end">
@@ -173,7 +173,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                   </Row>
                 </Col>
               </Row>
-            </div>
+            </div> */}
             <div>
               <Row justify="center">
                 <div className={styles.home_bluebox}>
