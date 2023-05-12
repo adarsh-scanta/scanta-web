@@ -89,31 +89,6 @@ const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
     </Menu>
   );
 
-  const [ctaClicksCount, setCtaClicksCount] = useState(0);
-  const [ctaSubmits, setCtaSubmits] = useState(0);
-  useEffect(() => {
-    const q = query(collection(db, "stats"));
-    onSnapshot(q, (querySnapshot) => {
-      setCtaClicksCount(querySnapshot.docs[0].data().ctaClicksCount);
-      setCtaSubmits(querySnapshot.docs[0].data().ctaSubmits);
-    });
-  }, []);
-
-  const handleDemoRequestButtonClick = async () => {
-    openModal();
-    //Lead Forensic function call
-    if (ctaClicksCount > 0) {
-      try {
-        await setDoc(doc(db, "stats", "P0kHUuxV7HZvSA7XrcHh"), {
-          ctaClicksCount: ctaClicksCount + 1,
-          ctaSubmits: ctaSubmits,
-        });
-      } catch (err) {
-        alert(err);
-      }
-    }
-  };
-
   const MenuItem = () => {
     return (
       <>
@@ -131,16 +106,12 @@ const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
             </CustomNavLinkSmall>
             <CustomNavLinkSmall>
               <Dropdown overlay={companyMenu}>
-                <a
-                  // eslint-disable-next-line
-                  className="ant-dropdown-link"
-                  onClick={(e) => e.preventDefault()}
-                >
+                <div>
                   <Link href="/company">
                     <Span>About</Span>
                   </Link>
                   <DownIcon />
-                </a>
+                </div>
               </Dropdown>
             </CustomNavLinkSmall>
             <CustomNavLinkSmall>
