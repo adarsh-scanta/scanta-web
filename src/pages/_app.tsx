@@ -2,7 +2,6 @@ import "./globals.css";
 import type { AppProps } from "next/app";
 import Script from "next/script";
 import Head from "next/head";
-import ErrorBoundary from "@/Components/ErrorBoundary";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -87,9 +86,7 @@ export default function App({ Component, pageProps }: AppProps) {
         ></iframe>
       </noscript>
       <main>
-        <ErrorBoundary>
-          <Component {...pageProps} />
-        </ErrorBoundary>
+        <Component {...pageProps} />
       </main>
     </>
   );
