@@ -1,5 +1,4 @@
 import MainBlock from "@/Components/Product/MainBlock";
-import Image from "next/image";
 import React from "react";
 import SecondBlock from "@/Components/Product/SecondBlock";
 import ThirdBlock from "@/Components/Product/ThirdBlock";

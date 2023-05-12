@@ -1,10 +1,7 @@
 "use client";
-import Image from "next/image";
-import styles from "./page.module.css";
 import styled from "styled-components";
-import React, { lazy } from "react";
+import React from "react";
 import Header from "@/Components/Header";
-// import Router from "next/navigation";
 import { Styles } from "@/styles/styles";
 import IntroBlock from "@/Components/IntroBlock";
 import ScrollToTop from "@/common/ScrollToTop";
@@ -14,7 +11,6 @@ import AboutBlock from "@/Components/AboutBlock";
 import CompanyInfoBlock from "@/Components/CompanyInfoBlock";
 import Footer from "@/Components/Footer";
 import Head from "next/head";
-// const ScrollToTop = lazy(() => import("../common/ScrollToTop"));
 
 export default function Home() {
   const SplashIcon = styled("div")`

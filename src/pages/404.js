@@ -1,7 +1,5 @@
-import MainBlock from "@/Components/FreeTrial/MainBlock";
 import Header from "@/Components/Header";
 import Container from "@/common/Container";
-import ScrollToTop from "@/common/ScrollToTop";
 import Footer from "@/Components/Footer";
 import { Styles } from "@/styles/styles";
 import { Row, Col } from "antd";

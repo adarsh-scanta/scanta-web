@@ -1,6 +1,4 @@
 "use client";
-import Image from "next/image";
-import styles from "./page.module.css";
 import styled from "styled-components";
 import React, { lazy } from "react";
 import Header from "@/Components/Header";
@@ -11,7 +9,6 @@ import ScrollToTop from "@/common/ScrollToTop";
 import Container from "@/common/Container";
 import { SplashArt2 } from "@/assets/arts/SplashArt";
 import AboutBlock from "@/Components/AboutBlock";
-import CompanyInfoBlock from "@/Components/CompanyInfoBlock";
 import Footer from "@/Components/Footer";
 import Test from "@/Components/Test";
 import Head from "next/head";

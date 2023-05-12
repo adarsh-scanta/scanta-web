@@ -7,7 +7,6 @@ import ScrollToTop from "@/common/ScrollToTop";
 import Footer from "@/Components/Footer";
 import { Styles } from "@/styles/styles";
 import Head from "next/head";
-import Image from "next/image";
 import React from "react";
 
 export default function Home() {
