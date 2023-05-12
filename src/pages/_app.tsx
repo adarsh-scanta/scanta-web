@@ -2,6 +2,7 @@ import "./globals.css";
 import type { AppProps } from "next/app";
 import Script from "next/script";
 import Head from "next/head";
+import { Suspense } from "react";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -86,7 +87,9 @@ export default function App({ Component, pageProps }: AppProps) {
         ></iframe>
       </noscript>
       <main>
-        <Component {...pageProps} />
+        <Suspense fallback={<p>Loading...</p>}>
+          <Component {...pageProps} />
+        </Suspense>
       </main>
     </>
   );
