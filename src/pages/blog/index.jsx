@@ -14,18 +14,42 @@ import {
 } from "firebase/firestore";
 import Head from "next/head";
 
-export const getServerSideProps = async () => {
-  const postsRef = collection(db, "posts");
-  const snapshot = await getDocs(postsRef);
-  const posts = snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }));
-  return {
-    props: {
-      posts: JSON.parse(JSON.stringify(posts)),
-    },
-  };
-};
 
-export default function Home({ posts }) {
+
+// export const getServerSideProps = async () => {
+//   const postsRef = collection(db, "posts");
+//   const snapshot = await getDocs(postsRef);
+//   const posts = snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }));
+//   return {
+//     props: {
+//       posts: JSON.parse(JSON.stringify(posts)),
+//     },
+//   };
+// };
+
+export default function Home() {
+
+   const [posts, setPosts] = useState([]);
+   const [sortedPosts, setSortedPosts] = useState([]);
+   useEffect(() => {
+     setSortedPosts(
+       posts?.sort(
+         (a, b) => b.data.created_at.seconds - a.data.created_at.seconds
+       )
+     );
+   }, [posts]);
+   useEffect(() => {
+     const q = query(collection(db, "posts"));
+     onSnapshot(q, (querySnapshot) => {
+       // const temp
+       setPosts(
+         querySnapshot.docs.map((doc) => ({
+           id: doc.id,
+           data: doc.data(),
+         }))
+       );
+     });
+   }, []);
   return (
     <React.Fragment>
       <Head>
@@ -59,7 +83,7 @@ export default function Home({ posts }) {
         <ScrollToTop />
         <div style={{ margin: "2rem auto", background: "#eff0f7" }}>
           {/* <React.Suspense fallback={posts}> */}
-          <Posts posts={posts} />
+          <Posts posts={sortedPosts} />
           {/* </React.Suspense> */}
           <Footer fromWhere={"blog"} />
         </div>
