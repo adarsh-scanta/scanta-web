@@ -20,8 +20,7 @@ const MainBlock = ({ id }: any) => {
       <Container>
         {/* <Fade direction="up" duration={500} triggerOnce={true}> */}
         <Row justify="space-evenly" id={id}>
-          
-          <Col lg={11} md={11} sm={22} xs={22}>
+          <Col lg={11} md={22} sm={22} xs={22}>
             <ContentWrapper>
               <Title>
                 <span style={{ color: "#2F327D" }}>About</span> Us
@@ -31,7 +30,7 @@ const MainBlock = ({ id }: any) => {
               </Content>
             </ContentWrapper>
           </Col>
-          <Col lg={11} md={11} sm={22} xs={22}>
+          <Col lg={11} md={22} sm={22} xs={22}>
             <ArtWrapper>
               <StoryArt />
             </ArtWrapper>

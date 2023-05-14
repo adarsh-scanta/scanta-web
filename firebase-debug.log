@@ -1,0 +1,43 @@
+[debug] [2023-05-11T15:48:19.620Z] ----------------------------------------------------------------------
+[debug] [2023-05-11T15:48:19.624Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Adarsh\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-05-11T15:48:19.626Z] CLI Version:   11.25.2
+[debug] [2023-05-11T15:48:19.626Z] Platform:      win32
+[debug] [2023-05-11T15:48:19.626Z] Node Version:  v16.13.2
+[debug] [2023-05-11T15:48:19.628Z] Time:          Thu May 11 2023 21:18:19 GMT+0530 (India Standard Time)
+[debug] [2023-05-11T15:48:19.628Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-05-11T15:48:19.807Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-05-11T15:48:19.808Z] > authorizing via signed-in user (adarsh@scanta.io)
+[debug] [2023-05-11T15:48:19.808Z] [iam] checking project scanta-web for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-05-11T15:48:19.811Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/scanta-web:testIamPermissions [none]
+[debug] [2023-05-11T15:48:19.811Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/scanta-web:testIamPermissions x-goog-quota-user=projects/scanta-web
+[debug] [2023-05-11T15:48:19.812Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/scanta-web:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-05-11T15:48:21.414Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/scanta-web:testIamPermissions 200
+[debug] [2023-05-11T15:48:21.414Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/scanta-web:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-05-11T15:48:21.415Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/scanta-web [none]
+[debug] [2023-05-11T15:48:21.932Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/scanta-web 200
+[debug] [2023-05-11T15:48:21.933Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/scanta-web {"projectId":"scanta-web","projectNumber":"847483270902","displayName":"scanta-web","name":"projects/scanta-web","resources":{"hostingSite":"scanta-web"},"state":"ACTIVE","etag":"1_20b9c07d-14e1-43fd-bd05-4418c4c0dfb3"}
+[debug] [2023-05-11T15:48:37.593Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/scanta-web/sites pageToken=&pageSize=10
+[debug] [2023-05-11T15:48:39.091Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/scanta-web/sites 200
+[debug] [2023-05-11T15:48:39.092Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/scanta-web/sites {"sites":[{"name":"projects/scanta-web/sites/scanta-web","defaultUrl":"https://scanta-web.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2023-05-11T15:48:39.093Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/scanta-web/sites 
+[debug] [2023-05-11T15:48:40.341Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/scanta-web/sites 200
+[debug] [2023-05-11T15:48:40.341Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/scanta-web/sites {"sites":[{"name":"projects/scanta-web/sites/scanta-web","defaultUrl":"https://scanta-web.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2023-05-11T15:48:40.342Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/scanta-web/webApps/-/config [none]
+[debug] [2023-05-11T15:48:41.170Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/scanta-web/webApps/-/config 200
+[debug] [2023-05-11T15:48:41.170Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/scanta-web/webApps/-/config {"projectId":"scanta-web","storageBucket":"scanta-web.appspot.com","apiKey":"AIzaSyCl4NeO6coUT7S0Gl5gfTNF-DKuFQVcIck","authDomain":"scanta-web.firebaseapp.com","messagingSenderId":"847483270902"}
+[debug] [2023-05-11T15:51:42.839Z] Error: Export encountered errors on following paths:
+	/lib/registry
+    at D:\scanta-web\next\scanta-web\node_modules\next\dist\export\index.js:613:19
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async Span.traceAsyncFn (D:\scanta-web\next\scanta-web\node_modules\next\dist\trace\trace.js:103:20)
+    at async D:\scanta-web\next\scanta-web\node_modules\next\dist\build\index.js:1483:21
+    at async Span.traceAsyncFn (D:\scanta-web\next\scanta-web\node_modules\next\dist\trace\trace.js:103:20)
+    at async D:\scanta-web\next\scanta-web\node_modules\next\dist\build\index.js:1339:17
+    at async Span.traceAsyncFn (D:\scanta-web\next\scanta-web\node_modules\next\dist\trace\trace.js:103:20)
+    at async build (D:\scanta-web\next\scanta-web\node_modules\next\dist\build\index.js:143:29)
+    at async build (C:\Users\Adarsh\AppData\Roaming\npm\node_modules\firebase-tools\lib\frameworks\next\index.js:55:5)
+    at async prepareFrameworks (C:\Users\Adarsh\AppData\Roaming\npm\node_modules\firebase-tools\lib\frameworks\index.js:261:108)
+    at async deploy (C:\Users\Adarsh\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\index.js:53:13)
+[error] 
+[error] Error: An unexpected error has occurred.

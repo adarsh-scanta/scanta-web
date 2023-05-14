@@ -2,7 +2,7 @@ const WorkArt4 = () => (
   <div className="mobile">
     <svg
       width="300"
-      height="350"
+      height="300"
       viewBox="0 0 1596 1045"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

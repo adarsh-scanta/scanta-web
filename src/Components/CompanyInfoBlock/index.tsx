@@ -90,7 +90,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                     <WorkArt8 />
                     <CarouselLabel
                       className={styles.moraleLabel}
-                      style={{ position: "relative", top: "-30px" }}
+                      style={{ position: "relative", top: "-10px" }}
                     >
                       Morale
                     </CarouselLabel>
@@ -112,7 +112,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                     <WorkArt11 />
                     <WorkArt12 />
                     <CarouselLabel
-                      style={{ position: "relative", top: "-30px" }}
+                      style={{ position: "relative", top: "-10px" }}
                     >
                       Cultural Health
                     </CarouselLabel>

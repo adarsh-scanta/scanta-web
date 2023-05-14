@@ -62,7 +62,7 @@ export const Title = styled("h6")`
   font-size: 2rem;
   text-align: center;
   color: #eb7a02;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 `;
 
 export const CarouselWrapper = styled(Carousel)`

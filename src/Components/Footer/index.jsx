@@ -4,6 +4,7 @@ import { Row, Col, Modal, Input } from "antd";
 import { withTranslation } from "react-i18next";
 import { useRouter } from "next/router";
 import Container from "../../common/Container";
+import CookieConsent from "react-cookie-consent";
 import { Button } from "../../common/Button";
 import ZapierForm from "react-zapier-form";
 import {
@@ -12,10 +13,46 @@ import {
   Subtitle,
   LogoContainer,
   LeftContainer,
+  Title,
+  Content,
 } from "./styles";
+import { NewsLetterModal } from "./NewsLetterModal";
 const Footer = ({ t, fromWhere }) => {
   const router = useRouter();
 
+  const [isNewsLetterModalVisible, setIsNewsLetterModalVisible] =
+    useState(false);
+
+  const closeNewsLetterModal = () => {
+    setIsNewsLetterModalVisible(false);
+    localStorage.setItem(
+      "newsletter",
+      JSON.stringify({ skipped: true, time: new Date() })
+    );
+  };
+
+  const openNewsLetterModal = async () => {
+    setIsNewsLetterModalVisible(true);
+  };
+
+  var OneDay = new Date().getTime() + 10 * 1000;
+
+  useEffect(() => {
+    const newsletter = localStorage.getItem("newsletter") || "";
+    let newsletterSkipped = false;
+    let newsletterExpiry = "";
+    newsletterSkipped = JSON.parse(newsletter ? newsletter : "{}")?.skipped;
+    newsletterExpiry = JSON.parse(newsletter ? newsletter : "{}")?.time;
+    if (!newsletterSkipped) {
+      setTimeout(() => {
+        openNewsLetterModal();
+      }, 10000);
+    } else if (new Date(OneDay) < new Date(newsletterExpiry)) {
+      setTimeout(() => {
+        openNewsLetterModal();
+      }, 10000);
+    }
+  }, []);
   return (
     <>
       <FooterSection
@@ -533,6 +570,53 @@ const Footer = ({ t, fromWhere }) => {
             </Row>
           </LeftContainer>
         </Container>
+        <Modal
+          open={isNewsLetterModalVisible}
+          footer={null}
+          onCancel={closeNewsLetterModal}
+        >
+          <Title>Subscribe to our newsletter</Title>
+          <div
+            style={{
+              margin: "0rem auto",
+              width: "100%",
+              // height: "50%",
+              background: "rgba(255, 255, 255, 0.8)",
+              backdropFilter: "blur(10px)",
+              borderRadius: "49.0901px",
+            }}
+          >
+            <Row justify="center">
+              <Content
+                style={{
+                  textAlign: "center",
+                  margin: "0rem 1rem 0",
+                  fontSize: "1rem",
+                }}
+              >
+                Sign up for the first HR Newsletter to combine IO Psychology and
+                HR Tech!
+              </Content>
+            </Row>
+            <NewsLetterModal handleClose={closeNewsLetterModal} />
+          </div>
+        </Modal>
+        <CookieConsent
+          location="bottom"
+          buttonText="Accept"
+          cookieName="cookieConsent"
+          style={{ background: "#2B373B" }}
+          buttonStyle={{
+            background: "#eb7b38",
+            color: "#fff",
+            fontSize: "13px",
+            borderRadius: "20px",
+          }}
+          expires={150}
+        >
+          This website uses cookies to enhance the user experience.{" "}
+          {/* <span style={{ fontSize: "10px" }}>This bit of text is smaller :O</span> */}
+        </CookieConsent>
       </FooterSection>
     </>
   );

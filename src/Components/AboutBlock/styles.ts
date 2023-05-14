@@ -6,10 +6,10 @@ export const LeftContentSection = styled("section")`
   top:-50px;
   width: 100%;
   @media only screen and (max-width: 1024px) {
-    padding: 1rem 0 4rem;
+    padding: 3rem 0 1rem;
   }
   @media only screen and (max-width: 600px) {
-    padding: 3rem 0 4rem;
+    padding: 3rem 0 0rem;
   }
 `;
 
@@ -21,9 +21,9 @@ export const Content = styled("p")`
 export const ContentWrapper = styled("div")`
   position: relative;
   border-radius: 20px;
-  padding: 1.5rem 1.5rem;
+  padding: 1.5rem 1.5rem 0;
   @media only screen and (max-width: 575px) {
-    padding-top: 2rem;
+    padding-top: 1rem;
   }
 `;
 

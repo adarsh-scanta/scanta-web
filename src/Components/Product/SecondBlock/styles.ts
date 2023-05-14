@@ -3,22 +3,20 @@ import styled from "styled-components";
 export const RightBlockContainer = styled("section")`
   padding: 4rem 0 1rem;
   position: relative;
-  height:550px;
+  height: 550px;
   // background: url("/img/svg/wave.svg");
   background-size: cover;
   background: url("/img/svg/Exec-Back.svg");
   // background-size: cover;
   @media only screen and (max-width: 1080px) {
     padding: 12rem 0 2.5rem;
-    height:750px;
-
-}
+    height: 750px;
+  }
 
   @media only screen and (max-width: 560px) {
     padding: 10rem 0 2.5rem;
-    height:1200px;
-
-}
+    height: 1200px;
+  }
 `;
 
 export const Title = styled("h6")`
@@ -34,19 +32,18 @@ export const Subtitle = styled("h6")`
 `;
 
 export const ContentWrapper = styled("div")`
-height: 95%;
-z-index: 2;
-background: #423EB6;
-backdrop-filter:blur(40px);
-border-radius: 20px;
-position: relative;
-filter: drop-shadow(0px 30px 70px rgba(0, 0, 0, 0.16));
-box-shadow: 0px 13px 21px -6px rgba(128,128,128,1);
+  height: 95%;
+  z-index: 2;
+  background: #423eb6;
+  backdrop-filter: blur(40px);
+  border-radius: 20px;
+  position: relative;
+  filter: drop-shadow(0px 30px 70px rgba(0, 0, 0, 0.16));
+  box-shadow: 0px 13px 21px -6px rgba(128, 128, 128, 1);
 
-@media only screen and (max-width: 560px) {
-    height: 99%;
-
-}
+  @media only screen and (max-width: 560px) {
+    // height: 99%;
+  }
 `;
 
 export const ButtonWrapper = styled("div")`
@@ -99,13 +96,11 @@ export const CTAWrapper = styled("span")`
   color: #252641;
 `;
 
-
 export const Content = styled("p")`
   margin: 1.2rem 0 1rem 0;
-  color:#696984;
-  fontSize: 1.2rem;
+  color: #696984;
+  fontsize: 1.2rem;
   @media only screen and (min-width: 1400px) {
     font-size: 1.2rem;
   }
 `;
-

@@ -9,7 +9,7 @@ export const RightBlockContainer = styled("section")`
   }
 
   @media only screen and (max-width: 768px) {
-    padding: 4rem 0 2rem;
+    padding: 2rem 0 2rem;
   }
 `;
 export const Content = styled("p")`
@@ -48,7 +48,7 @@ export const ContentWrapper = styled("div")`
   }
   @media only screen and (max-width: 575px) {
     padding-bottom: 2rem;
-    top: 15%;
+    top: 10%;
   }
 `;
 

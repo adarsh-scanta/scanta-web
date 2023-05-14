@@ -38,7 +38,7 @@ const MainBlock = ({ t, id }: any) => {
     >
       <Container>
         {/* <Fade direction="up" duration={500} triggerOnce={true}> */}
-        <Row justify="space-evenly" id={id}>
+        <Row justify="space-between" id={id}>
           <Col lg={11} md={8} sm={0} xs={0}>
             <Link href="/">
               <svg
@@ -67,7 +67,7 @@ const MainBlock = ({ t, id }: any) => {
               </ArtWrapper>
             </Row>
           </Col>
-          <Col lg={10} md={14} sm={0} xs={0}>
+          <Col lg={10} md={16} sm={0} xs={0}>
             <div style={{ margin: "0 1rem" }}>
               <div>
                 <button
@@ -124,7 +124,7 @@ const MainBlock = ({ t, id }: any) => {
               </div>
               <div
                 style={{
-                  width: "90%",
+                  width: "95%",
                   height: "650px",
                   background: "#fff",
                   boxShadow: "0px 0px 4px rgba(0, 0, 0, 0.25)",
@@ -132,6 +132,7 @@ const MainBlock = ({ t, id }: any) => {
                   transform: "scale(1, 1)",
                   position: "relative",
                   top: "10px",
+                  padding: "0 1rem",
                 }}
               >
                 <InlineWidget
@@ -149,7 +150,28 @@ const MainBlock = ({ t, id }: any) => {
             </div>
           </Col>
           <Col lg={0} md={0} sm={24} xs={24}>
-            <div style={{ margin: "0 1rem" }}>
+            <Link href="/">
+              <svg
+                width="35"
+                height="35"
+                viewBox="0 0 49 49"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                style={{ margin: "0 0 1rem" }}
+              >
+                <path
+                  d="M21.3564 33.3987L13.4367 25.479L37.9285 25.479C38.4693 25.479 38.9081 25.0402 38.9081 24.4994C38.9081 23.9587 38.4694 23.5197 37.9285 23.5197L25.0791 23.5197H13.4367L21.3556 15.6009C21.7379 15.2185 21.7379 14.5979 21.3556 14.2155C20.9732 13.8331 20.3526 13.8331 19.9702 14.2155L10.3786 23.8071C9.9962 24.1895 9.9962 24.8101 10.3786 25.1925L19.9702 34.7841L19.9726 34.7865C20.1627 34.974 20.4122 35.0706 20.6633 35.0706C20.9144 35.0706 21.1639 34.9739 21.354 34.7865L21.3564 34.7841C21.7388 34.4017 21.7388 33.7811 21.3564 33.3987Z"
+                  fill="black"
+                  stroke="black"
+                />
+                <path
+                  d="M24.5 0.5C11.267 0.5 0.5 11.2661 0.5 24.5C0.5 37.7341 11.2661 48.5 24.5 48.5C37.7341 48.5 48.5 37.7348 48.5 24.5C48.5 11.267 37.7348 0.5 24.5 0.5ZM24.5 46.5397C12.3476 46.5397 2.46026 36.6522 2.46026 24.5C2.46026 12.3478 12.3478 2.46026 24.5 2.46026C36.6522 2.46026 46.5397 12.3478 46.5397 24.5C46.5397 36.6522 36.6522 46.5397 24.5 46.5397Z"
+                  fill="black"
+                  stroke="black"
+                />
+              </svg>
+            </Link>
+            <div style={{ margin: "0" }}>
               <div>
                 <button
                   style={{
@@ -213,6 +235,7 @@ const MainBlock = ({ t, id }: any) => {
                   transform: "scale(1)",
                   position: "relative",
                   top: "10px",
+                  padding: "0 1rem",
                 }}
               >
                 <InlineWidget

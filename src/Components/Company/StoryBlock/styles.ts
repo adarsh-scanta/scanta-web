@@ -1,15 +1,15 @@
 import styled from "styled-components";
 
 export const RightBlockContainer = styled("section")`
-  padding: 12rem 0 2.5rem;
+  padding: 4rem 0 2.5rem;
   background: url("/img/svg/Exec-Back.svg");
   background-size: cover;
   @media only screen and (max-width: 1024px) {
-    padding: 8rem 0 3rem;
+    padding: 4rem 0 3rem;
   }
 
   @media only screen and (max-width: 768px) {
-    padding: 15rem 0 0rem;
+    padding: 4rem 0 0rem;
   }
 `;
 
@@ -50,13 +50,12 @@ export const ContentWrapper = styled("div")`
   // max-width: 90%;
   z-index: 1;
   @media only screen and (max-width: 1024px) {
-    padding-bottom: 8rem;
+    padding-bottom: 2rem;
     max-width: 100%;
     top: 10%;
   }
   @media only screen and (max-width: 575px) {
-    padding-bottom: 4rem;
-
+    padding-bottom: 0rem;
     top: 0%;
   }
 `;

@@ -45,7 +45,7 @@ const StoryBlock = ({ id }: any) => {
           </ContentWrapper>
         </Row>
         {/* </Fade> */}
-        <Row justify="space-between">
+        <Row justify="center">
           <Col lg={8} md={8} sm={22} xs={22}>
             {/* <Fade direction="up"> */}
             <div style={{ padding: "1.5rem 0 0" }}>

@@ -31,11 +31,11 @@ export const Content = styled("p")`
 
 export const ContentWrapper = styled("div")`
   position: relative;
-  top: 20%;
+  top: 10%;
   max-width: 90%;
   z-index: 1;
   @media only screen and (max-width: 575px) {
-    padding-bottom: 4rem;
+    padding-bottom: 0rem;
     top: 10%;
   }
 `;
