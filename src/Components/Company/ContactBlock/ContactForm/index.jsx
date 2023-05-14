@@ -11,12 +11,20 @@ const ContactForm = () => {
   const router = useRouter();
   const [ctaClicksCount, setCtaClicksCount] = useState(0);
   const [ctaSubmits, setCtaSubmits] = useState(0);
+  const [demoButtonCount, setDemoButtonCount] = useState(0);
+  const [demoSuccessCount, setDemoSuccessCount] = useState(0);
+  const [trialButtonCount, setTrialButtonCount] = useState(0);
+  const [trialSuccessCount, setTrialSuccessCount] = useState(0);
   // const [calendlyDuration, setCalendlyDuration] = useState(15);
   useEffect(() => {
     const q = query(collection(db, "stats"));
     onSnapshot(q, (querySnapshot) => {
       setCtaClicksCount(querySnapshot.docs[0].data().ctaClicksCount);
       setCtaSubmits(querySnapshot.docs[0].data().ctaSubmits);
+          setDemoButtonCount(querySnapshot.docs[0].data().demoButtonCount);
+          setDemoSuccessCount(querySnapshot.docs[0].data().demoSuccessCount);
+          setTrialButtonCount(querySnapshot.docs[0].data().trialButtonCount);
+          setTrialSuccessCount(querySnapshot.docs[0].data().trialSuccessCount);
     });
   }, []);
 
@@ -29,7 +37,11 @@ const ContactForm = () => {
       try {
         await setDoc(doc(db, "stats", "P0kHUuxV7HZvSA7XrcHh"), {
           ctaClicksCount: ctaClicksCount,
-          ctaSubmits: ctaSubmits + 1,
+          ctaSubmits: ctaSubmits,
+          demoButtonCount: demoButtonCount,
+          demoSuccessCount: demoSuccessCount,
+          trialButtonCount: trialButtonCount,
+          trialSuccessCount: trialSuccessCount+1,
         });
       } catch (err) {
         alert(err);
@@ -44,7 +56,6 @@ const ContactForm = () => {
         {({ error, loading, success }) => {
           if (success) {
             router.push("thankyou");
-            statsUpdate();
           }
           return (
             <div>
@@ -233,6 +244,7 @@ const ContactForm = () => {
                           color: "#FFFFFF",
                           fontSize: "1rem",
                         }}
+                        onClick={statsUpdate}
                       />
                       {/* <span>Submit</span> */}
                       {/* </Button> */}

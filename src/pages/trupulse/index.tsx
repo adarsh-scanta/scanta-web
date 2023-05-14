@@ -12,6 +12,7 @@ import Footer from "@/Components/Footer";
 import ServicesContent from "../../content/ServicesContent.json";
 import { Styles } from "@/styles/styles";
 import Head from "next/head";
+import ScrollToTop from "@/common/ScrollToTop";
 
 const articleStructuredData = {
   "@context": "https://schema.org",
@@ -117,6 +118,7 @@ export default function Trupulse() {
       </Head>
       <Header />
       <Styles />
+      <ScrollToTop />
       <MainBlock />
       <SecondBlock />
       <ThirdBlock />

@@ -49,6 +49,56 @@ const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
   //     setVisibility(false);
   //   }
   // };
+  const [ctaClicksCount, setCtaClicksCount] = useState(0);
+  const [ctaSubmits, setCtaSubmits] = useState(0);
+  const [demoButtonCount, setDemoButtonCount] = useState(0);
+  const [demoSuccessCount, setDemoSuccessCount] = useState(0);
+  const [trialButtonCount, setTrialButtonCount] = useState(0);
+  const [trialSuccessCount, setTrialSuccessCount] = useState(0);
+  useEffect(() => {
+    const q = query(collection(db, "stats"));
+    onSnapshot(q, (querySnapshot) => {
+      setCtaClicksCount(querySnapshot.docs[0].data().ctaClicksCount);
+      setCtaSubmits(querySnapshot.docs[0].data().ctaSubmits);
+      setDemoButtonCount(querySnapshot.docs[0].data().demoButtonCount);
+      setDemoSuccessCount(querySnapshot.docs[0].data().demoSuccessCount);
+      setTrialButtonCount(querySnapshot.docs[0].data().trialButtonCount);
+      setTrialSuccessCount(querySnapshot.docs[0].data().trialSuccessCount);
+    });
+  }, []);
+
+  const handleDemoRequestButtonClick = async () => {
+    if (ctaClicksCount > 0) {
+      try {
+        await setDoc(doc(db, "stats", "P0kHUuxV7HZvSA7XrcHh"), {
+          ctaClicksCount: ctaClicksCount,
+          ctaSubmits: ctaSubmits,
+          demoButtonCount: demoButtonCount + 1,
+          demoSuccessCount: demoSuccessCount,
+          trialButtonCount: trialButtonCount,
+          trialSuccessCount: trialSuccessCount,
+        });
+      } catch (err) {
+        alert(err);
+      }
+    }
+  };
+  const handleTrialButtonClick = async () => {
+    if (ctaClicksCount > 0) {
+      try {
+        await setDoc(doc(db, "stats", "P0kHUuxV7HZvSA7XrcHh"), {
+          ctaClicksCount: ctaClicksCount,
+          ctaSubmits: ctaSubmits,
+          demoButtonCount: demoButtonCount,
+          demoSuccessCount: demoSuccessCount,
+          trialButtonCount: trialButtonCount + 1,
+          trialSuccessCount: trialSuccessCount,
+        });
+      } catch (err) {
+        alert(err);
+      }
+    }
+  };
 
   const showDrawer = () => {
     setVisibility(!visible);
@@ -129,7 +179,7 @@ const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
                   <Link href="/request-demo">
                     <CTAWrapper
                       className="pulse"
-                      // onClick={handleDemoRequestButtonClick}
+                      onClick={handleDemoRequestButtonClick}
                     >
                       <Button>{t("Request a Demo")}</Button>
                     </CTAWrapper>
@@ -145,7 +195,7 @@ const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
                   <Link href="/free-trial">
                     <CTAWrapper
                       className="pulse"
-                      // onClick={handleDemoRequestButtonClick}
+                      onClick={handleTrialButtonClick}
                     >
                       <Button>{t("Free Trial")}</Button>
                     </CTAWrapper>
