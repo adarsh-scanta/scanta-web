@@ -1,4 +1,4 @@
-import { Row, Col, useRef } from "antd";
+import { Row, Col } from "antd";
 import Link from "next/link";
 import { withTranslation } from "react-i18next";
 import { SvgIcon } from "../../common/SvgIcon";
@@ -14,7 +14,7 @@ import {
   SplashIcon1,
 } from "./styles";
 import Container from "../../common/Container";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { collection, doc, onSnapshot, query, setDoc } from "firebase/firestore";
 import { db } from "@/firebase";
 
