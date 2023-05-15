@@ -36,7 +36,6 @@ const RightBlock = ({ t, id }: any) => {
       setTrialButtonCount(querySnapshot.docs[0].data().trialButtonCount);
       setTrialSuccessCount(querySnapshot.docs[0].data().trialSuccessCount);
     });
-    vidRef.current.play();
   }, []);
 
   const handleDemoReqButtonClick = async () => {
@@ -110,6 +109,7 @@ const RightBlock = ({ t, id }: any) => {
                 width="100%"
                 controls
                 autoPlay
+                muted
                 poster="https://chec-front.s3.amazonaws.com/tp-video-screenshot2(1).png"
                 style={{
                   margin: "4rem 0.5rem 10rem",
