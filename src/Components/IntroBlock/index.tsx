@@ -1,4 +1,4 @@
-import { Row, Col } from "antd";
+import { Row, Col, useRef } from "antd";
 import Link from "next/link";
 import { withTranslation } from "react-i18next";
 import { SvgIcon } from "../../common/SvgIcon";
@@ -19,13 +19,13 @@ import { collection, doc, onSnapshot, query, setDoc } from "firebase/firestore";
 import { db } from "@/firebase";
 
 const RightBlock = ({ t, id }: any) => {
+  const vidRef = useRef();
   const [ctaClicksCount, setCtaClicksCount] = useState(0);
   const [ctaSubmits, setCtaSubmits] = useState(0);
   const [demoButtonCount, setDemoButtonCount] = useState(0);
   const [demoSuccessCount, setDemoSuccessCount] = useState(0);
   const [trialButtonCount, setTrialButtonCount] = useState(0);
   const [trialSuccessCount, setTrialSuccessCount] = useState(0);
-  const [loaded, setLoaded] = useState(false);
   useEffect(() => {
     const q = query(collection(db, "stats"));
     onSnapshot(q, (querySnapshot) => {
@@ -36,9 +36,7 @@ const RightBlock = ({ t, id }: any) => {
       setTrialButtonCount(querySnapshot.docs[0].data().trialButtonCount);
       setTrialSuccessCount(querySnapshot.docs[0].data().trialSuccessCount);
     });
-    setTimeout(()=>{
-      setLoaded(true);
-    },1000)
+    vidRef.current.play();
   }, []);
 
   const handleDemoReqButtonClick = async () => {
@@ -108,39 +106,23 @@ const RightBlock = ({ t, id }: any) => {
           </Col>
           <Col lg={12} md={12} sm={22} xs={22}>
             <Row justify="center">
-              {loaded ? (
-                <video
-                  width="100%"
-                  controls
-                  autoPlay
-                  poster="https://chec-front.s3.amazonaws.com/tp-video-screenshot2(1).png"
-                  style={{
-                    margin: "4rem 0.5rem 10rem",
-                    borderRadius: "15px",
-                    boxShadow: "rgb(128, 128, 128) 1px 4px 19px -4px",
-                  }}
-                >
-                  <source
-                    src="https://chec-front.s3.amazonaws.com/tp-video-compressed.mp4"
-                    type="video/mp4"
-                  />
-                  Your browser does not support HTML video.
-                </video>
-              ) : (
-                <video
-                  width="100%"
-                  controls
-                  autoPlay
-                  poster="https://chec-front.s3.amazonaws.com/tp-video-screenshot2(1).png"
-                  style={{
-                    margin: "4rem 0.5rem 10rem",
-                    borderRadius: "15px",
-                    boxShadow: "rgb(128, 128, 128) 1px 4px 19px -4px",
-                  }}
-                >
-                  Your browser does not support HTML video.
-                </video>
-              )}
+              <video
+                width="100%"
+                controls
+                autoPlay
+                poster="https://chec-front.s3.amazonaws.com/tp-video-screenshot2(1).png"
+                style={{
+                  margin: "4rem 0.5rem 10rem",
+                  borderRadius: "15px",
+                  boxShadow: "rgb(128, 128, 128) 1px 4px 19px -4px",
+                }}
+              >
+                <source
+                  src="https://chec-front.s3.amazonaws.com/tp-video-compressed.mp4"
+                  type="video/mp4"
+                />
+                Your browser does not support HTML video.
+              </video>
             </Row>
           </Col>
         </Row>
