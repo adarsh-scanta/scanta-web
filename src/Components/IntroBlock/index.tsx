@@ -10,7 +10,8 @@ import {
   Subtitle,
   ContentWrapper,
   CTAWrapper,
-  ArtWrapper, SplashIcon1,
+  ArtWrapper,
+  SplashIcon1,
 } from "./styles";
 import Container from "../../common/Container";
 import { useEffect, useState } from "react";
@@ -18,41 +19,42 @@ import { collection, doc, onSnapshot, query, setDoc } from "firebase/firestore";
 import { db } from "@/firebase";
 
 const RightBlock = ({ t, id }: any) => {
-  
-const [ctaClicksCount, setCtaClicksCount] = useState(0);
-const [ctaSubmits, setCtaSubmits] = useState(0);
-const [demoButtonCount, setDemoButtonCount] = useState(0);
-const [demoSuccessCount, setDemoSuccessCount] = useState(0);
-const [trialButtonCount, setTrialButtonCount] = useState(0);
-const [trialSuccessCount, setTrialSuccessCount] = useState(0);
-useEffect(() => {
-  const q = query(collection(db, "stats"));
-  onSnapshot(q, (querySnapshot) => {
-    setCtaClicksCount(querySnapshot.docs[0].data().ctaClicksCount);
-    setCtaSubmits(querySnapshot.docs[0].data().ctaSubmits);
-    setDemoButtonCount(querySnapshot.docs[0].data().demoButtonCount);
-    setDemoSuccessCount(querySnapshot.docs[0].data().demoSuccessCount);
-    setTrialButtonCount(querySnapshot.docs[0].data().trialButtonCount);
-    setTrialSuccessCount(querySnapshot.docs[0].data().trialSuccessCount);
-  });
-}, []);
+  const [ctaClicksCount, setCtaClicksCount] = useState(0);
+  const [ctaSubmits, setCtaSubmits] = useState(0);
+  const [demoButtonCount, setDemoButtonCount] = useState(0);
+  const [demoSuccessCount, setDemoSuccessCount] = useState(0);
+  const [trialButtonCount, setTrialButtonCount] = useState(0);
+  const [trialSuccessCount, setTrialSuccessCount] = useState(0);
+  const [loaded, setLoaded] = useState(false);
+  useEffect(() => {
+    const q = query(collection(db, "stats"));
+    onSnapshot(q, (querySnapshot) => {
+      setCtaClicksCount(querySnapshot.docs[0].data().ctaClicksCount);
+      setCtaSubmits(querySnapshot.docs[0].data().ctaSubmits);
+      setDemoButtonCount(querySnapshot.docs[0].data().demoButtonCount);
+      setDemoSuccessCount(querySnapshot.docs[0].data().demoSuccessCount);
+      setTrialButtonCount(querySnapshot.docs[0].data().trialButtonCount);
+      setTrialSuccessCount(querySnapshot.docs[0].data().trialSuccessCount);
+    });
+    setLoaded(true);
+  }, []);
 
-const handleDemoReqButtonClick = async () => {
-  if (ctaClicksCount > 0) {
-    try {
-      await setDoc(doc(db, "stats", "P0kHUuxV7HZvSA7XrcHh"), {
-        ctaClicksCount: ctaClicksCount,
-        ctaSubmits: ctaSubmits,
-        demoButtonCount: demoButtonCount + 1,
-        demoSuccessCount: demoSuccessCount,
-        trialButtonCount: trialButtonCount,
-        trialSuccessCount: trialSuccessCount,
-      });
-    } catch (err) {
-      alert(err);
+  const handleDemoReqButtonClick = async () => {
+    if (ctaClicksCount > 0) {
+      try {
+        await setDoc(doc(db, "stats", "P0kHUuxV7HZvSA7XrcHh"), {
+          ctaClicksCount: ctaClicksCount,
+          ctaSubmits: ctaSubmits,
+          demoButtonCount: demoButtonCount + 1,
+          demoSuccessCount: demoSuccessCount,
+          trialButtonCount: trialButtonCount,
+          trialSuccessCount: trialSuccessCount,
+        });
+      } catch (err) {
+        alert(err);
+      }
     }
-  }
-};
+  };
 
   return (
     <RightBlockContainer>
@@ -104,23 +106,39 @@ const handleDemoReqButtonClick = async () => {
           </Col>
           <Col lg={12} md={12} sm={22} xs={22}>
             <Row justify="center">
-              <video
-                width="100%"
-                controls
-                autoPlay
-                poster="https://chec-front.s3.amazonaws.com/tp-video-screenshot2(1).png"
-                style={{
-                  margin: "4rem 0.5rem 10rem",
-                  borderRadius: "15px",
-                  boxShadow: "rgb(128, 128, 128) 1px 4px 19px -4px",
-                }}
-              >
-                <source
-                  src="https://chec-front.s3.amazonaws.com/tp-video-compressed.mp4"
-                  type="video/mp4"
-                />
-                Your browser does not support HTML video.
-              </video>
+              {loaded ? (
+                <video
+                  width="100%"
+                  controls
+                  autoPlay
+                  poster="https://chec-front.s3.amazonaws.com/tp-video-screenshot2(1).png"
+                  style={{
+                    margin: "4rem 0.5rem 10rem",
+                    borderRadius: "15px",
+                    boxShadow: "rgb(128, 128, 128) 1px 4px 19px -4px",
+                  }}
+                >
+                  <source
+                    src="https://chec-front.s3.amazonaws.com/tp-video-compressed.mp4"
+                    type="video/mp4"
+                  />
+                  Your browser does not support HTML video.
+                </video>
+              ) : (
+                <video
+                  width="100%"
+                  controls
+                  autoPlay
+                  poster="https://chec-front.s3.amazonaws.com/tp-video-screenshot2(1).png"
+                  style={{
+                    margin: "4rem 0.5rem 10rem",
+                    borderRadius: "15px",
+                    boxShadow: "rgb(128, 128, 128) 1px 4px 19px -4px",
+                  }}
+                >
+                  Your browser does not support HTML video.
+                </video>
+              )}
             </Row>
           </Col>
         </Row>

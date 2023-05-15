@@ -5,6 +5,7 @@ import Header from "@/Components/Header";
 import { Styles } from "@/styles/styles";
 import { Skeleton } from "antd";
 import Posts from "@/Components/Blog/Posts";
+import parse from "html-react-parser";
 import { db } from "../../firebase";
 import {
   collection,
@@ -41,18 +42,46 @@ export const getServerSideProps = async (ctx) => {
   };
 };
 
+const parseOption = {
+  replace: (domNode: any) => {
+    if (domNode.attribs && domNode.attribs.class === "remove") {
+      return <></>;
+    }
+  },
+};
+
 export default function Home({ currentPost }) {
   return (
     <React.Fragment>
       <Head>
         <title>{currentPost?.data?.metaTitle}</title>
-        <meta name="description" content={currentPost?.data?.metaDes} />
+        <meta
+          name="description"
+          content={
+            currentPost?.data?.metaDes.length > 5
+              ? currentPost?.data?.metaDes
+              : parse(
+                  currentPost?.data?.content ? currentPost?.data?.content : "",
+                  parseOption
+                )
+          }
+        />
         <link rel="canonical" href="https://scanta.io/blog" />
         <meta property="og:title" content={currentPost?.data?.metaTitle} />
         <meta property="og:url" content="https://www.scanta.io" />
         <meta property="og:image" content={currentPost?.data?.cover_image} />
         <link rel="image_src" href={currentPost?.data?.cover_image} />
-        <meta property="og:description" content={currentPost?.data?.metaDes} />
+        <meta
+          property="og:description"
+          content={
+            currentPost?.data?.metaDes.length > 5
+              ? currentPost?.data?.metaDes
+              : parse(
+                  currentPost?.data?.content ? currentPost?.data?.content : "",
+                  parseOption
+                )
+          }
+        />
       </Head>
       <div className="App" style={{ margin: "2rem auto" }}>
         <Header />
@@ -60,7 +89,7 @@ export default function Home({ currentPost }) {
         <ScrollToTop />
         <div style={{ margin: " auto", background: "#eff0f7" }}>
           {currentPost?.data?.isPublished ? (
-            <Post post={currentPost} from="blog"/>
+            <Post post={currentPost} from="blog" />
           ) : (
             <div style={{ textAlign: "center", margin: "12rem auto 2rem" }}>
               <Skeleton loading={true} active></Skeleton>

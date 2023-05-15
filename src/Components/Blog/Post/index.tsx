@@ -11,7 +11,18 @@ import { ClockCircleOutlined } from "@ant-design/icons";
 import Content from "./Content";
 import parse from "html-react-parser";
 import { useRouter } from "next/router";
-import { FacebookShareButton, FacebookIcon } from "react-share";
+import {
+  FacebookShareButton,
+  FacebookIcon,
+  TwitterShareButton,
+  TwitterIcon,
+  LinkedinShareButton,
+  LinkedinIcon,
+  EmailShareButton,
+  EmailIcon,
+  WhatsappShareButton,
+  WhatsappIcon,
+} from "react-share";
 import {
   collection,
   doc,
@@ -120,14 +131,46 @@ const Posts = ({ post, from }: any) => {
               alt={post?.data?.altTag}
             />
           </Row>
-          {/* <Row>
-            <FacebookShareButton url={`https://www.scanta.io${router.asPath}`}>
-              <FacebookIcon size={32} round={true} />
-            </FacebookShareButton>
-          </Row> */}
           {/* <Content content={post?.data?.content} /> */}
           <div className={styles.blog_content}>
             {parse(post?.data?.content ? post?.data?.content : "", parseOption)}
+          </div>
+          <div style={{ margin: "0 1.5rem 1rem" }}>
+            <Row>
+              <FacebookShareButton
+                url={`https://www.scanta.io${router.asPath}`}
+                style={{ margin: "0 0.5rem" }}
+              >
+                <FacebookIcon size={36} round={true} />
+              </FacebookShareButton>
+              <TwitterShareButton
+                url={`https://www.scanta.io${router.asPath}`}
+                style={{ margin: "0 0.5rem" }}
+              >
+                <TwitterIcon size={36} round={true} />
+              </TwitterShareButton>
+              <LinkedinShareButton
+                url={`https://www.scanta.io${router.asPath}`}
+                style={{ margin: "0 0.5rem" }}
+              >
+                <LinkedinIcon size={36} round={true} />
+              </LinkedinShareButton>
+              <WhatsappShareButton
+                url={`https://www.scanta.io${router.asPath}`}
+                title={post?.data?.title}
+                style={{ margin: "0 0.5rem" }}
+              >
+                <WhatsappIcon size={36} round={true} />
+              </WhatsappShareButton>
+              <EmailShareButton
+                url={`https://www.scanta.io${router.asPath}`}
+                body={`https://www.scanta.io${router.asPath}`}
+                subject={post?.data?.title}
+                style={{ margin: "0 0.5rem" }}
+              >
+                <EmailIcon size={36} round={true} />
+              </EmailShareButton>
+            </Row>
           </div>
           {post?.data?.tags !== "" && (
             <p style={{ color: "#696984", fontSize: "1rem", margin: "0 2rem" }}>
