@@ -1,11 +1,19 @@
 import LoginPage from "@/Components/Blog/LoginPage";
-import MainBlock from "@/Components/FreeTrial/MainBlock";
-import Footer from "@/Components/Footer";
 import { Styles } from "@/styles/styles";
 import Head from "next/head";
-import React from "react";
+import React, { useEffect } from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "@/firebase";
+import { useRouter } from "next/router";
 
 export default function Trupulse() {
+  const router = useRouter();
+  const [user] = useAuthState(auth);
+  useEffect(() => {
+    if (user) {
+      router.push("/blog/dashboard");
+    }
+  }, []);
   return (
     <React.Fragment>
       <Head>

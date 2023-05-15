@@ -209,7 +209,7 @@ const Footer = ({ t, fromWhere }) => {
                                               justifyContent: "center",
                                             }}
                                           >
-                                            <Row justify="center">
+                                            <Row justify="start">
                                               <Col
                                                 lg={24}
                                                 md={24}
@@ -226,7 +226,9 @@ const Footer = ({ t, fromWhere }) => {
                                                     border: "1px solid #b2b3cf",
                                                     height: "50px",
                                                     margin: "0 0 1rem 0",
-                                                    color: "b2b3cf",
+                                                    background: "transparent",
+                                                    borderRadius: "25px",
+                                                    color: "#b2b3cf",
                                                   }}
                                                   placeholder="Your Email"
                                                 />
@@ -249,6 +251,8 @@ const Footer = ({ t, fromWhere }) => {
                                                       position: "relative",
                                                       paddingTop: "12px",
                                                       border: "none",
+                                                      fontWeight:"bold",
+                                                      borderRadius: "25px",
                                                       cursor: "pointer",
                                                     }}
                                                   />
@@ -478,6 +482,8 @@ const Footer = ({ t, fromWhere }) => {
                                                     height: "50px",
                                                     margin: "0 0 1rem 0",
                                                     color: "b2b3cf",
+                                                    background: "transparent",
+                                                    borderRadius: "25px",
                                                   }}
                                                   placeholder="Your Email"
                                                 />
@@ -500,6 +506,8 @@ const Footer = ({ t, fromWhere }) => {
                                                       position: "relative",
                                                       paddingTop: "12px",
                                                       border: "none",
+                                                      fontWeight: "bold",
+                                                      borderRadius: "25px",
                                                       cursor: "pointer",
                                                     }}
                                                   />

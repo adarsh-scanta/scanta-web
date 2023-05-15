@@ -36,7 +36,9 @@ const RightBlock = ({ t, id }: any) => {
       setTrialButtonCount(querySnapshot.docs[0].data().trialButtonCount);
       setTrialSuccessCount(querySnapshot.docs[0].data().trialSuccessCount);
     });
-    setLoaded(true);
+    setTimeout(()=>{
+      setLoaded(true);
+    },1000)
   }, []);
 
   const handleDemoReqButtonClick = async () => {

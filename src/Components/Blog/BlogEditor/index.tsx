@@ -4,8 +4,7 @@ import { Row, Col } from "antd";
 import { withTranslation } from "react-i18next";
 import { RightBlockContainer } from "./styles";
 import Container from "../../../common/Container";
-import{ Quill } from "react-quill";
-import styles from "./index.module.css";
+import  "./index.module.css";
 import "react-quill/dist/quill.snow.css";
 import { Button, Input } from "antd";
 import { DeleteOutlined } from "@ant-design/icons";
@@ -18,7 +17,7 @@ const fontSizeArr = [
   "21px",
   "8px",
   "9px",
-  "10px", 
+  "10px",
   "12px",
   "14px",
   "16px",
@@ -32,21 +31,10 @@ const fontSizeArr = [
   "98px",
 ];
 
-// var Size = Quill.import("attributors/style/size");
-// var Bold = Quill.import("formats/bold");
-// Bold.tagName = "B"; // Quill uses <strong> by default
-// Quill.register(Bold, true);
-// Size.whitelist = fontSizeArr;
-// Quill.register(Size, true);
-
 const { Search } = Input;
 
 const BlogEditor = () => {
-
-  const ReactQuill = useMemo(
-    () => dynamic(() => import("react-quill"), { ssr: false }),
-    []
-  );
+  const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
   const [title, setTitle] = useState("");
   const [altTag, setAltTag] = useState("");
   const [metaTitle, setMetaTitle] = useState("");
