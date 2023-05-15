@@ -87,7 +87,6 @@ const Posts = ({ post, from }: any) => {
       user?.email === "satwant@scanta.io"
     );
   };
-
   return (
     <RightBlockContainer>
       <Container>
@@ -121,6 +120,11 @@ const Posts = ({ post, from }: any) => {
               alt={post?.data?.altTag}
             />
           </Row>
+          {/* <Row>
+            <FacebookShareButton url={`https://www.scanta.io${router.asPath}`}>
+              <FacebookIcon size={32} round={true} />
+            </FacebookShareButton>
+          </Row> */}
           {/* <Content content={post?.data?.content} /> */}
           <div className={styles.blog_content}>
             {parse(post?.data?.content ? post?.data?.content : "", parseOption)}
