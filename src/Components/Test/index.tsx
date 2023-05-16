@@ -1651,6 +1651,8 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                                             fontSize: "0.9rem",
                                             fontFamily: "Poppins SemiBold",
                                             margin: "0",
+                                            height:
+                                              item.name === "Richard E. Beyer"?"2.5rem":"",
                                           }}
                                         >
                                           {item.position}
