@@ -1478,6 +1478,11 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                                                   position: "relative",
                                                   bottom: "8px",
                                                 }
+                                              : item.name === "Mani Sundaram"
+                                              ? {
+                                                  position: "relative",
+                                                  bottom: "8px",
+                                                }
                                               : {}
                                           }
                                         />
@@ -1527,8 +1532,9 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                                         maxHeight: "100px",
                                         marginBottom:
                                           item.name === "Mani Sundaram"
-                                            ? "1.5rem"
+                                            ? "2.2rem"
                                             : "1rem",
+                                        marginTop: "0.5rem",
                                       }}
                                     >
                                       {`"${item.content}"`}
@@ -1658,6 +1664,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                                         color: "#000",
                                         fontSize: "0.8rem",
                                         fontFamily: "Poppins SemiBold",
+                                        marginTop: "0.5rem",
                                       }}
                                     >
                                       {`"${item.content}"`}{" "}
