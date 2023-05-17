@@ -1423,7 +1423,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                       // arrows
                       // nextArrow={<RightOutlined />}
                       // prevArrow={<LeftOutlined />}
-                      autoplaySpeed={8000}
+                      autoplaySpeed={60000}
                     >
                       <Row justify="center">
                         <Col span={24}>

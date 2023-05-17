@@ -108,8 +108,8 @@ const RightBlock = ({ t, id }: any) => {
               <video
                 width="100%"
                 controls
-                autoPlay
-                muted
+                // autoPlay
+                // muted
                 poster="https://chec-front.s3.amazonaws.com/tp-video-screenshot2(1).png"
                 style={{
                   margin: "4rem 0.5rem 10rem",
