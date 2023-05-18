@@ -23,7 +23,7 @@ export default function Home() {
           property="og:title"
           content="TruPulse - Best Employee Experience Tool"
         />
-        <meta property="og:url" content="https://www.scanta.io" />
+        <meta property="og:url" content="https://www.scanta.io/company" />
         <meta
           property="og:image"
           content="https://www.scanta.io/img/icons/ogGroup300.png"

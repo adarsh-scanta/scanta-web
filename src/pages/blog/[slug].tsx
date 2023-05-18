@@ -16,6 +16,7 @@ import {
 } from "firebase/firestore";
 import Post from "@/Components/Blog/Post";
 import Head from "next/head";
+import {useRouter} from "next/router";
 
 export const getServerSideProps = async (ctx) => {
   const { params } = ctx;
@@ -51,6 +52,8 @@ const parseOption = {
 };
 
 export default function Home({ currentPost }) {
+    const router = useRouter();
+
   return (
     <React.Fragment>
       <Head>
@@ -66,9 +69,12 @@ export default function Home({ currentPost }) {
                 )
           }
         />
-        <link rel="canonical" href="https://scanta.io/blog" />
+        <link rel="canonical" href={`https://www.scanta.io${router.asPath}`} />
         <meta property="og:title" content={currentPost?.data?.metaTitle} />
-        <meta property="og:url" content="https://www.scanta.io" />
+        <meta
+          property="og:url"
+          content={`https://www.scanta.io${router.asPath}`}
+        />
         <meta property="og:image" content={currentPost?.data?.cover_image} />
         <link rel="image_src" href={currentPost?.data?.cover_image} />
         <meta

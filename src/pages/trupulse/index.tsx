@@ -102,7 +102,7 @@ export default function Trupulse() {
           property="og:title"
           content="Employee Retention & People Analytics Tool"
         />
-        <meta property="og:url" content="https://www.scanta.io" />
+        <meta property="og:url" content="https://www.scanta.io/trupulse" />
         <meta
           property="og:image"
           content="https://www.scanta.io/img/icons/ogGroup300.png"
