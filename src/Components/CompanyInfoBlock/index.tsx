@@ -1351,7 +1351,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
               </Row>
             </div>
           </Container>
-          <div
+         {!wait && <div
             style={{
               background: "#FAFAFC",
               // background: "#0f0",
@@ -1677,7 +1677,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                 )}
               </Container>
             </Row>
-          </div>
+          </div>}
           <Container>
             <Row justify="center">
               <ServicesHeading style={{ marginBottom: "3rem" }}>
