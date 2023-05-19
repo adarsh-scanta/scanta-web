@@ -44,7 +44,7 @@ export const feedbackData = [
     name: "Danielle Strazzo",
     position: "VP of HR, BD",
     content:
-      "We cannot deliver for our customers, and enable the business agenda, without an engaged workforce. TruPulse delivers insights into your employees' state, arming you to make positive changes to the employee experience without the burden of surveys.",
+      "We cannot fully deliver for our customers, and execute the business agenda, without an engaged workforce. TruPulse delivers insights into your employees' state, arming you to make positive changes to the experience without the burden of surveys.",
     profilePic: "/img/svg/Danielle.svg",
     company_logo: "/img/icons/BDLogo.png",
   },
