@@ -4,7 +4,7 @@ import { Row, Col } from "antd";
 import { withTranslation } from "react-i18next";
 import { RightBlockContainer } from "./styles";
 import Container from "../../../common/Container";
-import  "./index.module.css";
+import "./index.module.css";
 import "react-quill/dist/quill.snow.css";
 import { Button, Input } from "antd";
 import { DeleteOutlined } from "@ant-design/icons";
@@ -34,8 +34,10 @@ const fontSizeArr = [
 const { Search } = Input;
 
 const BlogEditor = () => {
-  const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
-  const [title, setTitle] = useState("");
+const ReactQuill = useMemo(
+  () => dynamic(() => import("react-quill"), { ssr: false }),
+  []
+);  const [title, setTitle] = useState("");
   const [altTag, setAltTag] = useState("");
   const [metaTitle, setMetaTitle] = useState("");
   const [metaDescription, setMetaDescription] = useState("");
@@ -44,24 +46,46 @@ const BlogEditor = () => {
   const [tags, setTags] = useState([] as any);
   const [file, setFile] = useState({} as any);
 
-  const modules = {
-    toolbar: [
-      // [{ header: [1, 2, 3, false] }],
-      [{ font: [] }],
-      [{ size: fontSizeArr }],
-      ["bold", "italic", "underline", "strike"], // toggled buttons
-      ["blockquote", "code-block", "link"],
-      ["image"],
-      [{ list: "ordered" }, { list: "bullet" }],
-      [{ script: "sub" }, { script: "super" }], // superscript/subscript
-      [{ indent: "-1" }, { indent: "+1" }], // outdent/indent
-      [{ direction: "rtl" }], // text direction
-      [{ color: [] }, { background: [] }], // dropdown with defaults from theme
-      [{ align: [] }],
+  // const modules = {
+  //   toolbar: [
+  //     // [{ header: [1, 2, 3, false] }],
+  //     [{ font: [] }],
+  //     [{ size: fontSizeArr }],
+  //     ["bold", "italic", "underline", "strike"], // toggled buttons
+  //     ["blockquote", "code-block", "link"],
+  //     ["image"],
+  //     [{ list: "ordered" }, { list: "bullet" }],
+  //     [{ script: "sub" }, { script: "super" }], // superscript/subscript
+  //     [{ indent: "-1" }, { indent: "+1" }], // outdent/indent
+  //     [{ direction: "rtl" }], // text direction
+  //     [{ color: [] }, { background: [] }], // dropdown with defaults from theme
+  //     [{ align: [] }],
 
-      ["clean"], // remove formatting button
-    ],
-  };
+  //     ["clean"], // remove formatting button
+  //   ],
+  // };
+
+  const modules = useMemo(
+    () => ({
+      toolbar: [
+        //   [{ header: [1, 2, 3, false] }],
+        [{ font: [] }],
+        [{ size: fontSizeArr }],
+        ["bold", "italic", "underline", "strike"], // toggled buttons
+        ["blockquote", "code-block", "link"],
+        ["image"],
+        [{ list: "ordered" }, { list: "bullet" }],
+        [{ script: "sub" }, { script: "super" }], // superscript/subscript
+        [{ indent: "-1" }, { indent: "+1" }], // outdent/indent
+        [{ direction: "rtl" }], // text direction
+        [{ color: [] }, { background: [] }], // dropdown with defaults from theme
+        [{ align: [] }],
+
+        ["clean"], // remove formatting button
+      ],
+    }),
+    []
+  );
 
   function uniq(a: any) {
     return a.sort().filter(function (item: any, pos: any, ary: any) {

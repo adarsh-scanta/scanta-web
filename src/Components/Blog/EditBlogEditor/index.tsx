@@ -80,24 +80,45 @@ const EditBlogEditor = ({ post }: any) => {
     setMetaDescription(post?.data?.metaDes);
     setCustomURL(post?.data?.customURL);
   }, [post]);
-  const modules = {
-    toolbar: [
-      //   [{ header: [1, 2, 3, false] }],
-      [{ font: [] }],
-      [{ size: fontSizeArr }],
-      ["bold", "italic", "underline", "strike"], // toggled buttons
-      ["blockquote", "code-block", "link"],
-      ["image"],
-      [{ list: "ordered" }, { list: "bullet" }],
-      [{ script: "sub" }, { script: "super" }], // superscript/subscript
-      [{ indent: "-1" }, { indent: "+1" }], // outdent/indent
-      [{ direction: "rtl" }], // text direction
-      [{ color: [] }, { background: [] }], // dropdown with defaults from theme
-      [{ align: [] }],
+  // const modules = {
+  //   toolbar: [
+  //     //   [{ header: [1, 2, 3, false] }],
+  //     [{ font: [] }],
+  //     [{ size: fontSizeArr }],
+  //     ["bold", "italic", "underline", "strike"], // toggled buttons
+  //     ["blockquote", "code-block", "link"],
+  //     ["image"],
+  //     [{ list: "ordered" }, { list: "bullet" }],
+  //     [{ script: "sub" }, { script: "super" }], // superscript/subscript
+  //     [{ indent: "-1" }, { indent: "+1" }], // outdent/indent
+  //     [{ direction: "rtl" }], // text direction
+  //     [{ color: [] }, { background: [] }], // dropdown with defaults from theme
+  //     [{ align: [] }],
 
-      ["clean"], // remove formatting button
-    ],
-  };
+  //     ["clean"], // remove formatting button
+  //   ],
+  // };
+  const modules = useMemo(
+    () => ({
+      toolbar: [
+        //   [{ header: [1, 2, 3, false] }],
+        [{ font: [] }],
+        [{ size: fontSizeArr }],
+        ["bold", "italic", "underline", "strike"], // toggled buttons
+        ["blockquote", "code-block", "link"],
+        ["image"],
+        [{ list: "ordered" }, { list: "bullet" }],
+        [{ script: "sub" }, { script: "super" }], // superscript/subscript
+        [{ indent: "-1" }, { indent: "+1" }], // outdent/indent
+        [{ direction: "rtl" }], // text direction
+        [{ color: [] }, { background: [] }], // dropdown with defaults from theme
+        [{ align: [] }],
+
+        ["clean"], // remove formatting button
+      ],
+    }),
+    []
+  );
   const props: UploadProps = {
     onRemove: (file) => {
       const index = fileList.indexOf(file);
