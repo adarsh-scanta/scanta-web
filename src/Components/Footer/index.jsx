@@ -251,7 +251,7 @@ const Footer = ({ t, fromWhere }) => {
                                                       position: "relative",
                                                       paddingTop: "12px",
                                                       border: "none",
-                                                      fontWeight:"bold",
+                                                      fontWeight: "bold",
                                                       borderRadius: "25px",
                                                       cursor: "pointer",
                                                     }}
@@ -322,115 +322,32 @@ const Footer = ({ t, fromWhere }) => {
               </Col>
 
               <Col lg={0} md={24} sm={24} xs={24}>
-                <Row justify="start">
+                <Row justify="center">
                   <Col>
                     <LogoContainer>
                       <img
-                        src="/img/icons/logo14.png"
-                        width="120px"
+                        src="\img\icons\logo192.png"
+                        width="200px"
                         alt="logo"
-                        height="55px"
+                        height="65px"
                       />
                     </LogoContainer>
                   </Col>
                 </Row>
-                <Row justify="start">
-                  <Col>
-                    <p
-                      style={{
-                        color: "#B2B3CF",
-                        fontSize: "1rem",
-                        margin: "1rem 1rem",
-                      }}
-                    >
-                      Scanta Inc
-                      <br /> 50 Moulton Street
-                      <br />
-                      San Francisco, Ca 94123
-                      <br />
-                      Hello@scanta.io
-                    </p>
-                  </Col>
-                </Row>
-                <div style={{ margin: " 1rem" }}>
-                  <a href="https://www.facebook.com/scanta.io" target="_black">
-                    <img
-                      src="/img/svg/fb.svg"
-                      width="48px"
-                      height="48px"
-                      alt="fb"
-                    />
-                  </a>
-                  <a
-                    href="https://www.linkedin.com/company/scanta"
-                    target="_blank"
-                  >
-                    <img
-                      src="https://img.icons8.com/color/48/000000/linkedin-circled--v2.png"
-                      alt="linkedin"
-                      width="48px"
-                      height="48px"
-                      style={{ position: "relative", left: "3px" }}
-                    />{" "}
-                  </a>
-                  <a href="https://twitter.com/scanta_io" target="_blank">
-                    <img
-                      src="/img/svg/twitter.svg"
-                      alt="twitter"
-                      width="48px"
-                      height="48px"
-                    />
-                  </a>
-                </div>
                 <Row justify="center">
-                  <Col span={22}>
-                    <Row justify="start">
-                      <Col xs={24} sm={24} lg={12} xl={10}>
-                        <Row justify="start">
-                          <a
-                            href="https://chec-front.s3.amazonaws.com/Scanta+Privacy+Policy_Revised_2022.07.06_Clean.pdf"
-                            target="_blank"
-                          >
-                            <FooterLabel style={{ marginTop: "1rem" }}>
-                              Privacy Policy
-                            </FooterLabel>
-                          </a>
-                        </Row>
-                      </Col>
-                      <Col xs={24} sm={24} lg={12} xl={12}>
-                        <Row justify="start">
-                          <a
-                            href="https://chec-front.s3.amazonaws.com/TruPulse+End+User+License+Agreement.pdf"
-                            target="_blank"
-                          >
-                            <FooterLabel
-                              style={{
-                                marginTop: "0rem",
-                                marginBottom: "1rem",
-                              }}
-                            >
-                              Terms & Conditions
-                            </FooterLabel>
-                          </a>
-                        </Row>
-                      </Col>
-                    </Row>
-                  </Col>
-                </Row>
-                <Row justify="start">
                   <img
                     src={"/img/icons/employeePulse.png"}
                     alt="employee Pulse logo"
                     width="250px"
                     height="40px"
-                    style={{ margin: "0 0.5rem" }}
+                    style={{ margin: "1rem 0.5rem 0.5rem" }}
                   />
                   <p
                     style={{
                       margin: "0.5rem 1rem 1rem",
                       fontSize: "1rem",
                       color: "#b2b3cf",
-                      textAlign: "left",
+                      textAlign: "center",
                       width: "100%",
                     }}
                   >
@@ -442,10 +359,10 @@ const Footer = ({ t, fromWhere }) => {
                       width: "100%",
                       margin: "0 1rem",
                       position: "relative",
-                      minHeight: "190px",
+                      minHeight: "150px",
                     }}
                   >
-                    <Row justify="space-between">
+                    <Row justify="center">
                       <div className="newsletter-form-footer">
                         <ZapierForm action="https://hooks.zapier.com/hooks/catch/14238222/bj1czfx/">
                           {({ error, loading, success }) => {
@@ -499,7 +416,7 @@ const Footer = ({ t, fromWhere }) => {
                                                     type="submit"
                                                     value="submit"
                                                     style={{
-                                                      width: "100px",
+                                                      width: "100%",
                                                       background: "#eb7a02",
                                                       color: "#fff",
                                                       height: "50px",
@@ -560,19 +477,85 @@ const Footer = ({ t, fromWhere }) => {
                         </ZapierForm>
                       </div>
                     </Row>
+                  </div>
+                </Row>
+                <Row justify="center">
+                  <a href="https://www.facebook.com/scanta.io" target="_black">
+                    <img
+                      src="/img/svg/fb.svg"
+                      width="48px"
+                      height="48px"
+                      alt="fb"
+                      style={{ margin: "0 0.5rem" }}
+                    />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/company/scanta"
+                    target="_blank"
+                  >
+                    <img
+                      src="https://img.icons8.com/color/48/000000/linkedin-circled--v2.png"
+                      alt="linkedin"
+                      width="48px"
+                      height="48px"
+                      style={{ margin: "0 0.5rem" }}
+                    />{" "}
+                  </a>
+                  <a href="https://twitter.com/scanta_io" target="_blank">
+                    <img
+                      src="/img/svg/twitter.svg"
+                      alt="twitter"
+                      width="48px"
+                      height="48px"
+                      style={{ margin: "0 0.5rem" }}
+                    />
+                  </a>
+                </Row>
+
+                <Row justify="center">
+                  <Col span={22}>
+                    <Row justify="start">
+                      <Col xs={12} sm={12} lg={12} xl={10}>
+                        <Row justify="center">
+                          <a
+                            href="https://chec-front.s3.amazonaws.com/Scanta+Privacy+Policy_Revised_2022.07.06_Clean.pdf"
+                            target="_blank"
+                          >
+                            <FooterLabel>Privacy Policy</FooterLabel>
+                          </a>
+                        </Row>
+                      </Col>
+                      <Col xs={12} sm={12} lg={12} xl={12}>
+                        <Row justify="center">
+                          <a
+                            href="https://chec-front.s3.amazonaws.com/TruPulse+End+User+License+Agreement.pdf"
+                            target="_blank"
+                          >
+                            <FooterLabel>Terms & Conditions</FooterLabel>
+                          </a>
+                        </Row>
+                      </Col>
+                    </Row>
+
                     <Row justify="center">
                       <p
                         style={{
                           color: "#b2b3cf",
                           fontSize: "0.9rem",
-                          position: "absolute",
-                          bottom: "0rem",
+                          margin: "1rem",
                         }}
                       >
                         © 2023 Scanta Inc.
                       </p>
                     </Row>
-                  </div>
+                    <div
+                      style={{
+                        margin: " 1rem",
+                        width: "100%",
+                        height: "50px",
+                      }}
+                    ></div>
+                  </Col>
                 </Row>
               </Col>
             </Row>

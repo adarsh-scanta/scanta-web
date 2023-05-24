@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export const FooterSection = styled("footer")`
   minheight: 400px;
   width: 100%;
-  padding: 1rem 0px;
+  padding: 2rem 0px;
   
 `;
 

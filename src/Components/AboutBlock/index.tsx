@@ -2697,7 +2697,7 @@ const AboutBlock = () => {
             <div style={{ margin: "2rem 0 0" }}>
               <CTAWrapper className="pulse">
                 <Link href="/trupulse">
-                  <Button>{"Learn more"}</Button>
+                  <Button width="100%">{"Learn more"}</Button>
                 </Link>
               </CTAWrapper>
             </div>

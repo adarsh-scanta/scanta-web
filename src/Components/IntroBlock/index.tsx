@@ -62,7 +62,7 @@ const RightBlock = ({ t, id }: any) => {
       </SplashIcon1>
       <Container>
         <Row justify="center" id={id}>
-          <Col lg={12} md={12} sm={24} xs={24}>
+          <Col lg={12} md={12} sm={0} xs={0}>
             <ContentWrapper>
               <div style={{ position: "relative", top: "30px" }}>
                 <Subtitle style={{ fontWeight: "600" }}>
@@ -103,7 +103,7 @@ const RightBlock = ({ t, id }: any) => {
               </div>
             </ContentWrapper>
           </Col>
-          <Col lg={12} md={12} sm={22} xs={22}>
+          <Col lg={12} md={12} sm={0} xs={0}>
             <Row justify="center">
               <video
                 width="100%"
@@ -124,6 +124,71 @@ const RightBlock = ({ t, id }: any) => {
                 Your browser does not support HTML video.
               </video>
             </Row>
+          </Col>
+          <Col lg={0} md={0} sm={22} xs={22}>
+            <Row justify="center">
+              <video
+                width="100%"
+                controls
+                // autoPlay
+                // muted
+                poster="https://chec-front.s3.amazonaws.com/tp-video-screenshot2(1).png"
+                style={{
+                  margin: "5rem 2rem 1rem",
+                  borderRadius: "15px",
+                  boxShadow: "rgb(128, 128, 128) 1px 4px 19px -4px",
+                }}
+              >
+                <source
+                  src="https://chec-front.s3.amazonaws.com/tp-video-compressed.mp4"
+                  type="video/mp4"
+                />
+                Your browser does not support HTML video.
+              </video>
+            </Row>
+          </Col>
+          <Col lg={0} md={0} sm={24} xs={24}>
+            <ContentWrapper>
+              <div style={{ position: "relative", top: "-20px" }}>
+                <Subtitle style={{ fontWeight: "600" }}>
+                  Realtime understanding of <br />
+                  company morale, trending topics, <br />
+                  and corporate culture.
+                </Subtitle>
+                <Content style={{ marginBottom: "0" }}>
+                  TruPulse uses AI to help you understand the employee
+                  experience without running surveys.
+                </Content>
+              </div>
+              <div style={{ margin: "0rem 0 0" }}>
+                <Row justify="start">
+                  <Col span={24}>
+                    <div
+                      style={{
+                        margin: "0.5rem 0",
+                        width: "85%",
+                        background: "#fff",
+                        padding: "1rem",
+                        borderRadius: "20px",
+                        position: "fixed",
+                        bottom: "0",
+                      }}
+                    >
+                      <CTAWrapper
+                        className="pulse"
+                        onClick={handleDemoReqButtonClick}
+                      >
+                        <Link href="/request-demo">
+                          <Button width="100%" pulse={true}>
+                            {t("Request a Demo")}
+                          </Button>
+                        </Link>
+                      </CTAWrapper>
+                    </div>
+                  </Col>
+                </Row>
+              </div>
+            </ContentWrapper>
           </Col>
         </Row>
       </Container>

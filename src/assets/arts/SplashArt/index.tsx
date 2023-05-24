@@ -13,8 +13,8 @@ export const SplashArt2 = () => (
 
  export const SplashArt3 = () => (
    <svg
-     width="35"
-     height="35"
+     width="20"
+     height="20"
      viewBox="0 0 131 131"
      fill="none"
      xmlns="http://www.w3.org/2000/svg"

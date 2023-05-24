@@ -3,7 +3,7 @@ import { Carousel } from "antd";
 
 export const LeftContentSection = styled("section")`
   position: relative;
-  top:-50px;
+  top: -50px;
   width: 100%;
   @media only screen and (max-width: 1024px) {
     padding: 3rem 0 1rem;
@@ -15,7 +15,7 @@ export const LeftContentSection = styled("section")`
 
 export const Content = styled("p")`
   margin: 1.5rem 0 2rem 0;
-  color:#696984;
+  color: #696984;
 `;
 
 export const ContentWrapper = styled("div")`

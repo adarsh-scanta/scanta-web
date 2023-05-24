@@ -63,70 +63,147 @@ const CompanyInfoBlock = ({ t, from }: any) => {
           <Container>
             <div style={{ marginBottom: "8rem" }}>
               <Row justify="center">
-                <ServicesHeading style={{ margin: "2rem 2rem 1rem" }}>
-                  <span style={{ color: "#430568" }}>TruPulse Uncovers </span>{" "}
-                  Insights
-                </ServicesHeading>
-              </Row>
-              <Row justify="center">
-                <Col xs={24} sm={24} md={22} lg={16} xl={16}>
-                  <p
-                    style={{
-                      textAlign: "center",
-                      color: "#696984",
-                      margin: "0 2rem",
-                    }}
+                <Col xl={24} lg={24} sm={0} xs={0}>
+                  <Row justify="center">
+                    <ServicesHeading style={{ margin: "2rem 2rem 1rem" }}>
+                      <span style={{ color: "#430568" }}>
+                        TruPulse Uncovers{" "}
+                      </span>{" "}
+                      Insights
+                    </ServicesHeading>
+                  </Row>
+                  <Row justify="center">
+                    <Col xs={24} sm={24} md={22} lg={16} xl={16}>
+                      <p
+                        style={{
+                          textAlign: "center",
+                          color: "#696984",
+                          margin: "0 2rem",
+                        }}
+                      >
+                        Understanding your employees increases employee
+                        engagement, improves retention rates, maximizes the
+                        employee experience, and helps cultivate a healthy
+                        corporate culture. With TruPulse you see the most
+                        important employee insights in realtime and
+                        automatically.
+                      </p>
+                    </Col>
+                  </Row>
+                  <CarouselWrapper
+                    autoplay
+                    arrows
+                    nextArrow={<RightOutlined />}
+                    prevArrow={<LeftOutlined />}
+                    autoplaySpeed={8000}
                   >
-                    Understanding your employees increases employee engagement,
-                    improves retention rates, maximizes the employee experience,
-                    and helps cultivate a healthy corporate culture. With
-                    TruPulse you see the most important employee insights in
-                    realtime and automatically.
-                  </p>
+                    <Row justify="center">
+                      <div style={{ textAlign: "center" }}>
+                        <WorkArt7 />
+                        <WorkArt8 />
+                        <CarouselLabel
+                          className={styles.moraleLabel}
+                          style={{ position: "relative", top: "-10px" }}
+                        >
+                          Morale
+                        </CarouselLabel>
+                      </div>
+                    </Row>
+                    <Row justify="center">
+                      <div style={{ textAlign: "center" }}>
+                        <WorkArt9 />
+                        <WorkArt10 />
+                        <CarouselLabel
+                          style={{ position: "relative", top: "20px" }}
+                        >
+                          Voice of the Employee
+                        </CarouselLabel>
+                      </div>
+                    </Row>
+                    <Row justify="center">
+                      <div style={{ textAlign: "center" }}>
+                        <WorkArt11 />
+                        <WorkArt12 />
+                        <CarouselLabel
+                          style={{ position: "relative", top: "-10px" }}
+                        >
+                          Cultural Health
+                        </CarouselLabel>
+                      </div>
+                    </Row>
+                  </CarouselWrapper>
+                </Col>
+                <Col xl={0} lg={0} sm={24} xs={24}>
+                  <CarouselWrapper
+                    autoplay
+                    arrows
+                    nextArrow={<RightOutlined />}
+                    prevArrow={<LeftOutlined />}
+                    autoplaySpeed={8000}
+                  >
+                    <Row justify="center">
+                      <div style={{ textAlign: "center" }}>
+                        <WorkArt7 />
+                        <WorkArt8 />
+                        <CarouselLabel
+                          className={styles.moraleLabel}
+                          style={{ position: "relative", top: "-10px" }}
+                        >
+                          Morale
+                        </CarouselLabel>
+                      </div>
+                    </Row>
+                    <Row justify="center">
+                      <div style={{ textAlign: "center" }}>
+                        <WorkArt9 />
+                        <WorkArt10 />
+                        <CarouselLabel
+                          style={{ position: "relative", top: "20px" }}
+                        >
+                          Voice of the Employee
+                        </CarouselLabel>
+                      </div>
+                    </Row>
+                    <Row justify="center">
+                      <div style={{ textAlign: "center" }}>
+                        <WorkArt11 />
+                        <WorkArt12 />
+                        <CarouselLabel
+                          style={{ position: "relative", top: "-10px" }}
+                        >
+                          Cultural Health
+                        </CarouselLabel>
+                      </div>
+                    </Row>
+                  </CarouselWrapper>
+                  <Row justify="center">
+                    <ServicesHeading style={{ margin: "2rem 2rem 1rem" }}>
+                      <span style={{ color: "#430568" }}>
+                        TruPulse Uncovers{" "}
+                      </span>{" "}
+                      Insights
+                    </ServicesHeading>
+                  </Row>
+                  <Row justify="center">
+                    <Col xs={24} sm={24} md={22} lg={16} xl={16}>
+                      <p
+                        style={{
+                          textAlign: "center",
+                          color: "#696984",
+                          margin: "0 2rem",
+                        }}
+                      >
+                        Understanding your employees increases employee
+                        engagement, improves retention rates, maximizes the
+                        employee experience, and helps cultivate a healthy
+                        corporate culture. With TruPulse you see the most
+                        important employee insights in realtime and
+                        automatically.
+                      </p>
+                    </Col>
+                  </Row>
                 </Col>
               </Row>
-              <CarouselWrapper
-                autoplay
-                arrows
-                nextArrow={<RightOutlined />}
-                prevArrow={<LeftOutlined />}
-                autoplaySpeed={8000}
-              >
-                <Row justify="center">
-                  <div style={{ textAlign: "center" }}>
-                    <WorkArt7 />
-                    <WorkArt8 />
-                    <CarouselLabel
-                      className={styles.moraleLabel}
-                      style={{ position: "relative", top: "-10px" }}
-                    >
-                      Morale
-                    </CarouselLabel>
-                  </div>
-                </Row>
-                <Row justify="center">
-                  <div style={{ textAlign: "center" }}>
-                    <WorkArt9 />
-                    <WorkArt10 />
-                    <CarouselLabel
-                      style={{ position: "relative", top: "20px" }}
-                    >
-                      Voice of the Employee
-                    </CarouselLabel>
-                  </div>
-                </Row>
-                <Row justify="center">
-                  <div style={{ textAlign: "center" }}>
-                    <WorkArt11 />
-                    <WorkArt12 />
-                    <CarouselLabel
-                      style={{ position: "relative", top: "-10px" }}
-                    >
-                      Cultural Health
-                    </CarouselLabel>
-                  </div>
-                </Row>
-              </CarouselWrapper>
               <Row justify="center">
                 <Col xs={0} md={0} lg={24} xl={24}>
                   <Row justify="end">
@@ -144,21 +221,19 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                     </CTAWrapper>
                   </Row>
                 </Col>
-                <Col xs={24} md={24} lg={0} xl={0}>
-                  <Row justify="center">
-                    <CTAWrapper
-                      className={styles.pulse}
-                      style={{
-                        position: "relative",
-                        left: "5px",
-                        margin: "2rem 0 0",
-                      }}
-                    >
-                      <Link href="/trupulse">
-                        <Button>{t("Learn more")}</Button>
-                      </Link>
-                    </CTAWrapper>
-                  </Row>
+                <Col xs={20} md={22} lg={0} xl={0}>
+                  <CTAWrapper
+                    className={styles.pulse}
+                    style={{
+                      position: "relative",
+                      top: "2rem",
+                      margin: "2rem 0 0",
+                    }}
+                  >
+                    <Link href="/trupulse">
+                      <Button width="100%">{t("Learn more")}</Button>
+                    </Link>
+                  </CTAWrapper>
                 </Col>
               </Row>
             </div>
@@ -1333,16 +1408,14 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                           </Row>
                         </Col>
                         <Col xs={24} md={24} lg={0} xl={0}>
-                          <Row justify="center">
-                            <CTAWrapper
-                              className={styles.pulse}
-                              style={{ margin: "1rem 0 2rem" }}
-                            >
-                              <Link href="/trupulse">
-                                <Button>{t("Learn more")}</Button>
-                              </Link>
-                            </CTAWrapper>
-                          </Row>
+                          <CTAWrapper
+                            className={styles.pulse}
+                            style={{ margin: "1rem 0 2rem" }}
+                          >
+                            <Link href="/trupulse">
+                              <Button width="100%">{t("Learn more")}</Button>
+                            </Link>
+                          </CTAWrapper>
                         </Col>
                       </Row>
                     </Col>
@@ -1350,342 +1423,14 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                 </div>
               </Row>
             </div>
-          </Container>
-         {!wait && <div
-            style={{
-              background: "#FAFAFC",
-              // background: "#0f0",
-              paddingBottom: "5rem",
-              marginBottom: "3rem",
-              position: "relative",
-            }}
-          >
-            <Row>
-              <Container>
-                <Row justify="start">
-                  <Col xs={0} sm={0} lg={24} xl={24}>
-                    <Row justify="start">
-                      <ServicesHeading
-                        style={{
-                          textAlign: "left",
-                          margin: "3rem 1rem 2rem",
-                        }}
-                      >
-                        <span style={{ color: "#430568" }}>
-                          Customers and Partners
-                        </span>
-                      </ServicesHeading>
-                    </Row>
-                  </Col>
-                  <Col xs={24} sm={24} lg={0} xl={0}>
-                    <Row justify="center">
-                      <ServicesHeading
-                        style={{ textAlign: "center", margin: "3rem 0 2rem" }}
-                      >
-                        <span style={{ color: "#430568" }}>
-                          Customers and Partners
-                        </span>
-                      </ServicesHeading>
-                    </Row>
-                  </Col>
-                </Row>
-                {!wait && (
-                  <CarouselWrapper2
-                    autoplay
-                    // arrows
-                    // nextArrow={<RightOutlined />}
-                    // prevArrow={<LeftOutlined />}
-                    autoplaySpeed={60000}
-                  >
-                    <Row justify="center">
-                      <Col span={24}>
-                        <Row justify="space-between">
-                          {feedbackData.slice(0, 3).map((item, id) => (
-                            <Col xs={24} sm={24} lg={8} xl={8}>
-                              <div
-                                style={{
-                                  width: "95%",
-                                  margin: "1rem",
-                                  minHeight: "270px",
-                                  background: "#fff",
-                                  borderRadius: "12px",
-                                  boxShadow:
-                                    "rgb(128, 128, 128) 0px 5px 10px -6px",
-                                  padding: "1rem",
-                                }}
-                              >
-                                <Row>
-                                  <Col span={6}>
-                                    <div
-                                      style={{
-                                        width:
-                                          item.name ===
-                                          "Nathan Mondragon, Ph.D."
-                                            ? "80px"
-                                            : "70px",
-                                        height:
-                                          item.name ===
-                                          "Nathan Mondragon, Ph.D."
-                                            ? "74px"
-                                            : "72px",
-                                        // background: "#D9D9D9",
-                                        borderRadius: "40px",
-                                        // margin: "0 0.5rem",
-                                      }}
-                                    >
-                                      <img
-                                        src={item.profilePic}
-                                        width="100%"
-                                        height="100%"
-                                        alt={item.name}
-                                        style={
-                                          item.name ===
-                                          "Nathan Mondragon, Ph.D."
-                                            ? {
-                                                position: "relative",
-                                                bottom: "8px",
-                                              }
-                                            : item.name === "Dan Mcculloch"
-                                            ? {
-                                                position: "relative",
-                                                bottom: "8px",
-                                              }
-                                            : item.name === "Mani Sundaram"
-                                            ? {
-                                                position: "relative",
-                                                bottom: "8px",
-                                              }
-                                            : {}
-                                        }
-                                      />
-                                    </div>
-                                  </Col>
-                                  <Col span={18}>
-                                    <div
-                                      style={{
-                                        width: "100%",
-                                        // height: "70px",
-                                        // background: "#D9D9D9",
-                                        borderRadius: "40px",
-                                        margin: "1rem 0 0",
-                                      }}
-                                    >
-                                      <p
-                                        style={{
-                                          textAlign: "left",
-                                          color: "#F48C06",
-                                          fontSize: "1.1rem",
-                                          fontFamily: "Poppins SemiBold",
-                                          margin: "0",
-                                        }}
-                                      >
-                                        {item.name}
-                                      </p>
-                                      <p
-                                        style={{
-                                          textAlign: "left",
-                                          color: "#2F327D",
-                                          fontSize: "0.9rem",
-                                          fontFamily: "Poppins SemiBold",
-                                          margin: "0",
-                                        }}
-                                      >
-                                        {item.position}
-                                      </p>
-                                    </div>
-                                  </Col>
-                                </Row>
-                                <Row>
-                                  <p
-                                    style={{
-                                      color: "#000",
-                                      fontSize: "0.8rem",
-                                      fontFamily: "Poppins SemiBold",
-                                      maxHeight: "100px",
-                                      marginBottom:
-                                        item.name === "Mani Sundaram"
-                                          ? "2.2rem"
-                                          : "1rem",
-                                      marginTop: "0.5rem",
-                                    }}
-                                  >
-                                    {`"${item.content}"`}
-                                  </p>
-                                </Row>
-                                <hr
-                                  style={{
-                                    filter: "opacity(0.2)",
-                                    width: "109%",
-                                    position: "relative",
-                                    left: "-18px",
-                                  }}
-                                />
-                                <Row justify="center">
-                                  <img
-                                    src={item.company_logo}
-                                    // width="60%"
-                                    height={"50px"}
-                                    alt={
-                                      item.company_logo === "NA"
-                                        ? ""
-                                        : item.position.split(" ")[
-                                            item.position.split(" ").length - 1
-                                          ]
-                                    }
-                                  />
-                                </Row>
-                              </div>
-                            </Col>
-                          ))}
-                        </Row>
-                      </Col>
-                    </Row>
-                    <Row justify="center">
-                      <Col span={24}>
-                        <Row justify="space-between">
-                          {feedbackData.slice(3, 6).map((item, id) => (
-                            <Col xs={24} sm={24} lg={8} xl={8}>
-                              <div
-                                style={{
-                                  width: "95%",
-                                  margin: "1rem",
-                                  minHeight: "200px",
-                                  background: "#fff",
-                                  borderRadius: "12px",
-                                  boxShadow:
-                                    "rgb(128, 128, 128) 0px 5px 10px -6px",
-                                  padding: "1rem",
-                                }}
-                              >
-                                <Row>
-                                  <Col span={6}>
-                                    <div
-                                      style={{
-                                        width:
-                                          item.name === "Danielle Strazzo"
-                                            ? "80px"
-                                            : "70px",
-                                        height:
-                                          item.name === "Danielle Strazzo"
-                                            ? "80px"
-                                            : "70px",
-                                        borderRadius: "40px",
-                                        overflow: "hidden",
-                                      }}
-                                    >
-                                      <img
-                                        src={item.profilePic}
-                                        width="100%"
-                                        height="100%"
-                                        alt={item.name}
-                                        style={
-                                          item.name === "Jack Sullivan"
-                                            ? {
-                                                position: "relative",
-                                                top: "10px",
-                                              }
-                                            : item.name === "Danielle Strazzo"
-                                            ? {
-                                                position: "relative",
-                                                bottom: "11px",
-                                              }
-                                            : {}
-                                        }
-                                      />
-                                    </div>
-                                  </Col>
-                                  <Col span={18}>
-                                    <div
-                                      style={{
-                                        width: "100%",
-                                        // height: "70px",
-                                        // background: "#D9D9D9",
-                                        borderRadius: "40px",
-                                        margin: "1rem 0 0",
-                                      }}
-                                    >
-                                      <p
-                                        style={{
-                                          textAlign: "left",
-                                          color: "#F48C06",
-                                          fontSize: "1.1rem",
-                                          fontFamily: "Poppins SemiBold",
-                                          margin: "0",
-                                        }}
-                                      >
-                                        {item.name}
-                                      </p>
-                                      <p
-                                        style={{
-                                          textAlign: "left",
-                                          color: "#2F327D",
-                                          fontSize: "0.9rem",
-                                          fontFamily: "Poppins SemiBold",
-                                          margin: "0",
-                                          height:
-                                            item.name === "Richard E. Beyer"
-                                              ? "2.5rem"
-                                              : "",
-                                        }}
-                                      >
-                                        {item.position}
-                                      </p>
-                                    </div>
-                                  </Col>
-                                </Row>
-                                <Row>
-                                  <p
-                                    style={{
-                                      color: "#000",
-                                      fontSize: "0.8rem",
-                                      fontFamily: "Poppins SemiBold",
-                                      marginTop: "0.5rem",
-                                    }}
-                                  >
-                                    {`"${item.content}"`}{" "}
-                                  </p>
-                                </Row>
-                                <hr
-                                  style={{
-                                    filter: "opacity(0.2)",
-                                    width: "109%",
-                                    position: "relative",
-                                    left: "-18px",
-                                  }}
-                                />
-                                <Row justify="center">
-                                  <img
-                                    src={item.company_logo}
-                                    // width="60%"
-                                    height={"40px"}
-                                    alt={
-                                      item.company_logo === "NA"
-                                        ? ""
-                                        : item.position.split(" ")[
-                                            item.position.split(" ").length - 1
-                                          ]
-                                    }
-                                  />
-                                </Row>
-                              </div>
-                            </Col>
-                          ))}
-                        </Row>
-                      </Col>
-                    </Row>
-                  </CarouselWrapper2>
-                )}
-              </Container>
-            </Row>
-          </div>}
-          <Container>
+
             <Row justify="center">
               <ServicesHeading style={{ marginBottom: "3rem" }}>
                 <span style={{ color: "#430568" }}>Integrations</span>
               </ServicesHeading>
             </Row>
             <Row justify="center">
-              <Col lg={6} md={12} sm={12} xs={24}>
+              <Col lg={6} md={12} sm={0} xs={0}>
                 <Row justify="center">
                   <div style={{ margin: "2rem" }}>
                     <Row justify="center">
@@ -1699,7 +1444,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                   </div>
                 </Row>
               </Col>
-              <Col lg={6} md={12} sm={12} xs={24}>
+              <Col lg={6} md={12} sm={0} xs={0}>
                 <Row justify="center">
                   <div style={{ margin: "2rem" }}>
                     <Row justify="center">
@@ -1713,7 +1458,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                   </div>
                 </Row>
               </Col>
-              <Col lg={6} md={12} sm={12} xs={24}>
+              <Col lg={6} md={12} sm={0} xs={0}>
                 <Row justify="center">
                   <div style={{ margin: "2rem" }}>
                     <Row justify="center">
@@ -1727,7 +1472,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                   </div>
                 </Row>
               </Col>
-              <Col lg={6} md={12} sm={12} xs={24}>
+              <Col lg={6} md={12} sm={0} xs={0}>
                 <Row justify="center">
                   <div style={{ margin: "2rem" }}>
                     <Row justify="center">
@@ -1736,6 +1481,62 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                         alt="slack"
                         // width="80%"
                         height="200px"
+                      />
+                    </Row>
+                  </div>
+                </Row>
+              </Col>
+              <Col lg={0} md={0} sm={5} xs={5}>
+                <Row justify="center">
+                  <div style={{ margin: "2rem 1rem" }}>
+                    <Row justify="center">
+                      <img
+                        src="/img/icons/slack-logo.png"
+                        alt="slack"
+                        // width="80%"
+                        height="60px"
+                      />
+                    </Row>
+                  </div>
+                </Row>
+              </Col>
+              <Col lg={0} md={0} sm={5} xs={5}>
+                <Row justify="center">
+                  <div style={{ margin: "2rem 1rem" }}>
+                    <Row justify="center">
+                      <img
+                        src="/img/icons/teams-logo.png"
+                        alt="slack"
+                        // width="80%"
+                        height="60px"
+                      />
+                    </Row>
+                  </div>
+                </Row>
+              </Col>
+              <Col lg={0} md={0} sm={5} xs={5}>
+                <Row justify="center">
+                  <div style={{ margin: "2rem 1rem" }}>
+                    <Row justify="center">
+                      <img
+                        src="/img/icons/discord-logo.png"
+                        alt="slack"
+                        // width="80%"
+                        height="60px"
+                      />
+                    </Row>
+                  </div>
+                </Row>
+              </Col>
+              <Col lg={0} md={0} sm={5} xs={5}>
+                <Row justify="center">
+                  <div style={{ margin: "2rem 1rem" }}>
+                    <Row justify="center">
+                      <img
+                        src="/img/icons/and-more-logo.png"
+                        alt="slack"
+                        // width="80%"
+                        height="60px"
                       />
                     </Row>
                   </div>

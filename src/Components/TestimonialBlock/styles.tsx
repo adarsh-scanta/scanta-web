@@ -1,15 +1,17 @@
 import styled from "styled-components";
-
+import { Link } from "react-router-dom";
+import { Carousel } from "antd";
 export const RightBlockContainer = styled("section")`
-  padding: 6rem 0 1rem;
-  background: url("/img/svg/wave-grey-1.svg");
+  padding: 3rem 0 2.5rem;
+  min-height:650px;
+  background: url("/img/svg/wave2.svg");
   background-size: cover;
   @media only screen and (max-width: 1024px) {
     padding: 6rem 0 1.5rem;
   }
 
   @media only screen and (max-width: 768px) {
-    padding: 2rem 0 10rem;
+    padding: 2rem 0 0.75rem;
   }
 `;
 
@@ -17,7 +19,7 @@ export const Title = styled("span")`
   font-size: 2.2rem;
   font-family: Poppins Bold;
   color: #eb7a02;
-  margin-bottom:3rem;
+  margin-bottom: 3rem;
   line-height: 1.18;
   @media only screen and (min-width: 1400px) {
     font-size: 2.5rem;
@@ -64,14 +66,13 @@ export const ContentWrapper = styled("div")`
   margin: 0 1.5rem;
   top: 15%;
   z-index: 1;
-   @media only screen and (max-width: 1080px) {
+  @media only screen and (max-width: 1080px) {
     padding-bottom: 4rem;
     top: 10%;
   }
   @media only screen and (max-width: 768px) {
     padding-bottom: 2rem;
   }
- 
 `;
 
 export const ButtonWrapper = styled("div")`
@@ -124,4 +125,72 @@ export const CTAWrapper = styled("span")`
   margin-right: 1rem;
   transition: all 0.3s ease-in-out;
   color: #252641;
+`;
+
+
+export const CarouselWrapper2 = styled(Carousel)`
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  > .slick-dots li {
+    margin: 2rem 8px -2rem;
+  }
+  > .slick-dots li button {
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    background: #888;
+  }
+  > .slick-dots li.slick-active button {
+    width: 18px;
+    height: 18px;
+    border-radius: 100%;
+    background: #eb7a02;
+  }
+`;
+
+
+export const ServicesHeading = styled("h6")`
+  font-size: 1.8rem;
+  font-family: Poppins SemiBold;
+  text-align: center;
+  margin: 2rem auto 5rem;
+
+  color: #eb7a02;
+  @media only screen and (min-width: 1400px) {
+    font-size: 2.1rem;
+  }
+  @media only screen and (max-width: 1024px) {
+    margin: 2rem auto 3rem;
+  }
+`;
+
+export const CarouselWrapper = styled(Carousel)`
+  width: 80%;
+  text-align: center;
+  margin: auto;
+  > .slick-dots li {
+    margin: 0 8px;
+  }
+  > .slick-dots li button {
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    background: #888;
+  }
+  > .slick-dots li.slick-active button {
+    width: 18px;
+    height: 18px;
+    border-radius: 100%;
+    background: #eb7a02;
+  }
+`;
+
+export const CarouselLabel = styled("p")`
+  // font-size: 1.8rem;
+  font-weight: 600;
+  font-family: Poppins SemiBold;
+  color: #430568;
+  position: relative;
+  top: -40px;
 `;

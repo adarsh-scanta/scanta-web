@@ -9,6 +9,8 @@ export interface ButtonProps {
   border?: string;
   fixedWidth?: boolean;
   name?: string;
+  width?: string;
+  pulse?: boolean;
   children: React.ReactNode;
   onClick?: () => void;
 }

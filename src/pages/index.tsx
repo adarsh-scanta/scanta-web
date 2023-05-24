@@ -11,13 +11,14 @@ import AboutBlock from "@/Components/AboutBlock";
 import CompanyInfoBlock from "@/Components/CompanyInfoBlock";
 import Footer from "@/Components/Footer";
 import Head from "next/head";
+import TestimonialBlock from "@/Components/TestimonialBlock";
 
 export default function Home() {
   const SplashIcon = styled("div")`
 width: 100%;
-position: relative; 
-left: 45%;
- bottom: 7rem;
+position: relative;  
+left: 35%;
+ bottom: 4rem;
 @media only screen and (max-width: 1079px) {
    display: none; 
 `;
@@ -67,16 +68,22 @@ left: 45%;
         <Header />
         <Styles />
         <ScrollToTop />
-        <IntroBlock id="intro" />
-        <Container>
-          <SplashIcon>
-            <SplashArt2 />
-          </SplashIcon>
-          <AboutBlock />
-        </Container>
-        <CompanyInfoBlock from="home" />
-        <Footer fromWhere={"home"} />
-      </div> 
+        <div style={{ background: "#fff" }}>
+          <IntroBlock id="intro" />
+        </div>
+        <TestimonialBlock />
+
+        <div style={{ background: "#eff0f7" }}>
+          <Container>
+            <SplashIcon>
+              <SplashArt2 />
+            </SplashIcon>
+            <AboutBlock />
+          </Container>
+          <CompanyInfoBlock from="home" />
+          <Footer fromWhere={"home"} />
+        </div>
+      </div>
     </React.Fragment>
   );
 }

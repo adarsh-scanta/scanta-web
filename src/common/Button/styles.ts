@@ -4,6 +4,7 @@ export const StyledButton = styled("button")<any>`
   background: ${(p) => p.color || "#EB7A02"};
   color: ${(p) => (p.color ? "#252641" : "#fff")};
   font-size: 1rem;
+  width: ${(p) => p.width || "#EB7A02"};
   font-weight: 700;
   border: ${(p) => p.border || "1px solid #EB7A02"};
   border-radius: 4px;
@@ -11,7 +12,10 @@ export const StyledButton = styled("button")<any>`
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   border-radius: 80px;
-
+  animation: ${(p) =>
+    p.pulse
+      ? "borderPulse 1000ms infinite ease-out, 1000ms infinite ease-in, hoverShine 200ms"
+      : ""};
   &:hover,
   &:active,
   &:focus {

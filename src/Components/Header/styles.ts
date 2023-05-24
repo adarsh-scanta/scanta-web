@@ -8,7 +8,7 @@ export const HeaderSection = styled("header")`
   padding: 0 0.5rem 0.5rem;
   margin: 0;
   width: 100vw;
-  background: #fff;
+  background: #eff0f7;
   position: fixed;
   top: 0;
   left: 0;
@@ -97,6 +97,8 @@ export const CustomNavLinkSmall = styled(NavLink)`
   }
   @media only screen and (max-width: 768px) {
     margin: 1.25rem 2rem;
+    display:block;
+    text-align:left;
   }
 `;
 

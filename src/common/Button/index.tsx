@@ -8,12 +8,16 @@ export const Button = ({
   border,
   fixedWidth,
   children,
+  width,
+  pulse,
   onClick,
 }: ButtonProps) => (
   <StyledButton
     color={color}
     textColor={textColor}
     border={border}
+    width={width}
+    pulse={pulse}
     fixedWidth={fixedWidth}
     onClick={onClick}
   >
