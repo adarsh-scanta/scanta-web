@@ -159,6 +159,15 @@ const RightBlock = ({ t, id }: any) => {
                   TruPulse uses AI to help you understand the employee
                   experience without running surveys.
                 </Content>
+                <Col xs={24}>
+                  <div style={{ margin: "1rem 0 0", minWidth: "190px" }}>
+                    <CTAWrapper className="pulse">
+                      <Link href="/trupulse">
+                        <Button>{t("Learn more")}</Button>
+                      </Link>
+                    </CTAWrapper>
+                  </div>
+                </Col>
               </div>
               <div style={{ margin: "0rem 0 0" }}>
                 <Row justify="start">
@@ -166,7 +175,7 @@ const RightBlock = ({ t, id }: any) => {
                     <div
                       style={{
                         margin: "0.5rem 0",
-                        width: "85%",
+                        width: "88%",
                         background: "#fff",
                         padding: "1rem",
                         borderRadius: "20px",

@@ -7,7 +7,6 @@ export const LeftContentSection = styled("section")`
   // top: 150px;
   padding: 2rem 0 1rem;
   background-color: #eff0f7;
-  z-index: 2;
   @media only screen and (max-width: 1024px) {
     padding: 1rem 0 1rem;
   }
