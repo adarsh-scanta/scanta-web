@@ -2681,13 +2681,35 @@ const AboutBlock = () => {
             </Row>
           </div>
         </Col>
-        <Col lg={11} md={11} sm={22} xs={22}>
+        <Col lg={11} md={11} sm={0} xs={0}>
           <ContentWrapper>
             <Title>
               TruPulse
               <span style={{ color: "#430568" }}> is Different</span>
             </Title>
-            <Content>
+            <Content style={{ fontWeight: "600" }}>
+              TruPulse gives you something you don't currently have with surveys
+              and other feedback technologies you are currently using, the
+              ability to understand employees in realtime, everyday and
+              automatically. Improving the workplace experience is easy with
+              TruPulse.
+            </Content>
+            <div style={{ margin: "2rem 0 0" }}>
+              <CTAWrapper className="pulse">
+                <Link href="/trupulse">
+                  <Button>{"Learn more"}</Button>
+                </Link>
+              </CTAWrapper>
+            </div>
+          </ContentWrapper>
+        </Col>
+        <Col lg={0} md={0} sm={22} xs={22}>
+          <ContentWrapper>
+            <Title>
+              TruPulse
+              <span style={{ color: "#430568" }}> is Different</span>
+            </Title>
+            <Content style={{ fontWeight: "600" }}>
               TruPulse gives you something you don't currently have with surveys
               and other feedback technologies you are currently using, the
               ability to understand employees in realtime, everyday and

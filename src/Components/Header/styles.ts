@@ -8,7 +8,7 @@ export const HeaderSection = styled("header")`
   padding: 0 0.5rem 0.5rem;
   margin: 0;
   width: 100vw;
-  background: #eff0f7;
+  background: #fff;
   position: fixed;
   top: 0;
   left: 0;

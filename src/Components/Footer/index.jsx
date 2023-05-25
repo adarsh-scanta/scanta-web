@@ -346,9 +346,10 @@ const Footer = ({ t, fromWhere }) => {
                     style={{
                       margin: "0.5rem 1rem 1rem",
                       fontSize: "1rem",
-                      color: "#b2b3cf",
-                      textAlign: "center",
+                      color: "#fff",
+                      textAlign: "start",
                       width: "100%",
+                      fontWeight:"600"
                     }}
                   >
                     The first newsletter that combines IO Psychology and HR
@@ -395,7 +396,7 @@ const Footer = ({ t, fromWhere }) => {
                                                   style={{
                                                     margin: "1rem",
                                                     minWidth: "250px",
-                                                    border: "1px solid #b2b3cf",
+                                                    border: "1px solid #fff",
                                                     height: "50px",
                                                     margin: "0 0 1rem 0",
                                                     color: "b2b3cf",
@@ -421,7 +422,7 @@ const Footer = ({ t, fromWhere }) => {
                                                       color: "#fff",
                                                       height: "50px",
                                                       position: "relative",
-                                                      paddingTop: "12px",
+                                                      paddingTop: "15px",
                                                       border: "none",
                                                       fontWeight: "bold",
                                                       borderRadius: "25px",

@@ -64,24 +64,30 @@ const RightBlock = ({ t, id }: any) => {
         <Row justify="center" id={id}>
           <Col lg={12} md={12} sm={0} xs={0}>
             <ContentWrapper>
-              <div style={{ position: "relative", top: "30px" }}>
+              <div style={{ position: "relative", top: "10px" }}>
+                <img
+                  src="/img/icons/trupulse-logo-color.png"
+                  alt="trupulse-logo"
+                  width="200px"
+                />
+                <br />
                 <Subtitle style={{ fontWeight: "600" }}>
                   Realtime understanding of <br />
                   company morale, trending topics, <br />
                   and corporate culture.
                 </Subtitle>
-                <Content>
+                <Content style={{ fontWeight: "600" }}>
                   TruPulse uses AI to help you understand
                   <br /> the employee experience without running surveys.
                 </Content>
               </div>
-              <div style={{ margin: "4rem 0 0" }}>
+              <div style={{ margin: "2rem 0 0" }}>
                 <Row justify="start">
                   <Col xs={24} sm={8} md={24} lg={24} xl={24}>
                     <div style={{ margin: "0.5rem 0", minWidth: "190px" }}>
                       <CTAWrapper className="pulse">
-                        <Link href="/trupulse">
-                          <Button>{t("Learn more")}</Button>
+                        <Link href="/request-demo">
+                          <Button>{t("Request a Demo")}</Button>
                         </Link>
                       </CTAWrapper>
                     </div>
@@ -149,25 +155,16 @@ const RightBlock = ({ t, id }: any) => {
           </Col>
           <Col lg={0} md={0} sm={24} xs={24}>
             <ContentWrapper>
-              <div style={{ position: "relative", top: "-20px" }}>
+              <div style={{ position: "relative", top: "-10px" }}>
                 <Subtitle style={{ fontWeight: "600" }}>
                   Realtime understanding of <br />
                   company morale, trending topics, <br />
                   and corporate culture.
                 </Subtitle>
-                <Content style={{ marginBottom: "0" }}>
+                <Content style={{ marginBottom: "0", fontWeight: "600" }}>
                   TruPulse uses AI to help you understand the employee
                   experience without running surveys.
                 </Content>
-                <Col xs={24}>
-                  <div style={{ margin: "1rem 0 0", minWidth: "190px" }}>
-                    <CTAWrapper className="pulse">
-                      <Link href="/trupulse">
-                        <Button>{t("Learn more")}</Button>
-                      </Link>
-                    </CTAWrapper>
-                  </div>
-                </Col>
               </div>
               <div style={{ margin: "0rem 0 0" }}>
                 <Row justify="start">

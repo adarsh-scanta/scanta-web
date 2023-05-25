@@ -24,8 +24,10 @@ import { auth, logout } from "../../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { collection, setDoc, doc, query, onSnapshot } from "firebase/firestore";
 import { db } from "../../firebase";
+import { useRouter } from "next/router";
 
 const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
+  const router = useRouter();
   const [user, loading, error] = useAuthState(auth);
   const [visible, setVisibility] = useState(false);
 
@@ -144,17 +146,31 @@ const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
       <>
         <Row justify="space-between">
           <Col>
-            <CustomNavLinkSmall>
+            <CustomNavLinkSmall
+              style={{
+                borderBottom: router.asPath === "/" ? "1px solid #EB7A02" : "",
+              }}
+            >
               <Link href="/">
                 <Span>Home</Span>
               </Link>
             </CustomNavLinkSmall>
-            <CustomNavLinkSmall>
+            <CustomNavLinkSmall
+              style={{
+                borderBottom:
+                  router.asPath === "/trupulse" ? "1px solid #EB7A02" : "",
+              }}
+            >
               <Link href="/trupulse">
                 <Span>TruPulse™</Span>
               </Link>
             </CustomNavLinkSmall>
-            <CustomNavLinkSmall>
+            <CustomNavLinkSmall
+              style={{
+                borderBottom:
+                  router.asPath === "/company" ? "1px solid #EB7A02" : "",
+              }}
+            >
               <Dropdown overlay={companyMenu}>
                 <div>
                   <Link href="/company">
@@ -164,7 +180,12 @@ const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
                 </div>
               </Dropdown>
             </CustomNavLinkSmall>
-            <CustomNavLinkSmall>
+            <CustomNavLinkSmall
+              style={{
+                borderBottom:
+                  router.asPath === "/blog" ? "1px solid #EB7A02" : "",
+              }}
+            >
               <Link href="/blog">
                 <Span>Blog</Span>
               </Link>
@@ -174,21 +195,9 @@ const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
             {!user ? (
               <>
                 <CustomNavLinkSmall
-                  style={{ minWidth: "185px", margin: "0.5rem" }}
-                >
-                  <Link href="/request-demo">
-                    <CTAWrapper
-                      className="pulse"
-                      onClick={handleDemoRequestButtonClick}
-                    >
-                      <Button>{t("Request a Demo")}</Button>
-                    </CTAWrapper>
-                  </Link>
-                </CustomNavLinkSmall>
-                <CustomNavLinkSmall
                   style={{
                     minWidth: "120px",
-                    margin: "0.5rem 2rem 0.5rem 0.5rem",
+                    margin: "0.5rem",
                   }}
                   // onClick={() => scrollTo("contact")}
                 >
@@ -197,7 +206,22 @@ const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
                       className="pulse"
                       onClick={handleTrialButtonClick}
                     >
-                      <Button>{t("Free Trial")}</Button>
+                      <Button color="transparent">{t("Free Trial")}</Button>
+                    </CTAWrapper>
+                  </Link>
+                </CustomNavLinkSmall>
+                <CustomNavLinkSmall
+                  style={{
+                    minWidth: "185px",
+                    margin: "0.5rem 2rem 0.5rem 0.5rem",
+                  }}
+                >
+                  <Link href="/request-demo">
+                    <CTAWrapper
+                      className="pulse"
+                      onClick={handleDemoRequestButtonClick}
+                    >
+                      <Button>{t("Request a Demo")}</Button>
                     </CTAWrapper>
                   </Link>
                 </CustomNavLinkSmall>
@@ -223,79 +247,76 @@ const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
   const MenuItemForDrawer = () => {
     return (
       <div style={{ position: "relative" }}>
+       
         <Row justify="center">
-          <Col>
-            <CustomNavLinkSmall>
-              <Link href="/">
-                <Span>Home</Span>
+          <CustomNavLinkSmall>
+            <Link href="/">
+              <Span>Home</Span>
+            </Link>
+          </CustomNavLinkSmall>
+          <CustomNavLinkSmall>
+            <Link href="/trupulse">
+              <Span>TruPulse™</Span>
+            </Link>
+          </CustomNavLinkSmall>
+          <CustomNavLinkSmall>
+            <div>
+              <Link href="/company">
+                <Span>About</Span>
               </Link>
-            </CustomNavLinkSmall>
-            <CustomNavLinkSmall>
-              <Link href="/trupulse">
-                <Span>TruPulse™</Span>
-              </Link>
-            </CustomNavLinkSmall>
-            <CustomNavLinkSmall>
-              <Dropdown overlay={companyMenu}>
-                <div>
-                  <Link href="/company">
-                    <Span>About</Span>
-                  </Link>
-                  <DownIcon />
-                </div>
-              </Dropdown>
-            </CustomNavLinkSmall>
-            <CustomNavLinkSmall>
-              <Link href="/blog">
-                <Span>Blog</Span>
-              </Link>
-            </CustomNavLinkSmall>
-          </Col>
-          <Col>
-            {!user ? (
-              <div style={{ position: "fixed", bottom: "20px", right:"0" }}>
-                <CustomNavLinkSmall
-                  style={{ minWidth: "185px", margin: "0.5rem" }}
-                >
-                  <Link href="/request-demo">
-                    <CTAWrapper
-                      className="pulse"
-                      onClick={handleDemoRequestButtonClick}
-                    >
-                      <Button width="230px">{t("Request a Demo")}</Button>
-                    </CTAWrapper>
-                  </Link>
-                </CustomNavLinkSmall>
-                <CustomNavLinkSmall
-                  style={{
-                    minWidth: "120px",
-                    margin: "0.5rem 2rem 0.5rem 0.5rem",
-                  }}
-                  // onClick={() => scrollTo("contact")}
-                >
-                  <Link href="/free-trial">
-                    <CTAWrapper
-                      className="pulse"
-                      onClick={handleTrialButtonClick}
-                    >
-                      <Button width="230px">{t("Free Trial")}</Button>
-                    </CTAWrapper>
-                  </Link>
-                </CustomNavLinkSmall>
-              </div>
-            ) : (
+              <DownIcon />
+            </div>
+          </CustomNavLinkSmall>
+          <CustomNavLinkSmall>
+            <Link href="/blog">
+              <Span>Blog</Span>
+            </Link>
+          </CustomNavLinkSmall>
+          {!user ? (
+            <div style={{ position: "fixed", bottom: "20px", right: "0" }}>
               <CustomNavLinkSmall
-                style={{ width: "180px" }}
-                onClick={() => {
-                  logout();
-                  window.location.reload();
+                style={{
+                  minWidth: "120px",
+                  margin: "0.5rem 2rem 0.5rem 0.5rem",
                 }}
+                // onClick={() => scrollTo("contact")}
               >
-                <Span>Logout</Span>
-                {/* </Link> */}
+                <Link href="/free-trial">
+                  <CTAWrapper
+                    className="pulse"
+                    onClick={handleTrialButtonClick}
+                  >
+                    <Button width="230px" color="transparent">
+                      {t("Free Trial")}
+                    </Button>
+                  </CTAWrapper>
+                </Link>
               </CustomNavLinkSmall>
-            )}
-          </Col>
+              <CustomNavLinkSmall
+                style={{ minWidth: "185px", margin: "0.5rem" }}
+              >
+                <Link href="/request-demo">
+                  <CTAWrapper
+                    className="pulse"
+                    onClick={handleDemoRequestButtonClick}
+                  >
+                    <Button width="230px">{t("Request a Demo")}</Button>
+                  </CTAWrapper>
+                </Link>
+              </CustomNavLinkSmall>
+            </div>
+          ) : (
+            <CustomNavLinkSmall
+              style={{ width: "180px" }}
+              onClick={() => {
+                logout();
+                window.location.reload();
+              }}
+            >
+              <Span>Logout</Span>
+              {/* </Link> */}
+            </CustomNavLinkSmall>
+          )}
         </Row>
       </div>
     );
@@ -303,6 +324,7 @@ const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
 
   return (
     <HeaderSection
+      style={{ background: router.asPath === "/" ? "#eff0f7" : "#fff" }}
       // className={`header && ${showHeader ? "headerVisible" : "headerHidden"}`}
       className="headerVisible"
     >
@@ -329,7 +351,12 @@ const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
         <Col style={{ marginBottom: "2.5rem" }}>
           <Label onClick={onClose}>
             <Row justify="end"></Row>
-            <Col span={12}>
+            <Row justify="end">
+              <CustomNavLinkSmall>
+                <Span>Menu</Span>
+              </CustomNavLinkSmall>{" "}
+            </Row>
+            <Col span={8}>
               <Outline />
             </Col>
           </Label>
