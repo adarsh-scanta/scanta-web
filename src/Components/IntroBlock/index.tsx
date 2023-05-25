@@ -157,13 +157,10 @@ const RightBlock = ({ t, id }: any) => {
             <ContentWrapper>
               <div style={{ position: "relative", top: "-10px" }}>
                 <Subtitle style={{ fontWeight: "600" }}>
-                  Realtime understanding of <br />
-                  company morale, trending topics, <br />
-                  and corporate culture.
+                  Realtime understanding of company morale, trending topics, and corporate culture.
                 </Subtitle>
                 <Content style={{ marginBottom: "0", fontWeight: "600" }}>
-                  TruPulse uses AI to help you understand the employee
-                  experience without running surveys.
+                  TruPulse uses AI to help you understand the employee experience without running surveys.
                 </Content>
               </div>
               <div style={{ margin: "0rem 0 0" }}>
