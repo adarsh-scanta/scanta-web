@@ -247,31 +247,81 @@ const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
   const MenuItemForDrawer = () => {
     return (
       <div style={{ position: "relative" }}>
-       
         <Row justify="center">
-          <CustomNavLinkSmall>
-            <Link href="/">
-              <Span>Home</Span>
-            </Link>
-          </CustomNavLinkSmall>
-          <CustomNavLinkSmall>
-            <Link href="/trupulse">
-              <Span>TruPulse™</Span>
-            </Link>
-          </CustomNavLinkSmall>
-          <CustomNavLinkSmall>
-            <div>
-              <Link href="/company">
-                <Span>About</Span>
-              </Link>
-              <DownIcon />
-            </div>
-          </CustomNavLinkSmall>
-          <CustomNavLinkSmall>
-            <Link href="/blog">
-              <Span>Blog</Span>
-            </Link>
-          </CustomNavLinkSmall>
+          <Col span={24}>
+            <Row justify="center">
+              <CustomNavLinkSmall>
+                <Link href="/">
+                  <Span
+                    style={{
+                      borderBottom:
+                        router.asPath === "/" ? "1px solid #EB7A02" : "",
+                    }}
+                  >
+                    Home
+                  </Span>
+                </Link>
+              </CustomNavLinkSmall>
+            </Row>
+          </Col>
+          <Col span={24}>
+            {" "}
+            <Row justify="center">
+              <CustomNavLinkSmall>
+                <Link href="/trupulse">
+                  <Span
+                    style={{
+                      borderBottom:
+                        router.asPath === "/trupulse"
+                          ? "1px solid #EB7A02"
+                          : "",
+                    }}
+                  >
+                    TruPulse™
+                  </Span>
+                </Link>
+              </CustomNavLinkSmall>
+            </Row>
+          </Col>{" "}
+          <Col span={24}>
+            {" "}
+            <Row justify="center">
+              <CustomNavLinkSmall>
+                <div>
+                  <Link href="/company">
+                    <Span
+                      style={{
+                        borderBottom:
+                          router.asPath === "/company"
+                            ? "1px solid #EB7A02"
+                            : "",
+                      }}
+                    >
+                      About
+                    </Span>
+                  </Link>
+                  <DownIcon />
+                </div>
+              </CustomNavLinkSmall>
+            </Row>
+          </Col>
+          <Col span={24}>
+            {" "}
+            <Row justify="center">
+              <CustomNavLinkSmall>
+                <Link href="/blog">
+                  <Span
+                    style={{
+                      borderBottom:
+                        router.asPath === "/blog" ? "1px solid #EB7A02" : "",
+                    }}
+                  >
+                    Blog
+                  </Span>
+                </Link>
+              </CustomNavLinkSmall>
+            </Row>
+          </Col>
           {!user ? (
             <div style={{ position: "fixed", bottom: "20px", right: "0" }}>
               <CustomNavLinkSmall

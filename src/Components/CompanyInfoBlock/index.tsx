@@ -81,6 +81,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                               textAlign: "left",
                               color: "#696984",
                               margin: "0",
+                              fontWeight: "600",
                             }}
                           >
                             Understanding your employees increases employee
@@ -768,7 +769,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                         </Row>
                       </div>
                     </Col>
-                    <Col xs={24} sm={24} md={24} lg={12} xl={12}>
+                    <Col xs={0} sm={0} lg={12} xl={12}>
                       <div style={{ margin: "3rem 2rem 2rem" }}>
                         <ServicesHeading
                           style={{ textAlign: "left", marginBottom: "2rem" }}
@@ -813,15 +814,68 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                               className={styles.pulse}
                               style={{ margin: "1rem 0 0" }}
                             >
-                              <Link href="/trupulse">
-                                <Button>{t("Learn more")}</Button>
+                              <Link href="/request-demo">
+                                <Button>{t("Request a Demo")}</Button>
                               </Link>
                             </CTAWrapper>
                           </Col>
                         </Row>
                       </div>
                     </Col>
-                    <Col xs={24} sm={24} md={24} lg={12} xl={12}>
+                    <Col xs={24} sm={24} lg={0} xl={0}>
+                      <div style={{ margin: "1rem" }}>
+                        <ServicesHeading
+                          style={{ textAlign: "left", marginBottom: "1rem" }}
+                        >
+                          <span style={{ color: "#fff" }}>
+                            TruPulse is the{" "}
+                          </span>
+                          <span style={{ color: "#EB9437" }}>
+                            Future of Work
+                          </span>
+                        </ServicesHeading>
+                        <p style={{ color: "#fff", fontSize: "1.2rem" }}>
+                          TruPulse empowers leaders by combining technology,
+                          psychology and a respect for individual privacy to
+                          understand employees like never before.
+                        </p>
+                        <ul style={{ color: "#fff" }}>
+                          <li>
+                            <p style={{ color: "#fff", fontSize: "1.2rem" }}>
+                              Uses AI & Automation
+                            </p>
+                          </li>
+                          <li>
+                            <p style={{ color: "#fff", fontSize: "1.2rem" }}>
+                              Combines HR Tech and IO Psychology
+                            </p>
+                          </li>
+                          <li>
+                            <p style={{ color: "#fff", fontSize: "1.2rem" }}>
+                              Uncovers Data & Insights
+                            </p>
+                          </li>
+                          <li>
+                            <p style={{ color: "#fff", fontSize: "1.2rem" }}>
+                              Respects Individual Privacy
+                            </p>
+                          </li>
+                        </ul>
+                        <Row justify="start">
+                          <Col xs={0} sm={0} lg={24} xl={24}>
+                            <CTAWrapper
+                              className={styles.pulse}
+                              style={{ margin: "1rem 0 0" }}
+                            >
+                              <Link href="/request-demo">
+                                <Button>{t("Request a Demo")}</Button>
+                              </Link>
+                            </CTAWrapper>
+                          </Col>
+                        </Row>
+                      </div>
+                    </Col>
+                    <Col xs={24} sm={24} lg={12} xl={12}>
                       <Col xs={0} sm={0} lg={24} xl={24}>
                         <div style={{ margin: "1rem 0" }}>
                           <Row justify="center">
@@ -1378,7 +1432,6 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                           </Row>
                         </div>
                       </Col>
-
                       <Row justify="center">
                         <Col xs={24} md={24} lg={0} xl={0}>
                           <CTAWrapper
