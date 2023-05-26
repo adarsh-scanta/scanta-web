@@ -64,7 +64,7 @@ const RightBlock = ({ t, id }: any) => {
         <Row justify="center" id={id}>
           <Col lg={12} md={12} sm={0} xs={0}>
             <ContentWrapper>
-              <div style={{ position: "relative", top: "10px" }}>
+              <div style={{ position: "relative" }}>
                 <img
                   src="/img/icons/trupulse-logo-color.png"
                   alt="trupulse-logo"
