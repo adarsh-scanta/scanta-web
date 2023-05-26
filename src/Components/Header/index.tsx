@@ -400,13 +400,14 @@ const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
       <Drawer closable={false} open={visible} onClose={onClose}>
         <Col style={{ marginBottom: "2.5rem" }}>
           <Label onClick={onClose}>
-            <Row justify="end"></Row>
-            <Row justify="end">
-              <CustomNavLinkSmall>
-                <Span>Menu</Span>
-              </CustomNavLinkSmall>{" "}
-            </Row>
-            <Col span={8}>
+            <Col span={17}>
+              <Row justify="end">
+                <CustomNavLinkSmall>
+                  <Span>Menu</Span>
+                </CustomNavLinkSmall>{" "}
+              </Row>
+            </Col>
+            <Col span={6}>
               <Outline />
             </Col>
           </Label>
