@@ -126,6 +126,141 @@ const RightBlock = ({ t, id }: any) => {
                                   style={{
                                     width: "95%",
                                     margin: "1rem",
+                                    minHeight: "200px",
+                                    background: "#fff",
+                                    borderRadius: "12px",
+                                    boxShadow:
+                                      "rgb(128, 128, 128) 0px 5px 10px -6px",
+                                    padding: "1rem",
+                                  }}
+                                >
+                                  <Row>
+                                    <Col span={6}>
+                                      <div
+                                        style={{
+                                          width:
+                                            item.name === "Danielle Strazzo"
+                                              ? "80px"
+                                              : "70px",
+                                          height:
+                                            item.name === "Danielle Strazzo"
+                                              ? "80px"
+                                              : "70px",
+                                          borderRadius: "40px",
+                                          overflow: "hidden",
+                                        }}
+                                      >
+                                        <img
+                                          src={item.profilePic}
+                                          width="100%"
+                                          height="100%"
+                                          alt={item.name}
+                                          style={
+                                            item.name === "Jack Sullivan"
+                                              ? {
+                                                  position: "relative",
+                                                  top: "10px",
+                                                }
+                                              : item.name === "Danielle Strazzo"
+                                              ? {
+                                                  position: "relative",
+                                                  bottom: "11px",
+                                                }
+                                              : {}
+                                          }
+                                        />
+                                      </div>
+                                    </Col>
+                                    <Col span={18}>
+                                      <div
+                                        style={{
+                                          width: "100%",
+                                          // height: "70px",
+                                          // background: "#D9D9D9",
+                                          borderRadius: "40px",
+                                          margin: "1rem 0 0",
+                                        }}
+                                      >
+                                        <p
+                                          style={{
+                                            textAlign: "left",
+                                            color: "#F48C06",
+                                            fontSize: "1.1rem",
+                                            fontFamily: "Poppins SemiBold",
+                                            margin: "0",
+                                          }}
+                                        >
+                                          {item.name}
+                                        </p>
+                                        <p
+                                          style={{
+                                            textAlign: "left",
+                                            color: "#2F327D",
+                                            fontSize: "0.9rem",
+                                            fontFamily: "Poppins SemiBold",
+                                            margin: "0",
+                                            height:
+                                              item.name === "Richard E. Beyer"
+                                                ? "2.5rem"
+                                                : "",
+                                          }}
+                                        >
+                                          {item.position}
+                                        </p>
+                                      </div>
+                                    </Col>
+                                  </Row>
+                                  <Row>
+                                    <p
+                                      style={{
+                                        color: "#000",
+                                        fontSize: "0.8rem",
+                                        fontFamily: "Poppins SemiBold",
+                                        marginTop: "0.5rem",
+                                        height: "100px",
+                                      }}
+                                    >
+                                      {`"${item.content}"`}{" "}
+                                    </p>
+                                  </Row>
+                                  <hr
+                                    style={{
+                                      filter: "opacity(0.2)",
+                                      width: "109%",
+                                      position: "relative",
+                                      left: "-18px",
+                                    }}
+                                  />
+                                  <Row justify="center">
+                                    <img
+                                      src={item.company_logo}
+                                      // width="60%"
+                                      height={"40px"}
+                                      alt={
+                                        item.company_logo === "NA"
+                                          ? ""
+                                          : item.position.split(" ")[
+                                              item.position.split(" ").length -
+                                                1
+                                            ]
+                                      }
+                                    />
+                                  </Row>
+                                </div>
+                              </Col>
+                            ))}
+                          </Row>
+                        </Col>
+                      </Row>
+                      <Row justify="center">
+                        <Col span={24}>
+                          <Row justify="space-between">
+                            {feedbackData.slice(3, 6).map((item, id) => (
+                              <Col xs={24} sm={24} lg={8} xl={8}>
+                                <div
+                                  style={{
+                                    width: "95%",
+                                    margin: "1rem",
                                     minHeight: "270px",
                                     background: "#fff",
                                     borderRadius: "12px",
@@ -222,9 +357,10 @@ const RightBlock = ({ t, id }: any) => {
                                         fontSize: "0.8rem",
                                         fontFamily: "Poppins SemiBold",
                                         maxHeight: "100px",
+                                        height: "100px",
                                         marginBottom:
                                           item.name === "Mani Sundaram"
-                                            ? "2.2rem"
+                                            ? "1.5rem"
                                             : "1rem",
                                         marginTop: "0.5rem",
                                       }}
@@ -245,140 +381,6 @@ const RightBlock = ({ t, id }: any) => {
                                       src={item.company_logo}
                                       // width="60%"
                                       height={"50px"}
-                                      alt={
-                                        item.company_logo === "NA"
-                                          ? ""
-                                          : item.position.split(" ")[
-                                              item.position.split(" ").length -
-                                                1
-                                            ]
-                                      }
-                                    />
-                                  </Row>
-                                </div>
-                              </Col>
-                            ))}
-                          </Row>
-                        </Col>
-                      </Row>
-                      <Row justify="center">
-                        <Col span={24}>
-                          <Row justify="space-between">
-                            {feedbackData.slice(3, 6).map((item, id) => (
-                              <Col xs={24} sm={24} lg={8} xl={8}>
-                                <div
-                                  style={{
-                                    width: "95%",
-                                    margin: "1rem",
-                                    minHeight: "200px",
-                                    background: "#fff",
-                                    borderRadius: "12px",
-                                    boxShadow:
-                                      "rgb(128, 128, 128) 0px 5px 10px -6px",
-                                    padding: "1rem",
-                                  }}
-                                >
-                                  <Row>
-                                    <Col span={6}>
-                                      <div
-                                        style={{
-                                          width:
-                                            item.name === "Danielle Strazzo"
-                                              ? "80px"
-                                              : "70px",
-                                          height:
-                                            item.name === "Danielle Strazzo"
-                                              ? "80px"
-                                              : "70px",
-                                          borderRadius: "40px",
-                                          overflow: "hidden",
-                                        }}
-                                      >
-                                        <img
-                                          src={item.profilePic}
-                                          width="100%"
-                                          height="100%"
-                                          alt={item.name}
-                                          style={
-                                            item.name === "Jack Sullivan"
-                                              ? {
-                                                  position: "relative",
-                                                  top: "10px",
-                                                }
-                                              : item.name === "Danielle Strazzo"
-                                              ? {
-                                                  position: "relative",
-                                                  bottom: "11px",
-                                                }
-                                              : {}
-                                          }
-                                        />
-                                      </div>
-                                    </Col>
-                                    <Col span={18}>
-                                      <div
-                                        style={{
-                                          width: "100%",
-                                          // height: "70px",
-                                          // background: "#D9D9D9",
-                                          borderRadius: "40px",
-                                          margin: "1rem 0 0",
-                                        }}
-                                      >
-                                        <p
-                                          style={{
-                                            textAlign: "left",
-                                            color: "#F48C06",
-                                            fontSize: "1.1rem",
-                                            fontFamily: "Poppins SemiBold",
-                                            margin: "0",
-                                          }}
-                                        >
-                                          {item.name}
-                                        </p>
-                                        <p
-                                          style={{
-                                            textAlign: "left",
-                                            color: "#2F327D",
-                                            fontSize: "0.9rem",
-                                            fontFamily: "Poppins SemiBold",
-                                            margin: "0",
-                                            height:
-                                              item.name === "Richard E. Beyer"
-                                                ? "2.5rem"
-                                                : "",
-                                          }}
-                                        >
-                                          {item.position}
-                                        </p>
-                                      </div>
-                                    </Col>
-                                  </Row>
-                                  <Row>
-                                    <p
-                                      style={{
-                                        color: "#000",
-                                        fontSize: "0.8rem",
-                                        fontFamily: "Poppins SemiBold",
-                                        marginTop: "0.5rem",
-                                      }}
-                                    >
-                                      {`"${item.content}"`}{" "}
-                                    </p>
-                                  </Row>
-                                  <hr
-                                    style={{
-                                      filter: "opacity(0.2)",
-                                      width: "109%",
-                                      position: "relative",
-                                      left: "-18px",
-                                    }}
-                                  />
-                                  <Row justify="center">
-                                    <img
-                                      src={item.company_logo}
-                                      // width="60%"
-                                      height={"40px"}
                                       alt={
                                         item.company_logo === "NA"
                                           ? ""
