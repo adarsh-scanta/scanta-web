@@ -69,11 +69,11 @@ export default function Home({ currentPost }) {
                 )
           }
         />
-        <link rel="canonical" href={`https://www.scanta.io${router.asPath}`} />
+        <link rel="canonical" href={`https://scanta.io${router.asPath}`} />
         <meta property="og:title" content={currentPost?.data?.metaTitle} />
         <meta
           property="og:url"
-          content={`https://www.scanta.io${router.asPath}`}
+          content={`https://scanta.io${router.asPath}`}
         />
         <meta property="og:image" content={currentPost?.data?.cover_image} />
         <link rel="image_src" href={currentPost?.data?.cover_image} />

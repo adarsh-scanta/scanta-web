@@ -63,10 +63,10 @@ export default function Home() {
           property="og:title"
           content="TruPulse - Best Employee Experience Tool"
         />
-        <meta property="og:url" content="https://www.scanta.io/blog" />
+        <meta property="og:url" content="https://scanta.io/blog" />
         <meta
           property="og:image"
-          content="https://www.scanta.io/img/icons/ogGroup300.png"
+          content="https://scanta.io/img/icons/ogGroup300.png"
         />
         <meta
           property="og:description"
@@ -74,7 +74,7 @@ export default function Home() {
         />
         <link
           rel="image_src"
-          href="https://www.scanta.io/img/icons/ogGroup300.png"
+          href="https://scanta.io/img/icons/ogGroup300.png"
         ></link>
       </Head>
       <div className="App">

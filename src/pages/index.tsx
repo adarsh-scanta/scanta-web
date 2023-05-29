@@ -26,7 +26,7 @@ left: 35%;
     "@context": "https://schema.org/",
     "@type": "WebSite",
     name: "Scanta",
-    url: "https://www.scanta.io/",
+    url: "https://scanta.io/",
     potentialAction: {
       "@type": "SearchAction",
       target: "{search_term_string}",
@@ -43,15 +43,15 @@ left: 35%;
             name="description"
             content="TruPulse is a listening platform for real-time understanding of company morale, trending topics and corporate culture with the best employee experience tools."
           />
-          <link rel="canonical" href={"https://www.scanta.io/"} />
+          <link rel="canonical" href={"https://scanta.io/"} />
           <meta
             property="og:title"
             content="TruPulse - Best Employee Experience Tool"
           />
-          <meta property="og:url" content="https://www.scanta.io" />
+          <meta property="og:url" content="https://scanta.io" />
           <meta
             property="og:image"
-            content="https://www.scanta.io/img/icons/ogGroup300.png"
+            content="https://scanta.io/img/icons/ogGroup300.png"
           />
           <meta
             property="og:description"
@@ -59,7 +59,7 @@ left: 35%;
           />
           <link
             rel="image_src"
-            href="https://www.scanta.io/img/icons/ogGroup300.png"
+            href="https://scanta.io/img/icons/ogGroup300.png"
           ></link>
           <script type="application/ld+json">
             {JSON.stringify(articleStructuredData)}

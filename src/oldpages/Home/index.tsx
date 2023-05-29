@@ -24,7 +24,7 @@ left: 45%;
     "@context": "https://schema.org/",
     "@type": "WebSite",
     name: "Scanta",
-    url: "https://www.scanta.io/",
+    url: "https://scanta.io/",
     potentialAction: {
       "@type": "SearchAction",
       target: "{search_term_string}",
@@ -40,7 +40,7 @@ left: 45%;
           name="description"
           content="TruPulse is a listening platform for real-time understanding of company morale, trending topics and corporate culture with the best employee experience tools."
         />
-        <link rel="canonical" href={"https://www.scanta.io/"} />
+        <link rel="canonical" href={"https://scanta.io/"} />
         <script type="application/ld+json">
           {JSON.stringify(articleStructuredData)}
         </script>
