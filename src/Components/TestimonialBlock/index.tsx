@@ -152,11 +152,7 @@ const RightBlock = ({ t, id }: any) => {
                                       >
                                         <img
                                           src={item.profilePic}
-                                          width={
-                                            item.profilePic.includes("png")
-                                              ? "56px"
-                                              : "100%"
-                                          }
+                                          width="100%"
                                           height="100%"
                                           alt={item.name}
                                           style={
@@ -294,11 +290,7 @@ const RightBlock = ({ t, id }: any) => {
                                       >
                                         <img
                                           src={item.profilePic}
-                                          width={
-                                            item.profilePic.includes("png")
-                                              ? "56px"
-                                              : "100%"
-                                          }
+                                          width="100%"
                                           height="100%"
                                           alt={item.name}
                                           style={
@@ -449,11 +441,7 @@ const RightBlock = ({ t, id }: any) => {
                                 >
                                   <img
                                     src={item.profilePic}
-                                    width={
-                                      item.profilePic.includes("png")
-                                        ? "56px"
-                                        : "100%"
-                                    }
+                                    width="100%"
                                     height="100%"
                                     alt={item.name}
                                     style={
