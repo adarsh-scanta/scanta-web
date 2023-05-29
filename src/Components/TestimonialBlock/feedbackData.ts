@@ -12,7 +12,7 @@ export const feedbackData = [
     position: "VP of HR, BD",
     content:
       "We cannot fully deliver for our customers, and execute the business agenda, without an engaged workforce. TruPulse delivers insights into your employees' state, arming you to make positive changes to the experience without the burden of surveys.",
-    profilePic: "/img/svg/Danielle.svg",
+    profilePic: "/img/svg/Danielle.png",
     company_logo: "/img/icons/BDLogo.png",
   },
   {
@@ -20,7 +20,7 @@ export const feedbackData = [
     position: "Fmr Secretary of Labor, State of Kansas",
     content:
       "For years, I administered surveys in organizations. Although invaluable, feedback represented a snapshot in time. To monitor the pulse of organizations on a realtime, continual basis, the AI-driven TruPulse platform is a highly effective strategy.",
-    profilePic: "/img/svg/Richard.svg",
+    profilePic: "/img/svg/Richard.png",
     company_logo: "/img/icons/IGLogo.png",
   },
   {
