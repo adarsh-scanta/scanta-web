@@ -152,7 +152,11 @@ const RightBlock = ({ t, id }: any) => {
                                       >
                                         <img
                                           src={item.profilePic}
-                                          width="100%"
+                                          width={
+                                            item.profilePic.includes("png")
+                                              ? "56px"
+                                              : "100%"
+                                          }
                                           height="100%"
                                           alt={item.name}
                                           style={
@@ -290,7 +294,11 @@ const RightBlock = ({ t, id }: any) => {
                                       >
                                         <img
                                           src={item.profilePic}
-                                          width="100%"
+                                          width={
+                                            item.profilePic.includes("png")
+                                              ? "56px"
+                                              : "100%"
+                                          }
                                           height="100%"
                                           alt={item.name}
                                           style={
@@ -441,7 +449,11 @@ const RightBlock = ({ t, id }: any) => {
                                 >
                                   <img
                                     src={item.profilePic}
-                                    width={item.profilePic.includes("png")?"58px":"100%"}
+                                    width={
+                                      item.profilePic.includes("png")
+                                        ? "56px"
+                                        : "100%"
+                                    }
                                     height="100%"
                                     alt={item.name}
                                     style={
@@ -464,7 +476,7 @@ const RightBlock = ({ t, id }: any) => {
                                     }
                                   />
                                 </div>
-                              </Col>
+                              </Col>{" "}
                               <Col span={18}>
                                 <div
                                   style={{
