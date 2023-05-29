@@ -139,7 +139,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                 <Col xl={0} lg={0} sm={24} xs={24}>
                   <CarouselWrapper
                     autoplay
-                    arrows
+                    // arrows
                     nextArrow={<RightOutlined />}
                     prevArrow={<LeftOutlined />}
                     autoplaySpeed={8000}
