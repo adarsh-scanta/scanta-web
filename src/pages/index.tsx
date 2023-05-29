@@ -54,11 +54,11 @@ left: 35%;
             {`{
     "@context": "https://schema.org/",
     "@type": "WebSite",
-    name: "Scanta",
-    url: "https://scanta.io/",
-    potentialAction: {
+    "name": "Scanta",
+    "url": "https://scanta.io/",
+    "potentialAction": {
       "@type": "SearchAction",
-      target: "scanta.io",
+      "target": "scanta.io",
       "query-input": "required name=search_term_string"
     }
   }`}
