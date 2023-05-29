@@ -30,7 +30,13 @@ const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
   const router = useRouter();
   const [user, loading, error] = useAuthState(auth);
   const [visible, setVisibility] = useState(false);
+ const [wait, setWaiting] = useState(true);
 
+ useEffect(() => {
+   setTimeout(() => {
+     setWaiting(false);
+   }, 500);
+ }, []);
   // const scrollTo = (id: string) => {
   //   if (
   //     (location.pathname === "/departments" &&
@@ -322,7 +328,7 @@ const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
               </CustomNavLinkSmall>
             </Row>
           </Col>
-          {!user ? (
+          {!user && !wait ? (
             <div style={{ position: "fixed", bottom: "20px", right: "0" }}>
               <CustomNavLinkSmall
                 style={{

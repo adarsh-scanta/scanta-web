@@ -23,7 +23,6 @@ import { collection, doc, onSnapshot, query, setDoc } from "firebase/firestore";
 import { db } from "@/firebase";
 import { feedbackData } from "./feedbackData";
 
-
 const RightBlock = ({ t, id }: any) => {
   const vidRef = useRef();
   const [ctaClicksCount, setCtaClicksCount] = useState(0);
@@ -61,13 +60,13 @@ const RightBlock = ({ t, id }: any) => {
     }
   };
 
-    const [wait, setWaiting] = useState(true);
+  const [wait, setWaiting] = useState(true);
 
-    useEffect(() => {
-      setTimeout(() => {
-        setWaiting(false);
-      }, 2000);
-    }, []);
+  useEffect(() => {
+    setTimeout(() => {
+      setWaiting(false);
+    }, 500);
+  }, []);
   return (
     <RightBlockContainer>
       {!wait && (
@@ -126,7 +125,7 @@ const RightBlock = ({ t, id }: any) => {
                                   style={{
                                     width: "95%",
                                     margin: "1rem",
-                                    minHeight: "200px",
+                                    height: "300px",
                                     background: "#fff",
                                     borderRadius: "12px",
                                     boxShadow:
@@ -138,14 +137,7 @@ const RightBlock = ({ t, id }: any) => {
                                     <Col span={6}>
                                       <div
                                         style={{
-                                          width:
-                                            item.name === "Danielle Strazzo"
-                                              ? "80px"
-                                              : "70px",
-                                          height:
-                                            item.name === "Danielle Strazzo"
-                                              ? "80px"
-                                              : "70px",
+                                          width: "70px",
                                           borderRadius: "40px",
                                           overflow: "hidden",
                                         }}
@@ -153,21 +145,7 @@ const RightBlock = ({ t, id }: any) => {
                                         <img
                                           src={item.profilePic}
                                           width="100%"
-                                          height="100%"
                                           alt={item.name}
-                                          style={
-                                            item.name === "Jack Sullivan"
-                                              ? {
-                                                  position: "relative",
-                                                  top: "10px",
-                                                }
-                                              : item.name === "Danielle Strazzo"
-                                              ? {
-                                                  position: "relative",
-                                                  bottom: "11px",
-                                                }
-                                              : {}
-                                          }
                                         />
                                       </div>
                                     </Col>
@@ -175,8 +153,6 @@ const RightBlock = ({ t, id }: any) => {
                                       <div
                                         style={{
                                           width: "100%",
-                                          // height: "70px",
-                                          // background: "#D9D9D9",
                                           borderRadius: "40px",
                                           margin: "1rem 0 0",
                                         }}
@@ -261,7 +237,7 @@ const RightBlock = ({ t, id }: any) => {
                                   style={{
                                     width: "95%",
                                     margin: "1rem",
-                                    minHeight: "270px",
+                                    height: "300px",
                                     background: "#fff",
                                     borderRadius: "12px",
                                     boxShadow:
@@ -273,16 +249,8 @@ const RightBlock = ({ t, id }: any) => {
                                     <Col span={6}>
                                       <div
                                         style={{
-                                          width:
-                                            item.name ===
-                                            "Nathan Mondragon, Ph.D."
-                                              ? "80px"
-                                              : "70px",
-                                          height:
-                                            item.name ===
-                                            "Nathan Mondragon, Ph.D."
-                                              ? "74px"
-                                              : "72px",
+                                          width: "70px",
+                                          // height: "70px",
                                           // background: "#D9D9D9",
                                           borderRadius: "40px",
                                           // margin: "0 0.5rem",
@@ -291,27 +259,8 @@ const RightBlock = ({ t, id }: any) => {
                                         <img
                                           src={item.profilePic}
                                           width="100%"
-                                          height="100%"
+                                          // height="100%"
                                           alt={item.name}
-                                          style={
-                                            item.name ===
-                                            "Nathan Mondragon, Ph.D."
-                                              ? {
-                                                  position: "relative",
-                                                  bottom: "8px",
-                                                }
-                                              : item.name === "Dan Mcculloch"
-                                              ? {
-                                                  position: "relative",
-                                                  bottom: "8px",
-                                                }
-                                              : item.name === "Mani Sundaram"
-                                              ? {
-                                                  position: "relative",
-                                                  bottom: "8px",
-                                                }
-                                              : {}
-                                          }
                                         />
                                       </div>
                                     </Col>
@@ -415,7 +364,7 @@ const RightBlock = ({ t, id }: any) => {
                             style={{
                               width: "95%",
                               margin: "1rem",
-                              minHeight: "270px",
+                              height: "300px",
                               background: "#fff",
                               borderRadius: "12px",
                               boxShadow: "rgb(128, 128, 128) 0px 5px 10px -6px",
@@ -426,14 +375,8 @@ const RightBlock = ({ t, id }: any) => {
                               <Col span={6}>
                                 <div
                                   style={{
-                                    width:
-                                      item.name === "Nathan Mondragon, Ph.D."
-                                        ? "80px"
-                                        : "70px",
-                                    height:
-                                      item.name === "Nathan Mondragon, Ph.D."
-                                        ? "74px"
-                                        : "72px",
+                                    width: "70px",
+                                    // height: "70px",
                                     // background: "#D9D9D9",
                                     borderRadius: "40px",
                                     // margin: "0 0.5rem",
@@ -442,26 +385,8 @@ const RightBlock = ({ t, id }: any) => {
                                   <img
                                     src={item.profilePic}
                                     width="100%"
-                                    height="100%"
+                                    // height="100%"
                                     alt={item.name}
-                                    style={
-                                      item.name === "Nathan Mondragon, Ph.D."
-                                        ? {
-                                            position: "relative",
-                                            bottom: "8px",
-                                          }
-                                        : item.name === "Dan Mcculloch"
-                                        ? {
-                                            position: "relative",
-                                            bottom: "8px",
-                                          }
-                                        : item.name === "Mani Sundaram"
-                                        ? {
-                                            position: "relative",
-                                            bottom: "8px",
-                                          }
-                                        : {}
-                                    }
                                   />
                                 </div>
                               </Col>{" "}
@@ -511,10 +436,7 @@ const RightBlock = ({ t, id }: any) => {
                                   fontSize: "0.8rem",
                                   fontFamily: "Poppins SemiBold",
                                   maxHeight: "100px",
-                                  marginBottom:
-                                    item.name === "Mani Sundaram"
-                                      ? "1rem"
-                                      : "1rem",
+                                  marginBottom: "1rem",
                                   marginTop: "0.5rem",
                                 }}
                               >
