@@ -441,7 +441,7 @@ const RightBlock = ({ t, id }: any) => {
                                 >
                                   <img
                                     src={item.profilePic}
-                                    width="100%"
+                                    width={item.profilePic.includes("png")?"58px":"100%"}
                                     height="100%"
                                     alt={item.name}
                                     style={
