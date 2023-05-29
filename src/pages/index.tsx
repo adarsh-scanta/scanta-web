@@ -22,17 +22,6 @@ left: 35%;
 @media only screen and (max-width: 1079px) {
    display: none; 
 `;
-  const articleStructuredData = {
-    "@context": "https://schema.org/",
-    "@type": "WebSite",
-    name: "Scanta",
-    url: "https://scanta.io/",
-    potentialAction: {
-      "@type": "SearchAction",
-      target: "{search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
-  };
 
   return (
     <React.Fragment>
@@ -62,7 +51,17 @@ left: 35%;
             href="https://scanta.io/img/icons/ogGroup300.png"
           ></link>
           <script type="application/ld+json">
-            {JSON.stringify(articleStructuredData)}
+            {`{
+    "@context": "https://schema.org/",
+    "@type": "WebSite",
+    name: "Scanta",
+    url: "https://scanta.io/",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: "scanta.io",
+      "query-input": "required name=search_term_string"
+    }
+  }`}
           </script>
         </Head>
         <Header />
