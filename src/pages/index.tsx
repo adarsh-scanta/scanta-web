@@ -30,8 +30,8 @@ left: 35%;
     potentialAction: {
       "@type": "SearchAction",
       target: "{search_term_string}",
-      "query-input": "required name=search_term_string",
-    },
+      "query-input": "required name=search_term_string"
+    }
   };
 
   return (
