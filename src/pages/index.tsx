@@ -50,19 +50,6 @@ left: 35%;
             rel="image_src"
             href="https://scanta.io/img/icons/ogGroup300.png"
           ></link>
-          <script type="application/ld+json">
-            {`{
-    "@context": "https://schema.org/",
-    "@type": "WebSite",
-    "name": "Scanta",
-    "url": "https://scanta.io/",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "scanta.io",
-      "query-input": "required name=search_term_string"
-    }
-  }`}
-          </script>
         </Head>
         <Header />
         <Styles />
