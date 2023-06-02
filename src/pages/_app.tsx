@@ -18,17 +18,16 @@ export default function App({ Component, pageProps }: AppProps) {
     })(window, document, 'script', 'dataLayer', 'GTM-5S97HQ4');`}</Script>
 
         <Script
-          async
           src="https://www.googletagmanager.com/gtag/js?id=G-7KK004LHNR"
-        ></Script>
-        <Script>
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
           {` window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
     gtag('config', 'G-7KK004LHNR');`}
         </Script>
-
         <Script>
           {`!function (f, b, e, v, n, t, s) {
       if (f.fbq) return; n = f.fbq = function () {
@@ -57,7 +56,6 @@ export default function App({ Component, pageProps }: AppProps) {
           name="facebook-domain-verification"
           content="gefu7m9v0rc0rgmdlipsgauixdwbqr"
         />
-
         <meta charSet="UTF-8" />
         <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
         <meta name="author" content="Adarsh Verma" />
