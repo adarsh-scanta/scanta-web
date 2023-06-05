@@ -12,8 +12,6 @@ function BlogPosts() {
   useEffect(() => {
     const q = query(collection(db, "posts"), orderBy("id"));
     onSnapshot(q, (querySnapshot) => {
-      // console.log(q);
-      // console.log(querySnapshot);
       setPosts(
         querySnapshot.docs.map((doc) => ({
           id: doc.id,

@@ -31,7 +31,6 @@ export const getServerSideProps = async (ctx) => {
       .join("-")
       .includes(slug)
   )[0];
-  console.log(slug);
   return {
     props: {
       currentPost: JSON.parse(JSON.stringify(currentPost)),

@@ -33,7 +33,6 @@ const Posts = ({ posts }: any) => {
   useEffect(() => {
     setPublishedPosts(posts?.filter((item: any) => item?.data?.isPublished));
   }, [posts]);
-  console.log(router.pathname);
   useEffect(() => {
     if (page === 1) {
       setMinIndex(0);
@@ -53,7 +52,6 @@ const Posts = ({ posts }: any) => {
     }
   }, [page]);
 
-  console.log(publishedPosts);
 
   const handleClick = (data: any) => {
     if (data?.customURL?.length > 3) {

@@ -26,7 +26,6 @@ export const getServerSideProps = async (ctx) => {
   const snapshot = await getDocs(postsRef);
   const posts = snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }));
   const currentPost = posts.filter((post: any) => parseInt(post.data.id) === parseInt(slug))[0];
-  console.log(currentPost);
   return {
     props: {
       currentPost: JSON.parse(JSON.stringify(currentPost)),

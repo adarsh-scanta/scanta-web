@@ -45,7 +45,6 @@ function BlogFullPost() {
     "text/html"
   );
 
-  console.log(currentPost);
   return (
     <div className="App">
       <ScrollToTop />
