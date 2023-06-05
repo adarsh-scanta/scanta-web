@@ -129,7 +129,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                         <Button
                           onClick={() => {
                             (window as { [key: string]: any })["track_load"](
-                              "https://scanta.io/trupulse",
+                              "https://www.scanta.io/trupulse",
                               "Product Page"
                             );
                           }}
@@ -154,7 +154,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                         <Button
                           onClick={() => {
                             (window as { [key: string]: any })["track_load"](
-                              "https://scanta.io/trupulse",
+                              "https://www.scanta.io/trupulse",
                               "Product Page"
                             );
                           }}
@@ -1337,7 +1337,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                                     (window as { [key: string]: any })[
                                       "track_load"
                                     ](
-                                      "https://scanta.io/trupulse",
+                                      "https://www.scanta.io/trupulse",
                                       "Product Page"
                                     );
                                   }}
@@ -1360,7 +1360,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                                     (window as { [key: string]: any })[
                                       "track_load"
                                     ](
-                                      "https://scanta.io/trupulse",
+                                      "https://www.scanta.io/trupulse",
                                       "Product Page"
                                     );
                                   }}
@@ -1789,7 +1789,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                   <Button
                     onClick={() => {
                       (window as { [key: string]: any })["track_load"](
-                        "https://scanta.io/trupulse",
+                        "https://www.scanta.io/trupulse",
                         "Product Page"
                       );
                     }}

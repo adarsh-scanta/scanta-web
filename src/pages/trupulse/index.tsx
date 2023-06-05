@@ -94,15 +94,15 @@ export default function Trupulse() {
           name="description"
           content="TruPulse is the best employee retention platform. It performs realtime & continuous understanding of data & encourages a healthy work-life balance."
         />
-        <link rel="canonical" href="https://scanta.io/trupulse" />
+        <link rel="canonical" href="https://www.scanta.io/trupulse" />
         <meta
           property="og:title"
           content="Employee Retention & People Analytics Tool"
         />
-        <meta property="og:url" content="https://scanta.io/trupulse" />
+        <meta property="og:url" content="https://www.scanta.io/trupulse" />
         <meta
           property="og:image"
-          content="https://scanta.io/img/icons/ogGroup300.png"
+          content="https://www.scanta.io/img/icons/ogGroup300.png"
         />
         <meta
           property="og:description"
@@ -110,7 +110,7 @@ export default function Trupulse() {
         />
         <link
           rel="image_src"
-          href="https://scanta.io/img/icons/ogGroup300.png"
+          href="https://www.scanta.io/img/icons/ogGroup300.png"
         ></link>
       </Head>
       <Header />

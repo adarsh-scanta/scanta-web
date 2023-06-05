@@ -138,33 +138,33 @@ const Posts = ({ post, from }: any) => {
           <div style={{ margin: "0 1.5rem 1rem" }}>
             <Row>
               <FacebookShareButton
-                url={`https://scanta.io${router.asPath}`}
+                url={`https://www.scanta.io${router.asPath}`}
                 style={{ margin: "0 0.5rem" }}
               >
                 <FacebookIcon size={36} round={true} />
               </FacebookShareButton>
               <TwitterShareButton
-                url={`https://scanta.io${router.asPath}`}
+                url={`https://www.scanta.io${router.asPath}`}
                 style={{ margin: "0 0.5rem" }}
               >
                 <TwitterIcon size={36} round={true} />
               </TwitterShareButton>
               <LinkedinShareButton
-                url={`https://scanta.io${router.asPath}`}
+                url={`https://www.scanta.io${router.asPath}`}
                 style={{ margin: "0 0.5rem" }}
               >
                 <LinkedinIcon size={36} round={true} />
               </LinkedinShareButton>
               <WhatsappShareButton
-                url={`https://scanta.io${router.asPath}`}
+                url={`https://www.scanta.io${router.asPath}`}
                 title={post?.data?.title}
                 style={{ margin: "0 0.5rem" }}
               >
                 <WhatsappIcon size={36} round={true} />
               </WhatsappShareButton>
               <EmailShareButton
-                url={`https://scanta.io${router.asPath}`}
-                body={`https://scanta.io${router.asPath}`}
+                url={`https://www.scanta.io${router.asPath}`}
+                body={`https://www.scanta.io${router.asPath}`}
                 subject={post?.data?.title}
                 style={{ margin: "0 0.5rem" }}
               >

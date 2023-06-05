@@ -18,15 +18,15 @@ export default function Home() {
           name="description"
           content="TruPulse is a listening platform for real-time understanding of company morale, trending topics and corporate culture with the best employee experience tools."
         />
-        <link rel="canonical" href="https://scanta.io/company" />
+        <link rel="canonical" href="https://www.scanta.io/company" />
         <meta
           property="og:title"
           content="TruPulse - Best Employee Experience Tool"
         />
-        <meta property="og:url" content="https://scanta.io/company" />
+        <meta property="og:url" content="https://www.scanta.io/company" />
         <meta
           property="og:image"
-          content="https://scanta.io/img/icons/ogGroup300.png"
+          content="https://www.scanta.io/img/icons/ogGroup300.png"
         />
         <meta
           property="og:description"
@@ -34,7 +34,7 @@ export default function Home() {
         />
         <link
           rel="image_src"
-          href="https://scanta.io/img/icons/ogGroup300.png"
+          href="https://www.scanta.io/img/icons/ogGroup300.png"
         ></link>
       </Head>
       <Header />
