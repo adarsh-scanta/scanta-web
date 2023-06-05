@@ -128,19 +128,7 @@ module.exports = withAntdLess({
         source: "/demo",
         destination: "/request-demo",
         permanent: true,
-      }, {
-        source: "/",
-        destination: "/blog",
-        permanent: true,
-      }, {
-        source: "/",
-        destination: "/blog",
-        permanent: true,
-      }, {
-        source: "/",
-        destination: "/blog",
-        permanent: true,
-      },
+      }
     ];
   },
 
