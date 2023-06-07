@@ -67,6 +67,12 @@ const Posts = ({ post, from }: any) => {
         ...post.data,
         isPublished: true,
       });
+      fetch("https://hooks.zapier.com/hooks/catch/14238222/3t7o2n2/", {
+        method: "POST",
+        body: JSON.stringify({
+          ...post.data,
+        }),
+      });
       setLoading(false);
       alert("Blog Published Successfully");
       router.push("/blog/dashboard");
