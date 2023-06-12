@@ -171,6 +171,7 @@ const ReactQuill = useMemo(
             .join("-"),
           tags: tags.join(","),
           created_at: serverTimestamp(),
+          last_edit: serverTimestamp(),
           isPublished: false,
         });
         alert("Blog added successfully");
