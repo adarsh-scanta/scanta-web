@@ -67,6 +67,7 @@ const EditBlogEditor = ({ post }: any) => {
   const [metaTitle, setMetaTitle] = useState("");
   const [metaDescription, setMetaDescription] = useState("");
   const [customURL, setCustomURL] = useState("");
+  const [createDate, setCreateDate] = useState("");
   // progress
   const [percent, setPercent] = useState(0);
 
@@ -79,6 +80,8 @@ const EditBlogEditor = ({ post }: any) => {
     setMetaTitle(post?.data?.metaTitle);
     setMetaDescription(post?.data?.metaDes);
     setCustomURL(post?.data?.customURL);
+    setCreateDate(post?.data?.created_at);
+    console.log(post.data.created_at);
   }, [post]);
   // const modules = {
   //   toolbar: [
@@ -215,7 +218,8 @@ const EditBlogEditor = ({ post }: any) => {
             .split(" ")
             .join("-"),
           tags: tags.join(","),
-          created_at: serverTimestamp(),
+          created_at: createDate,
+          last_edit: serverTimestamp(),
           isPublished: post?.data?.isPublished,
         });
         alert("Blog updated successfully");
