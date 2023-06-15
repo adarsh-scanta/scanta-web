@@ -40,6 +40,7 @@ export const Subtitle = styled("span")`
 export const Content = styled("p")`
   margin: 0.5rem 0 2rem 0;
   font-size: 1.4rem;
+  font-weight:600;
   color:#696984;
 } @media only screen and (min-width: 1400px) {
   font-size: 1.3rem;

@@ -15,6 +15,7 @@ export const RightBlockContainer = styled("section")`
 export const Content = styled("p")`
   margin: 1.2rem 0 2rem 0;
   letter-spacing: 2px;
+  font-weight:600;
   font-size: 1.2rem;
   color: #696984;
 `;

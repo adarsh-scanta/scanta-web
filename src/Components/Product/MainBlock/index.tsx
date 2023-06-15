@@ -36,7 +36,7 @@ const RightBlock = ({ t, id }: any) => {
                 style={{ marginTop: "10px" }}
               />
               <div style={{ position: "relative", top: "30px" }}>
-                <Subtitle style={{ fontWeight: "600" }}>
+                <Subtitle style={{ fontWeight: "600",fontSize:"1.6rem" }}>
                   Surveying Employees{" "}
                   <span style={{ color: "#EB7A02" }}>Without Surveys</span>
                 </Subtitle>

@@ -329,11 +329,11 @@ const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
             </Row>
           </Col>
           {!user && !wait ? (
-            <div style={{ position: "fixed", bottom: "20px", right: "0" }}>
+            <div style={{ position: "fixed", bottom: "20px", }}>
               <CustomNavLinkSmall
                 style={{
                   minWidth: "120px",
-                  margin: "0.5rem 2rem 0.5rem 0.5rem",
+                  margin: "0.5rem  0.5rem 0.5rem",
                 }}
                 // onClick={() => scrollTo("contact")}
               >
