@@ -43,8 +43,9 @@ export default function App({ Component, pageProps }: AppProps) {
     fbq('init', '885285045904955');
     fbq('track', 'PageView');`}
         </script>
+
         <script type="text/javascript">
-          {`_linkedin_partner_id = "5462713";
+          {`_linkedin_partner_id = "5471609";
     window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
     window._linkedin_data_partner_ids.push(_linkedin_partner_id);`}
         </script>
