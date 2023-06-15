@@ -23,41 +23,40 @@ const MainBlock = ({ t, id }: any) => {
   const router = useRouter();
   const [meetDuration, setMeetDuration] = useState("15min");
 
-    
-const [ctaClicksCount, setCtaClicksCount] = useState(0);
-const [ctaSubmits, setCtaSubmits] = useState(0);
-const [demoButtonCount, setDemoButtonCount] = useState(0);
-const [demoSuccessCount, setDemoSuccessCount] = useState(0);
-const [trialButtonCount, setTrialButtonCount] = useState(0);
-const [trialSuccessCount, setTrialSuccessCount] = useState(0);
-useEffect(() => {
-  const q = query(collection(db, "stats"));
-  onSnapshot(q, (querySnapshot) => {
-    setCtaClicksCount(querySnapshot.docs[0].data().ctaClicksCount);
-    setCtaSubmits(querySnapshot.docs[0].data().ctaSubmits);
-    setDemoButtonCount(querySnapshot.docs[0].data().demoButtonCount);
-    setDemoSuccessCount(querySnapshot.docs[0].data().demoSuccessCount);
-    setTrialButtonCount(querySnapshot.docs[0].data().trialButtonCount);
-    setTrialSuccessCount(querySnapshot.docs[0].data().trialSuccessCount);
-  });
-}, []);
+  const [ctaClicksCount, setCtaClicksCount] = useState(0);
+  const [ctaSubmits, setCtaSubmits] = useState(0);
+  const [demoButtonCount, setDemoButtonCount] = useState(0);
+  const [demoSuccessCount, setDemoSuccessCount] = useState(0);
+  const [trialButtonCount, setTrialButtonCount] = useState(0);
+  const [trialSuccessCount, setTrialSuccessCount] = useState(0);
+  useEffect(() => {
+    const q = query(collection(db, "stats"));
+    onSnapshot(q, (querySnapshot) => {
+      setCtaClicksCount(querySnapshot.docs[0].data().ctaClicksCount);
+      setCtaSubmits(querySnapshot.docs[0].data().ctaSubmits);
+      setDemoButtonCount(querySnapshot.docs[0].data().demoButtonCount);
+      setDemoSuccessCount(querySnapshot.docs[0].data().demoSuccessCount);
+      setTrialButtonCount(querySnapshot.docs[0].data().trialButtonCount);
+      setTrialSuccessCount(querySnapshot.docs[0].data().trialSuccessCount);
+    });
+  }, []);
 
-const updateStats = async () => {
-  if (ctaClicksCount > 0) {
-    try {
-      await setDoc(doc(db, "stats", "P0kHUuxV7HZvSA7XrcHh"), {
-        ctaClicksCount: ctaClicksCount,
-        ctaSubmits: ctaSubmits,
-        demoButtonCount: demoButtonCount,
-        demoSuccessCount: demoSuccessCount+1,
-        trialButtonCount: trialButtonCount,
-        trialSuccessCount: trialSuccessCount,
-      });
-    } catch (err) {
-      alert(err);
+  const updateStats = async () => {
+    if (ctaClicksCount > 0) {
+      try {
+        await setDoc(doc(db, "stats", "P0kHUuxV7HZvSA7XrcHh"), {
+          ctaClicksCount: ctaClicksCount,
+          ctaSubmits: ctaSubmits,
+          demoButtonCount: demoButtonCount,
+          demoSuccessCount: demoSuccessCount + 1,
+          trialButtonCount: trialButtonCount,
+          trialSuccessCount: trialSuccessCount,
+        });
+      } catch (err) {
+        alert(err);
+      }
     }
-  }
-};
+  };
 
   useCalendlyEventListener({
     onProfilePageViewed: () => console.log("onProfilePageViewed"),
@@ -65,7 +64,8 @@ const updateStats = async () => {
     onEventTypeViewed: () => console.log("onEventTypeViewed"),
     onEventScheduled: () => {
       updateStats();
-      // (window as any).lintrk("track", { conversion_id: 13305921 });
+      typeof window !== undefined &&
+        (window as any).lintrk("track", { conversion_id: 13305921 });
       router.push("/thankyou");
     },
   });
