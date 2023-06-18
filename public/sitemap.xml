@@ -43,6 +43,19 @@
     <priority>0.8</priority>
 
   </url>
+<url>
+    <loc>https://www.scanta.io/blog/cultural-surveys-</loc>
+    <lastmod>2023-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+<url>
+    <loc>https://www.scanta.io/blog/opinion-churn-make-up-your-minds-employees</loc>
+    <lastmod>2023-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <url>
     <loc>https://www.scanta.io/blog/ai-in-hr-meets-big-gov</loc>
     <lastmod>2023-06-02</lastmod>
