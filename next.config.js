@@ -57,6 +57,22 @@ module.exports = withAntdLess({
         destination: "/",
         permanent: true,
       }, {
+        source: "/avatars",
+        destination: "/",
+        permanent: true,
+      }, {
+        source: "/ml-security",
+        destination: "/",
+        permanent: true,
+      }, {
+        source: "/arvr",
+        destination: "/",
+        permanent: true,
+      }, {
+        source: "/scanta/EndUserLicenseAgreement.html",
+        destination: "/",
+        permanent: true,
+      }, {
         source: "/EndUserLicenseAgreement.html",
         destination: "/",
         permanent: true,
