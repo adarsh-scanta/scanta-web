@@ -1,7 +1,6 @@
 "use client";
 import React, { useRef, useState } from "react";
 import { Row, Col } from "antd";
-import emailjs from "emailjs-com";
 import ZapierForm from "react-zapier-form";
 import { useRouter } from "next/router";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
