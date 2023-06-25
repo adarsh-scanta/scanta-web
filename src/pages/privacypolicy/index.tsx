@@ -1,21 +1,10 @@
 import MainBlock from "@/Components/FreeTrial/MainBlock";
 import { Styles } from "@/styles/styles";
 import Head from "next/head";
-import { Row, Col } from "antd";
-import { Document, Page } from "react-pdf";
-import React, { useState } from "react";
-import "react-pdf/dist/esm/Page/AnnotationLayer.css";
-import "react-pdf/dist/esm/Page/TextLayer.css";
-import { pdfjs } from "react-pdf";
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
+import {Row ,Col} from "antd"
+import React from "react";
 
 export default function PrivacyPolicy() {
-  const [numPages, setNumPages] = useState(null);
-  const [pageNumber, setPageNumber] = useState(1);
-
-  function onDocumentLoadSuccess({ numPages }) {
-    setNumPages(numPages);
-  }
   return (
     <React.Fragment>
       <Head>
@@ -44,34 +33,9 @@ export default function PrivacyPolicy() {
         ></link>
       </Head>
       <Styles />
-      <div style={{  background: "#eff0f7" }}>
+      <div style={{ margin: "2rem" }}>
         <Row>
-          <Col xs={24} sm={24} lg={0} xl={0}>
-            {" "}
-            <Document
-              file="https://chec-front.s3.amazonaws.com/Scanta+Privacy+Policy_Revised_2022.07.06_Clean.pdf"
-              onLoadSuccess={onDocumentLoadSuccess}
-            >
-              {Array.apply(null, Array(numPages))
-                .map((x, i) => i + 1)
-                .map((page) => (
-                  <Page pageNumber={page} scale={0.7} />
-                ))}
-            </Document>
-          </Col>
-          <Col xs={0} sm={0} lg={24} xl={24}>
-            {" "}
-            <Document
-              file="https://chec-front.s3.amazonaws.com/Scanta+Privacy+Policy_Revised_2022.07.06_Clean.pdf"
-              onLoadSuccess={onDocumentLoadSuccess}
-            >
-              {Array.apply(null, Array(numPages))
-                .map((x, i) => i + 1)
-                .map((page) => (
-                  <Page pageNumber={page} scale={1.8} />
-                ))}
-            </Document>
-          </Col>
+          <Col span={24}></Col>
         </Row>
       </div>
     </React.Fragment>

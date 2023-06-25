@@ -42,6 +42,3 @@
   content: attr(data-value) !important;
 }
 
-.react-pdf__Page__canvas {
-  margin: auto;
-}
