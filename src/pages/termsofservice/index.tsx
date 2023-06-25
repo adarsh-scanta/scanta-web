@@ -1,11 +1,17 @@
 import MainBlock from "@/Components/FreeTrial/MainBlock";
 import { Styles } from "@/styles/styles";
 import Head from "next/head";
-import React from "react";
+import React, { useEffect } from "react";
 import { Row, Col } from "antd";
 
 
 export default function TermsOfServic() {
+    useEffect(() => {
+      typeof window !== undefined &&
+        window.location.assign(
+          "https://chec-front.s3.amazonaws.com/Chec+End+User+License+Agreement_2022.07.08_Clean+(1).pdf"
+        );
+    }, []);
   return (
     <React.Fragment>
       <Head>

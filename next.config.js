@@ -29,20 +29,6 @@ module.exports = withAntdLess({
   redirects() {
     return [
       {
-        source: "/privacypolicy",
-        destination:
-          "https://chec-front.s3.amazonaws.com/Scanta+Privacy+Policy_Revised_2022.07.06_Clean.pdf",
-        permanent: true,
-        basePath: false,
-      },
-      {
-        source: "/termsofservice",
-        destination:
-          "https://chec-front.s3.amazonaws.com/Chec+End+User+License+Agreement_2022.07.08_Clean+(1).pdf",
-        permanent: true,
-        basePath: false,
-      },
-      {
         source: "/blog.html",
         destination: "/blog",
         permanent: true,

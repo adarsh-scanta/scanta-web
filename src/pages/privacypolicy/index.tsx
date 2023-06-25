@@ -1,10 +1,16 @@
 import MainBlock from "@/Components/FreeTrial/MainBlock";
 import { Styles } from "@/styles/styles";
 import Head from "next/head";
-import {Row ,Col} from "antd"
-import React from "react";
+import { Row, Col } from "antd";
+import React, { useEffect } from "react";
 
 export default function PrivacyPolicy() {
+  useEffect(() => {
+    typeof window !== undefined &&
+      window.location.assign(
+        "https://chec-front.s3.amazonaws.com/Scanta+Privacy+Policy_Revised_2022.07.06_Clean.pdf"
+      );
+  }, []);
   return (
     <React.Fragment>
       <Head>

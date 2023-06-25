@@ -140,14 +140,14 @@ const Footer = ({ t, fromWhere }) => {
                     <Row justify="start">
                       <Col xs={24} sm={24} lg={12} xl={10}>
                         <Row justify="center">
-                          <Link href="/privacypolicy">
+                          <Link href="/privacypolicy" target="_blank">
                             <FooterLabel>Privacy Policy</FooterLabel>
                           </Link>
                         </Row>
                       </Col>
                       <Col xs={24} sm={24} lg={12} xl={12}>
                         <Row justify="center">
-                          <Link href="/termsofservice">
+                          <Link href="/termsofservice" target="_blank">
                             <FooterLabel>Terms & Conditions</FooterLabel>
                           </Link>
                         </Row>
@@ -513,14 +513,14 @@ const Footer = ({ t, fromWhere }) => {
                     <Row justify="start">
                       <Col xs={12} sm={12} lg={12} xl={10}>
                         <Row justify="center">
-                          <Link href="/privacypolicy">
+                          <Link href="/privacypolicy" target="_blank">
                             <FooterLabel>Privacy Policy</FooterLabel>
                           </Link>
                         </Row>
                       </Col>
                       <Col xs={12} sm={12} lg={12} xl={12}>
                         <Row justify="center">
-                          <Link href="termsofservice">
+                          <Link href="termsofservice" target="_blank">
                             <FooterLabel>Terms & Conditions</FooterLabel>
                           </Link>
                         </Row>
