@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { Row, Col, Modal, Input } from "antd";
 import { withTranslation } from "react-i18next";
 import { useRouter } from "next/router";
+import Link from "next/link";
 import Container from "../../common/Container";
 import CookieConsent from "react-cookie-consent";
 import { Button } from "../../common/Button";
@@ -139,22 +140,16 @@ const Footer = ({ t, fromWhere }) => {
                     <Row justify="start">
                       <Col xs={24} sm={24} lg={12} xl={10}>
                         <Row justify="center">
-                          <a
-                            href="https://chec-front.s3.amazonaws.com/Scanta+Privacy+Policy_Revised_2022.07.06_Clean.pdf"
-                            target="_blank"
-                          >
+                          <Link href="/privacypolicy">
                             <FooterLabel>Privacy Policy</FooterLabel>
-                          </a>
+                          </Link>
                         </Row>
                       </Col>
                       <Col xs={24} sm={24} lg={12} xl={12}>
                         <Row justify="center">
-                          <a
-                            href="https://chec-front.s3.amazonaws.com/TruPulse+End+User+License+Agreement.pdf"
-                            target="_blank"
-                          >
+                          <Link href="/termsofservice">
                             <FooterLabel>Terms & Conditions</FooterLabel>
-                          </a>
+                          </Link>
                         </Row>
                       </Col>
                     </Row>
@@ -349,7 +344,7 @@ const Footer = ({ t, fromWhere }) => {
                       color: "#fff",
                       textAlign: "start",
                       width: "100%",
-                      fontWeight:"600"
+                      fontWeight: "600",
                     }}
                   >
                     The first newsletter that combines IO Psychology and HR
@@ -518,22 +513,16 @@ const Footer = ({ t, fromWhere }) => {
                     <Row justify="start">
                       <Col xs={12} sm={12} lg={12} xl={10}>
                         <Row justify="center">
-                          <a
-                            href="https://chec-front.s3.amazonaws.com/Scanta+Privacy+Policy_Revised_2022.07.06_Clean.pdf"
-                            target="_blank"
-                          >
+                          <Link href="/privacypolicy">
                             <FooterLabel>Privacy Policy</FooterLabel>
-                          </a>
+                          </Link>
                         </Row>
                       </Col>
                       <Col xs={12} sm={12} lg={12} xl={12}>
                         <Row justify="center">
-                          <a
-                            href="https://chec-front.s3.amazonaws.com/TruPulse+End+User+License+Agreement.pdf"
-                            target="_blank"
-                          >
+                          <Link href="termsofservice">
                             <FooterLabel>Terms & Conditions</FooterLabel>
-                          </a>
+                          </Link>
                         </Row>
                       </Col>
                     </Row>

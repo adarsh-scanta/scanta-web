@@ -37,7 +37,11 @@
   }
 }
 
+.ql-snow .ql-picker.ql-size .ql-picker-label::before,
+.ql-snow .ql-picker.ql-size .ql-picker-item::before {
+  content: attr(data-value) !important;
+}
 
-.ql-snow .ql-picker.ql-size .ql-picker-label::before, .ql-snow .ql-picker.ql-size .ql-picker-item::before {
-    content: attr(data-value) !important;
+.react-pdf__Page__canvas {
+  margin: auto;
 }
