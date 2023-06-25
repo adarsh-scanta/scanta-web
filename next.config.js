@@ -29,122 +29,164 @@ module.exports = withAntdLess({
   redirects() {
     return [
       {
+        source: "/privacypolicy",
+        destination:
+          "https://chec-front.s3.amazonaws.com/Scanta+Privacy+Policy_Revised_2022.07.06_Clean.pdf",
+        permanent: true,
+        basePath: false,
+      },
+      {
+        source: "/termsofservice",
+        destination:
+          "https://chec-front.s3.amazonaws.com/Chec+End+User+License+Agreement_2022.07.08_Clean+(1).pdf",
+        permanent: true,
+        basePath: false,
+      },
+      {
         source: "/blog.html",
         destination: "/blog",
         permanent: true,
-      }, {
+      },
+      {
         source: "/departments",
         destination: "/",
         permanent: true,
-      }, {
+      },
+      {
         source: "/demorequest",
         destination: "/request-demo",
         permanent: true,
-      }, {
+      },
+      {
         source: "/blog/post/:path*",
         destination: "/blog/:path*",
         permanent: true,
-      }, {
+      },
+      {
         source: "/press.html",
         destination: "/",
         permanent: true,
-      }, {
+      },
+      {
         source: "/product",
         destination: "/",
         permanent: true,
-      }, {
+      },
+      {
         source: "/home",
         destination: "/",
         permanent: true,
-      }, {
+      },
+      {
         source: "/avatars",
         destination: "/",
         permanent: true,
-      }, {
+      },
+      {
         source: "/ml-security",
         destination: "/",
         permanent: true,
-      }, {
+      },
+      {
         source: "/arvr",
         destination: "/",
         permanent: true,
-      }, {
+      },
+      {
         source: "/scanta/EndUserLicenseAgreement.html",
         destination: "/",
         permanent: true,
-      }, {
+      },
+      {
         source: "/EndUserLicenseAgreement.html",
         destination: "/",
         permanent: true,
-      }, {
+      },
+      {
         source: "/icon",
         destination: "/",
         permanent: true,
-      }, {
+      },
+      {
         source: "/q2-2-png",
         destination: "/",
         permanent: true,
-      }, {
+      },
+      {
         source: "/press",
         destination: "/",
         permanent: true,
-      }, {
+      },
+      {
         source: "/team",
         destination: "/company#Our-Team",
         permanent: true,
-      }, {
+      },
+      {
         source: "/under-construction",
         destination: "/",
         permanent: true,
-      }, {
+      },
+      {
         source: "/va-shield",
         destination: "/",
         permanent: true,
-      }, {
+      },
+      {
         source: "/cropped-logo-png",
         destination: "/",
         permanent: true,
-      }, {
+      },
+      {
         source: "/ardunk/privacypolicy.html",
         destination: "/",
         permanent: true,
-      }, {
+      },
+      {
         source: "/512x512bb",
         destination: "/",
         permanent: true,
-      }, {
+      },
+      {
         source: "/polygoons",
         destination: "/",
         permanent: true,
-      }, {
+      },
+      {
         source: "/logo_06",
         destination: "/",
         permanent: true,
-      }, {
+      },
+      {
         source: "/contact",
         destination: "/",
         permanent: true,
-      }, {
+      },
+      {
         source: "/attacks",
         destination: "/",
         permanent: true,
-      }, {
+      },
+      {
         source: "/press",
         destination: "/",
         permanent: true,
-      }, {
+      },
+      {
         source: "/about",
         destination: "/",
         permanent: true,
-      }, {
+      },
+      {
         source: "/feed",
         destination: "/",
         permanent: true,
-      }, {
+      },
+      {
         source: "/demo",
         destination: "/request-demo",
         permanent: true,
-      }
+      },
     ];
   },
 
