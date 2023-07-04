@@ -81,7 +81,6 @@ const EditBlogEditor = ({ post }: any) => {
     setMetaDescription(post?.data?.metaDes);
     setCustomURL(post?.data?.customURL);
     setCreateDate(post?.data?.created_at);
-    console.log(post.data.created_at);
   }, [post]);
   // const modules = {
   //   toolbar: [

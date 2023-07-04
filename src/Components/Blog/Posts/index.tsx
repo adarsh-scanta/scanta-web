@@ -66,7 +66,6 @@ const Posts = ({ posts }: any) => {
       );
     }
   };
-  console.log(publishedPosts);
   return (
     <RightBlockContainer id="intro">
       <Container>
