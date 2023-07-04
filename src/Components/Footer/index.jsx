@@ -38,22 +38,22 @@ const Footer = ({ t, fromWhere }) => {
 
   var OneDay = new Date().getTime() + 10 * 1000;
 
-  useEffect(() => {
-    const newsletter = localStorage.getItem("newsletter") || "";
-    let newsletterSkipped = false;
-    let newsletterExpiry = "";
-    newsletterSkipped = JSON.parse(newsletter ? newsletter : "{}")?.skipped;
-    newsletterExpiry = JSON.parse(newsletter ? newsletter : "{}")?.time;
-    if (!newsletterSkipped) {
-      setTimeout(() => {
-        openNewsLetterModal();
-      }, 10000);
-    } else if (new Date(OneDay) < new Date(newsletterExpiry)) {
-      setTimeout(() => {
-        openNewsLetterModal();
-      }, 10000);
-    }
-  }, []);
+  // useEffect(() => {
+  //   const newsletter = localStorage.getItem("newsletter") || "";
+  //   let newsletterSkipped = false;
+  //   let newsletterExpiry = "";
+  //   newsletterSkipped = JSON.parse(newsletter ? newsletter : "{}")?.skipped;
+  //   newsletterExpiry = JSON.parse(newsletter ? newsletter : "{}")?.time;
+  //   if (!newsletterSkipped) {
+  //     setTimeout(() => {
+  //       openNewsLetterModal();
+  //     }, 10000);
+  //   } else if (new Date(OneDay) < new Date(newsletterExpiry)) {
+  //     setTimeout(() => {
+  //       openNewsLetterModal();
+  //     }, 10000);
+  //   }
+  // }, []);
   return (
     <>
       <FooterSection
@@ -551,7 +551,7 @@ const Footer = ({ t, fromWhere }) => {
             </Row>
           </LeftContainer>
         </Container>
-        <Modal
+        {/* <Modal
           open={isNewsLetterModalVisible}
           footer={null}
           onCancel={closeNewsLetterModal}
@@ -581,8 +581,8 @@ const Footer = ({ t, fromWhere }) => {
             </Row>
             <NewsLetterModal handleClose={closeNewsLetterModal} />
           </div>
-        </Modal>
-        <CookieConsent
+        </Modal> */}
+        {/* <CookieConsent
           location="bottom"
           buttonText="Accept"
           cookieName="cookieConsent"
@@ -596,8 +596,7 @@ const Footer = ({ t, fromWhere }) => {
           expires={150}
         >
           This website uses cookies to enhance the user experience.{" "}
-          {/* <span style={{ fontSize: "10px" }}>This bit of text is smaller :O</span> */}
-        </CookieConsent>
+        </CookieConsent> */}
       </FooterSection>
     </>
   );
