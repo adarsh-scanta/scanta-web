@@ -113,7 +113,7 @@ const RightBlock = ({ t, id }: any) => {
           </Col>
           <Col lg={12} md={12} sm={0} xs={0}>
             <Row justify="center">
-              <video
+              {/* <video
                 width="100%"
                 controls
                 // autoPlay
@@ -130,12 +130,12 @@ const RightBlock = ({ t, id }: any) => {
                   type="video/mp4"
                 />
                 Your browser does not support HTML video.
-              </video>
+              </video> */}
             </Row>
           </Col>
           <Col lg={0} md={0} sm={22} xs={22}>
             <Row justify="center">
-              <video
+              {/* <video
                 width="100%"
                 controls
                 // autoPlay
@@ -152,7 +152,7 @@ const RightBlock = ({ t, id }: any) => {
                   type="video/mp4"
                 />
                 Your browser does not support HTML video.
-              </video>
+              </video> */}
             </Row>
           </Col>
           <Col lg={0} md={0} sm={24} xs={24}>
