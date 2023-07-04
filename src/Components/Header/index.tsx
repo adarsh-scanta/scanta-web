@@ -4,6 +4,8 @@ import { Row, Col, Drawer, Dropdown, Menu, Modal } from "antd";
 import { withTranslation } from "react-i18next";
 import { Button } from "../../common/Button";
 import Link from "next/link";
+import Image from "next/image";
+
 import {
   HeaderSection,
   LogoContainer,
@@ -386,12 +388,12 @@ const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
     >
       <Row justify="space-between">
         <LogoContainer href="/">
-          <img
-            src="\img\icons\logo192.png"
-            width="220px"
+          
+          <Image
+            src="/img/icons/logo192.png"
+            width={220}
+            height={66}
             alt="logo"
-            height="66px"
-            style={{ marginTop: "10px" }}
           />
         </LogoContainer>
         <NotHidden>

@@ -3,15 +3,19 @@ import styled from "styled-components";
 import React from "react";
 import Header from "@/Components/Header";
 import { Styles } from "@/styles/styles";
-import IntroBlock from "@/Components/IntroBlock";
-import ScrollToTop from "@/common/ScrollToTop";
 import Container from "@/common/Container";
 import { SplashArt2 } from "@/assets/arts/SplashArt";
-import AboutBlock from "@/Components/AboutBlock";
-import CompanyInfoBlock from "@/Components/CompanyInfoBlock";
-import Footer from "@/Components/Footer";
 import Head from "next/head";
-import TestimonialBlock from "@/Components/TestimonialBlock";
+import dynamic from "next/dynamic";
+
+const TestimonialBlock = dynamic(() => import("@/Components/TestimonialBlock"));
+const CompanyInfoBlock = dynamic(() => import("@/Components/CompanyInfoBlock"));
+const AboutBlock = dynamic(() => import("@/Components/AboutBlock"));
+const Footer = dynamic(() => import("@/Components/Footer"));
+const IntroBlock = dynamic(() => import("@/Components/IntroBlock"));
+const ScrollToTop = dynamic(() => import("@/common/ScrollToTop"));
+
+
 
 export default function Home() {
   const SplashIcon = styled("div")`
@@ -58,7 +62,6 @@ left: 35%;
           <IntroBlock id="intro" />
         </div>
         <TestimonialBlock />
-
         <div style={{ background: "#eff0f7" }}>
           <Container>
             <SplashIcon>

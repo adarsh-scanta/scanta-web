@@ -2,6 +2,8 @@
 import { Row, Col, Collapse, Modal } from "antd";
 import { useState, useEffect } from "react";
 import { withTranslation } from "react-i18next";
+import Image from "next/image";
+
 // import { Link } from "react-router-dom";
 import Link from "next/link";
 import styles from "./company.module.css";
@@ -29,13 +31,6 @@ import WorkArt12 from "@/assets/arts/WorkplaceArt/WorkArt12";
 import { feedbackData } from "./feedbackData";
 
 const CompanyInfoBlock = ({ t, from }: any) => {
-  const [wait, setWaiting] = useState(true);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setWaiting(false);
-    }, 2000);
-  }, []);
   const { Panel } = Collapse;
 
   const [isNewsLetterModalVisible, setIsNewsLetterModalVisible] =
@@ -1461,11 +1456,11 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                   <Row justify="center">
                     <div style={{ margin: "2rem" }}>
                       <Row justify="center">
-                        <img
+                        <Image
                           src="/img/icons/slack-logo.png"
+                          width={200}
+                          height={200}
                           alt="slack"
-                          // width="80%"
-                          height="200px"
                         />
                       </Row>
                     </div>
@@ -1475,11 +1470,11 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                   <Row justify="center">
                     <div style={{ margin: "2rem" }}>
                       <Row justify="center">
-                        <img
+                        <Image
                           src="/img/icons/teams-logo.png"
-                          alt="slack"
-                          // width="80%"
-                          height="200px"
+                          width={200}
+                          height={200}
+                          alt="teams"
                         />
                       </Row>
                     </div>
@@ -1489,11 +1484,12 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                   <Row justify="center">
                     <div style={{ margin: "2rem" }}>
                       <Row justify="center">
-                        <img
+                        =
+                        <Image
                           src="/img/icons/discord-logo.png"
-                          alt="slack"
-                          // width="80%"
-                          height="200px"
+                          width={200}
+                          height={200}
+                          alt="discord"
                         />
                       </Row>
                     </div>
@@ -1719,7 +1715,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
             </Row>
           </Container>
           <Modal
-            visible={isNewsLetterModalVisible}
+            open={isNewsLetterModalVisible}
             footer={null}
             onCancel={closeNewsLetterModal}
           >

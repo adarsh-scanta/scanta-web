@@ -342,7 +342,7 @@ const Footer = ({ t, fromWhere }) => {
                       margin: "0.5rem 1rem 1rem",
                       fontSize: "1rem",
                       color: "#fff",
-                      textAlign: "start",
+                      textAlign: "center",
                       width: "100%",
                       fontWeight: "600",
                     }}

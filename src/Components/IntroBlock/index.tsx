@@ -4,6 +4,7 @@ import { withTranslation } from "react-i18next";
 import { SvgIcon } from "../../common/SvgIcon";
 import IntroArt from "../../assets/arts/IntroArt";
 import { Button } from "../../common/Button";
+import Image from "next/image";
 import {
   RightBlockContainer,
   Content,
@@ -65,10 +66,11 @@ const RightBlock = ({ t, id }: any) => {
           <Col lg={12} md={12} sm={0} xs={0}>
             <ContentWrapper>
               <div style={{ position: "relative" }}>
-                <img
+                <Image
                   src="/img/icons/trupulse-logo-color.png"
-                  alt="trupulse-logo"
-                  width="200px"
+                  width={200}
+                  height={80}
+                  alt="logo"
                 />
                 <br />
                 <Subtitle style={{ fontWeight: "600" }}>
@@ -116,7 +118,7 @@ const RightBlock = ({ t, id }: any) => {
                 controls
                 // autoPlay
                 // muted
-                poster="https://chec-front.s3.amazonaws.com/tp-video-screenshot2(1).png"
+                poster="/img/tp-video-screenshot.png"
                 style={{
                   margin: "4rem 0.5rem 10rem",
                   borderRadius: "15px",
@@ -138,7 +140,7 @@ const RightBlock = ({ t, id }: any) => {
                 controls
                 // autoPlay
                 // muted
-                poster="https://chec-front.s3.amazonaws.com/tp-video-screenshot2(1).png"
+                poster="/img/tp-video-screenshot.png"
                 style={{
                   margin: "5rem 2rem 1rem",
                   borderRadius: "15px",
@@ -157,10 +159,12 @@ const RightBlock = ({ t, id }: any) => {
             <ContentWrapper>
               <div style={{ position: "relative", top: "-10px" }}>
                 <Subtitle style={{ fontWeight: "600" }}>
-                  Realtime understanding of company morale, trending topics, and corporate culture.
+                  Realtime understanding of company morale, trending topics, and
+                  corporate culture.
                 </Subtitle>
                 <Content style={{ marginBottom: "0", fontWeight: "600" }}>
-                  TruPulse uses AI to help you understand the employee experience without running surveys.
+                  TruPulse uses AI to help you understand the employee
+                  experience without running surveys.
                 </Content>
               </div>
               <div style={{ margin: "0rem 0 0" }}>

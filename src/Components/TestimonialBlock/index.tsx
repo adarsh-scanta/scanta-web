@@ -4,6 +4,7 @@ import { withTranslation } from "react-i18next";
 import { SvgIcon } from "../../common/SvgIcon";
 import IntroArt from "../../assets/arts/IntroArt";
 import { Button } from "../../common/Button";
+import Image from "next/image";
 import {
   RightBlockContainer,
   Content,
@@ -142,9 +143,10 @@ const RightBlock = ({ t, id }: any) => {
                                           overflow: "hidden",
                                         }}
                                       >
-                                        <img
+                                        <Image
                                           src={item.profilePic}
-                                          width="100%"
+                                          width={70}
+                                          height={85}
                                           alt={item.name}
                                         />
                                       </div>
@@ -250,16 +252,13 @@ const RightBlock = ({ t, id }: any) => {
                                       <div
                                         style={{
                                           width: "70px",
-                                          // height: "70px",
-                                          // background: "#D9D9D9",
                                           borderRadius: "40px",
-                                          // margin: "0 0.5rem",
                                         }}
                                       >
-                                        <img
+                                        <Image
                                           src={item.profilePic}
-                                          width="100%"
-                                          // height="100%"
+                                          width={70}
+                                          height={85}
                                           alt={item.name}
                                         />
                                       </div>
@@ -382,10 +381,11 @@ const RightBlock = ({ t, id }: any) => {
                                     // margin: "0 0.5rem",
                                   }}
                                 >
-                                  <img
+                                  
+                                  <Image
                                     src={item.profilePic}
-                                    width="100%"
-                                    // height="100%"
+                                    width={70}
+                                    height={85}
                                     alt={item.name}
                                   />
                                 </div>
