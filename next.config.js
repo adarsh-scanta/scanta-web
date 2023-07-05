@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const withAntdLess = require("next-plugin-antd-less");
-
+const withBundleAnalyzer = require("@next/bundle-analyzer")({
+  enabled: process.env.ANALYZE === "true",
+});
 module.exports = withAntdLess({
   // modifyVars: { '@primary-color': '#04f' }, // optional
   lessVarsFilePath: "./src/styles/variables.less", // optional

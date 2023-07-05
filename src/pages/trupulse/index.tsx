@@ -1,20 +1,18 @@
 import MainBlock from "@/Components/Product/MainBlock";
 import React from "react";
+import SecondBlock from "@/Components/Product/SecondBlock";
+import ThirdBlock from "@/Components/Product/ThirdBlock";
+import CompanyInfoBlock from "@/Components/CompanyInfoBlock";
+import FifthBlock from "@/Components/Product/FifthBlock";
+import FourthBlock from "@/Components/Product/FourthBlock";
+import SolutionBlock from "@/Components/SolutionBlock";
 import Container from "@/common/Container";
 import Header from "@/Components/Header";
+import Footer from "@/Components/Footer";
 import ServicesContent from "../../content/ServicesContent.json";
 import { Styles } from "@/styles/styles";
 import Head from "next/head";
-import dynamic from "next/dynamic";
-
-const ScrollToTop = dynamic(() => import("@/common/ScrollToTop"));
-const Footer = dynamic(() => import("@/Components/Footer"));
-const SolutionBlock = dynamic(() => import("@/Components/SolutionBlock"));
-const SecondBlock = dynamic(() => import("@/Components/Product/SecondBlock"));
-const ThirdBlock = dynamic(() => import("@/Components/Product/ThirdBlock"));
-const FourthBlock = dynamic(() => import("@/Components/Product/FourthBlock"));
-const FifthBlock = dynamic(() => import("@/Components/Product/FifthBlock"));
-const CompanyInfoBlock = dynamic(() => import("@/Components/CompanyInfoBlock"));
+import ScrollToTop from "@/common/ScrollToTop";
 
 const articleStructuredData = {
   "@context": "https://schema.org",

@@ -1,6 +1,5 @@
 import "./globals.css";
 import type { AppProps } from "next/app";
-import Script from "next/script";
 import Head from "next/head";
 import { Suspense } from "react";
 
