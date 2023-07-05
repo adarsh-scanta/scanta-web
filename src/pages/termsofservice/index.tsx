@@ -1,8 +1,6 @@
-import MainBlock from "@/Components/FreeTrial/MainBlock";
 import { Styles } from "@/styles/styles";
 import Head from "next/head";
 import React, { useEffect } from "react";
-import { Row, Col } from "antd";
 
 
 export default function TermsOfServic() {
@@ -41,9 +39,7 @@ export default function TermsOfServic() {
       </Head>
       <Styles />
       <div style={{ margin: "2rem" }}>
-        <Row>
-          <Col span={24}></Col>
-        </Row>
+     
       </div>{" "}
     </React.Fragment>
   );

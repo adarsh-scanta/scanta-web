@@ -1,7 +1,5 @@
-import MainBlock from "@/Components/FreeTrial/MainBlock";
 import { Styles } from "@/styles/styles";
 import Head from "next/head";
-import { Row, Col } from "antd";
 import React, { useEffect } from "react";
 
 export default function PrivacyPolicy() {
@@ -40,9 +38,7 @@ export default function PrivacyPolicy() {
       </Head>
       <Styles />
       <div style={{ margin: "2rem" }}>
-        <Row>
-          <Col span={24}></Col>
-        </Row>
+       
       </div>
     </React.Fragment>
   );
