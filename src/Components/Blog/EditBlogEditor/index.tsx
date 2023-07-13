@@ -21,6 +21,7 @@ import {
   setDoc,
   serverTimestamp,
 } from "firebase/firestore";
+import { useRouter } from "next/router";
 import { db } from "../../../firebase";
 import dynamic from "next/dynamic";
 const fontSizeArr = [
@@ -53,6 +54,7 @@ const fontSizeArr = [
 const { Search } = Input;
 
 const EditBlogEditor = ({ post }: any) => {
+  const router = useRouter();
   const ReactQuill = useMemo(
     () => dynamic(() => import("react-quill"), { ssr: false }),
     []
@@ -103,7 +105,7 @@ const EditBlogEditor = ({ post }: any) => {
   const modules = useMemo(
     () => ({
       toolbar: [
-        //   [{ header: [1, 2, 3, false] }],
+          [{ header: [1, 2, 3, false] }],
         [{ font: [] }],
         [{ size: fontSizeArr }],
         ["bold", "italic", "underline", "strike"], // toggled buttons
@@ -211,17 +213,20 @@ const EditBlogEditor = ({ post }: any) => {
           altTag: altTag,
           metaTitle: metaTitle,
           metaDes: metaDescription,
-          customURL: customURL
-            .toLowerCase()
-            .replace(/[^a-zA-Z ]/g, "")
-            .split(" ")
-            .join("-"),
+          customURL: customURL.includes("-")
+            ? customURL
+            : customURL
+                .toLowerCase()
+                .replace(/[^a-zA-Z ]/g, "")
+                .split(" ")
+                .join("-"),
           tags: tags.join(","),
           created_at: createDate,
           last_edit: serverTimestamp(),
           isPublished: post?.data?.isPublished,
         });
         alert("Blog updated successfully");
+        router.back();
         setLoading(false);
         setTitle("");
         setCoverImage("");

@@ -12,6 +12,7 @@ import { storage } from "../../../firebase";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import { db } from "../../../firebase";
+import { useRouter } from "next/router";
 import dynamic from "next/dynamic";
 const fontSizeArr = [
   "21px",
@@ -34,10 +35,13 @@ const fontSizeArr = [
 const { Search } = Input;
 
 const BlogEditor = () => {
-const ReactQuill = useMemo(
-  () => dynamic(() => import("react-quill"), { ssr: false }),
-  []
-);  const [title, setTitle] = useState("");
+  const router = useRouter();
+
+  const ReactQuill = useMemo(
+    () => dynamic(() => import("react-quill"), { ssr: false }),
+    []
+  );
+  const [title, setTitle] = useState("");
   const [altTag, setAltTag] = useState("");
   const [metaTitle, setMetaTitle] = useState("");
   const [metaDescription, setMetaDescription] = useState("");
@@ -68,7 +72,7 @@ const ReactQuill = useMemo(
   const modules = useMemo(
     () => ({
       toolbar: [
-        //   [{ header: [1, 2, 3, false] }],
+          [{ header: [1, 2, 3, false] }],
         [{ font: [] }],
         [{ size: fontSizeArr }],
         ["bold", "italic", "underline", "strike"], // toggled buttons
@@ -164,17 +168,20 @@ const ReactQuill = useMemo(
           altTag: altTag,
           metaTitle: metaTitle,
           metaDes: metaDescription,
-          customURL: customURL
-            .toLowerCase()
-            .replace(/[^a-zA-Z ]/g, "")
-            .split(" ")
-            .join("-"),
+          customURL: customURL.includes("-")
+            ? customURL
+            : customURL
+                .toLowerCase()
+                .replace(/[^a-zA-Z ]/g, "")
+                .split(" ")
+                .join("-"),
           tags: tags.join(","),
           created_at: serverTimestamp(),
           last_edit: serverTimestamp(),
           isPublished: false,
         });
         alert("Blog added successfully");
+        router.push("/blog/dashboard");
         setTitle("");
         setCoverImage("");
         setContent("");
