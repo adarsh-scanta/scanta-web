@@ -34,24 +34,10 @@ const Posts = ({ posts }: any) => {
     setPublishedPosts(posts?.filter((item: any) => item?.data?.isPublished));
   }, [posts]);
   useEffect(() => {
-    if (page === 1) {
-      setMinIndex(0);
-      setMaxIndex(9);
-    } else if (page === 2) {
-      setMinIndex(9);
-      setMaxIndex(18);
-    } else if (page === 3) {
-      setMinIndex(18);
-      setMaxIndex(27);
-    } else if (page === 4) {
-      setMinIndex(27);
-      setMaxIndex(36);
-    } else if (page === 5) {
-      setMinIndex(36);
-      setMaxIndex(45);
-    }
+    setMinIndex((page - 1) * 9);
+    setMaxIndex(page * 9);
+    console.log(page, publishedPosts.length);
   }, [page]);
-
 
   const handleClick = (data: any) => {
     if (data?.customURL?.length > 3) {
@@ -166,7 +152,8 @@ const Posts = ({ posts }: any) => {
             <Pagination
               defaultCurrent={1}
               current={page}
-              total={posts.length}
+              total={publishedPosts.length + 1}
+              defaultPageSize={9}
               onChange={(value) => setPage(value)}
             />
           </Row>
