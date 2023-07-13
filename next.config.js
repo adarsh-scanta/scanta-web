@@ -175,6 +175,17 @@ module.exports = withAntdLess({
         destination: "/request-demo",
         permanent: true,
       },
+      {
+        source: "/blog/using-passive-listening-to-measure-morale",
+        destination: "/blog/employee-morale",
+        permanent: true,
+      },
+      {
+        source:
+          "/blog/how-employee-insights-software-can-help-you-improve-your-company-culture",
+        destination: "/blog/employee-insights-software",
+        permanent: true,
+      },
     ];
   },
 
@@ -182,5 +193,3 @@ module.exports = withAntdLess({
     return config;
   },
 });
-
-
