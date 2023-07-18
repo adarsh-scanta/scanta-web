@@ -21,6 +21,12 @@ const format_date = (value) => {
   }
 };
 
+export async function getServerSideProps(context) {
+  const pageNo = context?.query?.page ?? "1";
+  // Default value = "1"
+
+  return { props: { page: pageNo } };
+}
 const Posts = ({ posts }: any) => {
   const { Meta } = Card;
   const router = useRouter();
@@ -34,10 +40,11 @@ const Posts = ({ posts }: any) => {
     setPublishedPosts(posts?.filter((item: any) => item?.data?.isPublished));
   }, [posts]);
   useEffect(() => {
-    setMinIndex((page - 1) * 9);
-    setMaxIndex(page * 9);
-    console.log(page, publishedPosts.length);
-  }, [page]);
+    const currentPage = parseInt(router?.query?.page ?? 1);
+    setPage(currentPage);
+    setMinIndex((currentPage - 1) * 9);
+    setMaxIndex(currentPage * 9);
+  }, [router]);
 
   const handleClick = (data: any) => {
     if (data?.customURL?.length > 3) {
@@ -51,6 +58,14 @@ const Posts = ({ posts }: any) => {
           .join("-")}`
       );
     }
+  };
+
+  const handlePageChange = (value: any) => {
+    setPage(value);
+    router.push({
+      pathname: "/blog",
+      query: { page: value },
+    });
   };
   return (
     <RightBlockContainer id="intro">
@@ -154,7 +169,7 @@ const Posts = ({ posts }: any) => {
               current={page}
               total={publishedPosts.length + 1}
               defaultPageSize={9}
-              onChange={(value) => setPage(value)}
+              onChange={(value) => handlePageChange(value)}
             />
           </Row>
         </div>
