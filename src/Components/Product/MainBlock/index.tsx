@@ -57,7 +57,7 @@ const RightBlock = ({ t, id }: any) => {
               </div>
             </ContentWrapper>
           </Col>
-          <Col lg={11} md={12} sm={22} xs={22}>
+          <Col lg={12} md={12} sm={22} xs={22}>
             <Row justify="center">
               <ArtWrapper>
                 <ProductTopArt />

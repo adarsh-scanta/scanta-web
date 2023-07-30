@@ -59,7 +59,7 @@ const ContactBlock = ({ id }: any) => {
             </Content>
           </ContentWrapper>
         </Row>
-        <Row justify="space-between">
+        <Row justify="space-around">
           <Col lg={11} md={11} sm={24} xs={24}>
             <Subtitle>
               <span style={{ color: "#2F327D", fontSize: "2rem" }}>Map &</span>{" "}

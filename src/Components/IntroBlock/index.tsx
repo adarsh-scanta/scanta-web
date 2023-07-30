@@ -114,13 +114,13 @@ const RightBlock = ({ t, id }: any) => {
           <Col lg={12} md={12} sm={0} xs={0}>
             <Row justify="center">
               <video
-                width="100%"
-                controls
+                width="98%"
+                controls 
                 // autoPlay
                 // muted
                 poster="/img/tp-video-screenshot.png"
                 style={{
-                  margin: "4rem 0.5rem 10rem",
+                  margin: "4rem 1rem 10rem",
                   borderRadius: "15px",
                   boxShadow: "rgb(128, 128, 128) 1px 4px 19px -4px",
                 }}

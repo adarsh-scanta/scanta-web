@@ -58,8 +58,10 @@ div{font-display: fallback;}
     .headerVisible{
         visibility: visible;
         transition: all 0.3s;
-        padding-left: 2rem;
-        padding-right:1rem;
+        padding:1rem 4.2rem 0 5.4rem;
+         @media only screen and (max-width: 890px) {
+        padding:1rem 1rem 0 1rem;
+        }
     }
     .headerHidden {
         visibility: hidden;

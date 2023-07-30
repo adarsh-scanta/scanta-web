@@ -61,7 +61,7 @@ export const Content = styled("p")`
 
 export const ContentWrapper = styled("div")`
   position: relative;
-  margin: 0 1.5rem;
+  margin: 0 1rem;
   top: 15%;
   z-index: 1;
    @media only screen and (max-width: 1080px) {

@@ -383,7 +383,6 @@ const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
   return (
     <HeaderSection
       style={{ background: router.asPath === "/" ? "#eff0f7" : "#fff" }}
-      // className={`header && ${showHeader ? "headerVisible" : "headerHidden"}`}
       className="headerVisible"
     >
       <Row justify="space-between">

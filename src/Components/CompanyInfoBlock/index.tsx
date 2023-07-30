@@ -56,7 +56,13 @@ const CompanyInfoBlock = ({ t, from }: any) => {
           }}
         >
           <Container>
-            <div style={{ marginBottom: "8rem", marginTop: "2rem" }}>
+            <div
+              style={{
+                marginBottom: "8rem",
+                marginTop: "2rem",
+                marginLeft: "1rem",
+              }}
+            >
               <Row justify="center">
                 <Col xl={24} lg={24} sm={0} xs={0}>
                   <Row justify="space-between">
@@ -1484,7 +1490,6 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                   <Row justify="center">
                     <div style={{ margin: "2rem" }}>
                       <Row justify="center">
-                        =
                         <Image
                           src="/img/icons/discord-logo.png"
                           width={200}
