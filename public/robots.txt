@@ -1,3 +1,2 @@
 User-agent: *
-
-Sitemap: https://www.scanta.io/sitemap.xml
+Disallow: /
