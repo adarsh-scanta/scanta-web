@@ -2,18 +2,17 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const FooterSection = styled("footer")`
-  minheight: 400px;
+  // minheight: 400px;
   width: 100%;
   padding: 2rem 0px;
-  
 `;
 
 export const FooterLabel = styled("p")`
   font-size: 1rem;
   color: #b2b3cf;
   text-align: center;
-  margin-bottom:0;
-  margin-top:2rem;
+  margin-bottom: 0;
+  margin-top: 2rem;
   // max-width:150px;
   padding: 10px 10px;
 `;
@@ -64,9 +63,9 @@ export const FooterButton = styled("button")`
   font-size: 1rem;
 `;
 export const LeftContainer = styled("div")`
-  margin: 10rem 0 0;
+  margin: 0;
   @media only screen and (max-width: 500px) {
-    margin: 12rem 2rem 0;
+    margin: 0rem 2rem 0;
   }
 `;
 

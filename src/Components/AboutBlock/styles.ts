@@ -2,26 +2,35 @@ import styled from "styled-components";
 import { Carousel } from "antd";
 
 export const LeftContentSection = styled("section")`
-  position: relative;
-  top: -50px;
   width: 100%;
+  margin: 3rem 0 0;
   @media only screen and (max-width: 1024px) {
-    padding: 3rem 0 1rem;
+    padding: 1rem 0 0;
+    margin: 1rem 0 0;
   }
   @media only screen and (max-width: 600px) {
-    padding: 3rem 0 0rem;
+    padding: 1rem 0 0rem;
+    margin: 1rem 0 0;
   }
 `;
 
 export const Content = styled("p")`
   margin: 1.5rem 0 2rem 0;
+  font-size: 1rem;
+  color: #696984;
+`;
+
+export const Content2 = styled("p")`
+  margin: 1.5rem 0 2rem 0;
+  font-size: 1rem;
+  text-align: left;
   color: #696984;
 `;
 
 export const ContentWrapper = styled("div")`
   position: relative;
   border-radius: 20px;
-  padding: 1.5rem 1.5rem 0;
+  padding: 2rem 1.5rem 0;
   @media only screen and (max-width: 575px) {
     padding-top: 1rem;
   }
@@ -56,10 +65,31 @@ export const AboutContent = styled("p")`
 `;
 export const Title = styled("h6")`
   font-size: 2rem;
+  text-align: cneter;
+  font-family: Poppins SemiBold;
+  color: #001011;
+  margin: 2rem 0 4rem;
+`;
+export const Subtitle = styled("h6")`
+  font-size: 2rem;
+  text-align: cneter;
+  font-family: Poppins SemiBold;
+  color: #001011;
+  margin: 1rem 0 1rem;
+`;
+export const Subtitle2 = styled("h6")`
+  font-size: 1.5rem;
   text-align: left;
   font-family: Poppins SemiBold;
-  color: #eb7a02;
-  margin-bottom: 0.5rem;
+  color: #001011;
+  margin: 1rem 0 1rem;
+`;
+export const SubText = styled("h6")`
+  font-size: 1rem;
+  text-align: cneter;
+  font-family: Poppins SemiBold;
+  color: #ff7e00;
+  margin: 1rem 0 1rem;
 `;
 
 export const CarouselWrapper = styled(Carousel)`
@@ -96,4 +126,28 @@ export const CTAWrapper = styled("span")`
   margin-right: 0.3rem;
   transition: all 0.3s ease-in-out;
   color: #252641;
+`;
+export const CarouselWrapper2 = styled(Carousel)`
+  width: 100vw;
+  text-align: center;
+  margin: auto;
+  > ..slick-dots {
+    position: relative !important;
+    bottom: 100px;
+  }
+  > .slick-dots li {
+    margin: 2rem 8px -2rem;
+  }
+  > .slick-dots li button {
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    background: #888;
+  }
+  > .slick-dots li.slick-active button {
+    width: 18px;
+    height: 18px;
+    border-radius: 100%;
+    background: #eb7a02;
+  }
 `;

@@ -15,18 +15,7 @@ const Footer = dynamic(() => import("@/Components/Footer"));
 const IntroBlock = dynamic(() => import("@/Components/IntroBlock"));
 const ScrollToTop = dynamic(() => import("@/common/ScrollToTop"));
 
-
-
 export default function Home() {
-  const SplashIcon = styled("div")`
-width: 100%;
-position: relative;  
-left: 35%;
- bottom: 4rem;
-@media only screen and (max-width: 1079px) {
-   display: none; 
-`;
-
   return (
     <React.Fragment>
       <div className="App">
@@ -58,20 +47,14 @@ left: 35%;
         <Header />
         <Styles />
         <ScrollToTop />
-        <div style={{ background: "#fff" }}>
+        <div>
           <IntroBlock id="intro" />
         </div>
         <TestimonialBlock />
-        <div style={{ background: "#eff0f7" }}>
-          <Container>
-            <SplashIcon>
-              <SplashArt2 />
-            </SplashIcon>
-            <AboutBlock />
-          </Container>
-          <CompanyInfoBlock from="home" />
-          <Footer fromWhere={"home"} />
-        </div>
+
+        <AboutBlock />
+        {/* <CompanyInfoBlock from="home" /> */}
+        <Footer fromWhere={"home"} />
       </div>
     </React.Fragment>
   );

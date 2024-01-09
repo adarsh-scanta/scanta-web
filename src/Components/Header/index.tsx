@@ -32,13 +32,13 @@ const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
   const router = useRouter();
   const [user, loading, error] = useAuthState(auth);
   const [visible, setVisibility] = useState(false);
- const [wait, setWaiting] = useState(true);
+  const [wait, setWaiting] = useState(true);
 
- useEffect(() => {
-   setTimeout(() => {
-     setWaiting(false);
-   }, 500);
- }, []);
+  useEffect(() => {
+    setTimeout(() => {
+      setWaiting(false);
+    }, 500);
+  }, []);
   // const scrollTo = (id: string) => {
   //   if (
   //     (location.pathname === "/departments" &&
@@ -170,7 +170,7 @@ const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
               }}
             >
               <Link href="/trupulse">
-                <Span>TruPulse™</Span>
+                <Span>Services</Span>
               </Link>
             </CustomNavLinkSmall>
             <CustomNavLinkSmall
@@ -182,7 +182,7 @@ const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
               <Dropdown overlay={companyMenu}>
                 <div>
                   <Link href="/company">
-                    <Span>About</Span>
+                    <Span>Portfolio</Span>
                   </Link>
                   <DownIcon />
                 </div>
@@ -195,57 +195,9 @@ const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
               }}
             >
               <Link href="/blog">
-                <Span>Blog</Span>
+                <Span>Company</Span>
               </Link>
             </CustomNavLinkSmall>
-          </Col>
-          <Col>
-            {!user ? (
-              <>
-                <CustomNavLinkSmall
-                  style={{
-                    minWidth: "120px",
-                    margin: "0.5rem",
-                  }}
-                  // onClick={() => scrollTo("contact")}
-                >
-                  <Link href="/free-trial">
-                    <CTAWrapper
-                      className="pulse"
-                      onClick={handleTrialButtonClick}
-                    >
-                      <Button color="transparent">{t("Free Trial")}</Button>
-                    </CTAWrapper>
-                  </Link>
-                </CustomNavLinkSmall>
-                <CustomNavLinkSmall
-                  style={{
-                    minWidth: "185px",
-                    margin: "0.5rem 2rem 0.5rem 0.5rem",
-                  }}
-                >
-                  <Link href="/request-demo">
-                    <CTAWrapper
-                      className="pulse"
-                      onClick={handleDemoRequestButtonClick}
-                    >
-                      <Button>{t("Request a Demo")}</Button>
-                    </CTAWrapper>
-                  </Link>
-                </CustomNavLinkSmall>
-              </>
-            ) : (
-              <CustomNavLinkSmall
-                style={{ width: "180px" }}
-                onClick={() => {
-                  logout();
-                  window.location.reload();
-                }}
-              >
-                <Span>Logout</Span>
-                {/* </Link> */}
-              </CustomNavLinkSmall>
-            )}
           </Col>
         </Row>
       </>
@@ -331,7 +283,7 @@ const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
             </Row>
           </Col>
           {!user && !wait ? (
-            <div style={{ position: "fixed", bottom: "20px", }}>
+            <div style={{ position: "fixed", bottom: "20px" }}>
               <CustomNavLinkSmall
                 style={{
                   minWidth: "120px",
@@ -382,28 +334,56 @@ const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
 
   return (
     <HeaderSection
-      style={{ background: router.asPath === "/" ? "#eff0f7" : "#fff" }}
+      style={{ background: router.asPath === "/" ? "#FFFAF5" : "#fff" }}
       className="headerVisible"
     >
       <Row justify="space-between">
-        <LogoContainer href="/">
-          
-          <Image
-            src="/img/icons/logo192.png"
-            width={220}
-            height={66}
-            alt="logo"
-          />
-        </LogoContainer>
-        <NotHidden>
-          <MenuItem />
-        </NotHidden>
+        <Col xs={18} sm={18} lg={0} xl={0}>
+          <Row justify="start">
+            <LogoContainer href="/">
+              <Image
+                src="/img/icons/logo192.png"
+                width={180}
+                height={55}
+                alt="logo"
+              />
+            </LogoContainer>
+          </Row>
+        </Col>
         <BurgerContainer>
           <Burger onClick={showDrawer}>
             <Outline />
           </Burger>
         </BurgerContainer>
       </Row>
+      <NotHidden>
+        <Row justify="space-between">
+          <LogoContainer href="/">
+            <Image
+              src="/img/icons/logo192.png"
+              width={180}
+              height={55}
+              alt="logo"
+            />
+          </LogoContainer>
+          <MenuItem />
+          <CustomNavLinkSmall
+            style={{
+              minWidth: "185px",
+              margin: "0.5rem 2rem 0.5rem 0.5rem",
+            }}
+          >
+            <Link href="/request-demo">
+              <CTAWrapper
+                className="pulse"
+                onClick={handleDemoRequestButtonClick}
+              >
+                <Button>{t("Scope My Project")}</Button>
+              </CTAWrapper>
+            </Link>
+          </CustomNavLinkSmall>
+        </Row>
+      </NotHidden>{" "}
       <Drawer closable={false} open={visible} onClose={onClose}>
         <Col style={{ marginBottom: "2.5rem" }}>
           <Label onClick={onClose}>

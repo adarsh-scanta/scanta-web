@@ -61,490 +61,256 @@ const Footer = ({ t, fromWhere }) => {
           alignItems: "center",
           justifyContent: "center",
           zIndex: 3,
-          background:
-            fromWhere === "home"
-              ? "url('/img/svg/footer-background.svg')"
-              : "url('/img/svg/footer-background1.svg')",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
+          background: "#fff",
         }}
       >
         <Container>
           <LeftContainer>
-            <Row gutter={24} justify="start" align="middle">
-              <Col lg={8} md={0} sm={0} xs={0}>
-                <Row justify="start">
-                  <Col>
-                    <LogoContainer>
-                      <img
-                        src="/img/icons/logo14.png"
-                        width="120px"
-                        alt="logo"
-                        height="55px"
-                      />
-                    </LogoContainer>
-                  </Col>
-                </Row>
-                <Row justify="start">
-                  <Col>
-                    <p
-                      style={{
-                        color: "#B2B3CF",
-                        fontSize: "1rem",
-                        margin: "1rem 1rem",
-                      }}
-                    >
-                      Scanta Inc
-                      <br /> 50 Moulton Street
-                      <br />
-                      San Francisco, Ca 94123
-                      <br />
-                      Hello@scanta.io
-                    </p>
-                  </Col>
-                </Row>
-                <div style={{ margin: " 1rem" }}>
-                  <a href="https://www.facebook.com/scanta.io" target="_black">
-                    <img
-                      src="/img/svg/fb.svg"
-                      alt="fb"
-                      width="48px"
-                      height="48px"
-                    />
-                  </a>
-                  <a
-                    href="https://www.linkedin.com/company/scanta"
-                    target="_blank"
-                  >
-                    <img
-                      src="https://img.icons8.com/color/48/000000/linkedin-circled--v2.png"
-                      alt="linkedin"
-                      width="48px"
-                      height="48px"
-                      style={{ position: "relative", left: "3px" }}
-                    />{" "}
-                  </a>
-                  <a href="https://twitter.com/scanta_io" target="_blank">
-                    <img
-                      src="/img/svg/twitter.svg"
-                      alt="twitter"
-                      width="48px"
-                      height="48px"
-                    />
-                  </a>
-                </div>
-              </Col>
-              <Col lg={8} md={0} sm={0} xs={0}>
-                <Row justify="start">
+            <Row>
+              <Col xs={0} sm={0} lg={24} xl={24}>
+                <Row gutter={24} justify="start" align="middle">
                   <Col span={24}>
-                    <Row justify="start">
-                      <Col xs={24} sm={24} lg={12} xl={10}>
-                        <Row justify="center">
-                          <Link href="/privacypolicy" target="_blank">
-                            <FooterLabel>Privacy Policy</FooterLabel>
-                          </Link>
-                        </Row>
-                      </Col>
-                      <Col xs={24} sm={24} lg={12} xl={12}>
-                        <Row justify="center">
-                          <Link href="/termsofservice" target="_blank">
-                            <FooterLabel>Terms & Conditions</FooterLabel>
-                          </Link>
-                        </Row>
-                      </Col>
-                    </Row>
+                    <div style={{ margin: "2rem 0" }}>
+                      <Row justify="space-between">
+                        <Col>
+                          <LogoContainer>
+                            <img
+                              src="/img/icons/logo14.png"
+                              width="120px"
+                              alt="logo"
+                              height="55px"
+                            />
+                          </LogoContainer>
+                        </Col>
+                        <Col>
+                          <Row justify="center">
+                            <p
+                              style={{
+                                fontSize: "1rem",
+                                fontWeight: 600,
+                                margin: "1rem",
+                              }}
+                            >
+                              Services
+                            </p>
+                            <p
+                              style={{
+                                fontSize: "1rem",
+                                fontWeight: 600,
+                                margin: "1rem",
+                                color: "#334041",
+                              }}
+                            >
+                              Portfolio
+                            </p>
+                            <p
+                              style={{
+                                fontSize: "1rem",
+                                fontWeight: 600,
+                                margin: "1rem",
+                                color: "#334041",
+                              }}
+                            >
+                              Company
+                            </p>
+                            <p
+                              style={{
+                                fontSize: "1rem",
+                                fontWeight: 600,
+                                margin: "1rem",
+                                color: "#334041",
+                              }}
+                            >
+                              Privacy Policy
+                            </p>
+                            <p
+                              style={{
+                                fontSize: "1rem",
+                                fontWeight: 600,
+                                margin: "1rem",
+                                color: "#334041",
+                              }}
+                            >
+                              Terms & Conditions
+                            </p>
+                          </Row>
+                        </Col>
+                      </Row>
+                    </div>
                   </Col>
                 </Row>
-              </Col>
-              <Col lg={8} md={0} sm={0} xs={0}>
-                <Row justify="start">
-                  <img
-                    src={"/img/icons/employeePulse.png"}
-                    alt="employee Pulse logo"
-                    width="250px"
-                    height="40px"
-                    style={{ margin: "0 0.5rem" }}
-                  />
-                  <p
-                    style={{
-                      margin: "0.5rem 1rem 1rem",
-                      fontSize: "1rem",
-                      color: "#b2b3cf",
-                      textAlign: "left",
-                      width: "100%",
-                    }}
-                  >
-                    The first newsletter that combines IO Psychology and HR
-                    Tech!{" "}
-                  </p>
-                  <div
-                    style={{
-                      width: "100%",
-                      margin: "0 1rem",
-                      position: "relative",
-                      minHeight: "190px",
-                    }}
-                  >
+                <hr />
+                <Row gutter={24} justify="start" align="middle">
+                  <Col span={24}>
                     <Row justify="space-between">
-                      <div className="newsletter-form-footer">
-                        <ZapierForm action="https://hooks.zapier.com/hooks/catch/14238222/bj1czfx/">
-                          {({ error, loading, success }) => {
-                            success && router.push("/trupulse");
-                            return (
-                              <div>
-                                {!success && !loading && (
-                                  <div>
-                                    <Row justify="center">
-                                      <Col lg={24} md={24} sm={24} xs={24}>
-                                        <div className="newsletter-form">
-                                          <div
-                                            style={{
-                                              width: "100%",
-                                              display: "flex",
-                                              justifyContent: "center",
-                                            }}
-                                          >
-                                            <Row justify="start">
-                                              <Col
-                                                lg={24}
-                                                md={24}
-                                                sm={24}
-                                                xs={24}
-                                              >
-                                                <input
-                                                  name="email"
-                                                  required
-                                                  type="email"
-                                                  style={{
-                                                    margin: "1rem",
-                                                    minWidth: "250px",
-                                                    border: "1px solid #b2b3cf",
-                                                    height: "50px",
-                                                    margin: "0 0 1rem 0",
-                                                    background: "transparent",
-                                                    borderRadius: "25px",
-                                                    color: "#b2b3cf",
-                                                  }}
-                                                  placeholder="Your Email"
-                                                />
-                                              </Col>
-                                              <Col
-                                                lg={24}
-                                                md={24}
-                                                sm={24}
-                                                xs={24}
-                                              >
-                                                <Row justify="center">
-                                                  <input
-                                                    type="submit"
-                                                    value="submit"
-                                                    style={{
-                                                      width: "100px",
-                                                      background: "#eb7a02",
-                                                      color: "#fff",
-                                                      height: "50px",
-                                                      position: "relative",
-                                                      paddingTop: "12px",
-                                                      border: "none",
-                                                      fontWeight: "bold",
-                                                      borderRadius: "25px",
-                                                      cursor: "pointer",
-                                                    }}
-                                                  />
-                                                </Row>
-                                              </Col>
-                                            </Row>
-                                          </div>
-                                        </div>
-                                      </Col>
-                                    </Row>
-                                  </div>
-                                )}
-                                {loading && (
-                                  <div
-                                    style={{
-                                      margin: "0 2rem",
-                                      textAlign: "center",
-                                      color: "b2b3cf",
-                                    }}
-                                  >
-                                    Loading...
-                                  </div>
-                                )}
-                                {error && (
-                                  <div
-                                    style={{
-                                      margin: "0 2rem",
-                                      textAlign: "center",
-                                      color: "b2b3cf",
-                                    }}
-                                  >
-                                    Something went wrong. Please try again
-                                    later.
-                                  </div>
-                                )}
-                                {success && (
-                                  <div
-                                    style={{
-                                      margin: "0 2rem",
-                                      textAlign: "center",
-                                      color: "b2b3cf",
-                                    }}
-                                  >
-                                    Thank you for contacting us!
-                                  </div>
-                                )}
-                              </div>
-                            );
+                      <Col>
+                        <p
+                          style={{
+                            fontSize: "1rem",
+                            fontWeight: 600,
+                            margin: "1rem",
+                            color: "#545F60",
                           }}
-                        </ZapierForm>
-                      </div>
+                        >
+                          © Copyright 2023 Scanta INC.
+                        </p>
+                      </Col>
+                      <Col>
+                        <Row justify="center">
+                          <img
+                            src="/img/icons/twitter.png"
+                            alt="twitter-logo"
+                            style={{
+                              fontSize: "1rem",
+                              fontWeight: 600,
+                              margin: "1rem",
+                            }}
+                          />{" "}
+                          <img
+                            src="/img/icons/fb.png"
+                            alt="twitter-logo"
+                            style={{
+                              fontSize: "1rem",
+                              fontWeight: 600,
+                              margin: "1rem",
+                            }}
+                          />{" "}
+                          <img
+                            src="/img/icons/linkedIn.png"
+                            alt="twitter-logo"
+                            style={{
+                              fontSize: "1rem",
+                              fontWeight: 600,
+                              margin: "1rem",
+                            }}
+                          />
+                        </Row>
+                      </Col>
                     </Row>
-                    <Row justify="end">
-                      <p
-                        style={{
-                          color: "#b2b3cf",
-                          fontSize: "0.9rem",
-                          position: "absolute",
-                          bottom: "0rem",
-                        }}
-                      >
-                        © 2023 Scanta Inc.
-                      </p>
-                    </Row>
-                  </div>
-                </Row>
-              </Col>
-
-              <Col lg={0} md={24} sm={24} xs={24}>
-                <Row justify="center">
-                  <Col>
-                    <LogoContainer>
-                      <img
-                        src="\img\icons\logo192.png"
-                        width="200px"
-                        alt="logo"
-                        height="65px"
-                      />
-                    </LogoContainer>
                   </Col>
                 </Row>
-                <Row justify="center">
-                  <img
-                    src={"/img/icons/employeePulse.png"}
-                    alt="employee Pulse logo"
-                    width="250px"
-                    height="40px"
-                    style={{ margin: "1rem 0.5rem 0.5rem" }}
-                  />
-                  <p
-                    style={{
-                      margin: "0.5rem 1rem 1rem",
-                      fontSize: "1rem",
-                      color: "#fff",
-                      textAlign: "center",
-                      width: "100%",
-                      fontWeight: "600",
-                    }}
-                  >
-                    The first newsletter that combines IO Psychology and HR
-                    Tech!{" "}
-                  </p>
-                  <div
-                    style={{
-                      width: "100%",
-                      margin: "0 1rem",
-                      position: "relative",
-                      minHeight: "150px",
-                    }}
-                  >
+              </Col>
+              <Col xs={24} sm={24} lg={0} xl={0}>
+                <Row gutter={24} justify="start" align="middle">
+                  <Col span={24}>
+                    <div style={{ margin: "2rem 0" }}>
+                      <Row justify="space-between">
+                        <Col>
+                          <LogoContainer>
+                            <img
+                              src="/img/icons/logo14.png"
+                              width="120px"
+                              alt="logo"
+                              height="55px"
+                            />
+                          </LogoContainer>
+                        </Col>
+                        <Col>
+                          <Row justify="start">
+                            <p
+                              style={{
+                                fontSize: "1rem",
+                                fontWeight: 600,
+                                margin: "1rem",
+                              }}
+                            >
+                              Services
+                            </p>
+                            <p
+                              style={{
+                                fontSize: "1rem",
+                                fontWeight: 600,
+                                margin: "1rem",
+                                color: "#334041",
+                              }}
+                            >
+                              Portfolio
+                            </p>
+                            <p
+                              style={{
+                                fontSize: "1rem",
+                                fontWeight: 600,
+                                margin: "1rem",
+                                color: "#334041",
+                              }}
+                            >
+                              Company
+                            </p>
+                            <p
+                              style={{
+                                fontSize: "1rem",
+                                fontWeight: 600,
+                                margin: "1rem",
+                                color: "#334041",
+                              }}
+                            >
+                              Privacy Policy
+                            </p>
+                            <p
+                              style={{
+                                fontSize: "1rem",
+                                fontWeight: 600,
+                                margin: "1rem",
+                                color: "#334041",
+                              }}
+                            >
+                              Terms & Conditions
+                            </p>
+                          </Row>
+                        </Col>
+                      </Row>
+                    </div>
+                  </Col>
+                </Row>
+                <hr />
+                <Row gutter={24} justify="start" align="middle">
+                  <Col span={24}>
                     <Row justify="center">
-                      <div className="newsletter-form-footer">
-                        <ZapierForm action="https://hooks.zapier.com/hooks/catch/14238222/bj1czfx/">
-                          {({ error, loading, success }) => {
-                            success && router.push("/trupulse");
-                            return (
-                              <div>
-                                {!success && !loading && (
-                                  <div>
-                                    <Row justify="center">
-                                      <Col lg={24} md={24} sm={24} xs={24}>
-                                        <div className="newsletter-form">
-                                          <div
-                                            style={{
-                                              width: "100%",
-                                              display: "flex",
-                                              justifyContent: "center",
-                                            }}
-                                          >
-                                            <Row justify="center">
-                                              <Col
-                                                lg={24}
-                                                md={24}
-                                                sm={24}
-                                                xs={24}
-                                              >
-                                                <input
-                                                  name="email"
-                                                  required
-                                                  type="email"
-                                                  style={{
-                                                    margin: "1rem",
-                                                    minWidth: "250px",
-                                                    border: "1px solid #fff",
-                                                    height: "50px",
-                                                    margin: "0 0 1rem 0",
-                                                    color: "b2b3cf",
-                                                    background: "transparent",
-                                                    borderRadius: "25px",
-                                                  }}
-                                                  placeholder="Your Email"
-                                                />
-                                              </Col>
-                                              <Col
-                                                lg={24}
-                                                md={24}
-                                                sm={24}
-                                                xs={24}
-                                              >
-                                                <Row justify="center">
-                                                  <input
-                                                    type="submit"
-                                                    value="submit"
-                                                    style={{
-                                                      width: "100%",
-                                                      background: "#eb7a02",
-                                                      color: "#fff",
-                                                      height: "50px",
-                                                      position: "relative",
-                                                      paddingTop: "15px",
-                                                      border: "none",
-                                                      fontWeight: "bold",
-                                                      borderRadius: "25px",
-                                                      cursor: "pointer",
-                                                    }}
-                                                  />
-                                                </Row>
-                                              </Col>
-                                            </Row>
-                                          </div>
-                                        </div>
-                                      </Col>
-                                    </Row>
-                                  </div>
-                                )}
-                                {loading && (
-                                  <div
-                                    style={{
-                                      margin: "0 2rem",
-                                      textAlign: "center",
-                                      color: "b2b3cf",
-                                    }}
-                                  >
-                                    Loading...
-                                  </div>
-                                )}
-                                {error && (
-                                  <div
-                                    style={{
-                                      margin: "0 2rem",
-                                      textAlign: "center",
-                                      color: "b2b3cf",
-                                    }}
-                                  >
-                                    Something went wrong. Please try again
-                                    later.
-                                  </div>
-                                )}
-                                {success && (
-                                  <div
-                                    style={{
-                                      margin: "0 2rem",
-                                      textAlign: "center",
-                                      color: "b2b3cf",
-                                    }}
-                                  >
-                                    Thank you for contacting us!
-                                  </div>
-                                )}
-                              </div>
-                            );
+                      <Col span={24}>
+                        <p
+                          style={{
+                            fontSize: "1rem",
+                            fontWeight: 600,
+                            margin: "1rem",
+                            color: "#545F60",
+                            textAlign: "center",
                           }}
-                        </ZapierForm>
-                      </div>
-                    </Row>
-                  </div>
-                </Row>
-                <Row justify="center">
-                  <a href="https://www.facebook.com/scanta.io" target="_black">
-                    <img
-                      src="/img/svg/fb.svg"
-                      width="48px"
-                      height="48px"
-                      alt="fb"
-                      style={{ margin: "0 0.5rem" }}
-                    />
-                  </a>
-                  <a
-                    href="https://www.linkedin.com/company/scanta"
-                    target="_blank"
-                  >
-                    <img
-                      src="https://img.icons8.com/color/48/000000/linkedin-circled--v2.png"
-                      alt="linkedin"
-                      width="48px"
-                      height="48px"
-                      style={{ margin: "0 0.5rem" }}
-                    />{" "}
-                  </a>
-                  <a href="https://twitter.com/scanta_io" target="_blank">
-                    <img
-                      src="/img/svg/twitter.svg"
-                      alt="twitter"
-                      width="48px"
-                      height="48px"
-                      style={{ margin: "0 0.5rem" }}
-                    />
-                  </a>
-                </Row>
-
-                <Row justify="center">
-                  <Col span={22}>
-                    <Row justify="start">
-                      <Col xs={12} sm={12} lg={12} xl={10}>
-                        <Row justify="center">
-                          <Link href="/privacypolicy" target="_blank">
-                            <FooterLabel>Privacy Policy</FooterLabel>
-                          </Link>
-                        </Row>
+                        >
+                          © Copyright 2023 Scanta INC.
+                        </p>
                       </Col>
-                      <Col xs={12} sm={12} lg={12} xl={12}>
+                      <Col span={24}>
                         <Row justify="center">
-                          <Link href="termsofservice" target="_blank">
-                            <FooterLabel>Terms & Conditions</FooterLabel>
-                          </Link>
+                          <img
+                            src="/img/icons/twitter.png"
+                            alt="twitter-logo"
+                            style={{
+                              fontSize: "1rem",
+                              fontWeight: 600,
+                              margin: "1rem",
+                            }}
+                          />{" "}
+                          <img
+                            src="/img/icons/fb.png"
+                            alt="twitter-logo"
+                            style={{
+                              fontSize: "1rem",
+                              fontWeight: 600,
+                              margin: "1rem",
+                            }}
+                          />{" "}
+                          <img
+                            src="/img/icons/linkedIn.png"
+                            alt="twitter-logo"
+                            style={{
+                              fontSize: "1rem",
+                              fontWeight: 600,
+                              margin: "1rem",
+                            }}
+                          />
                         </Row>
                       </Col>
                     </Row>
-
-                    <Row justify="center">
-                      <p
-                        style={{
-                          color: "#b2b3cf",
-                          fontSize: "0.9rem",
-                          margin: "1rem",
-                        }}
-                      >
-                        © 2023 Scanta Inc.
-                      </p>
-                    </Row>
-                    <div
-                      style={{
-                        margin: " 1rem",
-                        width: "100%",
-                        height: "50px",
-                      }}
-                    ></div>
                   </Col>
                 </Row>
               </Col>

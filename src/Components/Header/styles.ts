@@ -7,7 +7,7 @@ import Link from "next/link";
 export const HeaderSection = styled("header")`
   padding: 0 0.5rem 0.5rem;
   margin: 0;
-  width: 100vw;
+  width: 100%;
   background: #fff;
   position: fixed;
   top: 0;
@@ -90,7 +90,7 @@ export const CustomNavLinkSmall = styled(NavLink)`
   font-size: 1rem;
   color: #18216d;
   // transition: color 0.2s ease-in;
-  margin: 0.5rem 2rem;
+  margin: 0.5rem 1rem;
 
   @media only screen and (max-width: 1080px) {
     margin: 1rem 1rem;

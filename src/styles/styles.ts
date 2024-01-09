@@ -42,7 +42,7 @@ div{font-display: fallback;}
         padding:0;
         border: 0;
         outline: 0;
-        background-color: #eff0f7;
+        background-color: #FAFAFA;
         overflow-x: hidden;
         max-width: 100vw;
     }
@@ -58,7 +58,7 @@ div{font-display: fallback;}
     .headerVisible{
         visibility: visible;
         transition: all 0.3s;
-        padding:1rem 4.2rem 0 5.4rem;
+        padding:0.5rem 4.2rem 0.5rem 5.4rem;
          @media only screen and (max-width: 890px) {
         padding:1rem 1rem 0 1rem;
         }
@@ -156,12 +156,7 @@ div{font-display: fallback;}
 margin: auto;
 }
 
-// .ant-carousel .slick-prev{
-//     left:100px;
-// }
-// .ant-carousel .slick-next{
-//     right:100px;
-// }
+
 .ant-carousel .slick-prev,
 .ant-carousel .slick-next {
   color: #2f327d;
@@ -175,4 +170,9 @@ margin: auto;
 .ant-carousel .slick-next:focus {
   color: #2f327d;
 }
+
+// .ant-carousel .slick-dots {
+//     position: relative !important;
+//     bottom:100px !important;
+// }
 `;

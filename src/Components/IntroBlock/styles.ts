@@ -1,24 +1,25 @@
 import styled from "styled-components";
 
 export const RightBlockContainer = styled("section")`
-  padding: 6rem 0 1rem;
-  background: url("/img/svg/wave-grey-1.svg");
+  padding: 6rem 0 0rem;
+  background: #fafafa;
   background-size: cover;
   @media only screen and (max-width: 1024px) {
     padding: 6rem 0 1.5rem;
   }
 
   @media only screen and (max-width: 768px) {
-    padding: 2rem 0 12rem;
+    padding: 2rem 0 0rem;
   }
 `;
 
-export const Title = styled("span")`
+export const Title = styled("div")`
   font-size: 2.2rem;
-  font-family: Poppins Bold;
-  color: #eb7a02;
-  margin-bottom:3rem;
-  line-height: 1.18;
+  font-family: Poppins Semibold;
+  color: #001011;
+  text-align: center;
+  margin-bottom: 1rem;
+  line-height: 1.5;
   @media only screen and (min-width: 1400px) {
     font-size: 2.5rem;
   }
@@ -26,22 +27,22 @@ export const Title = styled("span")`
     font-size: 1.8rem;
   }
   @media only screen and (max-width: 768px) {
-    font-size: 1.5rem;
+    font-size: 2rem;
+    line-height: 1.2;
   }
 `;
-export const Subtitle = styled("span")`
-  font-size: 1.8rem;
-  margin-bottom: 0;
-  font-family: Poppins SemiBold;
-  color: #430568;
-  // line-height: 1.18;
+export const Subtitle = styled("div")`
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #334041;
 } @media only screen and (min-width: 1400px) {
-  font-size: 1.7rem;
+  font-size: 1.2rem;
 }
   @media only screen and (max-width: 1080px) {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   @media only screen and (max-width: 768px) {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
   }
 `;
 
@@ -60,18 +61,14 @@ export const Content = styled("p")`
 `;
 
 export const ContentWrapper = styled("div")`
-  position: relative;
-  margin: 0 1rem;
-  top: 15%;
+  margin: 4rem 1rem 0;
   z-index: 1;
-   @media only screen and (max-width: 1080px) {
+  @media only screen and (max-width: 1080px) {
     padding-bottom: 4rem;
-    top: 10%;
   }
   @media only screen and (max-width: 768px) {
     padding-bottom: 2rem;
   }
- 
 `;
 
 export const ButtonWrapper = styled("div")`
@@ -121,7 +118,7 @@ export const SplashIcon1 = styled("div")`
 export const CTAWrapper = styled("span")`
   cursor: pointer;
   font-weight: 1000;
-  margin-right: 1rem;
+  margin-bottom: 2.5rem;
   transition: all 0.3s ease-in-out;
   color: #252641;
 `;

@@ -11,7 +11,7 @@ export const StyledButton = styled("button")<any>`
   padding: 12px 20px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  border-radius: 80px;
+  // border-radius: 80px;
   animation: ${(p) =>
     p.pulse
       ? "borderPulse 1000ms infinite ease-out, 1000ms infinite ease-in, hoverShine 200ms"
