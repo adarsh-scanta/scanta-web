@@ -117,37 +117,6 @@ const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
   const onClose = () => {
     setVisibility(!visible);
   };
-  const companyMenu = (
-    <Menu
-      style={{
-        borderRadius: "20px",
-        padding: "1rem 0.5rem",
-        boxShadow: "0px 6px 21px -4px rgba(0,0,0,0.72)",
-        minWidth: "150px",
-      }}
-    >
-      <Menu.Item>
-        <Link href="/company#About">
-          <Span>About</Span>
-        </Link>
-      </Menu.Item>
-      <Menu.Item>
-        <Link href="/company#Our-Team">
-          <Span>Our Team</Span>
-        </Link>
-      </Menu.Item>
-      <Menu.Item>
-        <Link href="/company#Our-Advisors">
-          <Span>Advisors</Span>
-        </Link>
-      </Menu.Item>
-      <Menu.Item>
-        <Link href="/company#contact-us">
-          <Span>Contact Us</Span>
-        </Link>
-      </Menu.Item>
-    </Menu>
-  );
 
   const MenuItem = () => {
     return (
@@ -166,27 +135,24 @@ const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
             <CustomNavLinkSmall
               style={{
                 borderBottom:
-                  router.asPath === "/trupulse" ? "1px solid #EB7A02" : "",
+                  router.asPath === "/services" ? "1px solid #EB7A02" : "",
               }}
             >
-              <Link href="/trupulse">
+              <Link href="/services">
                 <Span>Services</Span>
               </Link>
             </CustomNavLinkSmall>
             <CustomNavLinkSmall
               style={{
                 borderBottom:
-                  router.asPath === "/company" ? "1px solid #EB7A02" : "",
+                  router.asPath === "/portfolio" ? "1px solid #EB7A02" : "",
               }}
             >
-              <Dropdown overlay={companyMenu}>
-                <div>
-                  <Link href="/company">
-                    <Span>Portfolio</Span>
-                  </Link>
-                  <DownIcon />
-                </div>
-              </Dropdown>
+              <div>
+                <Link href="/portfolio">
+                  <Span>Portfolio</Span>
+                </Link>
+              </div>
             </CustomNavLinkSmall>
             <CustomNavLinkSmall
               style={{
@@ -194,7 +160,7 @@ const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
                   router.asPath === "/blog" ? "1px solid #EB7A02" : "",
               }}
             >
-              <Link href="/blog">
+              <Link href="/company">
                 <Span>Company</Span>
               </Link>
             </CustomNavLinkSmall>
@@ -228,16 +194,16 @@ const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
             {" "}
             <Row justify="center">
               <CustomNavLinkSmall>
-                <Link href="/trupulse">
+                <Link href="/services">
                   <Span
                     style={{
                       borderBottom:
-                        router.asPath === "/trupulse"
+                        router.asPath === "/services"
                           ? "1px solid #EB7A02"
                           : "",
                     }}
                   >
-                    TruPulse™
+                    Services
                   </Span>
                 </Link>
               </CustomNavLinkSmall>
@@ -248,16 +214,16 @@ const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
             <Row justify="center">
               <CustomNavLinkSmall>
                 <div>
-                  <Link href="/company">
+                  <Link href="/portfolio">
                     <Span
                       style={{
                         borderBottom:
-                          router.asPath === "/company"
+                          router.asPath === "/portfolio"
                             ? "1px solid #EB7A02"
                             : "",
                       }}
                     >
-                      About
+                      Portfolio
                     </Span>
                   </Link>
                   <DownIcon />
@@ -333,10 +299,7 @@ const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
   };
 
   return (
-    <HeaderSection
-      style={{ background: router.asPath === "/" ? "#FFFAF5" : "#fff" }}
-      className="headerVisible"
-    >
+    <HeaderSection style={{ background: "#FFFAF5" }} className="headerVisible">
       <Row justify="space-between">
         <Col xs={18} sm={18} lg={0} xl={0}>
           <Row justify="start">

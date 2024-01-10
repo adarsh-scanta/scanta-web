@@ -1,9 +1,9 @@
 import { Row, Col } from "antd";
 import Link from "next/link";
 import { withTranslation } from "react-i18next";
-import { SvgIcon } from "../../common/SvgIcon";
-import IntroArt from "../../assets/arts/IntroArt";
-import { Button } from "../../common/Button";
+import { SvgIcon } from "../../../common/SvgIcon";
+import IntroArt from "../../../assets/arts/IntroArt";
+import { Button } from "../../../common/Button";
 import Image from "next/image";
 import {
   RightBlockContainer,
@@ -15,7 +15,7 @@ import {
   SplashIcon1,
   Title,
 } from "./styles";
-import Container from "../../common/Container";
+import Container from "../../../common/Container";
 import { useEffect, useState, useRef } from "react";
 import { collection, doc, onSnapshot, query, setDoc } from "firebase/firestore";
 import { db } from "@/firebase";
@@ -65,29 +65,38 @@ const RightBlock = ({ t, id }: any) => {
           <Col xs={0} sm={0} lg={24} xl={24}>
             <ContentWrapper>
               <Title>
-                Artificial Intelligence AR &<br /> AR/VR Consulting & Services
+                Tech Unveiled, Explore Our Showcase
+                <br /> Collection
               </Title>
-              <Subtitle style={{ fontWeight: "600" }}>
-                Bring Us Your Ideas, Let Us Execute Your Vision
+              <Subtitle
+                style={{
+                  fontWeight: "600",
+                  width: "80%",
+                  margin: "auto",
+                  marginBottom: "2rem",
+                }}
+              >
+                Embark on a journey through our portfolio, where success stories
+                unfold. Experience our commitment to excellence, tailored
+                solutions, and transformative impact across a spectrum of
+                industries. Explore and be inspired…
               </Subtitle>
-              <Row justify="center">
-                <CTAWrapper className="pulse">
-                  <Link href="/request-demo">
-                    <Button width="400px">{t("Request a Demo")}</Button>
-                  </Link>
-                </CTAWrapper>
-              </Row>
-              <img src="/img/intro.png" alt="intro image" width="100%" />
+
+              <img
+                src="/img/portfolio-banner.png"
+                alt="intro image"
+                width="100%"
+              />
             </ContentWrapper>
           </Col>
           {/* Mobile */}
           <Col xs={24} sm={24} lg={0} xl={0}>
             <ContentWrapper>
               <img
-                src="/img/intro.png"
+                src="/img/portfolio-banner.png"
                 alt="intro image"
                 width="100%"
-                style={{ margin: "0 0 1rem" }}
+                style={{ margin: " 0 0 1rem" }}
               />
               <Title style={{ textAlign: "left" }}>
                 Artificial Intelligence <br /> AR & AR/VR

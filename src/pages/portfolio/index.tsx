@@ -1,15 +1,9 @@
-import MainBlock from "@/Components/Product/MainBlock";
+import MainBlock from "@/Components/Portfolio/MainBlock";
 import React from "react";
-import SecondBlock from "@/Components/Product/SecondBlock";
-import ThirdBlock from "@/Components/Product/ThirdBlock";
-import CompanyInfoBlock from "@/Components/CompanyInfoBlock";
-import FifthBlock from "@/Components/Product/FifthBlock";
-import FourthBlock from "@/Components/Product/FourthBlock";
-import SolutionBlock from "@/Components/SolutionBlock";
-import Container from "@/common/Container";
+import SecondBlock from "@/Components/Portfolio/SecondBlock";
+
 import Header from "@/Components/Header";
 import Footer from "@/Components/Footer";
-import ServicesContent from "../../content/ServicesContent.json";
 import { Styles } from "@/styles/styles";
 import Head from "next/head";
 import ScrollToTop from "@/common/ScrollToTop";
@@ -118,13 +112,13 @@ export default function Trupulse() {
       <ScrollToTop />
       <MainBlock />
       <SecondBlock />
-      <ThirdBlock />
-      <FourthBlock cards={ServicesContent.cards2} />
-      <FifthBlock />
-      <Container>
+      {/* <ThirdBlock /> */}
+      {/* <FourthBlock cards={ServicesContent.cards2} /> */}
+      {/* <FifthBlock /> */}
+      {/* <Container>
         <SolutionBlock from="product" />
       </Container>
-      <CompanyInfoBlock from="product" />
+      <CompanyInfoBlock from="product" /> */}
       <Footer fromWhere={"home"} />
     </React.Fragment>
   );
