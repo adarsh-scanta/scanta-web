@@ -235,64 +235,20 @@ const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
             {" "}
             <Row justify="center">
               <CustomNavLinkSmall>
-                <Link href="/blog">
+                <Link href="/company">
                   <Span
                     style={{
                       borderBottom:
-                        router.asPath === "/blog" ? "1px solid #EB7A02" : "",
+                        router.asPath === "/company" ? "1px solid #EB7A02" : "",
                     }}
                   >
-                    Blog
+                    Company
                   </Span>
                 </Link>
               </CustomNavLinkSmall>
             </Row>
           </Col>
-          {!user && !wait ? (
-            <div style={{ position: "fixed", bottom: "20px" }}>
-              <CustomNavLinkSmall
-                style={{
-                  minWidth: "120px",
-                  margin: "0.5rem  0.5rem 0.5rem",
-                }}
-                // onClick={() => scrollTo("contact")}
-              >
-                <Link href="/free-trial">
-                  <CTAWrapper
-                    className="pulse"
-                    onClick={handleTrialButtonClick}
-                  >
-                    <Button width="230px" color="transparent">
-                      {t("Free Trial")}
-                    </Button>
-                  </CTAWrapper>
-                </Link>
-              </CustomNavLinkSmall>
-              <CustomNavLinkSmall
-                style={{ minWidth: "185px", margin: "0.5rem" }}
-              >
-                <Link href="/request-demo">
-                  <CTAWrapper
-                    className="pulse"
-                    onClick={handleDemoRequestButtonClick}
-                  >
-                    <Button width="230px">{t("Request a Demo")}</Button>
-                  </CTAWrapper>
-                </Link>
-              </CustomNavLinkSmall>
-            </div>
-          ) : (
-            <CustomNavLinkSmall
-              style={{ width: "180px" }}
-              onClick={() => {
-                logout();
-                window.location.reload();
-              }}
-            >
-              <Span>Logout</Span>
-              {/* </Link> */}
-            </CustomNavLinkSmall>
-          )}
+         
         </Row>
       </div>
     );

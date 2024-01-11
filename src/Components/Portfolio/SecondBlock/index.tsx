@@ -34,13 +34,13 @@ const MainBlock = ({ id, t }: any) => {
                   workplace topics and company culture. TruPulse takes the work
                   out of understanding the employee experience.
                 </Content>
-                <div style={{ margin: "2rem 0 " }}>
+                {/* <div style={{ margin: "2rem 0 " }}>
                   <CTAWrapper className="pulse">
                     <Link href="/trupulse">
                       <Button>{"Learn more"}</Button>
                     </Link>
                   </CTAWrapper>
-                </div>
+                </div> */}
               </ContentWrapper>
             </Col>
             <Col lg={12} md={12} sm={0} xs={0}>
@@ -97,13 +97,13 @@ const MainBlock = ({ id, t }: any) => {
                   prevent compromised systems from releasing confidential, false
                   or improper information.
                 </Content>
-                <div style={{ margin: "2rem 0 " }}>
+                {/* <div style={{ margin: "2rem 0 " }}>
                   <CTAWrapper className="pulse">
                     <Link href="/trupulse">
                       <Button>{"Learn more"}</Button>
                     </Link>
                   </CTAWrapper>
-                </div>
+                </div> */}
               </ContentWrapper>
             </Col>
             <Col lg={0} md={0} sm={24} xs={24}>
@@ -134,13 +134,13 @@ const MainBlock = ({ id, t }: any) => {
                   Scanta team used AR technology to help the Expedition Unknown
                   uncover long lost secrets.
                 </Content>
-                <div style={{ margin: "2rem 0 " }}>
+                {/* <div style={{ margin: "2rem 0 " }}>
                   <CTAWrapper className="pulse">
                     <Link href="/trupulse">
                       <Button>{"Learn more"}</Button>
                     </Link>
                   </CTAWrapper>
-                </div>
+                </div> */}
               </ContentWrapper>
             </Col>
             <Col lg={12} md={12} sm={0} xs={0}>
@@ -199,13 +199,13 @@ const MainBlock = ({ id, t }: any) => {
                   these unique avatars to explore the world of augmented reality
                   with Pikamojis.
                 </Content>
-                <div style={{ margin: "2rem 0 " }}>
+                {/* <div style={{ margin: "2rem 0 " }}>
                   <CTAWrapper className="pulse">
                     <Link href="/trupulse">
                       <Button>{"Learn more"}</Button>
                     </Link>
                   </CTAWrapper>
-                </div>
+                </div> */}
               </ContentWrapper>
             </Col>
             <Col lg={0} md={0} sm={24} xs={24}>
@@ -237,13 +237,13 @@ const MainBlock = ({ id, t }: any) => {
                   want. Aim the ball and SCORE! Explore new levels and unleash
                   the magical world of AR Dunk!
                 </Content>
-                <div style={{ margin: "2rem 0 " }}>
+                {/* <div style={{ margin: "2rem 0 " }}>
                   <CTAWrapper className="pulse">
                     <Link href="/trupulse">
                       <Button>{"Learn more"}</Button>
                     </Link>
                   </CTAWrapper>
-                </div>
+                </div> */}
               </ContentWrapper>
             </Col>
             <Col lg={12} md={12} sm={0} xs={0}>
@@ -298,13 +298,13 @@ const MainBlock = ({ id, t }: any) => {
                   backyard. Scanta’s cutting edge AR technology enables you to
                   interact with Polygoons in the virtual world.
                 </Content>
-                <div style={{ margin: "2rem 0 " }}>
+                {/* <div style={{ margin: "2rem 0 " }}>
                   <CTAWrapper className="pulse">
                     <Link href="/trupulse">
                       <Button>{"Learn more"}</Button>
                     </Link>
                   </CTAWrapper>
-                </div>
+                </div> */}
               </ContentWrapper>
             </Col>
             <Col lg={0} md={0} sm={24} xs={24}>

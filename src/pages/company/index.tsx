@@ -42,7 +42,7 @@ export default function Home() {
       <ScrollToTop />
       <MainBlock />
       <StoryBlock />
-      <AdvisorBlock />
+      {/* <AdvisorBlock /> */}
       <ContactBlock />
       <Footer fromWhere={"company"} />
     </React.Fragment>
