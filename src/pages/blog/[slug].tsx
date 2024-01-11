@@ -69,7 +69,7 @@ export default function Home({ currentPost }) {
                 )
           }
         />
-        <link rel="canonical" href={`https://www.scanta.io${router.asPath}`} />
+        <link rel="canonical" href={`https://www.trupulse.ai${router.asPath}`} />
         <meta property="og:title" content={currentPost?.data?.metaTitle} />
         <meta
           property="og:url"

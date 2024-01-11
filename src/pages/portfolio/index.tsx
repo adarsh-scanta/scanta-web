@@ -88,7 +88,7 @@ export default function Trupulse() {
           name="description"
           content="TruPulse is the best employee retention platform. It performs realtime & continuous understanding of data & encourages a healthy work-life balance."
         />
-        <link rel="canonical" href="https://www.scanta.io/trupulse" />
+        <link rel="canonical" href="https://www.trupulse.ai/trupulse" />
         <meta
           property="og:title"
           content="Employee Retention & People Analytics Tool"

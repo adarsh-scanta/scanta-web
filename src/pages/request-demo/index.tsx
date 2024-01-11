@@ -14,7 +14,7 @@ export default function Trupulse() {
           name="description"
           content="TruPulse is a listening platform for real-time understanding of company morale, trending topics and corporate culture with the best employee experience tools."
         />
-        <link rel="canonical" href="https://www.scanta.io/request-demo" />
+        <link rel="canonical" href="https://www.trupulse.ai/request-demo" />
         <meta
           property="og:title"
           content="TruPulse - Best Employee Experience Tool"
