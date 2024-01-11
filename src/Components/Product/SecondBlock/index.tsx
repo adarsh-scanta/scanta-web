@@ -49,7 +49,7 @@ const MainBlock = ({ id, t }: any) => {
                 <div style={{ margin: "2rem 0 " }}>
                   <CTAWrapper className="pulse">
                     <Link href="/portfolio">
-                      <Button>{"Learn more"}</Button>
+                      <Button color="transparent">{"Learn more"}</Button>
                     </Link>
                   </CTAWrapper>
                 </div>
@@ -110,7 +110,7 @@ const MainBlock = ({ id, t }: any) => {
                 <div style={{ margin: "2rem 0 " }}>
                   <CTAWrapper className="pulse">
                     <Link href="/portfolio">
-                      <Button>{"Learn more"}</Button>
+                      <Button color="transparent">{"Learn more"}</Button>
                     </Link>
                   </CTAWrapper>
                 </div>
@@ -158,7 +158,7 @@ const MainBlock = ({ id, t }: any) => {
                 <div style={{ margin: "2rem 0 " }}>
                   <CTAWrapper className="pulse">
                     <Link href="/portfolio">
-                      <Button>{"Learn more"}</Button>
+                      <Button color="transparent">{"Learn more"}</Button>
                     </Link>
                   </CTAWrapper>
                 </div>
@@ -230,7 +230,7 @@ const MainBlock = ({ id, t }: any) => {
                 <div style={{ margin: "2rem 0 " }}>
                   <CTAWrapper className="pulse">
                     <Link href="/portfolio">
-                      <Button>{"Learn more"}</Button>
+                      <Button color="transparent">{"Learn more"}</Button>
                     </Link>
                   </CTAWrapper>
                 </div>

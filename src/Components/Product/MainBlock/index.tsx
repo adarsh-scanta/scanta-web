@@ -10,9 +10,6 @@ import {
   Content,
   Subtitle,
   ContentWrapper,
-  CTAWrapper,
-  ArtWrapper,
-  SplashIcon1,
   Title,
 } from "./styles";
 import Container from "../../../common/Container";
@@ -104,18 +101,6 @@ const RightBlock = ({ t, id }: any) => {
                 offering cutting-edge solutions tailored to your needs.
                 Transform your future with confidence.
               </Subtitle>
-              <Row justify="center">
-                <CTAWrapper
-                  className="pulse"
-                  style={{ width: "100%", marginBottom: "1rem" }}
-                >
-                  <Link href="/request-demo">
-                    <span>
-                      <Button width="100%">{t("Request a Demo")}</Button>
-                    </span>
-                  </Link>
-                </CTAWrapper>
-              </Row>
             </ContentWrapper>
           </Col>
         </Row>

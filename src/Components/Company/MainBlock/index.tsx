@@ -5,40 +5,73 @@ import { Fade } from "react-awesome-reveal";
 import MainArt from "../../../assets/arts/Company/MainArt";
 import StoryArt from "../../../assets/arts/Company/StoryArt";
 import {
-  RightBlockContainer,
+  LeftContentSection,
   Title,
   ContentWrapper,
-  ArtWrapper, 
-  Content
+  Content,
+  CTAWrapper,
+  Subtitle,
+  CarouselWrapper2,
+  SubText,
+  Subtitle2,
+  Content2,
 } from "./styles";
 import Container from "../../../common/Container";
 
 const MainBlock = ({ id }: any) => {
-  
   return (
-    <RightBlockContainer id="intro">
+    <LeftContentSection id="intro">
       <Container>
-        {/* <Fade direction="up" duration={500} triggerOnce={true}> */}
-        <Row justify="space-evenly" id={id}>
-          <Col lg={11} md={22} sm={22} xs={22}>
-            <ContentWrapper>
-              <Title>
-                <span style={{ color: "#2F327D" }}>About</span> Us
-              </Title>
-              <Content>
-                Scanta is a San Francisco based company focused on providing AI solutions for conversational platforms. With deep experience in AI, machine learning, natural language processing and cybersecurity, Scanta is uniquely positioned to understand human conversation. We use these skills to develop easy to use solutions for corporations who rely on high volume conversational tools. Our flagship product TruPulse helps companies understand company morale, culture and communications.
-              </Content>
-            </ContentWrapper>
-          </Col>
-          <Col lg={11} md={22} sm={22} xs={22}>
-            <ArtWrapper>
-              <StoryArt />
-            </ArtWrapper>
-          </Col>
-        </Row>
-        {/* </Fade> */}
+        <div>
+          <Row justify="center" align="middle">
+            <Col lg={12} md={12} sm={24} xs={24}>
+              <ContentWrapper>
+                <Subtitle>About Us</Subtitle>
+                <Content style={{ fontWeight: "600" }}>
+                  Scanta is a San Francisco based tech company focused on
+                  providing AI, AR & VR consulting and technical services. Santa
+                  has been a leader in advanced technological innovation and has
+                  a worldwide talent pool of product consultants and developers
+                  to support our customers. Bring Us Your Ideas, Let Us Execute
+                  Your Vision
+                </Content>
+                {/* <div style={{ margin: "2rem 0 " }}>
+                  <CTAWrapper className="pulse">
+                    <Link href="/trupulse">
+                      <Button>{"Learn more"}</Button>
+                    </Link>
+                  </CTAWrapper>
+                </div> */}
+              </ContentWrapper>
+            </Col>
+            <Col lg={12} md={12} sm={0} xs={0}>
+              <div style={{ margin: "0 1rem" }}>
+                <Row justify="end">
+                  <img
+                    src="/img/icons/company-1.png"
+                    width="80%"
+                    alt="trupulse is different"
+                    style={{ borderRadius: "8px" }}
+                  />
+                </Row>
+              </div>
+            </Col>
+            <Col lg={0} md={0} sm={24} xs={24}>
+              <div style={{ margin: "0 1rem" }}>
+                <Row justify="start">
+                  <img
+                    src="/img/icons/company-1.png"
+                    width="100%"
+                    alt="trupulse is different"
+                    style={{ borderRadius: "8px" }}
+                  />
+                </Row>
+              </div>
+            </Col>
+          </Row>
+        </div>
       </Container>
-    </RightBlockContainer>
+    </LeftContentSection>
   );
 };
 

@@ -2,8 +2,7 @@ import styled from "styled-components";
 
 export const RightBlockContainer = styled("section")`
   padding: 4rem 0 2.5rem;
-  background: url("/img/svg/Exec-Back.svg");
-  background-size: cover;
+
   @media only screen and (max-width: 1024px) {
     padding: 4rem 0 3rem;
   }
@@ -14,18 +13,21 @@ export const RightBlockContainer = styled("section")`
 `;
 
 export const Title = styled("h6")`
-  font-size: 2.2rem;
-  color: #eb7a02;
+  font-size: 2rem;
   text-align: center;
-  @media only screen and (min-width: 1400px) {
-    font-size: 2.5rem;
-  }
+  margin: auto;
+  font-family: Poppins SemiBold;
+  color: #001011;
+  margin: 2rem 0 1rem;
 `;
 export const Subtitle = styled("h6")`
-  font-size: 2.5rem;
-  text-align: center;
-  color: #430568;
+  font-size: 2rem;
+  text-align: cneter;
+  font-family: Poppins SemiBold;
+  color: #001011;
+  margin: 1rem 0 1rem;
 `;
+
 export const ArtWrapper = styled("div")`
   position: relative;
   @media only screen and (max-width: 1080px) {
@@ -36,11 +38,13 @@ export const ArtWrapper = styled("div")`
     top: 10%;
   }
 `;
+
 export const Content = styled("p")`
-  margin: 1.2rem 0 2rem 0;
-  font-size: 1.2rem;
+  margin: 1.5rem 0 2rem 0;
+  font-size: 1rem;
+  max-width: 700px;
   text-align: center;
-  color:#696984;
+  color: #181818;
 `;
 
 export const ContentWrapper = styled("div")`

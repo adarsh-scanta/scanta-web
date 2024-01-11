@@ -248,7 +248,6 @@ const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
               </CustomNavLinkSmall>
             </Row>
           </Col>
-         
         </Row>
       </div>
     );
@@ -283,6 +282,7 @@ const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
               width={180}
               height={55}
               alt="logo"
+              
             />
           </LogoContainer>
           <MenuItem />

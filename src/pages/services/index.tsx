@@ -13,6 +13,7 @@ import ServicesContent from "../../content/ServicesContent.json";
 import { Styles } from "@/styles/styles";
 import Head from "next/head";
 import ScrollToTop from "@/common/ScrollToTop";
+import Newsletter from "@/Components/Newsletter";
 
 const articleStructuredData = {
   "@context": "https://schema.org",
@@ -89,7 +90,7 @@ export default function Trupulse() {
   return (
     <React.Fragment>
       <Head>
-        <title>Employee Retention & People Analytics Tool</title>
+        <title>AI Consulting & Services</title>
         <meta
           name="description"
           content="TruPulse is the best employee retention platform. It performs realtime & continuous understanding of data & encourages a healthy work-life balance."
@@ -97,7 +98,8 @@ export default function Trupulse() {
         <link rel="canonical" href="https://www.trupulse.ai/trupulse" />
         <meta
           property="og:title"
-          content="Employee Retention & People Analytics Tool"
+          content="AI Consulting & Services
+          "
         />
         <meta property="og:url" content="https://www.scanta.io/trupulse" />
         <meta
@@ -118,13 +120,7 @@ export default function Trupulse() {
       <ScrollToTop />
       <MainBlock />
       <SecondBlock />
-      {/* <ThirdBlock /> */}
-      {/* <FourthBlock cards={ServicesContent.cards2} /> */}
-      {/* <FifthBlock /> */}
-      {/* <Container>
-        <SolutionBlock from="product" />
-      </Container>
-      <CompanyInfoBlock from="product" /> */}
+      <Newsletter />
       <Footer fromWhere={"home"} />
     </React.Fragment>
   );

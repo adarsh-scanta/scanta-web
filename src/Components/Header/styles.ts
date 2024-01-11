@@ -30,6 +30,7 @@ export const HeaderSection = styled("header")`
 
 export const LogoContainer = styled(Link)`
   display: flex;
+  cursor: pointer;
 `;
 
 export const NavLink = styled("div")`
@@ -97,8 +98,8 @@ export const CustomNavLinkSmall = styled(NavLink)`
   }
   @media only screen and (max-width: 768px) {
     margin: 1.25rem 2rem;
-    display:block;
-    text-align:left;
+    display: block;
+    text-align: left;
   }
 `;
 

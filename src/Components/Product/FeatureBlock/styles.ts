@@ -2,9 +2,8 @@ import styled from "styled-components";
 
 export const RightBlockContainer = styled("section")`
   padding: 15rem 0 2.5rem;
-  // background: url("/img/svg/wave.svg");
   background-size: cover;
-  background: url("/img/svg/Exec-Back.svg");
+  // background: url("/img/svg/Exec-Back.svg");
   // background-size: cover;
   @media only screen and (max-width: 1024px) {
     padding: 8rem 0 1.5rem;

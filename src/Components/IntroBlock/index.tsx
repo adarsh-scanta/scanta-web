@@ -78,7 +78,30 @@ const RightBlock = ({ t, id }: any) => {
                   </Link>
                 </CTAWrapper>
               </Row>
-              <img src="/img/intro.png" alt="intro image" width="100%" />
+              {/* <img src="/img/intro.png" alt="intro image" width="100%" /> */}
+              <video
+                className="product-video mx-auto  mb-0  md:mb-8"
+                width="100%"
+                // height="253px "
+                controls
+                loop
+                autoPlay
+                muted
+                webkit-playsinline
+                playsInline
+                poster="/img/intro.png"
+                style={{
+                  width: "100%",
+                  // height: '253px ',
+                  boxShadow: "rgb(128, 128, 128) 1px 4px 19px -4px",
+                }}
+              >
+                <source
+                  src="https://scanta-web-resource.s3.amazonaws.com/videos/intro-video-scanta.mp4"
+                  type="video/mp4"
+                />
+                Your browser does not support HTML video.
+              </video>
             </ContentWrapper>
           </Col>
           {/* Mobile */}

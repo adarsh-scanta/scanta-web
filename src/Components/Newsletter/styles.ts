@@ -3,7 +3,7 @@ import { Carousel } from "antd";
 
 export const LeftContentSection = styled("section")`
   width: 100%;
-  margin: 8rem 0 0;
+  margin: 3rem 0 0;
   @media only screen and (max-width: 1024px) {
     padding: 1rem 0 0;
     margin: 1rem 0 0;

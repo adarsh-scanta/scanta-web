@@ -7,6 +7,7 @@ import Container from "@/common/Container";
 import { SplashArt2 } from "@/assets/arts/SplashArt";
 import Head from "next/head";
 import dynamic from "next/dynamic";
+import Newsletter from "@/Components/Newsletter";
 
 const TestimonialBlock = dynamic(() => import("@/Components/TestimonialBlock"));
 const CompanyInfoBlock = dynamic(() => import("@/Components/CompanyInfoBlock"));
@@ -20,7 +21,7 @@ export default function Home() {
     <React.Fragment>
       <div className="App">
         <Head>
-          <title>TruPulse - Best Employee Experience Tool</title>
+          <title>AI, ML, AR & VR Consulting & Services</title>
           <meta
             name="description"
             content="TruPulse is a listening platform for real-time understanding of company morale, trending topics and corporate culture with the best employee experience tools."
@@ -28,7 +29,7 @@ export default function Home() {
           <link rel="canonical" href={"https://www.trupulse.ai/"} />
           <meta
             property="og:title"
-            content="TruPulse - Best Employee Experience Tool"
+            content="AI, ML, AR & VR Consulting & Services"
           />
           <meta property="og:url" content="https://www.scanta.io" />
           <meta
@@ -53,6 +54,7 @@ export default function Home() {
         <TestimonialBlock />
 
         <AboutBlock />
+        <Newsletter />
         {/* <CompanyInfoBlock from="home" /> */}
         <Footer fromWhere={"home"} />
       </div>

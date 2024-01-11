@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const RightBlockContainer = styled("section")`
   padding: 6rem 0 4rem;
   //   height: 90vh;
-  background: url("/img/svg/Exec-Back.svg");
+  // background: url("/img/svg/Exec-Back.svg");
   background-size: cover;
   @media only screen and (max-width: 1024px) {
     padding: 8rem 0 4rem;

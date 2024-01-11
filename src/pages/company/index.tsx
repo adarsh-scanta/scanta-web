@@ -8,6 +8,7 @@ import Footer from "@/Components/Footer";
 import { Styles } from "@/styles/styles";
 import Head from "next/head";
 import React from "react";
+import Newsletter from "@/Components/Newsletter";
 
 export default function Home() {
   return (
@@ -43,7 +44,8 @@ export default function Home() {
       <MainBlock />
       <StoryBlock />
       {/* <AdvisorBlock /> */}
-      <ContactBlock />
+      {/* <ContactBlock /> */}
+      <Newsletter />
       <Footer fromWhere={"company"} />
     </React.Fragment>
   );

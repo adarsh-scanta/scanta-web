@@ -49,8 +49,8 @@ const AboutBlock = () => {
                   </Content>
                   <div style={{ margin: "2rem 0 " }}>
                     <CTAWrapper className="pulse">
-                      <Link href="/trupulse">
-                        <Button>{"Learn more"}</Button>
+                      <Link href="/portfolio">
+                        <Button color="transparent">{"Learn more"}</Button>
                       </Link>
                     </CTAWrapper>
                   </div>
@@ -62,7 +62,7 @@ const AboutBlock = () => {
                     <img
                       src="/img/icons/AI.png"
                       width="80%"
-                      alt="trupulse is different"
+                      alt="AI Art"
                       style={{ borderRadius: "8px" }}
                     />
                   </Row>
@@ -74,7 +74,7 @@ const AboutBlock = () => {
                     <img
                       src="/img/icons/AI.png"
                       width="100%"
-                      alt="trupulse is different"
+                      alt="AI Art"
                       style={{ borderRadius: "8px" }}
                     />
                   </Row>
@@ -92,7 +92,7 @@ const AboutBlock = () => {
                     <img
                       src="/img/icons/VR.png"
                       width="80%"
-                      alt="trupulse is different"
+                      alt="VR Art"
                       style={{ borderRadius: "8px" }}
                     />
                   </Row>
@@ -111,8 +111,8 @@ const AboutBlock = () => {
                   </Content>
                   <div style={{ margin: "2rem 0 " }}>
                     <CTAWrapper className="pulse">
-                      <Link href="/trupulse">
-                        <Button>{"Learn more"}</Button>
+                      <Link href="/portfolio">
+                        <Button color="transparent">{"Learn more"}</Button>
                       </Link>
                     </CTAWrapper>
                   </div>
@@ -124,7 +124,7 @@ const AboutBlock = () => {
                     <img
                       src="/img/icons/VR.png"
                       width="100%"
-                      alt="trupulse is different"
+                      alt="VR Art"
                       style={{ borderRadius: "8px" }}
                     />
                   </Row>
@@ -158,7 +158,7 @@ const AboutBlock = () => {
                               <img
                                 src="/img/icons/express-computer.png"
                                 width="100%"
-                                alt="trupulse is different"
+                                alt="Express Art"
                                 style={{ borderRadius: "8px" }}
                               />
                             </Row>
@@ -190,7 +190,7 @@ const AboutBlock = () => {
                               <img
                                 src="/img/icons/financial-express.png"
                                 width="100%"
-                                alt="trupulse is different"
+                                alt="FE Art"
                                 style={{ borderRadius: "8px" }}
                               />
                             </Row>
@@ -221,7 +221,7 @@ const AboutBlock = () => {
                               <img
                                 src="/img/icons/cointelegraph.png"
                                 width="100%"
-                                alt="trupulse is different"
+                                alt="CT Art"
                                 style={{ borderRadius: "8px" }}
                               />
                             </Row>
@@ -285,14 +285,24 @@ const AboutBlock = () => {
           <Container>
             <ContentWrapper>
               <Row justify="center">
-                <Title style={{ textAlign: "center", marginBottom: "1rem" }}>
-                  Entrepreneur
-                </Title>
-                <Content style={{ textAlign: "center", fontWeight: 600 }}>
-                  Scanta was born out of curiosity with augmented reality and is
-                  now striving to make avatars “intelligent” with immersive
-                  possibilities.
-                </Content>{" "}
+                <Col span={24}>
+                  <Row justify="center">
+                    <Title
+                      style={{ textAlign: "center", marginBottom: "1rem" }}
+                    >
+                      Entrepreneur
+                    </Title>
+                  </Row>
+                </Col>
+                <Col span={24}>
+                  <Row justify="center">
+                    <Content style={{ textAlign: "center", fontWeight: 600 }}>
+                      Scanta was born out of curiosity with augmented reality
+                      and is now striving to make avatars “intelligent” with
+                      immersive possibilities.
+                    </Content>
+                  </Row>
+                </Col>
               </Row>
               <Row justify="center">
                 <Col span={24}>

@@ -21,7 +21,7 @@ import Container from "../../../common/Container";
 const MainBlock = ({ id, t }: any) => {
   return (
     <LeftContentSection id="intro">
-      <div style={{ background: "#FFFAF5" }}>
+      <div style={{ background: "#FFFAF5", padding: "2rem 0" }}>
         <Container>
           <Row justify="center" align="middle">
             <Col lg={12} md={12} sm={24} xs={24}>
@@ -121,7 +121,7 @@ const MainBlock = ({ id, t }: any) => {
           </Row>
         </Container>
       </div>
-      <div style={{ background: "#FFFAF5" }}>
+      <div style={{ background: "#FFFAF5",padding: "2rem 0" }}>
         <Container>
           <Row justify="center" align="middle">
             <Col lg={12} md={12} sm={24} xs={24}>
@@ -223,7 +223,7 @@ const MainBlock = ({ id, t }: any) => {
           </Row>
         </Container>
       </div>
-      <div style={{ background: "#FFFAF5" }}>
+      <div style={{ background: "#FFFAF5",padding: "2rem 0" }}>
         <Container>
           <Row justify="center" align="middle">
             <Col lg={12} md={12} sm={24} xs={24}>
