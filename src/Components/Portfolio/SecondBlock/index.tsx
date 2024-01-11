@@ -27,7 +27,7 @@ const MainBlock = ({ id, t }: any) => {
             <Col lg={12} md={12} sm={24} xs={24}>
               <ContentWrapper>
                 <SubText>Trupulse</SubText>
-                <Subtitle>AI Powered people analytics.</Subtitle>
+                <Subtitle>AI Powered people analytics</Subtitle>
                 <Content style={{ fontWeight: "600" }}>
                   TruPulse is an AI platform that automatically provides
                   insights on employee morale, engagement, retention, trending

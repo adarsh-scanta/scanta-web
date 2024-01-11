@@ -65,7 +65,8 @@ const RightBlock = ({ t, id }: any) => {
           <Col xs={0} sm={0} lg={24} xl={24}>
             <ContentWrapper>
               <Title>
-                Artificial Intelligence AR &<br /> AR/VR Consulting & Services
+                Artificial Intelligence, Augmented Reality, Virtual Reality
+                Consulting & Development Services
               </Title>
               <Subtitle style={{ fontWeight: "600" }}>
                 Bring Us Your Ideas, Let Us Execute Your Vision
@@ -73,7 +74,7 @@ const RightBlock = ({ t, id }: any) => {
               <Row justify="center">
                 <CTAWrapper className="pulse">
                   <Link href="/request-demo">
-                    <Button width="400px">{t("Request a Demo")}</Button>
+                    <Button width="350px">{t("Request a Demo")}</Button>
                   </Link>
                 </CTAWrapper>
               </Row>
@@ -90,9 +91,8 @@ const RightBlock = ({ t, id }: any) => {
                 style={{ margin: "0 0 1rem" }}
               />
               <Title style={{ textAlign: "left" }}>
-                Artificial Intelligence <br /> AR & AR/VR
-                <br /> Consulting & <br />
-                Services
+                Artificial Intelligence, Augmented Reality, Virtual Reality
+                Consulting & Development Services
               </Title>
               <Subtitle style={{ fontWeight: "600", textAlign: "left" }}>
                 Bring Us Your Ideas, Let Us Execute Your Vision

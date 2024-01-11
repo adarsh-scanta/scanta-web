@@ -64,10 +64,7 @@ const RightBlock = ({ t, id }: any) => {
           {/* Desktop */}
           <Col xs={0} sm={0} lg={24} xl={24}>
             <ContentWrapper>
-              <Title>
-                Streamlined AI, ML, AR & VR Solutions for
-                <br /> Enhanced Corporate Experiences
-              </Title>
+              <Title>AI Consulting & Services</Title>
               <Subtitle
                 style={{
                   fontWeight: "600",
@@ -76,12 +73,17 @@ const RightBlock = ({ t, id }: any) => {
                   marginBottom: "2rem",
                 }}
               >
-                Lorem ipsum dolor sit amet consectetur. Tempor aliquam nisl
-                mattis commodo mi faucibus risus. Ultrices suscipit enim aliquet
-                mi malesuada tempor venenatis. Vel quam sed convallis convallis.
+                Elevate your business with Scanta, the forefront of AI
+                innovation. Our expert consulting services redefine industries,
+                offering cutting-edge solutions tailored to your needs.
+                Transform your future with confidence.
               </Subtitle>
 
-              <img src="/img/service-banner.png" alt="intro image" width="100%" />
+              <img
+                src="/img/service-banner.png"
+                alt="intro image"
+                width="100%"
+              />
             </ContentWrapper>
           </Col>
           {/* Mobile */}
@@ -94,12 +96,13 @@ const RightBlock = ({ t, id }: any) => {
                 style={{ margin: " 0 0 1rem" }}
               />
               <Title style={{ textAlign: "left" }}>
-                Artificial Intelligence <br /> AR & AR/VR
-                <br /> Consulting & <br />
-                Services
+                AI Consulting & Services
               </Title>
               <Subtitle style={{ fontWeight: "600", textAlign: "left" }}>
-                Bring Us Your Ideas, Let Us Execute Your Vision
+                Elevate your business with Scanta, the forefront of AI
+                innovation. Our expert consulting services redefine industries,
+                offering cutting-edge solutions tailored to your needs.
+                Transform your future with confidence.
               </Subtitle>
               <Row justify="center">
                 <CTAWrapper

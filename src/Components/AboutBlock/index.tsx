@@ -101,13 +101,13 @@ const AboutBlock = () => {
               <Col lg={12} md={12} sm={24} xs={24}>
                 <ContentWrapper>
                   <img src="/img/icons/VR-star.svg" alt="star" />
-                  <SubText>Artificial Intelligence</SubText>
-                  <Subtitle>Leading the AI Revolution</Subtitle>
+                  <SubText>Augmented & Virtual Reality</SubText>
+                  <Subtitle>Creating New Experiences</Subtitle>
                   <Content style={{ fontWeight: "600" }}>
-                    Empower your business with our AI expertise. From strategic
-                    planning to seamless implementation, we drive innovation,
-                    optimize processes, and ensure your success in the age of
-                    artificial intelligence.
+                    Step into the future with our AR/VR consulting. We create
+                    immersive experiences and seamlessly integrate cutting-edge
+                    technology, reshaping reality to elevate your brand and
+                    captivate your audience like never before.
                   </Content>
                   <div style={{ margin: "2rem 0 " }}>
                     <CTAWrapper className="pulse">

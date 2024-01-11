@@ -28,13 +28,23 @@ const MainBlock = ({ id, t }: any) => {
               <ContentWrapper>
                 <SubText>Artificial Intelligence</SubText>
                 <Subtitle>
-                  Leading the AI Revolution, Transforming Industries Worldwide.
+                  Transforming Visions into Intelligent Realities
                 </Subtitle>
                 <Content style={{ fontWeight: "600" }}>
-                  Lorem ipsum dolor sit amet consectetur. Tempor aliquam nisl
-                  mattis commodo mi faucibus risus. Ultrices suscipit enim
-                  aliquet mi malesuada tempor venenatis. Vel quam sed convallis
-                  convallis.
+                  Scanta AI specializes in cutting-edge AI development and
+                  consulting services, offering technical expertise for
+                  companies with predefined AI projects and strategic guidance
+                  for those lacking in-house teams. With a commitment to
+                  innovation, Scanta excels in diverse AI applications, such as
+                  natural language processing, computer vision, and predictive
+                  analytics.
+                  <br />
+                  <br />
+                  Whether enhancing customer experiences through chatbots or
+                  optimizing operations with automated insights, Scanta empowers
+                  businesses to unlock the full potential of artificial
+                  intelligence, providing tailored solutions that align with
+                  their unique goals and challenges.
                 </Content>
                 <div style={{ margin: "2rem 0 " }}>
                   <CTAWrapper className="pulse">
@@ -89,15 +99,13 @@ const MainBlock = ({ id, t }: any) => {
             </Col>
             <Col lg={12} md={12} sm={24} xs={24}>
               <ContentWrapper>
-                <SubText>Machine Learning</SubText>
-                <Subtitle>
-                  Empowering Industries with Customized Machine Learning.
-                </Subtitle>
+                <SubText>Augmented and Virtual Reality</SubText>
+                <Subtitle>AR/VR Consulting & Services</Subtitle>
                 <Content style={{ fontWeight: "600" }}>
-                  Lorem ipsum dolor sit amet consectetur. Tempor aliquam nisl
-                  mattis commodo mi faucibus risus. Ultrices suscipit enim
-                  aliquet mi malesuada tempor venenatis. Vel quam sed convallis
-                  convallis.
+                  Scanta crafts immersive AR and VR experiences, propelling
+                  businesses into a new dimension of engagement. Elevate brand
+                  presence, empower training, and captivate audiences with our
+                  cutting-edge solutions
                 </Content>
                 <div style={{ margin: "2rem 0 " }}>
                   <CTAWrapper className="pulse">
@@ -130,13 +138,22 @@ const MainBlock = ({ id, t }: any) => {
               <ContentWrapper>
                 <SubText>Augmented Reality</SubText>
                 <Subtitle>
-                  AR Redefining Industries, Transforming Tomorrow.
+                  Augmenting Experiences, Defining Digital Realities
                 </Subtitle>
                 <Content style={{ fontWeight: "600" }}>
-                  Lorem ipsum dolor sit amet consectetur. Tempor aliquam nisl
-                  mattis commodo mi faucibus risus. Ultrices suscipit enim
-                  aliquet mi malesuada tempor venenatis. Vel quam sed convallis
-                  convallis.
+                  Scanta is a trailblazer in augmented reality (AR) consulting
+                  and development, shaping immersive experiences that redefine
+                  engagement. From creating AR-enhanced training modules for
+                  industries like manufacturing to developing interactive retail
+                  experiences through AR applications, Scanta transforms
+                  concepts into captivating realities
+                  <br />
+                  <br />
+                  Whether it's implementing AR for product visualization,
+                  virtual try-ons, or educational simulations, Scanta tailors
+                  its services to pioneer innovative solutions, ensuring
+                  businesses harness the full potential of augmented reality to
+                  captivate audiences and elevate brand experiences.
                 </Content>
                 <div style={{ margin: "2rem 0 " }}>
                   <CTAWrapper className="pulse">
@@ -193,13 +210,22 @@ const MainBlock = ({ id, t }: any) => {
               <ContentWrapper>
                 <SubText>Virtual Reality</SubText>
                 <Subtitle>
-                  Enabling Immersive VR Experiences for Industries.
+                  Revolutionizing Realities, Inspiring Innovation
                 </Subtitle>
                 <Content style={{ fontWeight: "600" }}>
-                  Lorem ipsum dolor sit amet consectetur. Tempor aliquam nisl
-                  mattis commodo mi faucibus risus. Ultrices suscipit enim
-                  aliquet mi malesuada tempor venenatis. Vel quam sed convallis
-                  convallis.
+                  Scanta excels in virtual reality (VR) consulting and
+                  development services. From immersive VR training simulations
+                  for workforce skill enhancement to creating virtual showrooms
+                  for e-commerce platforms, Scanta pioneers groundbreaking
+                  projects.
+                  <br />
+                  <br />
+                  Whether it's architectural visualization, VR-based therapy
+                  applications, or interactive educational environments, Scanta
+                  crafts tailored VR solutions. Elevating experiences across
+                  industries, Scanta ensures businesses leverage the
+                  transformative power of virtual reality to stay at the
+                  forefront of technological innovation.
                 </Content>
                 <div style={{ margin: "2rem 0 " }}>
                   <CTAWrapper className="pulse">
