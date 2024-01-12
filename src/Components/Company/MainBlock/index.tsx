@@ -35,13 +35,6 @@ const MainBlock = ({ id }: any) => {
                   to support our customers. Bring Us Your Ideas, Let Us Execute
                   Your Vision
                 </Content>
-                {/* <div style={{ margin: "2rem 0 " }}>
-                  <CTAWrapper className="pulse">
-                    <Link href="/trupulse">
-                      <Button>{"Learn more"}</Button>
-                    </Link>
-                  </CTAWrapper>
-                </div> */}
               </ContentWrapper>
             </Col>
             <Col lg={12} md={12} sm={0} xs={0}>
@@ -50,7 +43,7 @@ const MainBlock = ({ id }: any) => {
                   <img
                     src="/img/icons/company-1.png"
                     width="80%"
-                    alt="trupulse is different"
+                    alt="company Art"
                     style={{ borderRadius: "8px" }}
                   />
                 </Row>
@@ -62,7 +55,7 @@ const MainBlock = ({ id }: any) => {
                   <img
                     src="/img/icons/company-1.png"
                     width="100%"
-                    alt="trupulse is different"
+                    alt="company Art"
                     style={{ borderRadius: "8px" }}
                   />
                 </Row>

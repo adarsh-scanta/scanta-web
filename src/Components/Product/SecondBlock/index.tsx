@@ -61,7 +61,7 @@ const MainBlock = ({ id, t }: any) => {
                   <img
                     src="/img/icons/services-1.png"
                     width="80%"
-                    alt="trupulse is different"
+                    alt="services Art"
                     style={{ borderRadius: "8px" }}
                   />
                 </Row>
@@ -73,7 +73,7 @@ const MainBlock = ({ id, t }: any) => {
                   <img
                     src="/img/icons/services-1.png"
                     width="100%"
-                    alt="trupulse is different"
+                    alt="services Art"
                     style={{ borderRadius: "8px" }}
                   />
                 </Row>
@@ -91,7 +91,7 @@ const MainBlock = ({ id, t }: any) => {
                   <img
                     src="/img/icons/services-2.png"
                     width="80%"
-                    alt="trupulse is different"
+                    alt="services Art"
                     style={{ borderRadius: "8px" }}
                   />
                 </Row>
@@ -122,7 +122,7 @@ const MainBlock = ({ id, t }: any) => {
                   <img
                     src="/img/icons/services-2.png"
                     width="100%"
-                    alt="trupulse is different"
+                    alt="services Art"
                     style={{ borderRadius: "8px" }}
                   />
                 </Row>
@@ -170,7 +170,7 @@ const MainBlock = ({ id, t }: any) => {
                   <img
                     src="/img/icons/services-3.png"
                     width="80%"
-                    alt="trupulse is different"
+                    alt="services Art"
                     style={{ borderRadius: "8px" }}
                   />
                 </Row>
@@ -182,7 +182,7 @@ const MainBlock = ({ id, t }: any) => {
                   <img
                     src="/img/icons/services-3.png"
                     width="100%"
-                    alt="trupulse is different"
+                    alt="services Art"
                     style={{ borderRadius: "8px" }}
                   />
                 </Row>
@@ -200,7 +200,7 @@ const MainBlock = ({ id, t }: any) => {
                   <img
                     src="/img/icons/services-4.png"
                     width="80%"
-                    alt="trupulse is different"
+                    alt="services Art"
                     style={{ borderRadius: "8px" }}
                   />
                 </Row>
@@ -242,7 +242,7 @@ const MainBlock = ({ id, t }: any) => {
                   <img
                     src="/img/icons/services-4.png"
                     width="100%"
-                    alt="trupulse is different"
+                    alt="services Art"
                     style={{ borderRadius: "8px" }}
                   />
                 </Row>

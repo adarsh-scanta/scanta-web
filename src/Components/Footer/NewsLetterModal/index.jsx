@@ -20,7 +20,7 @@ const NewsLetterModal = ({ handleClose }) => {
         {({ error, loading, success }) => {
           if (success) {
             handleClose();
-            router.push("/trupulse");
+            router.push("/portfolio");
           }
           return (
             <div>

@@ -6,11 +6,11 @@ import { Row, Col } from "antd";
 import React from "react";
 import Head from "next/head";
 
-export default function Trupulse() {
+export default function Scanta() {
   return (
     <React.Fragment>
       <Head>
-        <title>TruPulse - Page not found!</title>
+        <title>Scanta - Page not found!</title>
         <meta
           name="description"
           content="TruPulse is a listening platform for real-time understanding of company morale, trending topics and corporate culture with the best employee experience tools."
