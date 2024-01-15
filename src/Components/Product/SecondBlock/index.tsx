@@ -31,7 +31,7 @@ const MainBlock = ({ id, t }: any) => {
                   Transforming Visions into Intelligent Realities
                 </Subtitle>
                 <Content style={{ fontWeight: "600" }}>
-                  Scanta AI specializes in cutting-edge AI development and
+                  Scanta specializes in cutting-edge AI development and
                   consulting services, offering technical expertise for
                   companies with predefined AI projects and strategic guidance
                   for those lacking in-house teams. With a commitment to

@@ -1,26 +1,24 @@
 import { Styles } from "@/styles/styles";
 import Head from "next/head";
 import React, { useEffect } from "react";
+import Header from "@/Components/Header";
+import Footer from "@/Components/Footer";
+import Newsletter from "@/Components/Newsletter";
 
 export default function PrivacyPolicy() {
-  useEffect(() => {
-    typeof window !== undefined &&
-      window.location.assign(
-        "https://chec-front.s3.amazonaws.com/Scanta+Privacy+Policy_Revised_2022.07.06_Clean.pdf"
-      );
-  }, []);
+  // useEffect(() => {
+  //   typeof window !== undefined &&
+  //     window.location.assign(
+  //       "https://scanta-web-resource.s3.amazonaws.com/Scanta%2BPrivacy%2BPolicy_Revised_2022.07.06_Clean.pdf"
+  //     );
+  // }, []);
   return (
     <React.Fragment>
       <Head>
-        <title>TruPulse - Privacy Policy</title>
-        <meta
-          name="description"
-          content="TruPulse is a listening platform for real-time understanding of company morale, trending topics and corporate culture with the best employee experience tools."
-        />
-        <link rel="canonical" href="https://www.trupulse.ai/privacypolicy" />
+        <title>Scanta - Privacy Policy</title>
         <meta
           property="og:title"
-          content="TruPulse - Best Employee Experience Tool"
+          content="Scanta - Privacy Policy"
         />
         <meta property="og:url" content="https://www.scanta.io/privacypolicy" />
         <meta
@@ -36,10 +34,14 @@ export default function PrivacyPolicy() {
           href="https://www.scanta.io/img/icons/ogGroup300.png"
         ></link>
       </Head>
+      <Header />
       <Styles />
-      <div style={{ margin: "2rem" }}>
-       
-      </div>
+        <iframe
+          style={{ width: "90vw", margin: "5rem 4rem 0", height: "1600px" }}
+          src="https://scanta-web-resource.s3.amazonaws.com/Scanta+Privacy+Policy+v.+2.0.pdf"
+        />
+      <Newsletter />
+      <Footer fromWhere={"home"} />
     </React.Fragment>
   );
 }

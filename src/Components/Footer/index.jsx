@@ -74,65 +74,83 @@ const Footer = ({ t, fromWhere }) => {
                       <Row justify="space-between">
                         <Col>
                           <LogoContainer>
-                            <img
-                              src="/img/icons/logo14.png"
-                              width="120px"
-                              alt="logo"
-                              height="55px"
-                            />
+                            <Link href="/">
+                              <img
+                                src="/img/icons/logo14.png"
+                                width="120px"
+                                alt="logo"
+                                height="55px"
+                              />
+                            </Link>
                           </LogoContainer>
                         </Col>
                         <Col>
                           <Row justify="center">
-                            <p
-                              style={{
-                                fontSize: "1rem",
-                                fontWeight: 600,
-                                margin: "1rem",
-                              }}
-                            >
-                              Services
-                            </p>
-                            <p
-                              style={{
-                                fontSize: "1rem",
-                                fontWeight: 600,
-                                margin: "1rem",
-                                color: "#334041",
-                              }}
-                            >
-                              Portfolio
-                            </p>
-                            <p
-                              style={{
-                                fontSize: "1rem",
-                                fontWeight: 600,
-                                margin: "1rem",
-                                color: "#334041",
-                              }}
-                            >
-                              Company
-                            </p>
-                            <p
-                              style={{
-                                fontSize: "1rem",
-                                fontWeight: 600,
-                                margin: "1rem",
-                                color: "#334041",
-                              }}
-                            >
-                              Privacy Policy
-                            </p>
-                            <p
-                              style={{
-                                fontSize: "1rem",
-                                fontWeight: 600,
-                                margin: "1rem",
-                                color: "#334041",
-                              }}
-                            >
-                              Terms & Conditions
-                            </p>
+                            <Link href="/services">
+                              <p
+                                style={{
+                                  fontSize: "1rem",
+                                  fontWeight: 600,
+                                  cursor: "pointer",
+                                  margin: "1rem",
+                                  color: "#334041",
+                                }}
+                              >
+                                Services
+                              </p>
+                            </Link>
+                            <Link href="/portfolio">
+                              <p
+                                style={{
+                                  fontSize: "1rem",
+                                  fontWeight: 600,
+                                  margin: "1rem",
+                                  color: "#334041",
+                                  cursor: "pointer",
+                                }}
+                              >
+                                Portfolio
+                              </p>
+                            </Link>
+                            <Link href="/company">
+                              <p
+                                style={{
+                                  fontSize: "1rem",
+                                  fontWeight: 600,
+                                  margin: "1rem",
+                                  color: "#334041",
+                                  cursor: "pointer",
+                                }}
+                              >
+                                Company
+                              </p>
+                            </Link>
+                            <Link href="/privacypolicy" target="_blank">
+                              <p
+                                style={{
+                                  fontSize: "1rem",
+                                  fontWeight: 600,
+                                  margin: "1rem",
+                                  color: "#334041",
+                                  cursor: "pointer",
+                                }}
+                              >
+                                Privacy Policy
+                              </p>
+                            </Link>
+                            <Link href="/termsofservice">
+                              <p
+                                style={{
+                                  fontSize: "1rem",
+                                  fontWeight: 600,
+                                  margin: "1rem",
+                                  color: "#334041",
+                                  cursor: "pointer",
+                                }}
+                              >
+                                Terms & Conditions
+                              </p>
+                            </Link>
                           </Row>
                         </Col>
                       </Row>
@@ -197,65 +215,77 @@ const Footer = ({ t, fromWhere }) => {
                       <Row justify="space-between">
                         <Col>
                           <LogoContainer>
-                            <img
-                              src="/img/icons/logo14.png"
-                              width="120px"
-                              alt="logo"
-                              height="55px"
-                            />
+                            <Link href="/">
+                              <img
+                                src="/img/icons/logo14.png"
+                                width="120px"
+                                alt="logo"
+                                height="55px"
+                              />
+                            </Link>
                           </LogoContainer>
                         </Col>
                         <Col>
                           <Row justify="start">
-                            <p
-                              style={{
-                                fontSize: "1rem",
-                                fontWeight: 600,
-                                margin: "1rem",
-                              }}
-                            >
-                              Services
-                            </p>
-                            <p
-                              style={{
-                                fontSize: "1rem",
-                                fontWeight: 600,
-                                margin: "1rem",
-                                color: "#334041",
-                              }}
-                            >
-                              Portfolio
-                            </p>
-                            <p
-                              style={{
-                                fontSize: "1rem",
-                                fontWeight: 600,
-                                margin: "1rem",
-                                color: "#334041",
-                              }}
-                            >
-                              Company
-                            </p>
-                            <p
-                              style={{
-                                fontSize: "1rem",
-                                fontWeight: 600,
-                                margin: "1rem",
-                                color: "#334041",
-                              }}
-                            >
-                              Privacy Policy
-                            </p>
-                            <p
-                              style={{
-                                fontSize: "1rem",
-                                fontWeight: 600,
-                                margin: "1rem",
-                                color: "#334041",
-                              }}
-                            >
-                              Terms & Conditions
-                            </p>
+                            <Link href="/services">
+                              <p
+                                style={{
+                                  fontSize: "1rem",
+                                  fontWeight: 600,
+                                  margin: "1rem",
+                                }}
+                              >
+                                Services
+                              </p>
+                            </Link>
+                            <Link href="/portfolio">
+                              <p
+                                style={{
+                                  fontSize: "1rem",
+                                  fontWeight: 600,
+                                  margin: "1rem",
+                                  color: "#334041",
+                                }}
+                              >
+                                Portfolio
+                              </p>
+                            </Link>
+                            <Link href="/company">
+                              <p
+                                style={{
+                                  fontSize: "1rem",
+                                  fontWeight: 600,
+                                  margin: "1rem",
+                                  color: "#334041",
+                                }}
+                              >
+                                Company
+                              </p>
+                            </Link>
+                            <Link href="/privacypolicy" target="_blank">
+                              <p
+                                style={{
+                                  fontSize: "1rem",
+                                  fontWeight: 600,
+                                  margin: "1rem",
+                                  color: "#334041",
+                                }}
+                              >
+                                Privacy Policy
+                              </p>
+                            </Link>
+                            <Link href="/termsofservice">
+                              <p
+                                style={{
+                                  fontSize: "1rem",
+                                  fontWeight: 600,
+                                  margin: "1rem",
+                                  color: "#334041",
+                                }}
+                              >
+                                Terms & Conditions
+                              </p>
+                            </Link>
                           </Row>
                         </Col>
                       </Row>

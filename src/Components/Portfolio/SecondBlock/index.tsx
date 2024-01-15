@@ -117,7 +117,7 @@ const MainBlock = ({ id, t }: any) => {
                 <Content style={{ fontWeight: "600" }}>
                   Josh Gates is on a nation-wide treasure hunt to solve a
                   mystery no one has cracked for 40 years: The Secret. The
-                  Scanta team used AR technology to help the Expedition Unknown
+                  Scanta team used AR technology to help the Expedition Unknown team
                   uncover long lost secrets.
                 </Content>
               </ContentWrapper>
@@ -255,7 +255,7 @@ const MainBlock = ({ id, t }: any) => {
             </Col>
             <Col lg={12} md={12} sm={24} xs={24}>
               <ContentWrapper>
-                <SubText>Polygon</SubText>
+                <SubText>Polygoons</SubText>
                 <Subtitle>Shoot the AR Goons!</Subtitle>
                 <Content style={{ fontWeight: "600" }}>
                   Polygoons is an Augmented Reality first person shooter game

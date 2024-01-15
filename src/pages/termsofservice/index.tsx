@@ -2,26 +2,15 @@ import { Styles } from "@/styles/styles";
 import Head from "next/head";
 import React, { useEffect } from "react";
 
-
 export default function TermsOfServic() {
-    useEffect(() => {
-      typeof window !== undefined &&
-        window.location.assign(
-          "https://chec-front.s3.amazonaws.com/Chec+End+User+License+Agreement_2022.07.08_Clean+(1).pdf"
-        );
-    }, []);
   return (
     <React.Fragment>
       <Head>
-        <title>TruPulse - Free trial</title>
-        <meta
-          name="description"
-          content="TruPulse is a listening platform for real-time understanding of company morale, trending topics and corporate culture with the best employee experience tools."
-        />
-        <link rel="canonical" href="https://www.trupulse.ai/blog" />
+        <title>Scanta - Terms of Service</title>
+       
         <meta
           property="og:title"
-          content="TruPulse - Best Employee Experience Tool"
+          content="Scanta - Terms of Service"
         />
         <meta property="og:url" content="https://www.scanta.io" />
         <meta
@@ -38,9 +27,10 @@ export default function TermsOfServic() {
         ></link>
       </Head>
       <Styles />
-      <div style={{ margin: "2rem" }}>
-     
-      </div>{" "}
+      <iframe
+        style={{ width: "90vw", margin: "5rem 4rem 0", height: "1600px" }}
+        src="https://scanta-web-resource.s3.amazonaws.com/TruPulse+End+User+License+Agreement+v.+2.0.pdf"
+      />
     </React.Fragment>
   );
 }
