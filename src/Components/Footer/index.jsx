@@ -175,33 +175,49 @@ const Footer = ({ t, fromWhere }) => {
                       </Col>
                       <Col>
                         <Row justify="center">
-                          <img
-                            src="/img/icons/twitter.png"
-                            alt="twitter-logo"
-                            style={{
-                              fontSize: "1rem",
-                              fontWeight: 600,
-                              margin: "1rem",
-                            }}
-                          />{" "}
-                          <img
-                            src="/img/icons/fb.png"
-                            alt="twitter-logo"
-                            style={{
-                              fontSize: "1rem",
-                              fontWeight: 600,
-                              margin: "1rem",
-                            }}
-                          />{" "}
-                          <img
-                            src="/img/icons/linkedIn.png"
-                            alt="twitter-logo"
-                            style={{
-                              fontSize: "1rem",
-                              fontWeight: 600,
-                              margin: "1rem",
-                            }}
-                          />
+                          <a
+                            href="https://twitter.com/scanta_io"
+                            target="_blank"
+                          >
+                            <img
+                              src="/img/icons/twitter.png"
+                              alt="twitter-logo"
+                              style={{
+                                fontSize: "1rem",
+                                fontWeight: 600,
+                                margin: "1rem",
+                              }}
+                            />
+                          </a>
+                          <a
+                            href="https://www.facebook.com/scanta.io"
+                            target="_blank"
+                          >
+                            <img
+                              src="/img/icons/fb.png"
+                              alt="twitter-logo"
+                              style={{
+                                fontSize: "1rem",
+                                fontWeight: 600,
+                                margin: "1rem",
+                                cursor: "pointer",
+                              }}
+                            />
+                          </a>
+                          <a
+                            href="https://www.linkedin.com/company/scanta/"
+                            target="_blank"
+                          >
+                            <img
+                              src="/img/icons/linkedIn.png"
+                              alt="twitter-logo"
+                              style={{
+                                fontSize: "1rem",
+                                fontWeight: 600,
+                                margin: "1rem",
+                              }}
+                            />
+                          </a>
                         </Row>
                       </Col>
                     </Row>
@@ -311,33 +327,48 @@ const Footer = ({ t, fromWhere }) => {
                       </Col>
                       <Col span={24}>
                         <Row justify="center">
-                          <img
-                            src="/img/icons/twitter.png"
-                            alt="twitter-logo"
-                            style={{
-                              fontSize: "1rem",
-                              fontWeight: 600,
-                              margin: "1rem",
-                            }}
-                          />{" "}
-                          <img
-                            src="/img/icons/fb.png"
-                            alt="twitter-logo"
-                            style={{
-                              fontSize: "1rem",
-                              fontWeight: 600,
-                              margin: "1rem",
-                            }}
-                          />{" "}
-                          <img
-                            src="/img/icons/linkedIn.png"
-                            alt="twitter-logo"
-                            style={{
-                              fontSize: "1rem",
-                              fontWeight: 600,
-                              margin: "1rem",
-                            }}
-                          />
+                          <a
+                            href="https://twitter.com/scanta_io"
+                            target="_blank"
+                          >
+                            <img
+                              src="/img/icons/twitter.png"
+                              alt="twitter-logo"
+                              style={{
+                                fontSize: "1rem",
+                                fontWeight: 600,
+                                margin: "1rem",
+                              }}
+                            />
+                          </a>
+                          <a
+                            href="https://www.facebook.com/scanta.io"
+                            target="_blank"
+                          >
+                            <img
+                              src="/img/icons/fb.png"
+                              alt="twitter-logo"
+                              style={{
+                                fontSize: "1rem",
+                                fontWeight: 600,
+                                margin: "1rem",
+                              }}
+                            />
+                          </a>
+                          <a
+                            href="https://www.linkedin.com/company/scanta/"
+                            target="_blank"
+                          >
+                            <img
+                              src="/img/icons/linkedIn.png"
+                              alt="twitter-logo"
+                              style={{
+                                fontSize: "1rem",
+                                fontWeight: 600,
+                                margin: "1rem",
+                              }}
+                            />
+                          </a>
                         </Row>
                       </Col>
                     </Row>
