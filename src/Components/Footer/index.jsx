@@ -290,8 +290,9 @@ const Footer = ({ t, fromWhere }) => {
                                 Privacy Policy
                               </p>
                             </Link>
-                            <Link 
-                            // href="/termsofservice"
+                            <Link
+                              href="/"
+                              // href="/termsofservice"
                             >
                               <p
                                 style={{
