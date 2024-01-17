@@ -10,7 +10,6 @@ import {
   Title,
   Subtitle,
   ContentWrapper,
-  MapContainer,
 } from "./styles";
 import Container from "../../../common/Container";
 import React, { useEffect } from "react";
@@ -46,59 +45,26 @@ const ContactBlock = ({ id }: any) => {
       <Container>
         {/* <Fade direction="right"> */}
         <Row justify="center" id={id}>
-          <ContentWrapper>
-            <Title>
-              <span id="contact-us" style={{ color: "#2F327D" }}>
-                Contact
-              </span>{" "}
-              Us
-            </Title>
-            <Content>
-              Whether you have a question about our company or our products, we
-              would love to hear from you!
-            </Content>
-          </ContentWrapper>
+          <ContentWrapper></ContentWrapper>
         </Row>
         <Row justify="space-around">
           <Col lg={11} md={11} sm={24} xs={24}>
-            <Subtitle>
-              <span style={{ color: "#2F327D", fontSize: "2rem" }}>Map &</span>{" "}
-              <span style={{ color: "#F48C06", fontSize: "2rem" }}>
-                Address
-              </span>
-            </Subtitle>
-            <Content style={{ textAlign: "left", fontSize: "1.2rem" }}>
-              Scanta Inc
-              <br />
-              50 Moulton Street <br />
-              San Francisco, CA 94123
+            <Subtitle>Contact Us</Subtitle>
+            <Content style={{ textAlign: "left", margin: "0" }}>
+              We would love to hear from you!
             </Content>
-            <MapContainer>
-              <Map />
-            </MapContainer>
+            <img
+              src="/img/icons/Contact.png"
+              alt="contactArt"
+              style={{ margin: "1rem" }}
+            />
           </Col>
           <Col lg={11} md={11} sm={24} xs={24}>
             <div
               style={{
-                margin: "4rem auto",
-                width: "95%",
-                // height: "50%",
-                background: "rgba(255, 255, 255, 0.8)",
-                backdropFilter: "blur(10px)",
-                borderRadius: "49.0901px",
+                margin: "0 auto",
               }}
             >
-              <Row justify="center">
-                <Content
-                  style={{
-                    textAlign: "center",
-                    margin: "2rem 1rem 0",
-                    fontSize: "1rem",
-                  }}
-                >
-                  Please submit the form and we will get back to you!
-                </Content>
-              </Row>
               <ContactForm />
             </div>
           </Col>

@@ -44,7 +44,7 @@ export default function Home() {
       <MainBlock />
       <StoryBlock />
       {/* <AdvisorBlock /> */}
-      {/* <ContactBlock /> */}
+      <ContactBlock />
       <Newsletter />
       <Footer fromWhere={"company"} />
     </React.Fragment>

@@ -21,7 +21,7 @@ const StoryBlock = ({ id }: any) => {
         <Row justify="center" id={id}>
           <ContentWrapper>
             <Title>Our Team</Title>
-            <Content>
+            <Content style={{ fontWeight: 600 }}>
               Meet our team of passionate entrepreneurs, seasoned business
               executives and technical visionaries. Together the worldwide
               Scanta team is looking to uncover, develop and deploy solutions to
@@ -46,9 +46,11 @@ const StoryBlock = ({ id }: any) => {
                   Chaitanya Hiremath
                 </span>
                 <br />
-                <span style={{ fontSize: "1rem" }}>CEO</span>
+                <span style={{ fontSize: "1rem", color: "#545F60" }}>CEO</span>
                 <br />
-                <span style={{ fontSize: "1rem" }}>Co-Founder</span>
+                <span style={{ fontSize: "1rem", color: "#545F60" }}>
+                  Co-Founder
+                </span>
               </Content>
               {/* </Fade> */}
             </div>
@@ -68,9 +70,11 @@ const StoryBlock = ({ id }: any) => {
                   John Bloomer
                 </span>
                 <br />
-                <span style={{ fontSize: "1rem" }}>CTO</span>
+                <span style={{ fontSize: "1rem", color: "#545F60" }}>CTO</span>
                 <br />
-                <span style={{ fontSize: "1rem" }}>Co-Founder</span>
+                <span style={{ fontSize: "1rem", color: "#545F60" }}>
+                  Co-Founder
+                </span>
               </Content>
               {/* </Fade> */}
             </div>
@@ -92,9 +96,11 @@ const StoryBlock = ({ id }: any) => {
                   Dirk Peters
                 </span>
                 <br />
-                <span style={{ fontSize: "1rem" }}>CRO</span>
+                <span style={{ fontSize: "1rem", color: "#545F60" }}>CRO</span>
                 <br />
-                <span style={{ fontSize: "1rem" }}>Co-Founder</span>
+                <span style={{ fontSize: "1rem", color: "#545F60" }}>
+                  Co-Founder
+                </span>
               </Content>
               {/* </Fade> */}
             </div>

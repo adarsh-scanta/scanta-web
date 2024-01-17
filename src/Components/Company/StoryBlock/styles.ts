@@ -43,8 +43,9 @@ export const Content = styled("p")`
   margin: 1.5rem 0 2rem 0;
   font-size: 1rem;
   max-width: 700px;
+  font-weight: bold;
   text-align: center;
-  color: #181818;
+  color: #334041;
 `;
 
 export const ContentWrapper = styled("div")`

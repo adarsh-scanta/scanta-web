@@ -9,49 +9,12 @@ import { useRouter } from "next/router";
 
 const ContactForm = () => {
   const router = useRouter();
-  const [ctaClicksCount, setCtaClicksCount] = useState(0);
-  const [ctaSubmits, setCtaSubmits] = useState(0);
-  const [demoButtonCount, setDemoButtonCount] = useState(0);
-  const [demoSuccessCount, setDemoSuccessCount] = useState(0);
-  const [trialButtonCount, setTrialButtonCount] = useState(0);
-  const [trialSuccessCount, setTrialSuccessCount] = useState(0);
-  // const [calendlyDuration, setCalendlyDuration] = useState(15);
-  useEffect(() => {
-    const q = query(collection(db, "stats"));
-    onSnapshot(q, (querySnapshot) => {
-      setCtaClicksCount(querySnapshot.docs[0].data().ctaClicksCount);
-      setCtaSubmits(querySnapshot.docs[0].data().ctaSubmits);
-          setDemoButtonCount(querySnapshot.docs[0].data().demoButtonCount);
-          setDemoSuccessCount(querySnapshot.docs[0].data().demoSuccessCount);
-          setTrialButtonCount(querySnapshot.docs[0].data().trialButtonCount);
-          setTrialSuccessCount(querySnapshot.docs[0].data().trialSuccessCount);
-    });
-  }, []);
-
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
-
-  const statsUpdate = async () => {
-    if (ctaClicksCount > 0) {
-      try {
-        await setDoc(doc(db, "stats", "P0kHUuxV7HZvSA7XrcHh"), {
-          ctaClicksCount: ctaClicksCount,
-          ctaSubmits: ctaSubmits,
-          demoButtonCount: demoButtonCount,
-          demoSuccessCount: demoSuccessCount,
-          trialButtonCount: trialButtonCount,
-          trialSuccessCount: trialSuccessCount+1,
-        });
-      } catch (err) {
-        alert(err);
-      }
-    }
-  };
-
+  const [query, setQuery] = useState("");
   return (
     <div style={{ padding: "1rem", minHeight: "410px" }}>
-      <Row justify="center"></Row>
       <ZapierForm action="https://hooks.zapier.com/hooks/catch/14238222/bj1e0wg/">
         {({ error, loading, success }) => {
           if (success) {
@@ -62,23 +25,32 @@ const ContactForm = () => {
               {!success && !loading && (
                 <div>
                   <Row justify="center">
-                    <Col lg={11} md={11} sm={22} xs={22}>
-                      <div
+                    <Col lg={24} md={24} sm={24} xs={24}>
+                      <label
                         style={{
                           margin: "0.8rem",
-                          borderRadius: "15.3407px",
+                          color: "#334041",
+                          fontWeight: "bold",
+                        }}
+                      >
+                        First Name
+                      </label>
+                      <div
+                        style={{
+                          margin: "0.2rem 0.8rem 0.8rem",
+                          borderRadius: "8px",
                           border: " 1.53407px solid rgba(0, 0, 0, 0.1)",
                         }}
                       >
                         <input
                           type="text"
-                          placeholder="First name"
+                          placeholder="Enter your first name"
                           name="first_name"
                           required
                           style={{
                             padding: "0.8rem",
-                            backgroundColor: "#fff",
-                            borderRadius: "15.3407px",
+                            backgroundColor: "#FAF5F0",
+                            borderRadius: "8px",
                           }}
                           value={firstName}
                           onChange={(e) => {
@@ -87,23 +59,32 @@ const ContactForm = () => {
                         ></input>
                       </div>
                     </Col>
-                    <Col lg={11} md={11} sm={22} xs={22}>
-                      <div
+                    <Col lg={24} md={24} sm={24} xs={24}>
+                      <label
                         style={{
                           margin: "0.8rem",
-                          borderRadius: "15.3407px",
+                          color: "#334041",
+                          fontWeight: "bold",
+                        }}
+                      >
+                        Last Name
+                      </label>
+                      <div
+                        style={{
+                          margin: "0.2rem 0.8rem 0.8rem",
+                          borderRadius: "8px",
                           border: " 1.53407px solid rgba(0, 0, 0, 0.1)",
                         }}
                       >
                         <input
                           type="text"
-                          placeholder="Last name"
+                          placeholder="Enter your last name"
                           required
                           name="last_name"
                           style={{
                             padding: "0.8rem",
-                            backgroundColor: "#fff",
-                            borderRadius: "15.3407px",
+                            backgroundColor: "#FAF5F0",
+                            borderRadius: "8px",
                           }}
                           value={lastName}
                           onChange={(e) => {
@@ -114,140 +95,164 @@ const ContactForm = () => {
                     </Col>
                   </Row>
                   <Row justify="center">
-                    <div
-                      style={{
-                        margin: "0.8rem 1.8rem",
-                        width: "100%",
-                        borderRadius: "15.3407px",
-                        border: " 1.53407px solid rgba(0, 0, 0, 0.1)",
-                      }}
-                    >
-                      <input
-                        type="text"
-                        placeholder="Job title"
-                        name="job_title"
-                        required
-                        style={{
-                          width: "100%",
-                          padding: "0.8rem",
-                          backgroundColor: "#fff",
-                          borderRadius: "15.3407px",
-                        }}
-                      ></input>
-                    </div>
-                  </Row>
-                  <Row justify="center">
-                    <div
-                      style={{
-                        margin: "0.8rem 1.8rem",
-                        width: "100%",
-                        borderRadius: "15.3407px",
-                        border: " 1.53407px solid rgba(0, 0, 0, 0.1)",
-                      }}
-                    >
-                      <input
-                        type="email"
-                        placeholder="Email"
-                        required
-                        name="user_email"
-                        style={{
-                          width: "100%",
-                          padding: "0.8rem",
-                          backgroundColor: "#fff",
-                          borderRadius: "15.3407px",
-                        }}
-                        onChange={(e) => {
-                          setEmail(e.target.value);
-                        }}
-                        value={email}
-                      ></input>
-                    </div>
-                  </Row>
-                  <Row justify="center">
-                    <div
-                      style={{
-                        margin: "0.8rem 1.8rem",
-                        width: "100%",
-                        borderRadius: "15.3407px",
-                        border: " 1.53407px solid rgba(0, 0, 0, 0.1)",
-                      }}
-                    >
-                      <input
-                        type="text"
-                        placeholder="Company"
-                        name="user_company"
-                        required
-                        style={{
-                          width: "100%",
-                          padding: "0.8rem",
-                          backgroundColor: "#fff",
-                          borderRadius: "15.3407px",
-                        }}
-                      ></input>
-                    </div>
-                  </Row>
-                  {/* <Row justify="center">
-                    <Col lg={11} md={11} sm={22} xs={22}>
-                      <div
+                    <Col lg={24} md={24} sm={24} xs={24}>
+                      <label
                         style={{
                           margin: "0.8rem",
-                          borderRadius: "15.3407px",
-                          border: " 1.53407px solid rgba(0, 0, 0, 0.1)",
+                          color: "#334041",
+                          fontWeight: "bold",
                         }}
                       >
-                        <input
-                          type="number"
-                          name="emp_number"
-                          placeholder="No. of Employees"
-                          required
-                          style={{
-                            padding: "0.8rem",
-                            backgroundColor: "#fff",
-                            borderRadius: "15.3407px",
-                          }}
-                        ></input>
-                      </div>
-                    </Col>
-                    <Col lg={11} md={11} sm={22} xs={22}>
+                        Company
+                      </label>
                       <div
                         style={{
-                          margin: "0.8rem",
-                          borderRadius: "15.3407px",
+                          margin: "0.2rem 0.8rem 0.8rem",
+                          width: "100%",
+                          borderRadius: "8px",
                           border: " 1.53407px solid rgba(0, 0, 0, 0.1)",
                         }}
                       >
                         <input
                           type="text"
-                          placeholder="Phone number"
-                          name="user_phone"
-                          // required
+                          placeholder="Enter your company name"
+                          name="user_company"
+                          required
                           style={{
+                            width: "100%",
                             padding: "0.8rem",
-                            backgroundColor: "#fff",
-                            borderRadius: "15.3407px",
+                            backgroundColor: "#FAF5F0",
+                            borderRadius: "8px",
                           }}
                         ></input>
                       </div>
                     </Col>
-                  </Row> */}
+                  </Row>
+                  <Row justify="center">
+                    <Col lg={24} md={24} sm={24} xs={24}>
+                      <label
+                        style={{
+                          margin: "0.8rem",
+                          color: "#334041",
+                          fontWeight: "bold",
+                        }}
+                      >
+                        Job Title
+                      </label>
+                      <div
+                        style={{
+                          margin: "0.2rem 0.8rem 0.8rem",
+                          width: "100%",
+                          borderRadius: "8px",
+                          border: " 1.53407px solid rgba(0, 0, 0, 0.1)",
+                        }}
+                      >
+                        <input
+                          type="text"
+                          placeholder="Enter your role"
+                          name="job_title"
+                          required
+                          style={{
+                            width: "100%",
+                            padding: "0.8rem",
+                            backgroundColor: "#FAF5F0",
+                            borderRadius: "8px",
+                          }}
+                        ></input>
+                      </div>
+                    </Col>
+                  </Row>
+                  <Row justify="center">
+                    <Col lg={24} md={24} sm={24} xs={24}>
+                      <label
+                        style={{
+                          margin: "0.8rem",
+                          color: "#334041",
+                          fontWeight: "bold",
+                        }}
+                      >
+                        Email
+                      </label>
+                      <div
+                        style={{
+                          margin: "0.2rem 0.8rem 0.8rem",
+                          width: "100%",
+                          borderRadius: "8px",
+                          border: " 1.53407px solid rgba(0, 0, 0, 0.1)",
+                        }}
+                      >
+                        <input
+                          type="email"
+                          placeholder="Enter your email address"
+                          required
+                          name="user_email"
+                          style={{
+                            width: "100%",
+                            padding: "0.8rem",
+                            backgroundColor: "#FAF5F0",
+                            borderRadius: "8px",
+                          }}
+                          onChange={(e) => {
+                            setEmail(e.target.value);
+                          }}
+                          value={email}
+                        ></input>
+                      </div>
+                    </Col>
+                  </Row>
+                  <Row justify="center">
+                    <Col lg={24} md={24} sm={24} xs={24}>
+                      <label
+                        style={{
+                          margin: "0.8rem",
+                          color: "#334041",
+                          fontWeight: "bold",
+                        }}
+                      >
+                        How can we help you?
+                      </label>
+                      <div
+                        style={{
+                          margin: "0.2rem 0.8rem 0.8rem",
+                          width: "100%",
+                          borderRadius: "8px",
+                          border: " 1.53407px solid rgba(0, 0, 0, 0.1)",
+                        }}
+                      >
+                        <textarea
+                          type="text"
+                          placeholder="Enter your message"
+                          required
+                          name="user_query"
+                          style={{
+                            width: "100%",
+                            padding: "0.8rem",
+                            backgroundColor: "#FAF5F0",
+                            borderRadius: "8px",
+                          }}
+                          onChange={(e) => {
+                            setQuery(e.target.value);
+                          }}
+                          value={query}
+                        ></textarea>
+                      </div>
+                    </Col>
+                  </Row>
                   <Row justify="end">
-                    <div style={{ margin: "0.5rem 2rem 1rem", width: "150px" }}>
+                    <div style={{ margin: "1rem 0 1rem", width: "150px" }}>
                       <input
                         type="submit"
                         value="Next"
                         style={{
                           cursor: "pointer",
                           padding: "0.8rem",
-                          borderRadius: "15px",
+                          borderRadius: "8px",
                           background: "#EB7A02",
                           border: "none",
                           color: "#FFFFFF",
                           fontSize: "1rem",
                         }}
-                        onClick={statsUpdate}
                       />
-                      {/* <span>Submit</span> */}
-                      {/* </Button> */}
                     </div>
                   </Row>
                 </div>
