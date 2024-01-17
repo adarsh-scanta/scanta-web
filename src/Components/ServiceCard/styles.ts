@@ -11,7 +11,7 @@ export const ServiceCardTemplate = styled(Card)`
 
 export const CardContent = styled("p")`
   font-size: 1rem;
-  font-family: Poppins SemiBold;
+  font-family: Inter SemiBold;
   // font-weight: 600;
   text-align: left;
   margin-top: 0.5rem;
@@ -24,7 +24,7 @@ export const CardHeading = styled("p")`
   font-size: 1.1rem;
   // font-weight: 750;
   margin-bottom: 2rem;
-  font-family: Poppins SemiBold;
+  font-family: Inter SemiBold;
   color:#2F327D;
   text-align: center;
   @media only screen and (min-width: 1400px) {

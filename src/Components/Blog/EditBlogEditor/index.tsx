@@ -247,7 +247,7 @@ const EditBlogEditor = ({ post }: any) => {
         <p
           style={{
             color: "#2f327d",
-            fontFamily: "Poppins bold",
+            fontFamily: "Inter bold",
             fontSize: "28px",
             fontWeight: "600",
             marginTop: "2rem 2rem 0",

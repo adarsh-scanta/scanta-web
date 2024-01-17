@@ -57,7 +57,7 @@ const ServiceCard = ({ card, from }: any) => {
         </CardHeading>
         <CardContent
           style={{
-            color: mouseOver === card.cardHeading ? "#fff" : "#696984",
+            color: mouseOver === card.cardHeading ? "#fff" : "#334041",
           }}
         >
           <ul>

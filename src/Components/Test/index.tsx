@@ -60,7 +60,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                   <p
                     style={{
                       textAlign: "center",
-                      color: "#696984",
+                      color: "#334041",
                       margin: "0 2rem",
                     }}
                   >
@@ -1503,7 +1503,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                                             textAlign: "left",
                                             color: "#F48C06",
                                             fontSize: "1.1rem",
-                                            fontFamily: "Poppins SemiBold",
+                                            fontFamily: "Inter SemiBold",
                                             margin: "0",
                                           }}
                                         >
@@ -1514,7 +1514,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                                             textAlign: "left",
                                             color: "#2F327D",
                                             fontSize: "0.9rem",
-                                            fontFamily: "Poppins SemiBold",
+                                            fontFamily: "Inter SemiBold",
                                             margin: "0",
                                           }}
                                         >
@@ -1528,7 +1528,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                                       style={{
                                         color: "#000",
                                         fontSize: "0.8rem",
-                                        fontFamily: "Poppins SemiBold",
+                                        fontFamily: "Inter SemiBold",
                                         maxHeight: "100px",
                                         marginBottom:
                                           item.name === "Mani Sundaram"
@@ -1638,7 +1638,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                                             textAlign: "left",
                                             color: "#F48C06",
                                             fontSize: "1.1rem",
-                                            fontFamily: "Poppins SemiBold",
+                                            fontFamily: "Inter SemiBold",
                                             margin: "0",
                                           }}
                                         >
@@ -1649,7 +1649,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                                             textAlign: "left",
                                             color: "#2F327D",
                                             fontSize: "0.9rem",
-                                            fontFamily: "Poppins SemiBold",
+                                            fontFamily: "Inter SemiBold",
                                             margin: "0",
                                             height:
                                               item.name === "Richard E. Beyer"?"2.5rem":"",
@@ -1665,7 +1665,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                                       style={{
                                         color: "#000",
                                         fontSize: "0.8rem",
-                                        fontFamily: "Poppins SemiBold",
+                                        fontFamily: "Inter SemiBold",
                                         marginTop: "0.5rem",
                                       }}
                                     >
@@ -1775,9 +1775,9 @@ const CompanyInfoBlock = ({ t, from }: any) => {
               <p
                 style={{
                   margin: "1rem 2rem 2rem",
-                  fontFamily: "Poppins SemiBold",
+                  fontFamily: "Inter SemiBold",
                   textAlign: "center",
-                  color: "#696984",
+                  color: "#334041",
                 }}
               >
                 TruPulse Integrates With the Tools You Already Use

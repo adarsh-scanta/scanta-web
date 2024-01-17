@@ -80,7 +80,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                           <p
                             style={{
                               textAlign: "left",
-                              color: "#696984",
+                              color: "#334041",
                               margin: "0",
                               fontWeight: "600",
                             }}
@@ -177,7 +177,7 @@ const CompanyInfoBlock = ({ t, from }: any) => {
                       <p
                         style={{
                           textAlign: "left",
-                          color: "#696984",
+                          color: "#334041",
                           margin: "0 2rem",
                           fontWeight: "600",
                         }}

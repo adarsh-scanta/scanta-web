@@ -32,7 +32,7 @@ export const ListItem = styled("li")`
 
 export const ServicesHeading = styled("h6")`
   font-size: 1.8rem;
-font-family: Poppins SemiBold;
+font-family: Inter SemiBold;
   text-align: center;
   margin: 2rem auto 5rem;
 
@@ -68,7 +68,7 @@ export const CarouselWrapper = styled(Carousel)`
 export const CarouselLabel = styled("p")`
   // font-size: 1.8rem;
   font-weight: 600;
-  font-family: Poppins SemiBold;
+  font-family: Inter SemiBold;
   color:#430568;
   position: relative;
   top: -40px;
@@ -102,7 +102,7 @@ export const Subtitle = styled("h6")`
 export const Content = styled("p")`
   margin: 0.5rem 0 2rem 0;
   text-align: center;
-  color: #696984;
+  color: #334041;
   @media only screen and (max-width: 768px) {
     margin: 0 1rem;
   }

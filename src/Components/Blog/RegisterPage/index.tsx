@@ -29,7 +29,7 @@ const RegisterPage = () => {
         <p
           style={{
             color: "#2f327d",
-            fontFamily: "Poppins bold",
+            fontFamily: "Inter bold",
             fontSize: "28px",
             fontWeight: "600",
             margin: "2rem 2rem 0",

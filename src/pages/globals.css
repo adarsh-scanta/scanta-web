@@ -1,6 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
 @font-face {
   font-family: "Poppins Light";
   src: url("/fonts/Poppins-Light.ttf") format("truetype");
+  font-style: normal;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "Inter Light";
+  src: url("/fonts/Inter-Light.ttf") format("truetype");
   font-style: normal;
   font-display: fallback;
 }
@@ -11,10 +18,22 @@
   font-style: normal;
   font-display: fallback;
 }
+@font-face {
+  font-family: "Inter Bold";
+  src: url("/fonts/Inter-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-display: fallback;
+}
 
 @font-face {
   font-family: "Poppins SemiBold";
   src: url("/fonts/Poppins-SemiBold.ttf") format("truetype");
+  font-style: normal;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "Inter SemiBold";
+  src: url("/fonts/Inter-SemiBold.ttf") format("truetype");
   font-style: normal;
   font-display: fallback;
 }
@@ -41,4 +60,3 @@
 .ql-snow .ql-picker.ql-size .ql-picker-item::before {
   content: attr(data-value) !important;
 }
-

@@ -26,7 +26,7 @@ export const Styles = createGlobalStyle`
     body,
     html,
     a {
-        font-family: 'Poppins Light', sans-serif;
+        font-family: 'Inter Light', sans-serif;
         font-display: fallback;
     }
 p{
@@ -90,7 +90,7 @@ div{font-display: fallback;}
     h4,
     h5,
     h6 {
-        font-family: 'Poppins Bold', serif;
+        font-family: 'Inter Bold', serif;
         // color: #18216d;
         // font-size: 56px;
         line-height: 1.18;

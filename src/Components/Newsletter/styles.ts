@@ -17,14 +17,14 @@ export const LeftContentSection = styled("section")`
 export const Content = styled("p")`
   margin: 1.5rem 0 2rem 0;
   font-size: 1rem;
-  color: #696984;
+  color: #334041;
 `;
 
 export const Content2 = styled("p")`
   margin: 1.5rem 0 2rem 0;
   font-size: 1rem;
   text-align: left;
-  color: #696984;
+  color: #334041;
 `;
 
 export const ContentWrapper = styled("div")`
@@ -66,28 +66,28 @@ export const AboutContent = styled("p")`
 export const Title = styled("h6")`
   font-size: 2rem;
   text-align: cneter;
-  font-family: Poppins SemiBold;
+  font-family: Inter SemiBold;
   color: #001011;
   margin: 2rem 0 4rem;
 `;
 export const Subtitle = styled("h6")`
   font-size: 2rem;
   text-align: cneter;
-  font-family: Poppins SemiBold;
+  font-family: Inter SemiBold;
   color: #001011;
   margin: 1rem 0 1rem;
 `;
 export const Subtitle2 = styled("h6")`
   font-size: 1.5rem;
   text-align: left;
-  font-family: Poppins SemiBold;
+  font-family: Inter SemiBold;
   color: #001011;
   margin: 1rem 0 1rem;
 `;
 export const SubText = styled("h6")`
   font-size: 1rem;
   text-align: cneter;
-  font-family: Poppins SemiBold;
+  font-family: Inter SemiBold;
   color: #ff7e00;
   margin: 1rem 0 1rem;
 `;

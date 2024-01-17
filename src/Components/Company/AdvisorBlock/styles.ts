@@ -26,7 +26,7 @@ export const Subtitle = styled("h6")`
 export const Content = styled("p")`
   margin: 1.2rem 0 2rem 0;
   text-align: center;
-  color: #696984;
+  color: #334041;
 `;
 
 export const ContentWrapper = styled("div")`

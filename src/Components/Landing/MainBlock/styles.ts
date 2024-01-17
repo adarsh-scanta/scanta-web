@@ -18,7 +18,7 @@ export const Content = styled("p")`
   text-align:center;
   font-weight: 600;
   font-size: 1.2rem;
-  color: #696984;
+  color: #334041;
 `;
 
 export const Title = styled("h6")`
@@ -98,7 +98,7 @@ export const BigText = styled("p")`
   font-size: 50px;
   text-align: center;
   font-weight: 700;
-  font-family: Poppins Bold;
+  font-family: Inter Bold;
   background: linear-gradient(86deg, #ff7e00 0%, #430568 100%);
   background-clip: text;
   -webkit-background-clip: text;

@@ -49,7 +49,7 @@ export const AboutSubHeading = styled("div")`
 export const AboutContent = styled("p")`
   font-size: 1.2rem;
   font-weight: 700;
-  color: #696984;
+  color: #334041;
   @media only screen and (min-width: 1400px) {
     font-size: 1.3rem;
   }

@@ -112,7 +112,7 @@ const Posts = ({ post, from }: any) => {
             id="intro"
             style={{
               color: "#2f327d",
-              fontFamily: "Poppins bold",
+              fontFamily: "Inter bold",
               fontSize: "28px",
               fontWeight: "600",
               margin: "0 2rem 1rem",
@@ -179,7 +179,7 @@ const Posts = ({ post, from }: any) => {
             </Row>
           </div>
           {post?.data?.tags !== "" && (
-            <p style={{ color: "#696984", fontSize: "1rem", margin: "0 2rem" }}>
+            <p style={{ color: "#334041", fontSize: "1rem", margin: "0 2rem" }}>
               <strong className="strng">Tags: </strong>{" "}
               {post?.data?.tags.split(",").join(", ")}
             </p>

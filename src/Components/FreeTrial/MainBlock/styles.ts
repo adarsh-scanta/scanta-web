@@ -16,7 +16,7 @@ export const Content = styled("p")`
   margin: 1.2rem 0 2rem 0;
   letter-spacing: 1px;
   font-size: 1.2rem;
-  color: #696984;
+  color: #334041;
 `;
 
 export const Title = styled("h6")`

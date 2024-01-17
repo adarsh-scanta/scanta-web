@@ -16,14 +16,14 @@ export const Title = styled("h6")`
   font-size: 2rem;
   text-align: center;
   margin: auto;
-  font-family: Poppins SemiBold;
+  font-family: Inter SemiBold;
   color: #001011;
   margin: 2rem 0 1rem;
 `;
 export const Subtitle = styled("h6")`
   font-size: 2rem;
   text-align: cneter;
-  font-family: Poppins SemiBold;
+  font-family: Inter SemiBold;
   color: #001011;
   margin: 1rem 0 1rem;
 `;

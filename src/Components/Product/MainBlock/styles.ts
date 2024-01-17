@@ -15,7 +15,7 @@ export const RightBlockContainer = styled("section")`
 
 export const Title = styled("div")`
   font-size: 2.2rem;
-  font-family: Poppins Semibold;
+  font-family: Inter Semibold;
   color: #001011;
   text-align: center;
   margin-bottom: 1rem;
@@ -49,7 +49,7 @@ export const Subtitle = styled("div")`
 export const Content = styled("p")`
   margin: 0.5rem 0 2rem 0;
   font-size: 1.4rem;
-  color:#696984;
+  color:#334041;
 } @media only screen and (min-width: 1400px) {
   font-size: 1.3rem;
 }
