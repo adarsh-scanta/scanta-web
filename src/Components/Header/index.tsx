@@ -282,7 +282,6 @@ const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
               width={180}
               height={55}
               alt="logo"
-              
             />
           </LogoContainer>
           <MenuItem />
@@ -297,7 +296,7 @@ const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
                 className="pulse"
                 onClick={handleDemoRequestButtonClick}
               >
-                <Button>{t("Scope My Project")}</Button>
+                <Button>{t("Book a Demo")}</Button>
               </CTAWrapper>
             </Link>
           </CustomNavLinkSmall>

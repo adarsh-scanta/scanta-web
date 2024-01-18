@@ -66,18 +66,12 @@ const RightBlock = ({ t, id }: any) => {
             <ContentWrapper>
               <Title>
                 Artificial Intelligence, Augmented Reality, Virtual Reality
-                Consulting & Development Services
+                Consulting
               </Title>
               <Subtitle style={{ fontWeight: "600" }}>
                 Bring Us Your Ideas, Let Us Execute Your Vision
               </Subtitle>
-              <Row justify="center">
-                <CTAWrapper className="pulse">
-                  <Link href="/request-demo">
-                    <Button width="350px">{t("Request a Demo")}</Button>
-                  </Link>
-                </CTAWrapper>
-              </Row>
+
               {/* <img src="/img/intro.png" alt="intro image" width="100%" /> */}
               <video
                 className="product-video mx-auto  mb-0  md:mb-8"
@@ -102,36 +96,51 @@ const RightBlock = ({ t, id }: any) => {
                 />
                 Your browser does not support HTML video.
               </video>
+              <img
+                src="/img/icons/dicovery.png"
+                style={{
+                  width: "150px",
+                  position: "absolute",
+                  top: "210px",
+                  right: "20px",
+                }}
+                alt="discovery logo"
+              />
             </ContentWrapper>
           </Col>
           {/* Mobile */}
           <Col xs={24} sm={24} lg={0} xl={0}>
             <ContentWrapper>
-              <img
-                src="/img/intro.png"
-                alt="intro image"
+              <video
+                className="product-video mx-auto  mb-0  md:mb-8"
                 width="100%"
-                style={{ margin: "0 0 1rem" }}
-              />
+                // height="253px "
+                controls
+                loop
+                autoPlay
+                muted
+                webkit-playsinline
+                playsInline
+                poster="/img/intro.png"
+                style={{
+                  width: "100%",
+                  // height: '253px ',
+                  boxShadow: "rgb(128, 128, 128) 1px 4px 19px -4px",
+                }}
+              >
+                <source
+                  src="https://scanta-web-resource.s3.amazonaws.com/videos/intro-video-scanta.mp4"
+                  type="video/mp4"
+                />
+                Your browser does not support HTML video.
+              </video>
               <Title style={{ textAlign: "left" }}>
                 Artificial Intelligence, Augmented Reality, Virtual Reality
-                Consulting & Development Services
+                Consulting
               </Title>
               <Subtitle style={{ fontWeight: "600", textAlign: "left" }}>
                 Bring Us Your Ideas, Let Us Execute Your Vision
               </Subtitle>
-              <Row justify="center">
-                <CTAWrapper
-                  className="pulse"
-                  style={{ width: "100%", marginBottom: "1rem" }}
-                >
-                  <Link href="/request-demo">
-                    <span>
-                      <Button width="100%">{t("Request a Demo")}</Button>
-                    </span>
-                  </Link>
-                </CTAWrapper>
-              </Row>
             </ContentWrapper>
           </Col>
         </Row>
