@@ -360,24 +360,104 @@ const MainBlock = ({ id, t }: any) => {
             <Col lg={12} md={12} sm={0} xs={0}>
               <div style={{ margin: "0 1rem" }}>
                 <Row justify="end">
-                  <img
-                    src="/img/icons/portfolio-5.png"
-                    width="80%"
-                    alt="portfolio Art"
-                    style={{ borderRadius: "8px" }}
-                  />
+                   {fifthVisible ? (
+                    <div className="video_poster">
+                      <video
+                        className="product-video mx-auto mb-0  md:mb-8"
+                        width="450px"
+                        // height="253px"
+                        controls
+                        loop
+                        autoPlay
+                        webkit-playsinline
+                        playsInline
+                        muted
+                        poster="/img/icons/portfolio-5.png"
+                        style={{
+                          width: "450px",
+                          // height: '253px ',
+                          borderRadius: "8px",
+                          // boxShadow: "rgb(128, 128, 128) 1px 4px 19px -4px",
+                        }}
+                      >
+                        {
+                          <source
+                            src="https://scanta-web-resource.s3.amazonaws.com/videos/ar-dunk-ios-game.mp4"
+                            type="video/mp4"
+                          />
+                        }
+                        Your browser does not support HTML video.
+                      </video>
+                    </div>
+                  ) : (
+                    <img
+                      src="/img/icons/portfolio-5.png"
+                      className="product-image mx-auto my-8 mb-0  md:mb-8"
+                      alt=""
+                      style={{
+                        width: "450px",
+                        // height: '253px ',
+                        // margin: "auto",
+                        borderRadius: "8px",
+                        // boxShadow: "rgb(128, 128, 128) 1px 4px 19px -4px",
+                      }}
+                    />
+                  )}
                 </Row>
               </div>
             </Col>
             <Col lg={0} md={0} sm={24} xs={24}>
               <div style={{ margin: "0 1rem" }}>
                 <Row justify="center">
-                  <img
+                  {/* <img
                     src="/img/icons/portfolio-5.png"
                     width="100%"
                     alt="portfolio Art"
                     style={{ borderRadius: "8px" }}
-                  />
+                  /> */}
+                  {fifthVisible ? (
+                    <div className="video_poster">
+                      <video
+                        className="product-video mx-auto mb-0  md:mb-8"
+                        width="450px"
+                        // height="253px"
+                        controls
+                        loop
+                        autoPlay
+                        webkit-playsinline
+                        playsInline
+                        muted
+                        poster="/img/icons/portfolio-5.png"
+                        style={{
+                          width: "450px",
+                          // height: '253px ',
+                          borderRadius: "8px",
+                          // boxShadow: "rgb(128, 128, 128) 1px 4px 19px -4px",
+                        }}
+                      >
+                        {
+                          <source
+                            src="https://scanta-web-resource.s3.amazonaws.com/videos/ar-dunk-ios-game.mp4"
+                            type="video/mp4"
+                          />
+                        }
+                        Your browser does not support HTML video.
+                      </video>
+                    </div>
+                  ) : (
+                    <img
+                      src="/img/icons/portfolio-5.png"
+                      className="product-image mx-auto my-8 mb-0  md:mb-8"
+                      alt=""
+                      style={{
+                        width: "450px",
+                        // height: '253px ',
+                        // margin: "auto",
+                        borderRadius: "8px",
+                        // boxShadow: "rgb(128, 128, 128) 1px 4px 19px -4px",
+                      }}
+                    />
+                  )}
                 </Row>
               </div>
             </Col>
