@@ -56,7 +56,7 @@ export const Content = styled("p")`
 export const ContentWrapper = styled("div")`
   position: relative;
   margin: 0 1.5rem;
-  top: 15%;
+  top: 17%;
   z-index: 1;
   @media only screen and (max-width: 1080px) {
     padding-bottom: 4rem;
@@ -143,7 +143,7 @@ export const ServicesHeading = styled("h6")`
   font-size: 1.8rem;
   font-family: Inter SemiBold;
   text-align: center;
-  margin: 3rem 1rem 2rem;
+  margin: 0rem 1rem 2rem;
 
   color: #eb7a02;
   @media only screen and (min-width: 1400px) {

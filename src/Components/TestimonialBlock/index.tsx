@@ -33,6 +33,9 @@ const RightBlock = ({ t, id }: any) => {
             <Row justify="center" align="middle">
               <Col lg={24} md={24} sm={24} xs={24}>
                 <ContentWrapper>
+                  <Row justify="center">
+                    <img src="/img/trupulse-logo.png" alt="redirect_logo" width="150px"/>
+                  </Row>
                   <ServicesHeading style={{ marginBottom: "1rem" }}>
                     <span style={{ color: "#001011" }}>
                       AI Powered people analytics
@@ -82,7 +85,7 @@ const RightBlock = ({ t, id }: any) => {
             </Row>
           </Container>
         </div>
-        <div style={{background:"#FAFAFA"}}>
+        <div style={{ background: "#FAFAFA" }}>
           <Row>
             <Container>
               <Row justify="center">
