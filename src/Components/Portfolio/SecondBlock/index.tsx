@@ -41,6 +41,55 @@ const MainBlock = ({ id, t }: any) => {
       <div style={{ background: "#FFFAF5", padding: "2rem 0" }}>
         <Container>
           <Row ref={firstRef} justify="center" align="middle">
+            <Col lg={0} md={0} sm={24} xs={24}>
+              <div style={{ margin: "0 1rem" }}>
+                <Row justify="center">
+                  {firstVisible ? (
+                    <div className="video_poster">
+                      <video
+                        className="product-video mx-auto mb-0  md:mb-8"
+                        width="100%"
+                        // height="253px"
+                        controls
+                        loop
+                        autoPlay
+                        webkit-playsinline
+                        playsInline
+                        muted
+                        poster="/img/icons/portfolio-1.png"
+                        style={{
+                          width: "100%",
+                          // height: '253px ',
+                          borderRadius: "8px",
+                          // boxShadow: "rgb(128, 128, 128) 1px 4px 19px -4px",
+                        }}
+                      >
+                        {
+                          <source
+                            src="https://scanta-web-resource.s3.amazonaws.com/videos/morale-2.mp4"
+                            type="video/mp4"
+                          />
+                        }
+                        Your browser does not support HTML video.
+                      </video>
+                    </div>
+                  ) : (
+                    <img
+                      src="/img/icons/portfolio-1.png"
+                      className="product-image mx-auto my-8 mb-0  md:mb-8"
+                      alt=""
+                      style={{
+                        width: "100%",
+                        // height: '253px ',
+                        // margin: "auto",
+                        borderRadius: "8px",
+                        // boxShadow: "rgb(128, 128, 128) 1px 4px 19px -4px",
+                      }}
+                    />
+                  )}
+                </Row>
+              </div>
+            </Col>
             <Col lg={12} md={12} sm={24} xs={24}>
               <ContentWrapper>
                 <SubText>Trupulse</SubText>
@@ -56,12 +105,6 @@ const MainBlock = ({ id, t }: any) => {
             <Col lg={12} md={12} sm={0} xs={0}>
               <div style={{ margin: "0 1rem" }}>
                 <Row justify="end">
-                  {/* <img
-                    src="/img/icons/portfolio-1.png"
-                    width="80%"
-                    alt="portfolio Art"
-                    style={{ borderRadius: "8px" }}
-                  /> */}
                   {firstVisible ? (
                     <div className="video_poster">
                       <video
@@ -108,18 +151,6 @@ const MainBlock = ({ id, t }: any) => {
                 </Row>
               </div>
             </Col>
-            <Col lg={0} md={0} sm={24} xs={24}>
-              <div style={{ margin: "0 1rem" }}>
-                <Row justify="center">
-                  <img
-                    src="/img/icons/portfolio-1.png"
-                    width="100%"
-                    alt="portfolio Art"
-                    style={{ borderRadius: "8px" }}
-                  />
-                </Row>
-              </div>
-            </Col>
           </Row>
         </Container>
       </div>
@@ -129,12 +160,6 @@ const MainBlock = ({ id, t }: any) => {
             <Col lg={12} md={12} sm={0} xs={0}>
               <div style={{ margin: "0 1rem" }}>
                 <Row justify="start">
-                  {/* <img
-                    src="/img/icons/portfolio-2.png"
-                    width="80%"
-                    alt="portfolio Art"
-                    style={{ borderRadius: "8px" }}
-                  /> */}
                   {secondVisible ? (
                     <div className="video_poster">
                       <video
@@ -181,6 +206,55 @@ const MainBlock = ({ id, t }: any) => {
                 </Row>
               </div>
             </Col>
+            <Col lg={0} md={0} sm={24} xs={24}>
+              <div style={{ margin: "0 1rem" }}>
+                <Row justify="start">
+                  {secondVisible ? (
+                    <div className="video_poster">
+                      <video
+                        className="product-video mx-auto mb-0  md:mb-8"
+                        width="100%"
+                        // height="253px"
+                        controls
+                        loop
+                        autoPlay
+                        webkit-playsinline
+                        playsInline
+                        muted
+                        poster="/img/icons/portfolio-2.png"
+                        style={{
+                          width: "100%",
+                          // height: '253px ',
+                          borderRadius: "8px",
+                          // boxShadow: "rgb(128, 128, 128) 1px 4px 19px -4px",
+                        }}
+                      >
+                        {
+                          <source
+                            src="https://scanta-web-resource.s3.amazonaws.com/videos/va-shield.mp4"
+                            type="video/mp4"
+                          />
+                        }
+                        Your browser does not support HTML video.
+                      </video>
+                    </div>
+                  ) : (
+                    <img
+                      src="/img/icons/portfolio-2.png"
+                      className="product-image mx-auto my-8 mb-0  md:mb-8"
+                      alt=""
+                      style={{
+                        width: "100%",
+                        // height: '253px ',
+                        // margin: "auto",
+                        borderRadius: "8px",
+                        // boxShadow: "rgb(128, 128, 128) 1px 4px 19px -4px",
+                      }}
+                    />
+                  )}
+                </Row>
+              </div>
+            </Col>
             <Col lg={12} md={12} sm={24} xs={24}>
               <ContentWrapper>
                 <SubText>VA Shield</SubText>
@@ -195,24 +269,61 @@ const MainBlock = ({ id, t }: any) => {
                 </Content>
               </ContentWrapper>
             </Col>
-            <Col lg={0} md={0} sm={24} xs={24}>
-              <div style={{ margin: "0 1rem" }}>
-                <Row justify="start">
-                  <img
-                    src="/img/icons/portfolio-2.png"
-                    width="100%"
-                    alt="portfolio Art"
-                    style={{ borderRadius: "8px" }}
-                  />
-                </Row>
-              </div>
-            </Col>
           </Row>
         </Container>
       </div>
       <div style={{ background: "#FFFAF5", padding: "2rem 0" }}>
         <Container>
           <Row ref={thirdRef} justify="center" align="middle">
+            <Col lg={0} md={0} sm={24} xs={24}>
+              <div style={{ margin: "0 1rem" }}>
+                <Row justify="center">
+                  {thirdVisible ? (
+                    <div className="video_poster">
+                      <video
+                        className="product-video mx-auto mb-0  md:mb-8"
+                        width="100%"
+                        // height="253px"
+                        controls
+                        loop
+                        autoPlay
+                        webkit-playsinline
+                        playsInline
+                        muted
+                        poster="/img/icons/portfolio-3.png"
+                        style={{
+                          width: "100%",
+                          // height: '253px ',
+                          borderRadius: "8px",
+                          // boxShadow: "rgb(128, 128, 128) 1px 4px 19px -4px",
+                        }}
+                      >
+                        {
+                          <source
+                            src="https://scanta-web-resource.s3.amazonaws.com/videos/intro-video-scanta.mp4"
+                            type="video/mp4"
+                          />
+                        }
+                        Your browser does not support HTML video.
+                      </video>
+                    </div>
+                  ) : (
+                    <img
+                      src="/img/icons/portfolio-3.png"
+                      className="product-image mx-auto my-8 mb-0  md:mb-8"
+                      alt=""
+                      style={{
+                        width: "100%",
+                        // height: '253px ',
+                        // margin: "auto",
+                        borderRadius: "8px",
+                        // boxShadow: "rgb(128, 128, 128) 1px 4px 19px -4px",
+                      }}
+                    />
+                  )}
+                </Row>
+              </div>
+            </Col>
             <Col lg={12} md={12} sm={24} xs={24}>
               <ContentWrapper>
                 <SubText>The Discovery Channel</SubText>
@@ -280,18 +391,6 @@ const MainBlock = ({ id, t }: any) => {
                 </Row>
               </div>
             </Col>
-            <Col lg={0} md={0} sm={24} xs={24}>
-              <div style={{ margin: "0 1rem" }}>
-                <Row justify="center">
-                  <img
-                    src="/img/icons/portfolio-3.png"
-                    width="100%"
-                    alt="portfolio Art"
-                    style={{ borderRadius: "8px" }}
-                  />
-                </Row>
-              </div>
-            </Col>
           </Row>
         </Container>
       </div>
@@ -304,6 +403,18 @@ const MainBlock = ({ id, t }: any) => {
                   <img
                     src="/img/icons/portfolio-4.png"
                     width="80%"
+                    alt="portfolio Art"
+                    style={{ borderRadius: "8px" }}
+                  />
+                </Row>
+              </div>
+            </Col>
+            <Col lg={0} md={0} sm={24} xs={24}>
+              <div style={{ margin: "0 1rem" }}>
+                <Row justify="start">
+                  <img
+                    src="/img/icons/portfolio-4.png"
+                    width="100%"
                     alt="portfolio Art"
                     style={{ borderRadius: "8px" }}
                   />
@@ -326,45 +437,21 @@ const MainBlock = ({ id, t }: any) => {
                 </Content>
               </ContentWrapper>
             </Col>
-            <Col lg={0} md={0} sm={24} xs={24}>
-              <div style={{ margin: "0 1rem" }}>
-                <Row justify="start">
-                  <img
-                    src="/img/icons/portfolio-4.png"
-                    width="100%"
-                    alt="portfolio Art"
-                    style={{ borderRadius: "8px" }}
-                  />
-                </Row>
-              </div>
-            </Col>
           </Row>
         </Container>
       </div>
       <div style={{ background: "#FFFAF5", padding: "2rem 0" }}>
         <Container>
           <Row ref={fifthRef} justify="center" align="middle">
-            <Col lg={12} md={12} sm={24} xs={24}>
-              <ContentWrapper>
-                <SubText>AR Dunk</SubText>
-                <Subtitle>Next Generation AR Basketball</Subtitle>
-                <Content style={{ fontWeight: "600" }}>
-                  AR Dunk is an offbeat augmented reality basketball game that
-                  you can play anywhere, anytime! AR Dunk comes with a flying
-                  backboard. Virtually anchor the flying backboard anywhere you
-                  want. Aim the ball and SCORE! Explore new levels and unleash
-                  the magical world of AR Dunk!
-                </Content>
-              </ContentWrapper>
-            </Col>
-            <Col lg={12} md={12} sm={0} xs={0}>
+            <Col lg={0} md={0} sm={24} xs={24}>
               <div style={{ margin: "0 1rem" }}>
-                <Row justify="end">
-                   {fifthVisible ? (
+                <Row justify="center">
+                  
+                  {fifthVisible ? (
                     <div className="video_poster">
                       <video
                         className="product-video mx-auto mb-0  md:mb-8"
-                        width="450px"
+                        width="100%"
                         // height="253px"
                         controls
                         loop
@@ -374,7 +461,7 @@ const MainBlock = ({ id, t }: any) => {
                         muted
                         poster="/img/icons/portfolio-5.png"
                         style={{
-                          width: "450px",
+                          width: "100%",
                           // height: '253px ',
                           borderRadius: "8px",
                           // boxShadow: "rgb(128, 128, 128) 1px 4px 19px -4px",
@@ -395,7 +482,7 @@ const MainBlock = ({ id, t }: any) => {
                       className="product-image mx-auto my-8 mb-0  md:mb-8"
                       alt=""
                       style={{
-                        width: "450px",
+                        width: "100%",
                         // height: '253px ',
                         // margin: "auto",
                         borderRadius: "8px",
@@ -406,15 +493,22 @@ const MainBlock = ({ id, t }: any) => {
                 </Row>
               </div>
             </Col>
-            <Col lg={0} md={0} sm={24} xs={24}>
+            <Col lg={12} md={12} sm={24} xs={24}>
+              <ContentWrapper>
+                <SubText>AR Dunk</SubText>
+                <Subtitle>Next Generation AR Basketball</Subtitle>
+                <Content style={{ fontWeight: "600" }}>
+                  AR Dunk is an offbeat augmented reality basketball game that
+                  you can play anywhere, anytime! AR Dunk comes with a flying
+                  backboard. Virtually anchor the flying backboard anywhere you
+                  want. Aim the ball and SCORE! Explore new levels and unleash
+                  the magical world of AR Dunk!
+                </Content>
+              </ContentWrapper>
+            </Col>
+            <Col lg={12} md={12} sm={0} xs={0}>
               <div style={{ margin: "0 1rem" }}>
-                <Row justify="center">
-                  {/* <img
-                    src="/img/icons/portfolio-5.png"
-                    width="100%"
-                    alt="portfolio Art"
-                    style={{ borderRadius: "8px" }}
-                  /> */}
+                <Row justify="end">
                   {fifthVisible ? (
                     <div className="video_poster">
                       <video
@@ -470,12 +564,7 @@ const MainBlock = ({ id, t }: any) => {
             <Col lg={12} md={12} sm={0} xs={0}>
               <div style={{ margin: "0 1rem" }}>
                 <Row justify="start">
-                  {/* <img
-                    src="/img/icons/portfolio-6.png"
-                    width="80%"
-                    alt="portfolio Art"
-                    style={{ borderRadius: "8px" }}
-                  /> */}
+                  
                   {sixthVisible ? (
                     <div className="video_poster">
                       <video
@@ -522,6 +611,55 @@ const MainBlock = ({ id, t }: any) => {
                 </Row>
               </div>
             </Col>
+            <Col lg={0} md={0} sm={24} xs={24}>
+              <div style={{ margin: "0 1rem" }}>
+                <Row justify="start">
+                {sixthVisible ? (
+                    <div className="video_poster">
+                      <video
+                        className="product-video mx-auto mb-0  md:mb-8"
+                        width="100%"
+                        // height="253px"
+                        controls
+                        loop
+                        autoPlay
+                        webkit-playsinline
+                        playsInline
+                        muted
+                        poster="/img/icons/portfolio-6.png"
+                        style={{
+                          width: "100%",
+                          // height: '253px ',
+                          borderRadius: "8px",
+                          // boxShadow: "rgb(128, 128, 128) 1px 4px 19px -4px",
+                        }}
+                      >
+                        {
+                          <source
+                            src="https://scanta-web-resource.s3.amazonaws.com/videos/Polygoons++game+trailer.mp4"
+                            type="video/mp4"
+                          />
+                        }
+                        Your browser does not support HTML video.
+                      </video>
+                    </div>
+                  ) : (
+                    <img
+                      src="/img/icons/portfolio-6.png"
+                      className="product-image mx-auto my-8 mb-0  md:mb-8"
+                      alt=""
+                      style={{
+                        width: "100%",
+                        // height: '253px ',
+                        // margin: "auto",
+                        borderRadius: "8px",
+                        // boxShadow: "rgb(128, 128, 128) 1px 4px 19px -4px",
+                      }}
+                    />
+                  )}
+                </Row>
+              </div>
+            </Col>
             <Col lg={12} md={12} sm={24} xs={24}>
               <ContentWrapper>
                 <SubText>Polygoons</SubText>
@@ -540,18 +678,6 @@ const MainBlock = ({ id, t }: any) => {
                   </CTAWrapper>
                 </div> */}
               </ContentWrapper>
-            </Col>
-            <Col lg={0} md={0} sm={24} xs={24}>
-              <div style={{ margin: "0 1rem" }}>
-                <Row justify="start">
-                  <img
-                    src="/img/icons/portfolio-6.png"
-                    width="100%"
-                    alt="portfolio Art"
-                    style={{ borderRadius: "8px" }}
-                  />
-                </Row>
-              </div>
             </Col>
           </Row>
         </Container>

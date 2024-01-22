@@ -226,7 +226,6 @@ const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
                       Portfolio
                     </Span>
                   </Link>
-                  <DownIcon />
                 </div>
               </CustomNavLinkSmall>
             </Row>
@@ -296,7 +295,7 @@ const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
                 className="pulse"
                 onClick={handleDemoRequestButtonClick}
               >
-                <Button>{t("Book a Demo")}</Button>
+                <Button>{t("Book a Meeting")}</Button>
               </CTAWrapper>
             </Link>
           </CustomNavLinkSmall>
@@ -318,6 +317,22 @@ const Header = ({ t, isModalVisible, closeModal, openModal }: any) => {
           </Label>
         </Col>
         <MenuItemForDrawer />
+        <CustomNavLinkSmall
+            style={{
+              minWidth: "185px",
+              margin: "0.5rem auto 0.5rem",
+            }}
+          >
+            <Link href="/request-demo">
+              <CTAWrapper
+                className="pulse"
+                onClick={handleDemoRequestButtonClick}
+                style={{position:"relative", left:"50px"}}
+              >
+                <Button>{t("Book a Meeting")}</Button>
+              </CTAWrapper>
+            </Link>
+          </CustomNavLinkSmall>
       </Drawer>
     </HeaderSection>
   );

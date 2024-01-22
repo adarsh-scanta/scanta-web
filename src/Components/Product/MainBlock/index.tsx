@@ -90,7 +90,7 @@ const RightBlock = ({ t, id }: any) => {
                 src="/img/service-banner.png"
                 alt="intro image"
                 width="100%"
-                style={{ margin: " 0 0 1rem" }}
+                style={{ margin: " 2rem 0" }}
               />
               <Title style={{ textAlign: "left" }}>
                 AI Consulting & Services

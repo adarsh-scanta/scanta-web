@@ -57,7 +57,7 @@ const AboutBlock = () => {
                             {!success && !loading && (
                               <div>
                                 <Row justify="center">
-                                  <Col lg={24} md={24} sm={24} xs={24}>
+                                  <Col lg={24} md={24} sm={0} xs={0}>
                                     <div className="newsletter-form">
                                       <input
                                         name="email"
@@ -90,6 +90,46 @@ const AboutBlock = () => {
                                             borderRadius: "8px",
                                             padding: "0.8rem",
                                             cursor: "pointer",
+                                            marginBottom:"1rem"
+                                          }}
+                                        />
+                                      </div>
+                                    </div>
+                                  </Col>
+                                  <Col lg={0} md={0} sm={24} xs={24}>
+                                    <div className="newsletter-form">
+                                      <input
+                                        name="email"
+                                        required
+                                        type="email"
+                                        style={{
+                                          width: "100%",
+                                          border: "1px solid #667085",
+                                          margin: "1rem 0",
+                                          background: "#fff",
+                                          borderRadius: "8px",
+                                          color: "#667085",
+                                        }}
+                                        placeholder="Your Email"
+                                      />
+                                      <div
+                                        style={{
+                                          width: "100%",
+                                          display: "flex",
+                                          justifyContent: "center",
+                                        }}
+                                      >
+                                        <input
+                                          type="submit"
+                                          value="Subscribe"
+                                          style={{
+                                            width: "100%",
+                                            background: "#eb7a02",
+                                            color: "#fff",
+                                            borderRadius: "8px",
+                                            padding: "0.8rem",
+                                            cursor: "pointer",
+                                            marginBottom:"1rem"
                                           }}
                                         />
                                       </div>

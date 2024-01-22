@@ -96,28 +96,19 @@ const RightBlock = ({ t, id }: any) => {
                 src="/img/portfolio-banner.png"
                 alt="intro image"
                 width="100%"
-                style={{ margin: " 0 0 1rem" }}
+                style={{ margin: " 2rem 0 " }}
               />
               <Title style={{ textAlign: "left" }}>
-                Artificial Intelligence <br /> AR & AR/VR
-                <br /> Consulting & <br />
-                Services
+                Tech Unveiled,
+                <br /> Explore Our <br />
+                Showcase Collection
               </Title>
               <Subtitle style={{ fontWeight: "600", textAlign: "left" }}>
-                Bring Us Your Ideas, Let Us Execute Your Vision
+                Embark on a journey through our portfolio, where success stories
+                unfold. Experience our commitment to excellence, tailored
+                solutions, and transformative impact across a spectrum of
+                industries. Explore and be inspired…
               </Subtitle>
-              <Row justify="center">
-                <CTAWrapper
-                  className="pulse"
-                  style={{ width: "100%", marginBottom: "1rem" }}
-                >
-                  <Link href="/request-demo">
-                    <span>
-                      <Button width="100%">{t("Request a Demo")}</Button>
-                    </span>
-                  </Link>
-                </CTAWrapper>
-              </Row>
             </ContentWrapper>
           </Col>
         </Row>
