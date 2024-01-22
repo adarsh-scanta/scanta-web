@@ -2,15 +2,15 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { Carousel } from "antd";
 export const RightBlockContainer = styled("section")`
-  padding: 3rem 0 2rem;
+  padding: 3rem 0 0;
   background: #fffaf5;
   background-size: cover;
   @media only screen and (max-width: 1024px) {
-    padding: 6rem 0 1.5rem;
+    padding: 3rem 0 0;
   }
 
   @media only screen and (max-width: 768px) {
-    padding: 2rem 0 0.75rem;
+    padding: 2rem 0 0;
   }
 `;
 
@@ -47,17 +47,10 @@ export const Subtitle = styled("span")`
 `;
 
 export const Content = styled("p")`
-  margin: 0.5rem 0 2rem 0;
-  font-size: 1.4rem;
-  color:#334041;
-} @media only screen and (min-width: 1400px) {
-  font-size: 1.3rem;
-}
-  @media only screen and (max-width: 1080px) {
-    font-size: 1.3rem;
-  @media only screen and (max-width: 768px) {
-    font-size: 1.3rem;
-  }
+  margin: 0 0 1rem ;
+  font-size: 1rem;
+  color: #334041;
+  text-align: center;
 `;
 
 export const ContentWrapper = styled("div")`
@@ -190,4 +183,12 @@ export const CarouselLabel = styled("p")`
   color: #430568;
   position: relative;
   top: -40px;
+`;
+
+export const SubText = styled("h6")`
+  font-size: 1rem;
+  text-align: cneter;
+  font-family: Inter SemiBold;
+  color: #ff7e00;
+  margin: 1rem 0 1rem;
 `;

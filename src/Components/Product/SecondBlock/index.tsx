@@ -24,6 +24,18 @@ const MainBlock = ({ id, t }: any) => {
       <div style={{ background: "#FFFAF5" }}>
         <Container>
           <Row justify="center" align="middle">
+          <Col lg={0} md={0} sm={24} xs={24}>
+              <div style={{ margin: "0 1rem" }}>
+                <Row justify="center">
+                  <img
+                    src="/img/icons/services-1.png"
+                    width="100%"
+                    alt="services Art"
+                    style={{ borderRadius: "8px" }}
+                  />
+                </Row>
+              </div>
+            </Col>
             <Col lg={12} md={12} sm={24} xs={24}>
               <ContentWrapper>
                 <SubText>Artificial Intelligence</SubText>
@@ -67,18 +79,7 @@ const MainBlock = ({ id, t }: any) => {
                 </Row>
               </div>
             </Col>
-            <Col lg={0} md={0} sm={24} xs={24}>
-              <div style={{ margin: "0 1rem" }}>
-                <Row justify="center">
-                  <img
-                    src="/img/icons/services-1.png"
-                    width="100%"
-                    alt="services Art"
-                    style={{ borderRadius: "8px" }}
-                  />
-                </Row>
-              </div>
-            </Col>
+            
           </Row>
         </Container>
       </div>
@@ -91,6 +92,18 @@ const MainBlock = ({ id, t }: any) => {
                   <img
                     src="/img/icons/services-2.png"
                     width="80%"
+                    alt="services Art"
+                    style={{ borderRadius: "8px" }}
+                  />
+                </Row>
+              </div>
+            </Col>
+            <Col lg={0} md={0} sm={24} xs={24}>
+              <div style={{ margin: "0 1rem" }}>
+                <Row justify="start">
+                  <img
+                    src="/img/icons/services-2.png"
+                    width="100%"
                     alt="services Art"
                     style={{ borderRadius: "8px" }}
                   />
@@ -116,11 +129,18 @@ const MainBlock = ({ id, t }: any) => {
                 </div>
               </ContentWrapper>
             </Col>
-            <Col lg={0} md={0} sm={24} xs={24}>
+           
+          </Row>
+        </Container>
+      </div>
+      <div style={{ background: "#FFFAF5" }}>
+        <Container>
+          <Row justify="center" align="middle">
+          <Col lg={0} md={0} sm={24} xs={24}>
               <div style={{ margin: "0 1rem" }}>
-                <Row justify="start">
+                <Row justify="center">
                   <img
-                    src="/img/icons/services-2.png"
+                    src="/img/icons/services-3.png"
                     width="100%"
                     alt="services Art"
                     style={{ borderRadius: "8px" }}
@@ -128,12 +148,6 @@ const MainBlock = ({ id, t }: any) => {
                 </Row>
               </div>
             </Col>
-          </Row>
-        </Container>
-      </div>
-      <div style={{ background: "#FFFAF5" }}>
-        <Container>
-          <Row justify="center" align="middle">
             <Col lg={12} md={12} sm={24} xs={24}>
               <ContentWrapper>
                 <SubText>Augmented Reality</SubText>
@@ -176,11 +190,18 @@ const MainBlock = ({ id, t }: any) => {
                 </Row>
               </div>
             </Col>
-            <Col lg={0} md={0} sm={24} xs={24}>
+            
+          </Row>
+        </Container>
+      </div>
+      <div>
+        <Container>
+          <Row justify="center" align="middle">
+          <Col lg={0} md={0} sm={24} xs={24}>
               <div style={{ margin: "0 1rem" }}>
-                <Row justify="center">
+                <Row justify="start">
                   <img
-                    src="/img/icons/services-3.png"
+                    src="/img/icons/services-4.png"
                     width="100%"
                     alt="services Art"
                     style={{ borderRadius: "8px" }}
@@ -188,12 +209,6 @@ const MainBlock = ({ id, t }: any) => {
                 </Row>
               </div>
             </Col>
-          </Row>
-        </Container>
-      </div>
-      <div>
-        <Container>
-          <Row justify="center" align="middle">
             <Col lg={12} md={12} sm={0} xs={0}>
               <div style={{ margin: "0 1rem" }}>
                 <Row justify="start">
@@ -236,18 +251,7 @@ const MainBlock = ({ id, t }: any) => {
                 </div>
               </ContentWrapper>
             </Col>
-            <Col lg={0} md={0} sm={24} xs={24}>
-              <div style={{ margin: "0 1rem" }}>
-                <Row justify="start">
-                  <img
-                    src="/img/icons/services-4.png"
-                    width="100%"
-                    alt="services Art"
-                    style={{ borderRadius: "8px" }}
-                  />
-                </Row>
-              </div>
-            </Col>
+          
           </Row>
         </Container>
       </div>

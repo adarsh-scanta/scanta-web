@@ -66,7 +66,7 @@ const MainBlock = ({ id, t }: any) => {
                       >
                         {
                           <source
-                            src="https://scanta-web-resource.s3.amazonaws.com/videos/morale-2.mp4"
+                            src="https://scanta-web-resource.s3.amazonaws.com/videos/home-1.mp4"
                             type="video/mp4"
                           />
                         }
@@ -562,7 +562,7 @@ const MainBlock = ({ id, t }: any) => {
         <Container>
           <Row ref={sixthRef} justify="center" align="middle">
             <Col lg={12} md={12} sm={0} xs={0}>
-              <div style={{ margin: "0 1rem" }}>
+              <div style={{ margin: "2rem 1rem" }}>
                 <Row justify="start">
                   
                   {sixthVisible ? (

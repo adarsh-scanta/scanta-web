@@ -48,7 +48,7 @@ const ContactBlock = ({ id }: any) => {
           <ContentWrapper></ContentWrapper>
         </Row>
         <Row justify="space-around">
-          <Col lg={11} md={11} sm={24} xs={24}>
+          <Col lg={11} md={11} sm={22} xs={22}>
             <Subtitle>Contact Us</Subtitle>
             <Content style={{ textAlign: "left", margin: "0" }}>
               We would love to hear from you!
@@ -56,6 +56,7 @@ const ContactBlock = ({ id }: any) => {
             <img
               src="/img/icons/Contact.png"
               alt="contactArt"
+              width="100%"
               style={{ margin: "1rem" }}
             />
           </Col>
