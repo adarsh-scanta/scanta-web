@@ -29,7 +29,7 @@ export const StyledButton = styled("button")<any>`
         0px 0px 0px 0px rgba(255, 255, 255, 1);
     }
     100% {
-      box-shadow: inset 0px 0px 0px 3px rgba(117, 117, 255, 0.4),
+      box-shadow: inset 0px 0px 0px 3px rgba(255, 144, 25, 0.4),
         0px 0px 0px 10px rgba(255, 255, 255, 0.4);
     }
   }
