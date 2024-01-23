@@ -57,7 +57,7 @@ const RightBlock = ({ t, id }: any) => {
                   <Row justify="center">
                     <video
                       className="product-video mx-auto  mb-0  md:mb-8"
-                      width="90%"
+                      width="100%"
                       // height="253px "
                       controls
                       loop
