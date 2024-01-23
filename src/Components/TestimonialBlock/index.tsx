@@ -67,7 +67,7 @@ const RightBlock = ({ t, id }: any) => {
                       playsInline
                       poster="/img/icons/portfolio-1.png"
                       style={{
-                        width: "90%",
+                        width: "100%",
                         // height: '253px ',
                         margin: "2rem 0",
                         boxShadow: "rgb(128, 128, 128) 1px 4px 19px -4px",
