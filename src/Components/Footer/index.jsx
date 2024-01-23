@@ -170,7 +170,7 @@ const Footer = ({ t, fromWhere }) => {
                             color: "#545F60",
                           }}
                         >
-                          © Copyright 2023 Scanta INC.
+                          © Copyright 2024 Scanta INC.
                         </p>
                       </Col>
                       <Col>
@@ -325,7 +325,7 @@ const Footer = ({ t, fromWhere }) => {
                             textAlign: "center",
                           }}
                         >
-                          © Copyright 2023 Scanta INC.
+                          © Copyright 2024 Scanta INC.
                         </p>
                       </Col>
                       <Col span={24}>
