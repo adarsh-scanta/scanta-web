@@ -65,8 +65,7 @@ const RightBlock = ({ t, id }: any) => {
           <Col xs={0} sm={0} lg={24} xl={24}>
             <ContentWrapper>
               <Title>
-                Artificial Intelligence, Augmented Reality, Virtual Reality
-                Consulting
+              Transforming Vision for Empowered Success
               </Title>
               <Subtitle style={{ fontWeight: "600" }}>
                 Bring Us Your Ideas, Let Us Execute Your Vision
@@ -137,8 +136,7 @@ const RightBlock = ({ t, id }: any) => {
                 Your browser does not support HTML video.
               </video>
               <Title style={{ textAlign: "left" }}>
-                Artificial Intelligence, Augmented Reality, Virtual Reality
-                Consulting
+              Transforming Vision for Empowered Success
               </Title>
               <Subtitle style={{ fontWeight: "600", textAlign: "left" }}>
                 Bring Us Your Ideas, Let Us Execute Your Vision

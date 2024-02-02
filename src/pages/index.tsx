@@ -21,7 +21,7 @@ export default function Home() {
     <React.Fragment>
       <div className="App">
         <Head>
-          <title>AI, ML, AR & VR Consulting & Services</title>
+          <title>Transforming Vision for Empowered Success</title>
           <meta
             name="description"
             content="TruPulse is a listening platform for real-time understanding of company morale, trending topics and corporate culture with the best employee experience tools."
