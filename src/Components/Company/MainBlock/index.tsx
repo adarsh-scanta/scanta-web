@@ -29,7 +29,7 @@ const MainBlock = ({ id }: any) => {
                 <Subtitle>About Us</Subtitle>
                 <Content style={{ fontWeight: "600" }}>
                   Scanta is a San Francisco based tech company focused on
-                  providing AI, AR & VR consulting and technical services. Santa
+                  providing AI, AR & VR consulting and technical services. Scanta
                   has been a leader in advanced technological innovation and has
                   a worldwide talent pool of product consultants and developers
                   to support our customers. Bring Us Your Ideas, Let Us Execute
