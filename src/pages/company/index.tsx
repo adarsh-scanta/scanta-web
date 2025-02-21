@@ -42,7 +42,7 @@ export default function Home() {
       <Styles />
       <ScrollToTop />
       <MainBlock />
-      <StoryBlock />
+      {/* <StoryBlock /> */}
       {/* <AdvisorBlock /> */}
       <ContactBlock />
       <Newsletter />
