@@ -12,7 +12,7 @@ import Newsletter from "@/Components/Newsletter";
 
 export default function Home() {
   return (
-    <React.Fragment>
+    <React.Fragment> 
       <Head>
         <title>Scanta</title>
         <meta
